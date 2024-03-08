@@ -1,4 +1,5 @@
 using System;
+using RhythmGame;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,6 +21,7 @@ namespace Controller
         public static Action OnResume;
         public static Action OnNextDialogue;
         public static Action OnOverrideSkip;
+        public static Action<NoteType> OnNotePressed;
     
         public static Action OnPlayerTwoInteract;
 
@@ -138,23 +140,37 @@ namespace Controller
 
         #endregion
 
-        #region UIPuzzle Layout
-        public void Cancel(InputAction.CallbackContext context)
+        #region KeyMaps
+
+        public void FirstNote(InputAction.CallbackContext context)
         {
             if (context.started)
             {
-                OnCancel?.Invoke();
+                OnNotePressed?.Invoke(NoteType.First);
             }
         }
-        #endregion
-
-        #region PlayerTwo Layout
-    
-        public void PlayerTwoInteract(InputAction.CallbackContext context)
+        
+        public void SecondNote(InputAction.CallbackContext context)
         {
             if (context.started)
             {
-                OnPlayerTwoInteract?.Invoke();
+                OnNotePressed?.Invoke(NoteType.Second);
+            }
+        }
+        
+        public void ThirdNote(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnNotePressed?.Invoke(NoteType.Third);
+            }
+        }
+        
+        public void FourthNote(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnNotePressed?.Invoke(NoteType.Fourth);
             }
         }
 
