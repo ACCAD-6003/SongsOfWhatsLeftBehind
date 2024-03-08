@@ -1,10 +1,13 @@
-﻿namespace RhythmGame
+﻿using System;
+
+namespace RhythmGame
 {
+    [Flags]
     public enum NoteType
     {
-        First = 0,
-        Second = 1,
-        Third = 2,
-        Fourth = 3,
+        First = 1,
+        Second = 2,
+        Third = 4,
+        Fourth = 8,
     }
 }

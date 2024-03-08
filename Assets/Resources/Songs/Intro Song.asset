@@ -19,13 +19,13 @@ MonoBehaviour:
     notes:
     - offset: 0
       noteLength: 0
-      notes: 00000000
+      notes: 01000000
     - offset: 1
       noteLength: 0
-      notes: 0100000000000000
+      notes: 0200000001000000
     - offset: 2
       noteLength: 0
-      notes: 02000000
+      notes: 04000000
     - offset: 3
       noteLength: 0
       notes: 

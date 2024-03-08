@@ -417,7 +417,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3211393832728974128, guid: a4c1ceabe00fa204f93aa70ea0a12224, type: 3}
   m_PrefabInstance: {fileID: 908281545}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 988278891}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50b9584e58f13cd45bc2e75d0132c95b, type: 3}
@@ -507,6 +507,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &988278891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3211393832728974135, guid: a4c1ceabe00fa204f93aa70ea0a12224, type: 3}
+  m_PrefabInstance: {fileID: 908281545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &988278894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988278891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ddbc7c16d4a42feada0b5fe3e416058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayForCombinedNotes: 0.05
 --- !u!1 &1638374519
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,22 +592,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
       Data: 1
     - Name: $v
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -601,6 +607,18 @@ MonoBehaviour:
       Data: 2
     - Name: $v
       Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 10
       Data: 2
     - Name: 
       Entry: 8
@@ -610,7 +628,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 3
+      Data: 8
     - Name: $v
       Entry: 10
       Data: 3
@@ -638,7 +656,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 7
       Data: UnityEngine.Vector2, UnityEngine.CoreModule
@@ -659,7 +677,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: $v
       Entry: 7
       Data: UnityEngine.Vector2, UnityEngine.CoreModule
@@ -680,7 +698,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 2
+      Data: 4
     - Name: $v
       Entry: 7
       Data: UnityEngine.Vector2, UnityEngine.CoreModule
@@ -701,7 +719,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 3
+      Data: 8
     - Name: $v
       Entry: 7
       Data: UnityEngine.Vector2, UnityEngine.CoreModule
@@ -729,7 +747,7 @@ MonoBehaviour:
     - Name: OnSongEnd
       Entry: 6
       Data: 
-  songData: {fileID: 11400000, guid: f34124f5f24ce284aae4d77964dea448, type: 2}
+  songData: {fileID: 11400000, guid: cb7a8ee5426f419498cac323b5ff1888, type: 2}
   noteDelay: 0
   correctThreshold: 0.5
   timeToReachBottom: 2

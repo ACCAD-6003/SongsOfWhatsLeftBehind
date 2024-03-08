@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Controller;
+using Sirenix.Utilities;
 
 namespace RhythmGame
 {
@@ -20,6 +22,12 @@ namespace RhythmGame
         [SerializeField] private Dictionary<NoteType, Vector2> notePositions;
 
         Dictionary<NoteType, List<NoteImage>> notePools = new();
+        List<NoteImage> ActiveNotes => notePools
+            .Where(x => x.Value.Any(y => y.gameObject.activeInHierarchy))
+            .SelectMany(x => x.Value)
+            .Where(y => y.gameObject.activeInHierarchy)
+            .ToList();
+        
         GameObject noteContainer;
 
         [HideInInspector] public Action OnSongStart;
@@ -32,22 +40,21 @@ namespace RhythmGame
 
         private void CheckForNoteInZone(NoteType type)
         {
-            var notesInZone = notePools[type]
-                .Where(x => x.gameObject.activeInHierarchy)
+            var notesInZone = ActiveNotes
                 .Where(x => x.transform.position.y <= targetZone + correctThreshold &&
                             x.transform.position.y >= targetZone - correctThreshold)
                 .ToList();
-            if (notesInZone.Count > 0)
+            if (notesInZone.Count == 0 || notesInZone.Any(x => (x.NoteType & type) == 0))
+            {
+                Debug.Log("Lose Score"); ;
+            }
+            else 
             {
                 foreach (var note in notesInZone)
                 {
                     note.gameObject.SetActive(false);
                     Debug.Log("Score");
                 }
-            }
-            else
-            {
-                Debug.Log("Lose Score");
             }
         }
         
@@ -107,8 +114,8 @@ namespace RhythmGame
 
         private IEnumerator HandleSong(SongData songData)
         {
-            Controller.UIController.OnNotePressed += CheckForNoteInZone;
-            Controller.UIController.Instance.SwapToUI();
+            RhythmGameController.OnNoteProcessed += CheckForNoteInZone;
+            UIController.Instance.SwapToUI();
             var startTime = Time.realtimeSinceStartup;
             float TimeElapsed() => Time.realtimeSinceStartup - startTime;
             foreach (var phrase in songData.phrases)
@@ -125,7 +132,7 @@ namespace RhythmGame
             }
 
             yield return new WaitUntil(() => !notePools.Any(x => x.Value.Any(y => y.gameObject.activeInHierarchy)));
-            Controller.UIController.OnNotePressed -= CheckForNoteInZone;
+            RhythmGameController.OnNoteProcessed -= CheckForNoteInZone;
             EndSong();
         }
         

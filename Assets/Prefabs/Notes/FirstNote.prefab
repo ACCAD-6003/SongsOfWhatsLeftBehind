@@ -51,9 +51,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3745372852165608150, guid: e46c0619445f7634ab62138910bd4026, type: 3}
+      propertyPath: noteType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6287804035596968944, guid: e46c0619445f7634ab62138910bd4026, type: 3}
       propertyPath: m_Name
-      value: GeneralNote
+      value: FirstNote
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e46c0619445f7634ab62138910bd4026, type: 3}
