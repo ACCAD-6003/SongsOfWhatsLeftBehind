@@ -11,27 +11,27 @@ namespace RhythmGame
 {
     public class RhythmGameManager : SerializedMonoBehaviour
     {
-        private const int NOTE_POOL_SIZE = 10;
+        [HideInInspector] public Action OnSongStart;
+        [HideInInspector] public Action OnSongEnd;
+
+        private const int NOTE_POOL_SIZE = 30;
         
         [SerializeField] private SongData songData;
-        [SerializeField] private float noteDelay;
         [SerializeField] private float correctThreshold;
         [SerializeField] private float timeToReachBottom;
         [SerializeField] private float targetZone;
-        [SerializeField] private Dictionary<NoteType, GameObject> notePrefabs;
-        [SerializeField] private Dictionary<NoteType, Vector2> notePositions;
+        [SerializeField] private GameObject notePrefab;
+        [SerializeField] private float yOffset;
+        [SerializeField] private RhythmGameMusicPlayer musicPlayer;
+        [SerializeField] private Dictionary<NoteType, NoteTemplate> templates;
+        
+        List<NoteImage> notePool = new();
 
-        Dictionary<NoteType, List<NoteImage>> notePools = new();
-        List<NoteImage> ActiveNotes => notePools
-            .Where(x => x.Value.Any(y => y.gameObject.activeInHierarchy))
-            .SelectMany(x => x.Value)
+        private IEnumerable<NoteImage> ActiveNotes => notePool
             .Where(y => y.gameObject.activeInHierarchy)
             .ToList();
         
         GameObject noteContainer;
-
-        [HideInInspector] public Action OnSongStart;
-        [HideInInspector] public Action OnSongEnd;
 
         private void Start()
         {
@@ -41,68 +41,85 @@ namespace RhythmGame
         private void CheckForNoteInZone(NoteType type)
         {
             var notesInZone = ActiveNotes
-                .Where(x => x.transform.position.y <= targetZone + correctThreshold &&
-                            x.transform.position.y >= targetZone - correctThreshold)
+                .Where(x => WithinThreshold(x.Position))
                 .ToList();
             if (notesInZone.Count == 0 || notesInZone.Any(x => (x.NoteType & type) == 0))
             {
-                Debug.Log("Lose Score"); ;
+                LoseScore();
             }
             else 
             {
                 foreach (var note in notesInZone)
                 {
-                    note.gameObject.SetActive(false);
-                    Debug.Log("Score");
+                    note.Hit(Score, LoseScore);
                 }
             }
         }
-        
-        private void DisplayNote(NoteType noteType)
+
+        private void Score()
         {
-            var note = GetNoteFromPool(noteType);
-            note.transform.position = notePositions[noteType];
-            note.Send(timeToReachBottom, targetZone);
+            Debug.Log("Score");
+        }
+
+        private void LoseScore()
+        {
+            Debug.Log("Lose Score");
+            musicPlayer.PlayErrorSound();
+        }
+
+        private bool WithinThreshold(float value)
+        {
+            return Math.Abs(value - Mathf.Clamp(value, targetZone - correctThreshold, targetZone + correctThreshold)) 
+                   < Mathf.Epsilon;
+        }
+        
+        private void DisplayNote(NoteType noteType, NoteStyle style, float length)
+        {
+            var note = GetNoteFromPool(noteType, style);
+            note.transform.position = new Vector3(templates[noteType].position, yOffset);
+            note.Send(timeToReachBottom, targetZone, WithinThreshold, length);
         }
         
         private void CreateNotePools()
         {
-            notePools.Clear();
+            notePool.Clear();
             noteContainer = new GameObject("NoteContainer");
-            
-            foreach (var noteType in Enum.GetValues(typeof(NoteType)))
+            for (int i = 0; i < NOTE_POOL_SIZE; i++)
             {
-                var notes = new List<NoteImage>();
-                for (int i = 0; i < NOTE_POOL_SIZE; i++)
-                {
-                    var note = Instantiate(notePrefabs[(NoteType)noteType], noteContainer.transform, true);
-                    note.SetActive(false);
-                    notes.Add(note.GetComponent<NoteImage>());
-                }
-                notePools.Add((NoteType)noteType, notes);
+                var note = Instantiate(notePrefab, noteContainer.transform, true);
+                note.SetActive(false);
+                notePool.Add(note.GetComponent<NoteImage>());
             }
         }
 
-        private NoteImage GetNoteFromPool(NoteType noteType)
+        private NoteImage GetNoteFromPool(NoteType noteType, NoteStyle style = NoteStyle.Single)
         {
-            foreach (var note in notePools[noteType].Where(note => !note.gameObject.activeInHierarchy))
+            var note = notePool.FirstOrDefault(x => !x.gameObject.activeInHierarchy);
+            
+            if (note == null)
             {
-                note.gameObject.SetActive(true);
-                return note;
+                note = Instantiate(notePrefab, noteContainer.transform, true).GetComponent<NoteImage>();
+                notePool.Add(note);
             }
             
-            var newNote = Instantiate(notePrefabs[noteType], noteContainer.transform, true).GetComponent<NoteImage>();
-            newNote.gameObject.SetActive(true);
-            notePools[noteType].Add(newNote);
-            return newNote;
+            note.gameObject.SetActive(true);
+            note.Setup(templates[noteType], style);
+            return note;
         }
         
         [Button]
-        public void StartSong()
+        public void StartSong(float startBeat)
         {
             OnSongStart?.Invoke();
             
-            if(IsValidSong(songData)) StartCoroutine(HandleSong(songData));
+            if(IsValidSong(songData)) StartCoroutine(HandleSong(songData, RhythmHelper.ConvertBPMToOffset(startBeat, songData)));
+        }
+
+        [Button]
+        public void RestartSong(float startBeat)
+        {
+            EndSong();
+            StartSong(startBeat);
         }
 
         private bool IsValidSong(SongData song)
@@ -112,34 +129,41 @@ namespace RhythmGame
             return isValidSong;
         }
 
-        private IEnumerator HandleSong(SongData songData)
+        private IEnumerator HandleSong(SongData songData, float songStart = 0)
         {
-            RhythmGameController.OnNoteProcessed += CheckForNoteInZone;
+            musicPlayer.PlaySong(songData, songStart);
+            RhythmGameController.OnNotePressedProcessed += CheckForNoteInZone;
             UIController.Instance.SwapToUI();
             var startTime = Time.realtimeSinceStartup;
-            float TimeElapsed() => Time.realtimeSinceStartup - startTime;
+            float TimeElapsed() => Time.realtimeSinceStartup - startTime + songStart;
             foreach (var phrase in songData.phrases)
             {
                 yield return new WaitUntil(() => TimeElapsed() >= phrase.startTime - timeToReachBottom);
-                foreach (var note in phrase.notes)
+                foreach (var note in phrase.notes.Where(x => x.offset + phrase.startTime - timeToReachBottom >= songStart))
                 {
                     yield return new WaitUntil(() => TimeElapsed() >= phrase.startTime - timeToReachBottom + note.offset);
                     foreach (var noteType in note.notes)
                     {
-                        DisplayNote(noteType);
+                        DisplayNote(noteType, note.style, note.noteLength);
                     }
                 }
             }
 
-            yield return new WaitUntil(() => !notePools.Any(x => x.Value.Any(y => y.gameObject.activeInHierarchy)));
-            RhythmGameController.OnNoteProcessed -= CheckForNoteInZone;
+            //yield return new WaitUntil(() => !notePool.Any(y => y.gameObject.activeInHierarchy));
+            yield return new WaitUntil(() => songData.song.length < TimeElapsed());
             EndSong();
         }
         
         
 
+        [Button]
         private void EndSong()
         {
+            Debug.Log("Ending Song");
+            RhythmGameController.OnNotePressedProcessed -= CheckForNoteInZone;
+            StopAllCoroutines();
+            notePool.ForEach(x => x.gameObject.SetActive(false));
+            musicPlayer.StopSong();
             OnSongEnd?.Invoke();
         }
     }

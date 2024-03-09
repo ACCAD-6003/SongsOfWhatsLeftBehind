@@ -535,6 +535,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1638374521}
   - component: {fileID: 1638374520}
+  - component: {fileID: 1638374523}
+  - component: {fileID: 1638374522}
   m_Layer: 0
   m_Name: Rhythm Game
   m_TagString: Untagged
@@ -557,20 +559,22 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 6144276038967389322, guid: 514d069845c097e4cbd58a190b8e37f9, type: 3}
-    - {fileID: 4619755220918602922, guid: 8da414c8c7db6fd4da66d58b7bde1919, type: 3}
-    - {fileID: 5169640125933858771, guid: 3d9e9c6f575ca53489da5f3bdfd7f6ee, type: 3}
-    - {fileID: 1678362025755741433, guid: 849a16f41b74d484d991d5c34c72b17f, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: notePrefabs
+    - Name: OnSongStart
+      Entry: 6
+      Data: 
+    - Name: OnSongEnd
+      Entry: 6
+      Data: 
+    - Name: templates
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[RhythmGame.NoteType, Assembly-CSharp],[UnityEngine.GameObject,
-        UnityEngine.CoreModule]], mscorlib
+      Data: 0|System.Collections.Generic.Dictionary`2[[RhythmGame.NoteType, Assembly-CSharp],[RhythmGame.NoteTemplate,
+        Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
       Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[RhythmGame.NoteType,
@@ -594,79 +598,51 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: $v
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 7
-      Data: 
-    - Name: $k
+      Data: 2|RhythmGame.NoteTemplate, Assembly-CSharp
+    - Name: noteType
       Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 10
+      Data: 1
+    - Name: singleNoteIcon
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.8396226
+    - Name: 
+      Entry: 4
+      Data: 0.343770027
+    - Name: 
+      Entry: 4
+      Data: 0.343770027
+    - Name: 
+      Entry: 4
       Data: 1
     - Name: 
       Entry: 8
       Data: 
-    - Name: 
+    - Name: longNoteIcon
       Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4
-    - Name: $v
-      Entry: 10
-      Data: 2
+      Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
-      Entry: 8
-      Data: 
+      Entry: 4
+      Data: 0.8396226
     - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 8
-    - Name: $v
-      Entry: 10
-      Data: 3
+      Entry: 4
+      Data: 0.343770027
     - Name: 
-      Entry: 8
-      Data: 
+      Entry: 4
+      Data: 0.343770027
     - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: notePositions
-      Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[RhythmGame.NoteType, Assembly-CSharp],[UnityEngine.Vector2,
-        UnityEngine.CoreModule]], mscorlib
-    - Name: comparer
-      Entry: 9
+      Entry: 4
       Data: 1
     - Name: 
-      Entry: 12
-      Data: 4
-    - Name: 
-      Entry: 7
+      Entry: 8
       Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 7
-      Data: UnityEngine.Vector2, UnityEngine.CoreModule
-    - Name: 
+    - Name: position
       Entry: 4
       Data: -3
     - Name: 
-      Entry: 4
-      Data: 5.5
-    - Name: 
       Entry: 8
       Data: 
     - Name: 
@@ -680,13 +656,49 @@ MonoBehaviour:
       Data: 2
     - Name: $v
       Entry: 7
-      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+      Data: 3|RhythmGame.NoteTemplate, Assembly-CSharp
+    - Name: noteType
+      Entry: 3
+      Data: 2
+    - Name: singleNoteIcon
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
+      Entry: 4
+      Data: 0.345098048
+    - Name: 
+      Entry: 4
+      Data: 0.8392157
+    - Name: 
+      Entry: 4
+      Data: 0.6779687
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: longNoteIcon
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.345098048
+    - Name: 
+      Entry: 4
+      Data: 0.839215755
+    - Name: 
+      Entry: 4
+      Data: 0.6784314
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: position
       Entry: 4
       Data: -1
-    - Name: 
-      Entry: 4
-      Data: 5.5
     - Name: 
       Entry: 8
       Data: 
@@ -701,13 +713,49 @@ MonoBehaviour:
       Data: 4
     - Name: $v
       Entry: 7
-      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+      Data: 4|RhythmGame.NoteTemplate, Assembly-CSharp
+    - Name: noteType
+      Entry: 3
+      Data: 4
+    - Name: singleNoteIcon
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.3540298
+    - Name: 
+      Entry: 4
+      Data: 0.8392157
+    - Name: 
+      Entry: 4
+      Data: 0.345098048
     - Name: 
       Entry: 4
       Data: 1
     - Name: 
+      Entry: 8
+      Data: 
+    - Name: longNoteIcon
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
       Entry: 4
-      Data: 5.5
+      Data: 0.3529412
+    - Name: 
+      Entry: 4
+      Data: 0.839215755
+    - Name: 
+      Entry: 4
+      Data: 0.345098048
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: position
+      Entry: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -722,13 +770,49 @@ MonoBehaviour:
       Data: 8
     - Name: $v
       Entry: 7
-      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+      Data: 5|RhythmGame.NoteTemplate, Assembly-CSharp
+    - Name: noteType
+      Entry: 3
+      Data: 8
+    - Name: singleNoteIcon
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
     - Name: 
+      Entry: 4
+      Data: 0.8392157
+    - Name: 
+      Entry: 4
+      Data: 0.345098048
+    - Name: 
+      Entry: 4
+      Data: 0.7269345
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: longNoteIcon
+      Entry: 7
+      Data: UnityEngine.Color, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0.839215755
+    - Name: 
+      Entry: 4
+      Data: 0.345098048
+    - Name: 
+      Entry: 4
+      Data: 0.7254902
+    - Name: 
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: position
       Entry: 4
       Data: 3
-    - Name: 
-      Entry: 4
-      Data: 5.5
     - Name: 
       Entry: 8
       Data: 
@@ -741,17 +825,13 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: OnSongStart
-      Entry: 6
-      Data: 
-    - Name: OnSongEnd
-      Entry: 6
-      Data: 
   songData: {fileID: 11400000, guid: cb7a8ee5426f419498cac323b5ff1888, type: 2}
-  noteDelay: 0
   correctThreshold: 0.5
   timeToReachBottom: 2
   targetZone: -3.8
+  notePrefab: {fileID: 6287804035596968944, guid: e46c0619445f7634ab62138910bd4026, type: 3}
+  yOffset: 5.5
+  musicPlayer: {fileID: 1638374522}
 --- !u!4 &1638374521
 Transform:
   m_ObjectHideFlags: 0
@@ -768,3 +848,112 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1638374522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638374519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7730e9e1de7a40038764fc8a013420b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  errorSound: {fileID: 8300000, guid: 78b6861fbfe74164dbd58c27f70ad2d0, type: 3}
+--- !u!82 &1638374523
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638374519}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -12,20 +12,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eefdd0ca8314c78a9391514fcc1bf22, type: 3}
   m_Name: Intro Song
   m_EditorClassIdentifier: 
-  song: {fileID: 0}
+  song: {fileID: 8300000, guid: 5dd7b2b419d4c8c48b3707f8173be4e7, type: 3}
   phrases:
   - phraseName: Intro
-    startTime: 2
+    startTime: 3.6486487
     notes:
-    - offset: 0
-      noteLength: 0
+    - offset: 0.4054054
+      noteLength: 1.6216217
+      style: 1
       notes: 01000000
-    - offset: 1
+    - offset: 2.4324324
       noteLength: 0
-      notes: 0200000001000000
-    - offset: 2
+      style: 0
+      notes: 02000000
+    - offset: 3.2432432
       noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 4.0540543
+      noteLength: 1.2162161
+      style: 1
+      notes: 0100000002000000
+    - offset: 6.081081
+      noteLength: 0
+      style: 0
       notes: 04000000
-    - offset: 3
+    - offset: 7.7027025
       noteLength: 0
-      notes: 
+      style: 0
+      notes: 08000000
+  bpm: 148

@@ -21,7 +21,7 @@ namespace Controller
         public static Action OnResume;
         public static Action OnNextDialogue;
         public static Action OnOverrideSkip;
-        public static Action<NoteType> OnNotePressed;
+        public static Action<NoteType, bool> OnNotePressed;
     
         public static Action OnPlayerTwoInteract;
 
@@ -144,33 +144,33 @@ namespace Controller
 
         public void FirstNote(InputAction.CallbackContext context)
         {
-            if (context.started)
-            {
-                OnNotePressed?.Invoke(NoteType.First);
-            }
+            BroadcastNote(context, NoteType.First);
         }
         
         public void SecondNote(InputAction.CallbackContext context)
         {
-            if (context.started)
-            {
-                OnNotePressed?.Invoke(NoteType.Second);
-            }
+            BroadcastNote(context, NoteType.Second);
         }
         
         public void ThirdNote(InputAction.CallbackContext context)
         {
-            if (context.started)
-            {
-                OnNotePressed?.Invoke(NoteType.Third);
-            }
+            BroadcastNote(context, NoteType.Third);
         }
         
         public void FourthNote(InputAction.CallbackContext context)
         {
+            BroadcastNote(context, NoteType.Fourth);
+        }
+
+        private void BroadcastNote(InputAction.CallbackContext context, NoteType type)
+        {
             if (context.started)
             {
-                OnNotePressed?.Invoke(NoteType.Fourth);
+                OnNotePressed?.Invoke(type, true);
+            }
+            else if (context.canceled)
+            {
+                OnNotePressed?.Invoke(type, false);
             }
         }
 

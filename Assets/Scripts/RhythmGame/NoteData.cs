@@ -8,6 +8,7 @@ namespace RhythmGame
     {
         public float offset;
         public float noteLength;
+        public NoteStyle style;
         public List<NoteType> notes = new();
     }
 }
