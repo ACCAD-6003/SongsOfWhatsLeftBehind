@@ -56,50 +56,96 @@ public static class JsonDialogueConverter
         bool ReachedChoices() => NextLine().StartsWith(CHOICES_MARKER);
         bool ReachedDialogue() => NextLine().StartsWith(DIALOGUE_MARKER);
         bool ReachedLeadsTo() => NextLine().StartsWith(LEADS_TO_MARKER);
-        //void AddChoicesToChain() => conversation.DialoguesSeries[^1].choices.Add(NextLine());
 
         conversation.ID = NextLine();
         Debug.Log($"Converting {NextLine()}");
+        RemoveLine();
+        
+        AssertMarker(NextLine(), CONDITIONAL_MARKER);
+        conversation.StateRequirements = GetCondition(NextLine()[CONDITIONAL_MARKER.Length..]);
+        RemoveLine();
+        
+        AssertMarker(NextLine(), CHANGES_MARKER);
+        conversation.StateChanges = GetWorldStateChanges(NextLine()[CHANGES_MARKER.Length..]);
         RemoveLine();
         
         AssertMarker(NextLine(), CONVERSANT_MARKER);
         conversation.Conversant = NextLine()[CONVERSANT_MARKER.Length..];
         RemoveLine();
 
+        AssertMarker(NextLine(), DIALOGUE_MARKER);
+        RemoveLine();
+        CreateNewChain();
         while (!ReachedLeadsTo())
         {
-            AssertMarker(NextLine(), DIALOGUE_MARKER);
+            AddDialogueToChain(conversation, NextLine());
             RemoveLine();
-            
-            CreateNewChain();
-
-            while (!ReachedChoices())
-            {
-                AddDialogueToChain(conversation, NextLine());
-                RemoveLine();
-            }
-            
-            RemoveLine();
-            
-            while (!ReachedDialogue() && !ReachedLeadsTo())
-            {
-                //AddChoicesToChain();
-                RemoveLine();
-            }
         }
         
         AssertMarker(NextLine(), LEADS_TO_MARKER);
         if(!NextLine().Trim().EndsWith(LEADS_TO_MARKER))
-            conversation.LeadsTo.Add(NextLine()[LEADS_TO_MARKER.Length..].Trim());
+            conversation.LeadsTo.Add(GetChoice(NextLine()[LEADS_TO_MARKER.Length..].Trim()));
         RemoveLine();
 
         while (MoreLinesToProcess())
         {
-            conversation.LeadsTo.Add(NextLine());
+            conversation.LeadsTo.Add(GetChoice(NextLine().Trim()));
             RemoveLine();
         }
 
         return conversation;
+    }
+    
+    /*
+     * Can be in the following forms:
+     * None
+     * {stateName}
+     * !{stateName}
+     * {value} {operator} {stateName} {operator} {value}
+     *
+     * Also supports multiple conditions separated by "and" or "or"
+     *
+     * Value is an integer
+     * StateName is a string that is not an integer
+     * Where operator is one of: ==, !=, >, <, >=, <=
+     */
+    private static List<StateRequirement> GetCondition(string line)
+    {
+        var conditionals = new List<StateRequirement>();
+        if (line == "None") return conditionals;
+        
+        var conditions = line.Split("and").Select(x => x.Trim()).ToList();
+        conditionals.AddRange(conditions.Select(components => new StateRequirement(components)));
+
+        return conditionals;
+    }
+
+    /*
+     * Can be in the following forms:
+     * None
+     * {stateName}
+     * !{stateName}
+     * {stateName} = {value}
+     * {stateName} += {value}
+     * {stateName} -= {value}
+     */
+    private static List<StateChange> GetWorldStateChanges(string line)
+    {
+        var changes = new List<StateChange>();
+        if (line == "None") return changes;
+        
+        var conditions = line.Split("and").Select(x => x.Trim()).ToList();
+        changes.AddRange(conditions.Select(components => new StateChange(components)));
+
+        return changes;
+    }
+    
+    private static LeadsToPath GetChoice(string line)
+    {
+        var hasPrompt = line.Contains("=>");
+        var prompt = hasPrompt ? line.Split("=>")[0].Trim() : "";
+        var nextID = hasPrompt ? line.Split("=>")[1].Trim() : line.Trim();
+        return new LeadsToPath(prompt, nextID);        
     }
 
     private static void AddDialogueToChain(ConversationData conversation, string line)

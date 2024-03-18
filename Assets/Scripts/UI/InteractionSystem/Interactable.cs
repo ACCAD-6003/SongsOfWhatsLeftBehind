@@ -24,21 +24,16 @@ namespace UI.InteractionSystem
             return objectToCheck.gameObject.CompareTag(tagToCheck);
         } 
         
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (!HasTag(other.gameObject, PLAYER_TAG)) return;
-            
-            if (playersInRange == 0)
+
+            onInRange.Invoke();
+            UIController.OnInteract += goToNextScene switch
             {
-                onInRange.Invoke();
-                UIController.OnInteract += goToNextScene switch
-                {
-                    false => TriggerDialogue,
-                    true => GoToNextScene
-                };
-            }
-            
-            playersInRange++;
+                false => TriggerDialogue,
+                true => GoToNextScene
+            };
         }
         
         private void GoToNextScene()
@@ -46,13 +41,10 @@ namespace UI.InteractionSystem
             StartCoroutine(SceneTools.TransitionToScene(SceneTools.NextSceneExists ? SceneTools.NextSceneIndex : 0));
         }
         
-        private void OnTriggerExit(Collider other)
+        private void OnTriggerExit2D(Collider2D other)
         {
             if (!HasTag(other.gameObject, PLAYER_TAG)) return;
-            
-            playersInRange--;
-            if (playersInRange != 0) return;
-            
+
             onOutOfRange.Invoke();
             UIController.OnInteract -= goToNextScene switch
             {

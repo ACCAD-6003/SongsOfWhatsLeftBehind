@@ -11,8 +11,8 @@ namespace UI.Dialogue_System
         [SerializeField] GameObject choiceTemplate;
         [SerializeField] float scaleFactor;
 
-        List<TextMeshProUGUI> choicesText = new List<TextMeshProUGUI>();
-        List<RectTransform> choices = new List<RectTransform>();
+        List<TextMeshProUGUI> choicesText = new();
+        List<RectTransform> choices = new();
 
         Action<int> OnClick;
 

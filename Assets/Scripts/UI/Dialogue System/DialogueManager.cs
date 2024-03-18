@@ -19,6 +19,8 @@ namespace UI.Dialogue_System
         public static Action OnDialogueEnded;
         public static Action<string, ConversantType, ConversantType> OnTextUpdated;
         public static Action<string, ConversantType, ConversantType> OnTextSet;
+        public static Action<List<string>> OnChoiceMenuOpen;
+        public static Action OnChoiceMenuClose;
 
         [SerializeField, Tooltip("Chars/Second")] float dialogueSpeed;
         [SerializeField, Tooltip("Chars/Second")] float dialogueFastSpeed;
@@ -30,17 +32,21 @@ namespace UI.Dialogue_System
         private bool inDialogue;
         private bool continueInputReceived;
         private bool abortDialogue;
+        private int choiceSelected;
         public bool InDialogue => inDialogue;
         public bool InInternalDialogue { get; private set; }
 
         public bool ValidateID(string id) => conversationGroup.Find(data => data.Data.ID.ToLower().Equals(id.ToLower()));
         private int playersReady;
     
+        [Button] private void DisplayWorldState() => Debug.Log(WorldState.GetCurrentWorldState());
+        [Button] private void SetWorldState(string key, int value) => WorldState.SetState(key, _ => value);
 
         protected override void Awake()
         {
             base.Awake();
             conversationGroup = Resources.LoadAll<SOConversationData>("Dialogue").ToList();
+            conversationGroup.Sort((x, y) => x.Data.StateRequirements.Count > y.Data.StateRequirements.Count ? -1 : 1);
         }
 
         private void Start()
@@ -112,13 +118,14 @@ namespace UI.Dialogue_System
                 return;
             }
 
-            var conversationDataPointer = conversationGroup.Find(data => data.Data.ID.ToLower().Equals(dialogueId.ToLower()));
+            var conversationDataPointer = conversationGroup.Find(data => data.Data.ID.ToLower().Equals(dialogueId.ToLower()) && CheckStateRequirements(dialogueId));
             if (conversationDataPointer == null)
             {
                 Debug.LogError("Could not find " + dialogueId + " in database");
                 return;
             }
 
+            Debug.Log("Starting conversation: " + conversationDataPointer.Data.ID);
             StartCoroutine(HandleConversation(conversationDataPointer.Data));
         }
 
@@ -139,81 +146,95 @@ namespace UI.Dialogue_System
         private IEnumerator HandleConversation(ConversationData data)
         {
             OnDialogueStarted?.Invoke(data, PlayerOne);
-            OnDialogueStarted?.Invoke(data, PlayerTwo);
+            yield return DisplayDialogue(data);
+            UpdateWorldState(data);
+            yield return ProceedToNextDialogue(data);
+        }
 
-            abortDialogue = false;
-            UIController.OnOverrideSkip += OnAbort;
-        
-            var dialogueIndex = dialogueProgress.TryGetValue(data.ID, out var progress)
-                ? Mathf.Min(progress, data.DialoguesSeries.Count - 1)
-                : 0;
-            var dialogues = data.DialoguesSeries[dialogueIndex].dialogues;
+        private IEnumerator ProceedToNextDialogue(ConversationData data)
+        {
+            yield return AwaitChoice(data);
+            var nextDialogue = choiceSelected == -1 ? "end" : data.LeadsTo[choiceSelected].nextID;
 
-
-            for (var index = 0; index < dialogues.Count; index++)
-            {
-                if (abortDialogue) break;
-                var dialogue = dialogues[index];
-                var speakingToEachOther = data.Conversant == PLAYER_SPEAKING_TO_EACH_OTHER_LABEL;
-                switch (speakingToEachOther)
-                {
-                    case false when dialogue.speaker is PlayerOne:
-                        index++;
-                        InInternalDialogue = true;
-                        yield return ProcessDialogue(dialogue, dialogues[index], data.Conversant);
-                        continue;
-                    case false when dialogue.speaker is PlayerTwo:
-                        index++;
-                        InInternalDialogue = true;
-                        yield return ProcessDialogue(dialogues[index], dialogue, data.Conversant);
-                        continue;
-                    default:
-                        InInternalDialogue = false;
-                        yield return ProcessDialogue(dialogue, dialogue, data.Conversant);
-                        break;
-                }
-            }
-
-            UIController.OnOverrideSkip -= OnAbort;
-
-            var nextDialogueIndex = dialogueProgress.TryGetValue(data.ID, out var p)
-                ? Mathf.Min(p, data.LeadsTo.Count - 1)
-                : 0;
-            var nextDialogue = data.LeadsTo[nextDialogueIndex];
-            
-            if(nextDialogue.ToLower().StartsWith("end"))
+            if (nextDialogue.ToLower().StartsWith("end"))
                 ExitDialogue();
             else
                 StartDialogue(nextDialogue);
         }
 
+        private static void UpdateWorldState(ConversationData data)
+        {
+            foreach (var change in data.StateChanges)
+            {
+                WorldState.SetState(change.State, change.Modifier);
+            }
+        }
+
+        private bool CheckStateRequirements(string dialogueID)
+        {
+            var data = conversationGroup.Where(x => x.Data.ID == dialogueID).ToList();
+            if (!data.Any()) return true;
+
+            return data
+                .Select(x => x.Data.StateRequirements)
+                .Any(y => y.All(requirement => requirement.IsMet(WorldState.GetState(requirement.State))));
+        }
+        
+        public void SelectChoice(int choice) => choiceSelected = choice;
+
+        private IEnumerator AwaitChoice(ConversationData data)
+        {
+            choiceSelected = -1;
+            if (!data.HasChoice)
+            {
+                choiceSelected = data.LeadsTo.FindIndex(x => CheckStateRequirements(x.nextID));
+            }
+            else
+            {
+                var choices = data.LeadsTo.Where(x => CheckStateRequirements(x.nextID)).ToList();
+                OnChoiceMenuOpen?.Invoke(choices.Select(x => x.nextID).ToList());
+                yield return new WaitUntil(() => choiceSelected != -1);
+                OnChoiceMenuClose?.Invoke();
+            }
+        }
+
+        private IEnumerator DisplayDialogue(ConversationData data)
+        {
+            abortDialogue = false;
+            UIController.OnOverrideSkip += OnAbort;
+
+            var dialogueIndex = dialogueProgress.TryGetValue(data.ID, out var progress)
+                ? Mathf.Min(progress, data.DialoguesSeries.Count - 1)
+                : 0;
+            var dialogues = data.DialoguesSeries[dialogueIndex].dialogues;
+
+            foreach (var dialogue in dialogues.TakeWhile(_ => !abortDialogue))
+            {
+                yield return ProcessDialogue(dialogue, data.Conversant);
+            }
+
+            UIController.OnOverrideSkip -= OnAbort;
+        }
+
         private void OnContinueInput() => continueInputReceived = true;
 
-        private IEnumerator ProcessDialogue(DialogueData dialogue, DialogueData dialogueTwo, string conversant)
+        private IEnumerator ProcessDialogue(DialogueData dialogue, string conversant)
         {
             var speakerName = SpeakerName(dialogue, conversant);
-            var speakerNameTwo = SpeakerName(dialogueTwo, conversant);
             
             OnTextSet?.Invoke(speakerName + dialogue.Dialogue, ConversantType.PlayerOne, dialogue.speaker);
             OnTextUpdated?.Invoke(speakerName, ConversantType.PlayerOne, dialogue.speaker);
-            OnTextSet?.Invoke(speakerNameTwo + dialogueTwo.Dialogue, ConversantType.PlayerTwo, dialogueTwo.speaker);
-            OnTextUpdated?.Invoke(speakerNameTwo, ConversantType.PlayerTwo, dialogueTwo.speaker);
             yield return new WaitUntil(() => FadeToBlackSystem.FadeOutComplete);
 
             continueInputReceived = false;
 
 
             UIController.OnNextDialogue += SpeedUpText;
-            playersReady = 0; 
-            StartCoroutine(TypewriterDialogue(speakerName, PlayerOne, dialogue));
-            StartCoroutine(TypewriterDialogue(speakerNameTwo, PlayerTwo, dialogueTwo));
-            yield return new WaitUntil(() => playersReady == 2);
+            yield return TypewriterDialogue(speakerName, PlayerOne, dialogue);
             UIController.OnNextDialogue -= SpeedUpText;
 
             UIController.OnNextDialogue += OnContinueInput;
-
             yield return new WaitUntil(() => continueInputReceived);
-
             UIController.OnNextDialogue -= OnContinueInput;
         }
 
@@ -225,15 +246,12 @@ namespace UI.Dialogue_System
             speakerName = dialogue.speaker switch
             {
                 ConversantType.PlayerOne => PLAYER_MARKER,
-                ConversantType.PlayerTwo => PLAYER_TWO_MARKER,
                 ConversantType.Conversant => conversant + ": ",
                 _ => speakerName
             };
-            speakerName = Underline(speakerName) + "\n";
+            speakerName = $"<u>{speakerName}</u>" + "\n";
 
             return speakerName;
-
-            string Underline(string text) => "<u>" + text + "</u>";
         }
 
         private IEnumerator TypewriterDialogue(string name, ConversantType player, DialogueData dialogue)

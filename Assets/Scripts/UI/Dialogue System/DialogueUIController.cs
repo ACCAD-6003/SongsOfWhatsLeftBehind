@@ -14,6 +14,7 @@ namespace UI.Dialogue_System
         [SerializeField] private TextBoxDisplay textBoxDisplay;
         [SerializeField] private ConversantType player;
         [SerializeField] private Dictionary<ConversantType, DialogueDisplay> dialogueBackgrounds;
+        [SerializeField] private ChoicesDisplay choicesDisplay;
         [SerializeField] private Image grayBackground;
         [SerializeField] private Image playerPortrait;
         
@@ -27,6 +28,7 @@ namespace UI.Dialogue_System
         private void HideUI()
         {
             DialogueManager.OnTextUpdated -= UpdateDialogue;
+            DialogueManager.OnChoiceMenuOpen -= DisplayChoices;
             Debug.Log("Hiding UI");
             
             foreach (Transform child in transform)
@@ -50,6 +52,7 @@ namespace UI.Dialogue_System
             textBoxDisplay.Display(player);
             DialogueManager.OnTextUpdated += UpdateDialogue;
             DialogueManager.OnTextSet += SetDialogue;
+            DialogueManager.OnChoiceMenuOpen += DisplayChoices;
         }
 
         private void SetDialogue(string text, ConversantType playerListener, ConversantType speaker)
@@ -70,19 +73,25 @@ namespace UI.Dialogue_System
             if (player != playerListener) return;
             textBoxDisplay.UpdateDialogueText(text, playerListener);
         }
+        
+        private void DisplayChoices(List<string> choices)
+        {
+            choicesDisplay.Display(choices, OnChoiceSelected);
+        }
+        
+        private void OnChoiceSelected(int index)
+        {
+            DialogueManager.Instance.SelectChoice(index);
+            choicesDisplay.Hide();
+        }
 
         private void OnDisable()
         {
             DialogueManager.OnDialogueStarted -= DisplayUI;
             DialogueManager.OnDialogueEnded -= HideUI;
             DialogueManager.OnTextSet -= SetDialogue;
-        }
-
-        private void OnDestroy()
-        {
-            DialogueManager.OnDialogueStarted -= DisplayUI;
             DialogueManager.OnTextUpdated -= UpdateDialogue;
-            DialogueManager.OnTextSet -= SetDialogue;
+            DialogueManager.OnChoiceMenuOpen -= DisplayChoices;
         }
 
         [System.Serializable]

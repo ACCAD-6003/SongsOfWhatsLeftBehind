@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: ChoiceDialogue
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: ChoiceDialogue
+    Conversant: Player
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: "You\u2019re so far away from me\u2026"
+    LeadsTo:
+    - inspectorDescription: 'Prompt: I know Leads to: SimpleDialogue'
+      prompt: I know
+      nextID: SimpleDialogue
+    - inspectorDescription: "Prompt: I\u2019ll try Leads to: ConditionalDialogue"
+      prompt: "I\u2019ll try"
+      nextID: ConditionalDialogue
+    - inspectorDescription: 'Prompt: No Leads to: exit'
+      prompt: No
+      nextID: exit
+    StateChanges: []
+    StateRequirements: []
