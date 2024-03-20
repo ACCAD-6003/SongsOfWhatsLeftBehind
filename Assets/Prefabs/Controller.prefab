@@ -73,213 +73,57 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: ceb8f355-1403-48a9-9894-ce302251fdf3
     m_ActionName: Gameplay/Interact[/Keyboard/e,/Keyboard/enter]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller.UIController, Assembly-CSharp
-        m_MethodName: Pause
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b6b61349-4087-436f-818c-19001bc83357
-    m_ActionName: Gameplay/Pause[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller.UIController, Assembly-CSharp
-        m_MethodName: Click
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e54344a1-1f45-45d0-94e6-6ee8d6daa7d3
-    m_ActionName: Gameplay/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: NavigateMenu
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 100702a6-2f17-4121-a31e-cf068476d40b
-    m_ActionName: UI/Navigate Menu[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: Select
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 44a4228b-fc36-42c8-acb8-0a18489ddb16
-    m_ActionName: UI/Select[/Keyboard/enter,/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: GoBack
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 48c0b318-fe10-4854-8754-804a9619c585
-    m_ActionName: UI/Go Back[/Keyboard/backspace]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: Skip
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9dc674c5-a479-4c94-81a1-6db0babbae6e
-    m_ActionName: UI/Skip
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: Resume
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b0f996c3-4345-4bdc-842f-1d985eac0c4c
-    m_ActionName: UI/Resume[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: NextDialogue
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 3fa48add-0a7a-4444-9ae2-e0d2abdab471
-    m_ActionName: UI/NextDialogue[/Keyboard/e,/Keyboard/enter,/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller.UIController, Assembly-CSharp
-        m_MethodName: OverrideSkip
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d80b88f0-fe9f-4aef-adf6-9c12054956f4
-    m_ActionName: UI/AbortDialogue[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: PlayerTwoInteract
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: a66cb535-1341-4316-9d3d-e9235d510873
     m_ActionName: Gameplay/PlayerTwoInteract[/Keyboard/enter]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller.UIController, Assembly-CSharp
-        m_MethodName: ChitChat
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+    m_ActionId: b6b61349-4087-436f-818c-19001bc83357
+    m_ActionName: Gameplay/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e54344a1-1f45-45d0-94e6-6ee8d6daa7d3
+    m_ActionName: Gameplay/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
     m_ActionId: 5c321b6a-8c83-4133-9bf1-9ba19dc924ab
     m_ActionName: Gameplay/ChitChat[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3211393832728974128}
-        m_TargetAssemblyTypeName: Controller.UIController, Assembly-CSharp
-        m_MethodName: SkipScene
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 35efbd99-009e-442c-a903-11a12e41e76d
     m_ActionName: Gameplay/SkipScene[/Keyboard/0]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 100702a6-2f17-4121-a31e-cf068476d40b
+    m_ActionName: UI/Navigate Menu[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 44a4228b-fc36-42c8-acb8-0a18489ddb16
+    m_ActionName: UI/Select[/Keyboard/enter,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 48c0b318-fe10-4854-8754-804a9619c585
+    m_ActionName: UI/Go Back[/Keyboard/backspace,/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9dc674c5-a479-4c94-81a1-6db0babbae6e
+    m_ActionName: UI/Skip
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b0f996c3-4345-4bdc-842f-1d985eac0c4c
+    m_ActionName: UI/Resume[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3fa48add-0a7a-4444-9ae2-e0d2abdab471
+    m_ActionName: UI/NextDialogue[/Keyboard/e,/Keyboard/enter,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d80b88f0-fe9f-4aef-adf6-9c12054956f4
+    m_ActionName: UI/AbortDialogue[/Mouse/middleButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
