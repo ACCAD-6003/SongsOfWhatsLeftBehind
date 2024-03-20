@@ -5,17 +5,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private float speed;
+    [SerializeField] private float speed;
+    [SerializeField] private Vector2 moveInput;
+    [SerializeField] private float jumpHeight = 5f;
+
     private PlayerMovement playerMovement;
     private Rigidbody2D rbody;
-    private Vector2 moveInput;
-    private float jumpHeight = 5f;
 
     private void Awake()
     {
         playerMovement = new PlayerMovement();
         rbody = GetComponent<Rigidbody2D>();
+        playerMovement.PlayerAcions.Jump.performed += Jump;
     }
 
     private void Jump(InputAction.CallbackContext ctx)
@@ -29,16 +30,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveInput = playerMovement.PlayerAcions.Movement.ReadValue<Vector2>();       
-        if (rbody.velocity.y == 0)
-        {
-            rbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-        }
-        else
-        {
-            moveInput.y = 0;
-        }
-        rbody.velocity = moveInput * speed;
+        moveInput.x = playerMovement.PlayerAcions.Movement.ReadValue<Vector2>().x;       
+        rbody.velocity = new Vector2(moveInput.x * speed, rbody.velocity.y);
     }
 
     private void OnEnable()
