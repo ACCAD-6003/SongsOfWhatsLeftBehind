@@ -35,15 +35,6 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""585904b5-616d-421e-bf6e-69f532e8b1b8"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -57,6 +48,17 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""9d769719-3e43-4a85-a6ad-125eb651ec96"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -79,17 +81,6 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b4c174b2-9de7-47fa-bea3-a2f2461453b2"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -99,7 +90,6 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
         // Player Acions
         m_PlayerAcions = asset.FindActionMap("Player Acions", throwIfNotFound: true);
         m_PlayerAcions_Movement = m_PlayerAcions.FindAction("Movement", throwIfNotFound: true);
-        m_PlayerAcions_Jump = m_PlayerAcions.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -160,13 +150,11 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PlayerAcions;
     private IPlayerAcionsActions m_PlayerAcionsActionsCallbackInterface;
     private readonly InputAction m_PlayerAcions_Movement;
-    private readonly InputAction m_PlayerAcions_Jump;
     public struct PlayerAcionsActions
     {
         private @PlayerMovement m_Wrapper;
         public PlayerAcionsActions(@PlayerMovement wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_PlayerAcions_Movement;
-        public InputAction @Jump => m_Wrapper.m_PlayerAcions_Jump;
         public InputActionMap Get() { return m_Wrapper.m_PlayerAcions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -179,9 +167,6 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                 @Movement.started -= m_Wrapper.m_PlayerAcionsActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_PlayerAcionsActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_PlayerAcionsActionsCallbackInterface.OnMovement;
-                @Jump.started -= m_Wrapper.m_PlayerAcionsActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerAcionsActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerAcionsActionsCallbackInterface.OnJump;
             }
             m_Wrapper.m_PlayerAcionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -189,9 +174,6 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
             }
         }
     }
@@ -199,6 +181,5 @@ public partial class @PlayerMovement : IInputActionCollection2, IDisposable
     public interface IPlayerAcionsActions
     {
         void OnMovement(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
     }
 }

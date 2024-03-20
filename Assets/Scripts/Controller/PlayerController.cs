@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,23 +10,34 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement playerMovement;
     private Rigidbody2D rbody;
     private Vector2 moveInput;
+    private float jumpHeight = 5f;
 
     private void Awake()
     {
         playerMovement = new PlayerMovement();
         rbody = GetComponent<Rigidbody2D>();
-        playerMovement.PlayerAcions.Jump.performed += Jump();
     }
 
-    private void Jump()
+    private void Jump(InputAction.CallbackContext ctx)
     {
-
+        if (rbody.velocity.y == 0)
+        {
+            Debug.Log("Bruh");
+            rbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+        }
     }
 
     private void FixedUpdate()
     {
-        moveInput = playerMovement.PlayerAcions.Movement.ReadValue<Vector2>();
-        moveInput.y = 0f;
+        moveInput = playerMovement.PlayerAcions.Movement.ReadValue<Vector2>();       
+        if (rbody.velocity.y == 0)
+        {
+            rbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+        }
+        else
+        {
+            moveInput.y = 0;
+        }
         rbody.velocity = moveInput * speed;
     }
 
