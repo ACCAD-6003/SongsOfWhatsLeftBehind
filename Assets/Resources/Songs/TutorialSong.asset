@@ -12,25 +12,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eefdd0ca8314c78a9391514fcc1bf22, type: 3}
   m_Name: TutorialSong
   m_EditorClassIdentifier: 
-  song: {fileID: 0}
+  song: {fileID: 8300000, guid: 45748c068c5fcc847881ce207a58a7fa, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 0.75
     notes:
-    - offset: 3.75
+    - offset: 3
       noteLength: 0
       style: 0
       notes: 02000000
-    - offset: 4.5
+    - offset: 3.75
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 5.25
+    - offset: 4.5
       noteLength: 0
       style: 0
       notes: 01000000
+    - offset: 5.25
+      noteLength: 0
+      style: 0
+      notes: 02000000
     - offset: 6
-      noteLength: 1.5
-      style: 1
-      notes: 08000000
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 6.75
+      noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 7.5
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 8.25
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 9
+      noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 9.75
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 10.5
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 11.25
+      noteLength: 0
+      style: 0
+      notes: 01000000
   bpm: 80
