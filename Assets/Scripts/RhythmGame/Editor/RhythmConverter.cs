@@ -58,7 +58,7 @@ namespace RhythmGame.Editor
                     RemoveLine();
                     while (MoreLinesToProcess() && !NextLine().StartsWith(PhraseLabel))
                     {
-                        var note = CreateTimeNote(NextLine().Split(), BpmCalculator);
+                        var note = CreateTimeNote(NextLine().Split(" "), BpmCalculator);
                         RemoveLine();
 
                         phrase.notes.Add(note);
@@ -85,12 +85,14 @@ namespace RhythmGame.Editor
 
             if (i != splitLine.Length - 1)
             {
+                Debug.Log($"Held Note: {splitLine[^2]} to {splitLine[^1]}");
                 note.style = NoteStyle.Hold;
                 note.offset = offsetCalculator(splitLine[^2]);
                 note.noteLength = offsetCalculator(splitLine[^1]) - note.offset;
             }
             else
             {
+                Debug.Log($"Single Note: {splitLine.Last()}");
                 note.style = NoteStyle.Single;
                 note.offset = offsetCalculator(splitLine.Last());
             }
@@ -101,15 +103,16 @@ namespace RhythmGame.Editor
         private static float ConvertTimeToOffset(string time)
         {
             var timeParts = time.Split(':');
-            var minutes = float.Parse(timeParts[0]);
-            var seconds = float.Parse(timeParts[1]);
-            var milliseconds = float.Parse(timeParts[2]);
-            return (minutes * 60 + seconds + milliseconds / 1000);
+            Debug.Log(time);
+            var minutes = int.Parse(timeParts[0]);
+            var seconds = int.Parse(timeParts[1]);
+            var milliseconds = timeParts.Length > 2 ? int.Parse(timeParts[2]) : 0;
+            return (minutes * 60 + seconds + milliseconds / 1000f);
         }
         
         private static float ConvertBPMToOffset(string beat, float bpm)
         {
-            return float.Parse(beat) * (60 / bpm);
+            return float.TryParse(beat, out var x) ? x * (60 / bpm) : ConvertTimeToOffset(beat);
         }
 
         private static void AssertMarker(string text, string marker)
