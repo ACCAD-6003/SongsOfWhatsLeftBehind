@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eefdd0ca8314c78a9391514fcc1bf22, type: 3}
+  m_Name: Messing
+  m_EditorClassIdentifier: 
+  song: {fileID: 0}
+  phrases:
+  - phraseName: Phrase
+    startTime: 0.6
+    notes:
+    - offset: 3
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 3.6
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 4.2
+      noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 4.8
+      noteLength: 0
+      style: 0
+      notes: 08000000
+  bpm: 100
