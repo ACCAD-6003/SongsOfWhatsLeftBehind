@@ -63,6 +63,7 @@ namespace RhythmGame
                     Controller.RhythmGameController.OnNoteReleasedProcessed += UponRelease;
                     break;
                 case NoteStyle.Single:
+                    this.loseScore = null;
                     gameObject.SetActive(false);
                     score();
                     break;
