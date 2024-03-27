@@ -183,4 +183,167 @@ MonoBehaviour:
       noteLength: 2.25
       style: 1
       notes: 08000000
+  - phraseName: Phrase
+    startTime: 51
+    notes:
+    - offset: 0.75
+      noteLength: 1.875
+      style: 1
+      notes: 02000000
+  - phraseName: Phrase
+    startTime: 53.25
+    notes:
+    - offset: 1.125
+      noteLength: 1.5
+      style: 1
+      notes: 01000000
+  - phraseName: Phrase
+    startTime: 55.5
+    notes:
+    - offset: 1.125
+      noteLength: 0.75
+      style: 1
+      notes: 02000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 2.625
+      noteLength: 0
+      style: 0
+      notes: 08000000
+    - offset: 3
+      noteLength: 0
+      style: 0
+      notes: 08000000
+  - phraseName: Phrase
+    startTime: 57.75
+    notes:
+    - offset: 1.125
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 1.5
+      noteLength: 1.125
+      style: 1
+      notes: 02000000
+    - offset: 3
+      noteLength: 0
+      style: 0
+      notes: 01000000
+  - phraseName: Phrase
+    startTime: 60
+    notes:
+    - offset: 1.125
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 1.875
+      noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 2.625
+      noteLength: 0
+      style: 0
+      notes: 01000000
+  - phraseName: Phrase
+    startTime: 62.25
+    notes:
+    - offset: 0.75
+      noteLength: 1.5
+      style: 1
+      notes: 04000000
+  - phraseName: Phrase
+    startTime: 64.5
+    notes:
+    - offset: 1.125
+      noteLength: 1.125
+      style: 1
+      notes: 08000000
+  - phraseName: Phrase
+    startTime: 66.75
+    notes:
+    - offset: 0.75
+      noteLength: 1.875
+      style: 1
+      notes: 04000000
+  - phraseName: Phrase
+    startTime: 71.25
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 1.125
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 1.875
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 2.625
+      noteLength: 0
+      style: 0
+      notes: 04000000
+  - phraseName: Phrase
+    startTime: 73.5
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 1.125
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 1.875
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 2.25
+      noteLength: 3
+      style: 1
+      notes: 08000000
+  - phraseName: Phrase
+    startTime: 78
+    notes:
+    - offset: 1.125
+      noteLength: 1.125
+      style: 1
+      notes: 01000000
+  - phraseName: Phrase
+    startTime: 80.25
+    notes:
+    - offset: 1.125
+      noteLength: 1.125
+      style: 1
+      notes: 08000000
+  - phraseName: Phrase
+    startTime: 82.5
+    notes:
+    - offset: 1.125
+      noteLength: 6.375
+      style: 1
+      notes: 0200000004000000
   bpm: 80
