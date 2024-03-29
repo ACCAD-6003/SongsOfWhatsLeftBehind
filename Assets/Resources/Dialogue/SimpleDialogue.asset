@@ -28,9 +28,9 @@ MonoBehaviour:
       - speaker: 0
         Dialogue: "Yeah let\u2019s do this!"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
+    - inspectorDescription: 'Prompt:  Triggers Event: SadQuest1'
       prompt: 
-      nextID: end
-      isEvent: 0
+      nextID: SadQuest1
+      isEvent: 1
     StateChanges: []
     StateRequirements: []

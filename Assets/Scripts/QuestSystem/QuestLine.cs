@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 
 namespace QuestSystem
@@ -7,10 +11,26 @@ namespace QuestSystem
     public class QuestLine : ScriptableObject
     {
         [SerializeField] private string questName;
+        [SerializeField] private string triggerEvent;
         [SerializeField] private List<Task> tasks = new();
-
+        
         private int currentTaskIndex = 0;
         
+        public string TriggerEvent => triggerEvent;
+
+        public void SetupQuestLine(string sectionToParse)
+        {
+            var lines = sectionToParse.Split('\n').Where(x => !x.IsNullOrWhitespace()).ToArray();
+            triggerEvent = lines[0].Trim();
+            questName = lines[1].Trim();
+            name = triggerEvent;
+            tasks.Clear();
+            for (int i = 2; i < lines.Length; i++)
+            {
+                tasks.Add(new Task(lines[i]));
+            }
+        }
+
         public void ResetQuestLine()
         {
             currentTaskIndex = 0;
@@ -31,9 +51,9 @@ namespace QuestSystem
             return description;
         }
         
-        public string GetNextTaskCondition()
+        public bool CheckNextCompletionStatus(Func<string, int> getWorldState)
         {
-            return currentTaskIndex < tasks.Count ? tasks[currentTaskIndex].completionCondition : null;
+            return currentTaskIndex < tasks.Count && tasks[currentTaskIndex].IsCompleted(getWorldState);
         }
 
         public void CompleteCurrentTask()

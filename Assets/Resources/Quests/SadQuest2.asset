@@ -10,11 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a19351fa36549739574611fa0bb79dd, type: 3}
-  m_Name: SadQuest
+  m_Name: SadQuest2
   m_EditorClassIdentifier: 
-  questName: Learn about what is troubling Garret
-  triggerEvent: 'Quest: SadQuest1'
+  questName: Learn more about Garrets minecraft addiction
+  triggerEvent: SadQuest2
   tasks:
   - label: Speak to the baker
+    completionCondition: bakerSpokenToAgain
+    comparisonType: 4
+    comparisonValue: 1
   - label: Ask John about what happened at the hospital
+    completionCondition: heardAboutHospitalAgain
+    comparisonType: 4
+    comparisonValue: 1
   - label: Ask around the town about Garret
+    completionCondition: garretMentioned
+    comparisonType: 4
+    comparisonValue: 6
+  DEBUG_sectionToParse: 

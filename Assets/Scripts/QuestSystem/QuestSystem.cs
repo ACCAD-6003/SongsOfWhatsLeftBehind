@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Controller;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace QuestSystem
 {
     public class QuestSystem : SerializedMonoBehaviour
     {
-        [SerializeField] private Dictionary<string, QuestLine> questLines = new();
+        [SerializeField] private List<QuestLine> questLines = new();
         [SerializeField] QuestUIDisplay questUIDisplay;
         
         private QuestLine currentQuestLine;
@@ -29,23 +30,16 @@ namespace QuestSystem
         private void HandleWorldStateChanged()
         {
             if (currentQuestLine == null 
-                || currentQuestLine.GetNextTaskCondition() == null
-                || !WorldState.InState(currentQuestLine.GetNextTaskCondition())) return;
+                || !currentQuestLine.CheckNextCompletionStatus(WorldState.GetState)) return;
 
             currentQuestLine.CompleteCurrentTask();
-            if (currentQuestLine.GetNextTaskCondition() == null)
-            {
-                currentQuestLine = null;
-            }
         }
         
         private void HandleEventTriggered(string eventName)
         {
-            if (questLines.TryGetValue(eventName, out var questLine) && currentQuestLine != questLine)
-            {
-                questLine.ResetQuestLine();
-                currentQuestLine = questLine;
-            }
+            if (questLines.All(x => x.TriggerEvent != eventName)) return;
+            currentQuestLine = questLines.Find(x => x.TriggerEvent == eventName);
+            currentQuestLine.ResetQuestLine();
         }
 
         private void OpenUI()

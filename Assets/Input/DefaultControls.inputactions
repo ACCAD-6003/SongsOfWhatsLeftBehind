@@ -33,15 +33,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ChitChat",
-                    "type": "Button",
-                    "id": "5c321b6a-8c83-4133-9bf1-9ba19dc924ab",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "SkipScene",
                     "type": "Button",
                     "id": "35efbd99-009e-442c-a903-11a12e41e76d",
@@ -86,18 +77,7 @@
                 {
                     "name": "",
                     "id": "7c29fb89-f586-412e-afb5-cdb25d02acbc",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b44fee85-68ec-4dc2-a01b-e103340b8dd1",
-                    "path": "<HID::Logitech Logitech RumblePad 2 USB>/button3",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -129,17 +109,6 @@
                 },
                 {
                     "name": "",
-                    "id": "8f06e1f1-f010-4c27-95ac-d8285335b8ea",
-                    "path": "<HID::Logitech Logitech RumblePad 2 USB>/button10",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "82df56cd-69b0-4f88-98c1-ba72b42c977c",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -152,62 +121,18 @@
                 {
                     "name": "",
                     "id": "5e506206-ca3c-4b50-beb6-cf70627d27ae",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "769c139e-74b5-4d38-b746-7a8cbaa70c44",
-                    "path": "<HID::Logitech Logitech RumblePad 2 USB>/button3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7003a53d-f6de-4eec-a712-97b8a192fda8",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChitChat",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1052d958-a7dd-4e93-b405-0ad048233c01",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChitChat",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "99f49581-7c77-4528-b237-45ee43f52e73",
-                    "path": "<HID::Logitech Logitech RumblePad 2 USB>/button3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChitChat",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "210b7b63-ffc2-4dd2-b5be-779458f210f3",
-                    "path": "<Keyboard>/0",
+                    "path": "<Gamepad>/select",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -218,7 +143,7 @@
                 {
                     "name": "",
                     "id": "ac569e60-5185-459a-9be5-cc848c1dce40",
-                    "path": "<Keyboard>/q",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -454,6 +379,28 @@
                 },
                 {
                     "name": "",
+                    "id": "145fa6c9-ca1d-4608-a421-0954d3673bc6",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3ac23af-c9d9-4174-a541-c60605b3fca3",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ad2be53e-39ac-482f-9cb1-253789d8e014",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
@@ -476,6 +423,17 @@
                 },
                 {
                     "name": "",
+                    "id": "e7192081-0c39-47c7-8a15-527c997a795a",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a95963a2-0a8c-4c72-b010-cb1ee89cafe3",
                     "path": "<Keyboard>/backspace",
                     "interactions": "",
@@ -487,8 +445,8 @@
                 },
                 {
                     "name": "",
-                    "id": "c2a12005-8f94-4d71-be83-ed9cf2da18c5",
-                    "path": "<Keyboard>/escape",
+                    "id": "8b1ba651-aa4a-432e-91ec-14e475b432b2",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -499,7 +457,18 @@
                 {
                     "name": "",
                     "id": "dfe27653-3d22-459c-a496-8eaa60cb25db",
-                    "path": "",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d071092-2c7d-4d22-9086-c0e26b1fa8ac",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -511,17 +480,6 @@
                     "name": "",
                     "id": "388ff243-62eb-407b-93ef-89ab6046a721",
                     "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Resume",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3ea87875-af97-4f12-a998-64a01871d70f",
-                    "path": "<HID::Logitech Logitech RumblePad 2 USB>/button10",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -575,30 +533,8 @@
                 },
                 {
                     "name": "",
-                    "id": "2548635a-41ab-4298-aa46-e8c53e8f8539",
-                    "path": "<Mouse>/middleButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "AbortDialogue",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "c2fd0889-ae00-48cd-9c8f-06fed5939b8d",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "NextDialogue",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ce3284f5-6d4a-4900-a764-cb386cc0f1e5",
-                    "path": "<HID::Logitech Logitech RumblePad 2 USB>/button3",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -619,8 +555,52 @@
                 },
                 {
                     "name": "",
+                    "id": "e89f32ec-186f-48f8-a845-832748410985",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "First Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bd13a448-5774-4119-baf5-20b187a3d31b",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "First Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9dbf7849-e739-4ef0-87e2-daca7279b1f5",
                     "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Second Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc7a90f1-f8c3-4f22-984f-522b3a628068",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Second Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3124dd76-5930-43b0-b7e7-a92b13a81b46",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -641,6 +621,28 @@
                 },
                 {
                     "name": "",
+                    "id": "04f615ae-7c0a-48ea-b1b4-65b9af27f5a9",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Third Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ac1cdf9-c07b-4474-8249-beaff8c33531",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Third Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "8cac0329-a218-49dc-b31c-b015297c60d7",
                     "path": "<Keyboard>/4",
                     "interactions": "",
@@ -652,8 +654,41 @@
                 },
                 {
                     "name": "",
+                    "id": "1891a18d-b0c3-4f74-90ca-dd1f8edd1e41",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fourth Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa759506-f9a5-46b9-be27-d56f2465532f",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fourth Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "03e360e0-39d9-4fd6-abed-be487a2020bf",
                     "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseQuestLog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f20bd9a6-de5c-4a30-be85-f3866c8081ca",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
