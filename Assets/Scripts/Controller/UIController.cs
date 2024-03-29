@@ -13,6 +13,7 @@ namespace Controller
         public static Action OnPause;
         public static Action OnChitChat;
         public static Action OnSkipScene;
+        public static Action OnOpenQuestLog;
 
         public static Action<Vector2> OnNavigateMenu;
         public static Action OnSelect;
@@ -21,8 +22,9 @@ namespace Controller
         public static Action OnResume;
         public static Action OnNextDialogue;
         public static Action OnOverrideSkip;
+        public static Action OnCloseQuestLog;
         public static Action<NoteType, bool> OnNotePressed;
-    
+
         public static Action OnPlayerTwoInteract;
 
         public static Action OnCancel;
@@ -69,6 +71,14 @@ namespace Controller
             if (context.started)
             {
                 OnSkipScene?.Invoke();
+            }
+        }
+        
+        public void OpenQuestLog(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnOpenQuestLog?.Invoke();
             }
         }
 
@@ -135,6 +145,14 @@ namespace Controller
             if (context.started)
             {
                 OnOverrideSkip?.Invoke();
+            }
+        }
+        
+        public void CloseQuestLog(InputAction.CallbackContext context)
+        {
+            if (context.started)
+            {
+                OnCloseQuestLog?.Invoke();
             }
         }
 

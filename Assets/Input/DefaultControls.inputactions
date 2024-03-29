@@ -15,15 +15,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "PlayerTwoInteract",
-                    "type": "Button",
-                    "id": "a66cb535-1341-4316-9d3d-e9235d510873",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Pause",
                     "type": "Button",
                     "id": "b6b61349-4087-436f-818c-19001bc83357",
@@ -54,6 +45,15 @@
                     "name": "SkipScene",
                     "type": "Button",
                     "id": "35efbd99-009e-442c-a903-11a12e41e76d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "OpenQuestLog",
+                    "type": "Button",
+                    "id": "ed24d128-963c-482f-8994-7d3d8df77795",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -173,39 +173,6 @@
                 },
                 {
                     "name": "",
-                    "id": "eaaa3985-46b5-40d6-a4d7-319c44e2d8b5",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerTwoInteract",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fb80fbb9-a531-4a27-a297-fba7cb82ec58",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerTwoInteract",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "23bff18d-1e14-4f9e-8227-747b58734430",
-                    "path": "<HID::Logitech Logitech RumblePad 2 USB>/button3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerTwoInteract",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "7003a53d-f6de-4eec-a712-97b8a192fda8",
                     "path": "<Keyboard>/q",
                     "interactions": "",
@@ -245,6 +212,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SkipScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ac569e60-5185-459a-9be5-cc848c1dce40",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenQuestLog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -348,6 +326,15 @@
                     "name": "Fourth Key",
                     "type": "Button",
                     "id": "5c5ef1d3-caf6-46a4-95fa-a89adc4b4cb7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CloseQuestLog",
+                    "type": "Button",
+                    "id": "19e316b7-454d-432f-a9bd-bd1e11b271de",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -660,6 +647,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Fourth Key",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03e360e0-39d9-4fd6-abed-be487a2020bf",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseQuestLog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
