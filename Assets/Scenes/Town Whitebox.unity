@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 597510640}
   - component: {fileID: 597510641}
   - component: {fileID: 597510642}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sign Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1709,7 +1709,7 @@ GameObject:
   - component: {fileID: 1353427672}
   - component: {fileID: 1353427674}
   - component: {fileID: 1353427673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: House Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2190,7 +2190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1671108768}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2422,7 +2422,7 @@ GameObject:
   - component: {fileID: 1809239295}
   - component: {fileID: 1809239297}
   - component: {fileID: 1809239296}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shed Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3025,7 +3025,7 @@ GameObject:
   - component: {fileID: 2091892985}
   - component: {fileID: 2091892986}
   - component: {fileID: 2091892987}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sign Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -42,3 +42,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: People
+    uniqueID: 2245693397
+    locked: 0

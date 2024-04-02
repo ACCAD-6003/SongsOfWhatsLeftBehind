@@ -46,6 +46,17 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
         }
+
+        if (rbody.velocity.y > 0)
+        {
+            Debug.Log("LAMO");
+            Physics2D.IgnoreLayerCollision(0, 3, true);
+        }
+        //else the collision will not be ignored
+        else
+        {
+            Physics2D.IgnoreLayerCollision(0, 3, false);
+        }
     }
 
     private void FixedUpdate()
