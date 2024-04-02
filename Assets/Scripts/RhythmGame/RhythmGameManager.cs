@@ -165,6 +165,7 @@ namespace RhythmGame
             notePool.ForEach(x => x.gameObject.SetActive(false));
             musicPlayer.StopSong();
             OnSongEnd?.Invoke();
+            UIController.Instance.SwapToGameplay();
         }
     }
 }

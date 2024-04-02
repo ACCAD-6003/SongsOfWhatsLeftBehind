@@ -9,7 +9,7 @@ namespace UI.Menus
     public class PauseMenu : MenuBase
     {
         protected override Action OpenTrigger { get => UIController.OnPause; set => UIController.OnPause = value; }
-        protected override Action CloseTrigger { get => UIController.OnGoBack; set => UIController.OnGoBack = value; }
+        protected override Action CloseTrigger { get => UIController.OnResume; set => UIController.OnResume = value; }
         
         [Button]
         private void DEBUG_OpenMenu()
