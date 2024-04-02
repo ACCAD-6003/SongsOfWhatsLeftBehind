@@ -122,6 +122,12 @@ namespace RhythmGame
             if(IsValidSong(songData)) StartCoroutine(HandleSong(songData, RhythmHelper.ConvertBPMToOffset(startBeat, songData)));
         }
 
+        public void PlaySong(SongData song)
+        {
+            songData = song;
+            StartSong(0);
+        }
+
         [Button]
         public void RestartSong(float startBeat)
         {

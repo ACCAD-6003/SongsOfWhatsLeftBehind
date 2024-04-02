@@ -625,6 +625,9 @@ GameObject:
   - component: {fileID: 1638374523}
   - component: {fileID: 1638374522}
   - component: {fileID: 1638374524}
+  - component: {fileID: 1638374527}
+  - component: {fileID: 1638374526}
+  - component: {fileID: 1638374525}
   m_Layer: 0
   m_Name: Rhythm Game
   m_TagString: Untagged
@@ -1081,17 +1084,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventToReceive: PlayTutorialSong
+  eventToReceive: PlayHappySong
   onEventReceived:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1638374520}
         m_TargetAssemblyTypeName: RhythmGame.RhythmGameManager, Assembly-CSharp
-        m_MethodName: StartSong
-        m_Mode: 4
+        m_MethodName: PlaySong
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
+          m_ObjectArgumentAssemblyTypeName: RhythmGame.SongData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1638374525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638374519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToReceive: PlayDeterminedSong
+  onEventReceived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1638374520}
+        m_TargetAssemblyTypeName: RhythmGame.RhythmGameManager, Assembly-CSharp
+        m_MethodName: PlaySong
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
+          m_ObjectArgumentAssemblyTypeName: RhythmGame.SongData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1638374526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638374519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToReceive: PlayAngrySong
+  onEventReceived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1638374520}
+        m_TargetAssemblyTypeName: RhythmGame.RhythmGameManager, Assembly-CSharp
+        m_MethodName: PlaySong
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
+          m_ObjectArgumentAssemblyTypeName: RhythmGame.SongData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1638374527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638374519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToReceive: PlaySadSong
+  onEventReceived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1638374520}
+        m_TargetAssemblyTypeName: RhythmGame.RhythmGameManager, Assembly-CSharp
+        m_MethodName: PlaySong
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
+          m_ObjectArgumentAssemblyTypeName: RhythmGame.SongData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1260,27 +1347,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3207732717548692664, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3207732717548692664, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3207732717548692664, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3207732717548692664, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3207732717548692664, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3207732717548692664, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -203.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3375476069415742311, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: serializationData.Prefab
@@ -1288,27 +1375,27 @@ PrefabInstance:
       objectReference: {fileID: 3375476069415742311, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
     - target: {fileID: 3751857342427152572, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3751857342427152572, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3751857342427152572, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3751857342427152572, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3751857342427152572, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 293.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3751857342427152572, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -308.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5771320139781711516, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_RootOrder
@@ -1360,7 +1447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8441142607620619466, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9082992164545186048, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: serializationData.Prefab
