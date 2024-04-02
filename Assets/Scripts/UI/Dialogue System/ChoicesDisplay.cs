@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace UI.Dialogue_System
 {
@@ -13,6 +14,7 @@ namespace UI.Dialogue_System
 
         List<TextMeshProUGUI> choicesText = new();
         List<RectTransform> choices = new();
+        List<SimpleButton> choiceButtons = new();
 
         Action<int> OnClick;
 
@@ -23,16 +25,15 @@ namespace UI.Dialogue_System
                 GameObject instance = Instantiate(choiceTemplate, transform);
                 var textBox = instance.transform.GetComponentInChildren<TextMeshProUGUI>();
                 textBox.text = choiceOption;
-                textBox.color = Color.gray;
                 var uiButton = instance.transform.GetComponent<SimpleButton>();
                 uiButton.OnClick += UiButton_OnClick;
                 uiButton.OnSelect += UiButton_OnSelect;
                 choicesText.Add(textBox);
                 choices.Add(instance.GetComponent<RectTransform>());
+                choiceButtons.Add(uiButton);
             }
 
             this.OnClick = OnClick;
-            if (choicesText.Count > 0) SelectChoice(0);
         }
 
         private void UiButton_OnClick(IButton obj)
@@ -42,18 +43,12 @@ namespace UI.Dialogue_System
 
         private void UiButton_OnSelect(IButton obj)
         {
-            SelectChoice(choices.Select(x => x.GetComponent<IButton>()).ToList().IndexOf(obj));
+            var choice = choices.Select(x => x.GetComponent<IButton>()).ToList().IndexOf(obj);
         }
 
         public void SelectChoice(int index)
         {
-            choicesText.ForEach(choice => choice.color = Color.gray);
-            choicesText[index].color = Color.black;
-            if (choices.Count > 0)
-            {
-                choices.ForEach(x => x.localScale = Vector3.one);
-                choices[index].localScale = Vector3.one * scaleFactor;
-            }
+            choiceButtons[index].ToggleSelected(true);
         }
 
         public void Hide()
@@ -66,14 +61,14 @@ namespace UI.Dialogue_System
             int children = transform.childCount - 1;
             while(children >= 0)
             {
-                var uiButton = transform.GetChild(children).transform.GetComponent<SimpleButton>();
-                uiButton.OnSelect -= UiButton_OnClick;
-                uiButton.OnSelect -= UiButton_OnSelect;
+                choiceButtons[children].OnSelect -= UiButton_OnClick;
+                choiceButtons[children].OnSelect -= UiButton_OnSelect;
                 Destroy(transform.GetChild(children).gameObject);
                 children--;
             }
             choicesText.Clear();
             choices.Clear();
+            choiceButtons.Clear();
         }
     }
 }

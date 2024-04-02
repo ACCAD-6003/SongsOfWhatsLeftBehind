@@ -9,10 +9,12 @@ public abstract class UIButton : MonoBehaviour, IButton, IPointerEnterHandler
     public event Action<IButton> OnSelect;
     public event Action<IButton> OnClick;
     protected bool isSelected;
-
+    private Button button;
+    
     public void Awake()
     {
-        GetComponent<Button>().onClick.AddListener(Click);
+        button = GetComponent<Button>();
+        button.onClick.AddListener(Click);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -29,7 +31,7 @@ public abstract class UIButton : MonoBehaviour, IButton, IPointerEnterHandler
     public virtual void ToggleSelected(bool isSelected)
     {
         this.isSelected = isSelected;
-        transform.localScale = Vector3.one * (isSelected ? 1.2f : 1);
+        if (isSelected) button.Select();
     }
 
     public abstract void Use();

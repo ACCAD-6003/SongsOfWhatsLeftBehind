@@ -14,8 +14,7 @@ namespace UI.Dialogue_System
         public static readonly string CONVERSANT_MARKER = "Conversant: ";
         public static readonly string UNLOCKS_MARKER = "Unlocks: ";
         public static readonly string DIALOGUE_MARKER = "Dialogue:";
-        public static readonly string PLAYER_MARKER = "Uri: ";
-        public static readonly string PLAYER_TWO_MARKER = "Centa: ";
+        public static readonly string PLAYER_MARKER = "Kristen: ";
         public static readonly string VOICE_MARKER = "Voice: ";
         public static readonly string CHOICES_MARKER = "Choices:";
         public static readonly string LEADS_TO_MARKER = "Leads To:";
@@ -26,6 +25,7 @@ namespace UI.Dialogue_System
         public static readonly string FAILURE = "FAIL";
         public static readonly string PLAYER_SPEAKING_TO_EACH_OTHER_LABEL = "Player";
         public static readonly List<string> PREFIXES = new List<string>() { "F", "B", "A" };
+        public static readonly string EVENT_MARKER = "*";
 
         public static List<string> POTION_GIVEN_MARKERS => PREFIXES.Select(p => p + SUCCESS).Concat(PREFIXES.Select(p => p + FAILURE)).Select(p => p.ToLower()).ToList();
 
@@ -39,8 +39,7 @@ namespace UI.Dialogue_System
     
         public enum ConversantType
         {
-            PlayerOne,
-            PlayerTwo,
+            Player,
             Conversant,
             Other,
         }
@@ -178,12 +177,16 @@ namespace UI.Dialogue_System
             [SerializeField, ReadOnly, LabelText("Path: ")] private string inspectorDescription;
             [HideInInspector] public string prompt;
             [HideInInspector] public string nextID;
+            [HideInInspector] public bool isEvent;
             
-            public LeadsToPath(string prompt, string nextID)
+            public LeadsToPath(string prompt, string nextID, bool isEvent)
             {
                 this.prompt = prompt;
                 this.nextID = nextID;
-                inspectorDescription = "Prompt: " + prompt + " Leads to: " + nextID;
+                this.isEvent = isEvent;
+                inspectorDescription = isEvent 
+                    ? "Prompt: " + prompt + " Triggers Event: " + nextID
+                    : "Prompt: " + prompt + " Leads to: " + nextID;
             }
         }
 

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a19351fa36549739574611fa0bb79dd, type: 3}
+  m_Name: SadQuest
+  m_EditorClassIdentifier: 
+  questName: Learn about what is troubling Garret
+  triggerEvent: 'Quest: SadQuest1'
+  tasks:
+  - label: Speak to the baker
+  - label: Ask John about what happened at the hospital
+  - label: Ask around the town about Garret

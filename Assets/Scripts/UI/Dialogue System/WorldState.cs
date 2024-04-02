@@ -7,8 +7,9 @@ namespace UI.Dialogue_System
     public static class WorldState
     {
         private static readonly Dictionary<string, int> CurrentState = new(); 
+        public static Action OnWorldStateChanged;
         
-        public static void ModifyState(string key, int value)
+        public static void SetState(string key, int value)
         {
             if (CurrentState.TryGetValue(key, out var currentValue))
             {
@@ -18,6 +19,8 @@ namespace UI.Dialogue_System
             {
                 CurrentState[key] = value;
             }
+            
+            OnWorldStateChanged?.Invoke();
         }
         
         public static void SetState(string key, Func<int, int> valueCalculator)
@@ -25,11 +28,15 @@ namespace UI.Dialogue_System
             Debug.Assert(key != null, nameof(key) + " != null");
             Debug.Assert(valueCalculator != null, nameof(valueCalculator) + " != null for key: " + key);
             CurrentState[key] = valueCalculator(CurrentState.TryGetValue(key, out var currentValue) ? currentValue : 0);
+            
+            OnWorldStateChanged?.Invoke();
         }
         
         public static void SetState(string key, bool value)
         {
             CurrentState[key] = value ? 1 : 0;
+            
+            OnWorldStateChanged?.Invoke();
         }
         
         public static int GetState(string key)

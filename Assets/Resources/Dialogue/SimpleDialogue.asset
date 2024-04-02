@@ -14,36 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: SimpleDialogue
-    Conversant: Player
+    Conversant: None
     DialoguesSeries:
     - dialogues:
-      - speaker: 1
+      - speaker: 0
         Dialogue: "You\u2019re so far away from me\u2026"
       - speaker: 0
         Dialogue: "I\u2019m sorry\u2026I don\u2019t know what happened\u2026I-I can\u2019t
           reach you."
-      - speaker: 1
+      - speaker: 0
         Dialogue: "We must\u2019ve been separated, though I don\u2019t know why.
           We must try to come back together."
       - speaker: 0
         Dialogue: "Yeah let\u2019s do this!"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
+    - inspectorDescription: 'Prompt:  Triggers Event: SadQuest1'
       prompt: 
-      nextID: end
-    StateChanges:
-    - components:
-      - friendship
-      - +=
-      - 5
-      inspectorDescription: friendship += 5
-      State: friendship
-    - components:
-      - gotMilk
-      inspectorDescription: gotMilk
-      State: gotMilk
-    - components:
-      - '!drankMilk'
-      inspectorDescription: '!drankMilk'
-      State: drankMilk
+      nextID: SadQuest1
+      isEvent: 1
+    StateChanges: []
     StateRequirements: []

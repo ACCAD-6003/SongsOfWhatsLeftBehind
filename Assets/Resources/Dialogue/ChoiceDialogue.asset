@@ -17,17 +17,20 @@ MonoBehaviour:
     Conversant: Player
     DialoguesSeries:
     - dialogues:
-      - speaker: 1
+      - speaker: 0
         Dialogue: "You\u2019re so far away from me\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt: I know Leads to: SimpleDialogue'
       prompt: I know
       nextID: SimpleDialogue
+      isEvent: 0
     - inspectorDescription: "Prompt: I\u2019ll try Leads to: ConditionalDialogue"
       prompt: "I\u2019ll try"
       nextID: ConditionalDialogue
-    - inspectorDescription: 'Prompt: No Leads to: exit'
+      isEvent: 0
+    - inspectorDescription: 'Prompt: No Triggers Event: SadQuest'
       prompt: No
-      nextID: exit
+      nextID: SadQuest
+      isEvent: 1
     StateChanges: []
     StateRequirements: []

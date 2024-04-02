@@ -12,8 +12,7 @@ namespace UI.Dialogue_System
 {
     public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     {
-        public const ConversantType PlayerOne = ConversantType.PlayerOne;
-        public const ConversantType PlayerTwo = ConversantType.PlayerTwo;
+        private const ConversantType PLAYER = ConversantType.Player;
 
         public static Action<ConversationData, ConversantType> OnDialogueStarted;
         public static Action OnDialogueEnded;
@@ -21,6 +20,9 @@ namespace UI.Dialogue_System
         public static Action<string, ConversantType, ConversantType> OnTextSet;
         public static Action<List<string>> OnChoiceMenuOpen;
         public static Action OnChoiceMenuClose;
+        
+        // Triggered when an event dialogue is reached, will exit the dialogue first then trigger the event
+        public static Action<string> OnEventTriggered;
 
         [SerializeField, Tooltip("Chars/Second")] float dialogueSpeed;
         [SerializeField, Tooltip("Chars/Second")] float dialogueFastSpeed;
@@ -51,7 +53,6 @@ namespace UI.Dialogue_System
 
         private void Start()
         {
-            StartCoroutine(WatchForCrash());
             SceneManager.activeSceneChanged += DestroyOnStart;
         }
 
@@ -67,23 +68,6 @@ namespace UI.Dialogue_System
         private void OnDestroy()
         {
             SceneManager.activeSceneChanged -= DestroyOnStart;
-        }
-
-        private IEnumerator WatchForCrash()
-        {
-            while (true)
-            {
-                yield return new WaitUntil(() => inDialogue);
-                while (!UIController.Instance.InGameplay)
-                {
-                    if (!inDialogue)
-                    {
-                        Debug.LogError("Dialogue system has crashed");
-                        UIController.Instance.SwapToGameplay();
-                    }
-                    yield return new WaitForSeconds(0.5f);
-                }
-            }
         }
 
         [Button(ButtonStyle.Box)]
@@ -145,7 +129,7 @@ namespace UI.Dialogue_System
 
         private IEnumerator HandleConversation(ConversationData data)
         {
-            OnDialogueStarted?.Invoke(data, PlayerOne);
+            OnDialogueStarted?.Invoke(data, PLAYER);
             yield return DisplayDialogue(data);
             UpdateWorldState(data);
             yield return ProceedToNextDialogue(data);
@@ -154,10 +138,16 @@ namespace UI.Dialogue_System
         private IEnumerator ProceedToNextDialogue(ConversationData data)
         {
             yield return AwaitChoice(data);
-            var nextDialogue = choiceSelected == -1 ? "end" : data.LeadsTo[choiceSelected].nextID;
+            var nextDialogue = choiceSelected == -1 ? "end" : 
+                data.LeadsTo.Where(x => CheckStateRequirements(x.nextID)).ToList()[choiceSelected].nextID;
 
             if (nextDialogue.ToLower().StartsWith("end"))
                 ExitDialogue();
+            else if (data.LeadsTo.Where(x => CheckStateRequirements(x.nextID)).ToList()[choiceSelected].isEvent)
+            {
+                ExitDialogue();
+                OnEventTriggered?.Invoke(nextDialogue);
+            }
             else
                 StartDialogue(nextDialogue);
         }
@@ -192,7 +182,7 @@ namespace UI.Dialogue_System
             else
             {
                 var choices = data.LeadsTo.Where(x => CheckStateRequirements(x.nextID)).ToList();
-                OnChoiceMenuOpen?.Invoke(choices.Select(x => x.nextID).ToList());
+                OnChoiceMenuOpen?.Invoke(choices.Select(x => x.prompt).ToList());
                 yield return new WaitUntil(() => choiceSelected != -1);
                 OnChoiceMenuClose?.Invoke();
             }
@@ -222,17 +212,16 @@ namespace UI.Dialogue_System
         {
             var speakerName = SpeakerName(dialogue, conversant);
             
-            OnTextSet?.Invoke(speakerName + dialogue.Dialogue, ConversantType.PlayerOne, dialogue.speaker);
-            OnTextUpdated?.Invoke(speakerName, ConversantType.PlayerOne, dialogue.speaker);
+            OnTextSet?.Invoke(speakerName + dialogue.Dialogue, ConversantType.Player, dialogue.speaker);
+            OnTextUpdated?.Invoke(speakerName, ConversantType.Player, dialogue.speaker);
             yield return new WaitUntil(() => FadeToBlackSystem.FadeOutComplete);
 
             continueInputReceived = false;
 
-
             UIController.OnNextDialogue += SpeedUpText;
-            yield return TypewriterDialogue(speakerName, PlayerOne, dialogue);
+            yield return TypewriterDialogue(speakerName, PLAYER, dialogue);
             UIController.OnNextDialogue -= SpeedUpText;
-
+            
             UIController.OnNextDialogue += OnContinueInput;
             yield return new WaitUntil(() => continueInputReceived);
             UIController.OnNextDialogue -= OnContinueInput;
@@ -245,7 +234,7 @@ namespace UI.Dialogue_System
             
             speakerName = dialogue.speaker switch
             {
-                ConversantType.PlayerOne => PLAYER_MARKER,
+                ConversantType.Player => PLAYER_MARKER,
                 ConversantType.Conversant => conversant + ": ",
                 _ => speakerName
             };

@@ -50,6 +50,10 @@ namespace UI.Dialogue_System
             }
         
             textBoxDisplay.Display(player);
+            DialogueManager.OnTextUpdated -= UpdateDialogue;
+            DialogueManager.OnTextSet -= SetDialogue;
+            DialogueManager.OnChoiceMenuOpen -= DisplayChoices;
+            
             DialogueManager.OnTextUpdated += UpdateDialogue;
             DialogueManager.OnTextSet += SetDialogue;
             DialogueManager.OnChoiceMenuOpen += DisplayChoices;
@@ -77,6 +81,7 @@ namespace UI.Dialogue_System
         private void DisplayChoices(List<string> choices)
         {
             choicesDisplay.Display(choices, OnChoiceSelected);
+            textBoxDisplay.SetDialogueText("", player);
         }
         
         private void OnChoiceSelected(int index)

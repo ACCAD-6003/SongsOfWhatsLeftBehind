@@ -145,14 +145,16 @@ public static class JsonDialogueConverter
         var hasPrompt = line.Contains("=>");
         var prompt = hasPrompt ? line.Split("=>")[0].Trim() : "";
         var nextID = hasPrompt ? line.Split("=>")[1].Trim() : line.Trim();
-        return new LeadsToPath(prompt, nextID);        
+        var isEvent = nextID.StartsWith(EVENT_MARKER);
+        nextID = isEvent ? nextID[EVENT_MARKER.Length..] : nextID;
+        return new LeadsToPath(prompt, nextID, isEvent);        
     }
 
     private static void AddDialogueToChain(ConversationData conversation, string line)
     {
         var markersToCheck = new List<(string label, ConversantType type)>
         {
-            (PLAYER_MARKER, ConversantType.PlayerOne), (PLAYER_TWO_MARKER, ConversantType.PlayerTwo), 
+            (PLAYER_MARKER, ConversantType.Player), 
             (VOICE_MARKER, ConversantType.Other), ($"{conversation.Conversant}: ", ConversantType.Conversant)
         };
 
