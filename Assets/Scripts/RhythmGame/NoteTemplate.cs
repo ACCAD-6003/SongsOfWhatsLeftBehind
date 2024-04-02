@@ -10,5 +10,7 @@ namespace RhythmGame
         public Color singleNoteIcon;
         public Color longNoteIcon;
         public float position;
+        public float marginX;
+        public float endPointX;
     }
 }

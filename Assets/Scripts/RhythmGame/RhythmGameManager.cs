@@ -15,17 +15,20 @@ namespace RhythmGame
         [HideInInspector] public Action OnSongEnd;
 
         private const int NOTE_POOL_SIZE = 30;
-        
+
+        [SerializeField] private GameObject display;
         [SerializeField] private SongData songData;
-        [SerializeField] private float correctThreshold;
         [SerializeField, ReadOnly] private float timeToReachBottom;
-        [SerializeField] private float targetZone;
+        [SerializeField] private RectTransform targetZone;
         [SerializeField] private GameObject notePrefab;
-        [SerializeField] private float yOffset;
+        [SerializeField] private GameObject noteSpawnPositionMarker;
         [SerializeField] private RhythmGameMusicPlayer musicPlayer;
         [SerializeField] private Dictionary<NoteType, NoteTemplate> templates;
         
         List<NoteImage> notePool = new();
+        float CorrectThreshold => targetZone.rect.height / 2;
+        float ThresholdCenter => targetZone.position.y;
+        float NoteSpawnPosition => noteSpawnPositionMarker.transform.position.y;
 
         private IEnumerable<NoteImage> ActiveNotes => notePool
             .Where(y => y.gameObject.activeInHierarchy)
@@ -36,6 +39,7 @@ namespace RhythmGame
         private void Start()
         {
             CreateNotePools();
+            ToggleDisplay(false);
         }
 
         private void CheckForNoteInZone(NoteType type)
@@ -69,21 +73,24 @@ namespace RhythmGame
 
         private bool WithinThreshold(float value)
         {
-            return Math.Abs(value - Mathf.Clamp(value, targetZone - correctThreshold, targetZone + correctThreshold)) 
+            return Math.Abs(value - Mathf.Clamp(value, ThresholdCenter - CorrectThreshold, ThresholdCenter + CorrectThreshold)) 
                    < Mathf.Epsilon;
         }
         
         private void DisplayNote(NoteType noteType, NoteStyle style, float length)
         {
             var note = GetNoteFromPool(noteType, style);
-            note.transform.position = new Vector3(templates[noteType].position, yOffset);
-            note.Send(timeToReachBottom, targetZone, WithinThreshold, length);
+            note.transform.position = new Vector3(display.transform.position.x + templates[noteType].position, NoteSpawnPosition);
+            note.Send(timeToReachBottom, ThresholdCenter, WithinThreshold, length);
         }
         
         private void CreateNotePools()
         {
             notePool.Clear();
             noteContainer = new GameObject("NoteContainer");
+            noteContainer.AddComponent<RectTransform>();
+            noteContainer.transform.SetParent(display.transform);
+            noteContainer.transform.localPosition = Vector3.zero;
             for (int i = 0; i < NOTE_POOL_SIZE; i++)
             {
                 var note = Instantiate(notePrefab, noteContainer.transform, true);
@@ -129,9 +136,15 @@ namespace RhythmGame
             return isValidSong;
         }
 
+        private void ToggleDisplay(bool shouldDisplay)
+        {
+            display.SetActive(shouldDisplay);
+        }
+
         private IEnumerator HandleSong(SongData songData, float songStart = 0)
         {
             timeToReachBottom = songData.speed;
+            ToggleDisplay(true);
             musicPlayer.PlaySong(songData, songStart);
             RhythmGameController.OnNotePressedProcessed += CheckForNoteInZone;
             UIController.Instance.SwapToUI();
@@ -167,6 +180,7 @@ namespace RhythmGame
             musicPlayer.StopSong();
             OnSongEnd?.Invoke();
             UIController.Instance.SwapToGameplay();
+            ToggleDisplay(false);
         }
     }
 }
