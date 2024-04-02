@@ -11,5 +11,6 @@ namespace RhythmGame
         public float bpm;
         public string SongName => name;
         public float SongLength => phrases[^1].startTime + phrases[^1].duration;
+        public float speed = 1;
     }
 }

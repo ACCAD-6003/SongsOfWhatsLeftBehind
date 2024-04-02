@@ -18,7 +18,7 @@ namespace RhythmGame
         
         [SerializeField] private SongData songData;
         [SerializeField] private float correctThreshold;
-        [SerializeField] private float timeToReachBottom;
+        [SerializeField, ReadOnly] private float timeToReachBottom;
         [SerializeField] private float targetZone;
         [SerializeField] private GameObject notePrefab;
         [SerializeField] private float yOffset;
@@ -131,6 +131,7 @@ namespace RhythmGame
 
         private IEnumerator HandleSong(SongData songData, float songStart = 0)
         {
+            timeToReachBottom = songData.speed;
             musicPlayer.PlaySong(songData, songStart);
             RhythmGameController.OnNotePressedProcessed += CheckForNoteInZone;
             UIController.Instance.SwapToUI();
