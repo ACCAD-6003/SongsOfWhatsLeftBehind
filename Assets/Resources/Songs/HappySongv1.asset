@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eefdd0ca8314c78a9391514fcc1bf22, type: 3}
   m_Name: HappySongv1
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: 413be7570a476ac4da7bb9aaf218cb18, type: 3}
+  song: {fileID: 8300000, guid: bf0426c4bb8ca264b89377354dddd064, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 3.8181818
@@ -98,17 +98,17 @@ MonoBehaviour:
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 1.7727273
-      noteLength: 0.13636363
-      style: 1
+    - offset: 1.9090909
+      noteLength: 0
+      style: 0
       notes: 01000000
-    - offset: 2.0454545
-      noteLength: 0.13636374
-      style: 1
+    - offset: 2.1818182
+      noteLength: 0
+      style: 0
       notes: 02000000
-    - offset: 2.3181818
-      noteLength: 0.13636374
-      style: 1
+    - offset: 2.4545455
+      noteLength: 0
+      style: 0
       notes: 04000000
   - phraseName: Phrase
     startTime: 14.727273
@@ -333,8 +333,8 @@ MonoBehaviour:
       style: 0
       notes: 0200000004000000
     - offset: 1.6363636
-      noteLength: 0.27272725
-      style: 1
+      noteLength: 0
+      style: 0
       notes: 0400000008000000
     - offset: 2.4545455
       noteLength: 0
@@ -347,12 +347,12 @@ MonoBehaviour:
       noteLength: 0.27272725
       style: 1
       notes: 02000000
-    - offset: 1.0909091
+    - offset: 1.6363636
       noteLength: 0
       style: 0
       notes: 01000000
-    - offset: 1.3636364
-      noteLength: 1.0909091
+    - offset: 1.9090909
+      noteLength: 0.5454546
       style: 1
       notes: 02000000
   - phraseName: Phrase
@@ -454,17 +454,17 @@ MonoBehaviour:
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 1.7727273
-      noteLength: 0.13636363
-      style: 1
+    - offset: 1.9090909
+      noteLength: 0
+      style: 0
       notes: 01000000
-    - offset: 2.0454545
-      noteLength: 0.13636374
-      style: 1
+    - offset: 2.1818182
+      noteLength: 0
+      style: 0
       notes: 02000000
-    - offset: 2.3181818
-      noteLength: 0.13636374
-      style: 1
+    - offset: 2.4545455
+      noteLength: 0
+      style: 0
       notes: 04000000
   - phraseName: Phrase
     startTime: 62.727272
