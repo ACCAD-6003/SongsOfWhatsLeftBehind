@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
         if (rbody.velocity.y > 0)
         {
-            Debug.Log("LAMO");
+            //Debug.Log("LAMO");
             Physics2D.IgnoreLayerCollision(0, 3, true);
         }
         //else the collision will not be ignored
