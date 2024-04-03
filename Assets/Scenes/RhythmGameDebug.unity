@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventToReceive: PlayHappySong
+  eventToReceive: 
   onEventReceived:
     m_PersistentCalls:
       m_Calls:
