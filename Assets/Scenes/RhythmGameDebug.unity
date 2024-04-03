@@ -667,7 +667,7 @@ MonoBehaviour:
       Data: 
   songData: {fileID: 11400000, guid: 40d596dcd33f44e48aabfce4173886ea, type: 2}
   correctThreshold: 0.5
-  timeToReachBottom: 1
+  timeToReachBottom: 2
   targetZone: -3.8
   notePrefab: {fileID: 6287804035596968944, guid: e46c0619445f7634ab62138910bd4026, type: 3}
   yOffset: 5.5

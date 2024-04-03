@@ -77,26 +77,26 @@ MonoBehaviour:
     startTime: 17.333334
     notes:
     - offset: 0.6666667
-      noteLength: 0.99999994
+      noteLength: 0.3333333
       style: 1
       notes: 08000000
-    - offset: 2
+    - offset: 1.6666666
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 2.3333333
+    - offset: 2
       noteLength: 0
       style: 0
       notes: 02000000
-    - offset: 2.6666667
+    - offset: 2.3333333
       noteLength: 0
       style: 0
       notes: 01000000
   - phraseName: Phrase
     startTime: 19.333334
     notes:
-    - offset: 1
-      noteLength: 3
+    - offset: 0.6666667
+      noteLength: 3.3333333
       style: 1
       notes: 08000000
   - phraseName: Phrase
@@ -146,8 +146,8 @@ MonoBehaviour:
   - phraseName: Phrase
     startTime: 31.333334
     notes:
-    - offset: 1
-      noteLength: 1.6666667
+    - offset: 0.6666667
+      noteLength: 2
       style: 1
       notes: 04000000
   - phraseName: Phrase
@@ -264,8 +264,8 @@ MonoBehaviour:
   - phraseName: Phrase
     startTime: 57.333332
     notes:
-    - offset: 1
-      noteLength: 1
+    - offset: 0.6666667
+      noteLength: 1.3333333
       style: 1
       notes: 08000000
   - phraseName: Phrase
@@ -278,10 +278,6 @@ MonoBehaviour:
   - phraseName: Phrase
     startTime: 63.333332
     notes:
-    - offset: 0.6666667
-      noteLength: 0
-      style: 0
-      notes: 02000000
     - offset: 1
       noteLength: 0
       style: 0
@@ -321,8 +317,8 @@ MonoBehaviour:
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 2
-      noteLength: 2.6666665
+    - offset: 2.3333333
+      noteLength: 2.3333333
       style: 1
       notes: 08000000
   - phraseName: Phrase
