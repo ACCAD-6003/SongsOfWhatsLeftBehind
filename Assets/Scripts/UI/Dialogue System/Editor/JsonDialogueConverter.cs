@@ -22,7 +22,8 @@ public static class JsonDialogueConverter
             conversation.SetConversation(ConvertFromJson(ConvertToJson(ConvertToConversation(dialogueScene))));
 
             string filePath = $"Assets/Resources/Dialogue/{conversation.Data.ID}.asset";
-            if (System.IO.File.Exists(filePath))
+            AssetDatabase.CreateAsset(conversation, filePath);
+            /*if (System.IO.File.Exists(filePath))
             {
                 var file = AssetDatabase.LoadAssetAtPath(filePath, typeof(SOConversationData)) as SOConversationData;
                 file.SetConversation(conversation.Data);
@@ -30,8 +31,7 @@ public static class JsonDialogueConverter
             }
             else
             {
-                AssetDatabase.CreateAsset(conversation, filePath);
-            }
+            }*/
         }
     }
 

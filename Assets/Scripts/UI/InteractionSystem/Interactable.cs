@@ -14,7 +14,7 @@ namespace UI.InteractionSystem
         [SerializeField] private UnityEvent onInRange;
         [SerializeField] private UnityEvent onOutOfRange;
         [SerializeField] private bool goToNextScene;
-        [SerializeField, HideIf("goToNextScene")] private SOConversationData conversation;
+        [SerializeField, HideIf("goToNextScene")] private string conversation;
         [SerializeField, HideIf("goToNextScene")] private UnityEvent onTriggerDialogue;
 
         private int playersInRange;
@@ -26,7 +26,7 @@ namespace UI.InteractionSystem
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!HasTag(other.gameObject, PLAYER_TAG)) return;
+            if (!HasTag(other.gameObject, PLAYER_TAG) && !DialogueAvailable()) return;
 
             onInRange.Invoke();
             UIController.OnInteract += goToNextScene switch
@@ -34,6 +34,13 @@ namespace UI.InteractionSystem
                 false => TriggerDialogue,
                 true => GoToNextScene
             };
+        }
+
+        private bool DialogueAvailable()
+        {
+            if (conversation == null) return true;
+
+            return DialogueManager.Instance.CheckStateRequirements(conversation);
         }
         
         private void GoToNextScene()
