@@ -885,8 +885,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3225084360760242720, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: conversation
-      value: 
-      objectReference: {fileID: 11400000, guid: 3ff8966f14e6d374280d247256852a7a, type: 2}
+      value: Doctor
+      objectReference: {fileID: 0}
     - target: {fileID: 3225084360760242722, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: m_Name
       value: Interaction Handler
@@ -951,8 +951,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3225084360760242720, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: conversation
-      value: 
-      objectReference: {fileID: 11400000, guid: 2b23221130424b44c8f84b6b3f4979fc, type: 2}
+      value: GarretsSister
+      objectReference: {fileID: 0}
     - target: {fileID: 3225084360760242722, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: m_Name
       value: Interaction Handler
@@ -2090,8 +2090,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3225084360760242720, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: conversation
-      value: 
-      objectReference: {fileID: 11400000, guid: 75c6d4e9e0f508743a8b4918a8a7cf90, type: 2}
+      value: BankTeller
+      objectReference: {fileID: 0}
     - target: {fileID: 3225084360760242722, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: m_Name
       value: Interaction Handler
@@ -2847,8 +2847,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3225084360760242720, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: conversation
-      value: 
-      objectReference: {fileID: 11400000, guid: 8969e62f96de6104394372f1db33b77d, type: 2}
+      value: AcappellaGroup
+      objectReference: {fileID: 0}
     - target: {fileID: 3225084360760242722, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: m_Name
       value: Interaction Handler
@@ -3630,8 +3630,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3225084360760242720, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: conversation
-      value: 
-      objectReference: {fileID: 11400000, guid: 223cd5fe47d783145b284d4f48bc9115, type: 2}
+      value: Spencer
+      objectReference: {fileID: 0}
     - target: {fileID: 3225084360760242722, guid: 0fc6aebdb66c53141a350b2d96095fab, type: 3}
       propertyPath: m_Name
       value: Interaction Handler
