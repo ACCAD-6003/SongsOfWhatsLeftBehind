@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a19351fa36549739574611fa0bb79dd, type: 3}
   m_Name: SadQuest1
   m_EditorClassIdentifier: 
-  questName: Learn about what is troubling Garret
+  questName: "Find Garret\u2019s best friend Spencer and check on him."
   triggerEvent: SadQuest1
   tasks:
-  - label: Speak to the baker
-  - label: Ask John about what happened at the hospital
-  - label: Ask around the town about Garret
+  - label: Speak to Spencer

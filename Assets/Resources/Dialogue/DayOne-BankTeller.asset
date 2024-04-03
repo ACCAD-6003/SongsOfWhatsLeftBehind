@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: DayOne-BankTeller
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: DayOne-BankTeller
+    Conversant: Borris
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: "If I find out you\u2019ve done something shady, I\u2019m gonna-"
+      - speaker: 0
+        Dialogue: "Whoa! Don\u2019t say something illegal there."
+      - speaker: 1
+        Dialogue: "*Sigh* just don\u2019t do it."
+      - speaker: 0
+        Dialogue: "I\u2019m not, jeez!"
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - bankTellerTalkedTo
+      - ==
+      - 1
+      inspectorDescription: bankTellerTalkedTo == 1
+      State: bankTellerTalkedTo

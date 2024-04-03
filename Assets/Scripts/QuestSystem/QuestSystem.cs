@@ -54,7 +54,7 @@ namespace QuestSystem
             }
             
             UIController.Instance.SwapToUI();
-            UIController.OnGoBack += CloseUI;
+            UIController.OnResume += CloseUI;
             UIController.OnCloseQuestLog += CloseUI;
             UIController.OnOpenQuestLog -= OpenUI;
         }
@@ -63,7 +63,7 @@ namespace QuestSystem
         {
             UIController.Instance.SwapToGameplay();
             questUIDisplay.Hide();
-            UIController.OnGoBack -= CloseUI;
+            UIController.OnResume -= CloseUI;
             UIController.OnCloseQuestLog -= CloseUI;
             UIController.OnOpenQuestLog += OpenUI;
         }
@@ -74,7 +74,7 @@ namespace QuestSystem
             WorldState.OnWorldStateChanged -= HandleWorldStateChanged;
             UIController.OnOpenQuestLog -= OpenUI;
             UIController.OnCloseQuestLog -= CloseUI;
-            UIController.OnGoBack -= CloseUI;
+            UIController.OnResume -= CloseUI;
         }
     }
 }

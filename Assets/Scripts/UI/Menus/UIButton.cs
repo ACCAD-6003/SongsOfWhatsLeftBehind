@@ -11,7 +11,7 @@ public abstract class UIButton : MonoBehaviour, IButton, IPointerEnterHandler
     protected bool isSelected;
     private Button button;
     
-    public void Awake()
+    public virtual void Awake()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(Click);
