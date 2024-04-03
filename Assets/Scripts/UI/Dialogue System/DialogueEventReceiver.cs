@@ -8,7 +8,7 @@ namespace UI.Dialogue_System
     public class DialogueEventReceiver : MonoBehaviour
     {
         [SerializeField] private string eventToReceive;
-        [SerializeField] private UnityEvent onEventReceived;
+        [SerializeField] private UnityEvent<string> onEventReceived;
 
         private void OnEnable()
         {
@@ -18,13 +18,13 @@ namespace UI.Dialogue_System
         private void OnEventTriggered(string eventToReceive)
         {
             if (eventToReceive != this.eventToReceive) return;
-            TriggerEvent();
+            TriggerEvent(eventToReceive);
         }
 
         [Button]
-        private void TriggerEvent()
+        private void TriggerEvent(string eventToRecieve)
         {
-            onEventReceived?.Invoke();
+            onEventReceived?.Invoke(eventToReceive);
         }
         
         private void OnDisable()

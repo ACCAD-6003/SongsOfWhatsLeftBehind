@@ -14,6 +14,7 @@ namespace QuestSystem
         [SerializeField] QuestUIDisplay questUIDisplay;
         
         private QuestLine currentQuestLine;
+        private int currentQuestID;
 
         private void Awake()
         {
@@ -22,20 +23,21 @@ namespace QuestSystem
 
         private void OnEnable()
         {
-            DialogueManager.OnEventTriggered += HandleEventTriggered;
             WorldState.OnWorldStateChanged += HandleWorldStateChanged;
             UIController.OnOpenQuestLog += OpenUI;
         }
         
         private void HandleWorldStateChanged()
         {
+            TryHandleNewQuest("");
+
             if (currentQuestLine == null 
                 || !currentQuestLine.CheckNextCompletionStatus(WorldState.GetState)) return;
 
             currentQuestLine.CompleteCurrentTask();
         }
         
-        private void HandleEventTriggered(string eventName)
+        private void TryHandleNewQuest(string eventName)
         {
             if (questLines.All(x => x.TriggerEvent != eventName)) return;
             currentQuestLine = questLines.Find(x => x.TriggerEvent == eventName);
@@ -70,7 +72,6 @@ namespace QuestSystem
         
         private void OnDisable()
         {
-            DialogueManager.OnEventTriggered -= HandleEventTriggered;
             WorldState.OnWorldStateChanged -= HandleWorldStateChanged;
             UIController.OnOpenQuestLog -= OpenUI;
             UIController.OnCloseQuestLog -= CloseUI;

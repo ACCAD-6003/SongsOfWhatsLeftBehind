@@ -625,9 +625,7 @@ GameObject:
   - component: {fileID: 1638374523}
   - component: {fileID: 1638374522}
   - component: {fileID: 1638374524}
-  - component: {fileID: 1638374527}
-  - component: {fileID: 1638374526}
-  - component: {fileID: 1638374525}
+  - component: {fileID: 1638374528}
   m_Layer: 0
   m_Name: Rhythm Game
   m_TagString: Untagged
@@ -1088,19 +1086,19 @@ MonoBehaviour:
   onEventReceived:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1638374520}
-        m_TargetAssemblyTypeName: RhythmGame.RhythmGameManager, Assembly-CSharp
+      - m_Target: {fileID: 1638374528}
+        m_TargetAssemblyTypeName: RhythmGame.RhythmGameSongLoader, Assembly-CSharp
         m_MethodName: PlaySong
-        m_Mode: 2
+        m_Mode: 0
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
-          m_ObjectArgumentAssemblyTypeName: RhythmGame.SongData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1638374525
+--- !u!114 &1638374528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1109,81 +1107,89 @@ MonoBehaviour:
   m_GameObject: {fileID: 1638374519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
+  m_Script: {fileID: 11500000, guid: b4b34635d17f31c4db7ed6c156204f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventToReceive: PlayDeterminedSong
-  onEventReceived:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1638374520}
-        m_TargetAssemblyTypeName: RhythmGame.RhythmGameManager, Assembly-CSharp
-        m_MethodName: PlaySong
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
-          m_ObjectArgumentAssemblyTypeName: RhythmGame.SongData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1638374526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638374519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToReceive: PlayAngrySong
-  onEventReceived:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1638374520}
-        m_TargetAssemblyTypeName: RhythmGame.RhythmGameManager, Assembly-CSharp
-        m_MethodName: PlaySong
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
-          m_ObjectArgumentAssemblyTypeName: RhythmGame.SongData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1638374527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638374519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToReceive: PlaySadSong
-  onEventReceived:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1638374520}
-        m_TargetAssemblyTypeName: RhythmGame.RhythmGameManager, Assembly-CSharp
-        m_MethodName: PlaySong
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
-          m_ObjectArgumentAssemblyTypeName: RhythmGame.SongData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
+    - {fileID: 11400000, guid: 0e50618c03a99894d8ee0405b321a514, type: 2}
+    - {fileID: 11400000, guid: 40d596dcd33f44e48aabfce4173886ea, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: songMappings
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[RhythmGame.SongData,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayHappySong
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayDeterminedSong
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayAngrySong
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlaySadSong
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &1854986431
 GameObject:
   m_ObjectHideFlags: 0
