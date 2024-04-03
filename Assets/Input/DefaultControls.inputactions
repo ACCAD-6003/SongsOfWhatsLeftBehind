@@ -221,7 +221,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "First Key",
+                    "name": "Key One",
                     "type": "Button",
                     "id": "5412dd94-60e3-4710-b829-864c6dacc034",
                     "expectedControlType": "Button",
@@ -230,7 +230,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Second Key",
+                    "name": "Key Two",
                     "type": "Button",
                     "id": "8c52689c-769e-49e7-8800-55081238f2e1",
                     "expectedControlType": "Button",
@@ -239,7 +239,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Third Key",
+                    "name": "Key Three",
                     "type": "Button",
                     "id": "85009597-cfa9-4064-ad1e-b5092a4ff5ed",
                     "expectedControlType": "Button",
@@ -248,7 +248,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Fourth Key",
+                    "name": "Key Four",
                     "type": "Button",
                     "id": "5c5ef1d3-caf6-46a4-95fa-a89adc4b4cb7",
                     "expectedControlType": "Button",
@@ -549,7 +549,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "First Key",
+                    "action": "Key One",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -560,7 +560,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "First Key",
+                    "action": "Key One",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -571,7 +571,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "First Key",
+                    "action": "Key One",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -582,7 +582,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Second Key",
+                    "action": "Key Two",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -593,7 +593,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Second Key",
+                    "action": "Key Two",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -604,7 +604,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Second Key",
+                    "action": "Key Two",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -615,7 +615,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Third Key",
+                    "action": "Key Three",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -626,7 +626,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Third Key",
+                    "action": "Key Three",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -637,7 +637,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Third Key",
+                    "action": "Key Three",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -648,7 +648,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fourth Key",
+                    "action": "Key Four",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -659,7 +659,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fourth Key",
+                    "action": "Key Four",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -670,7 +670,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fourth Key",
+                    "action": "Key Four",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

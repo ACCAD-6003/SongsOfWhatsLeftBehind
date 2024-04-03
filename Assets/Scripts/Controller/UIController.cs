@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using RhythmGame;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -39,6 +40,22 @@ namespace Controller
 
         public void SwapToUI() { playerInput.SwitchCurrentActionMap("UI"); OnSwapToUI?.Invoke(); inGameplay = false; }
         public void SwapToGameplay() { playerInput.SwitchCurrentActionMap("Gameplay"); OnSwapToGameplay?.Invoke(); inGameplay = true; }
+        public string GetKey(string keyName)
+        {
+            try { return playerInput.actions.FindAction(keyName).GetBindingDisplayString(0); }
+            catch { Debug.LogError("Can't find key " + keyName); return "?"; }
+        }
+
+        public IEnumerator AllowUserToSetKey(string keyName)
+        {
+            playerInput.enabled = false;
+            var operation = playerInput.actions.FindAction(keyName).PerformInteractiveRebinding();
+            Debug.Log("Press a key");
+            operation.Start();
+            yield return new WaitUntil(() => operation.completed);
+            operation.Dispose();
+            playerInput.enabled = true;
+        }
         
         #region Gameplay Layout
 

@@ -19,6 +19,8 @@ namespace UI.Menus
             if (display == null) display = transform.GetChild(0).gameObject;
             if (pages.Count == 0) pages.Add(new Page(display));
         }
+        
+        private void JumpToStartPage() => JumpToPage(0);
 
         private void OnEnable()
         {
@@ -33,6 +35,7 @@ namespace UI.Menus
         {
             display.SetActive(true);
             Controller.UIController.Instance.SwapToUI();
+            if (pages.Count > 1) Controller.UIController.OnGoBack += JumpToStartPage;
             JumpToPage(0);
             CloseTrigger += CloseMenu;
         }
@@ -65,6 +68,7 @@ namespace UI.Menus
             display.SetActive(false);
             HideAllPages();
             Controller.UIController.Instance.SwapToGameplay();
+            if (pages.Count > 1) Controller.UIController.OnGoBack -= JumpToStartPage;
             CloseTrigger -= CloseMenu;
         }
 

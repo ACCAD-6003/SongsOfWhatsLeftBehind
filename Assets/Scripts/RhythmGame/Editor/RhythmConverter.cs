@@ -44,6 +44,12 @@ namespace RhythmGame.Editor
             var bpm = float.Parse(NextLine()[BPMLabel.Length..]);
             song.bpm = bpm;
             RemoveLine();
+            
+            if (NextLine().StartsWith(SpeedLabel))
+            {
+                song.speed = float.Parse(NextLine()[SpeedLabel.Length..]);
+                RemoveLine();
+            }
 
             float BpmCalculator(string x) => ConvertBPMToOffset(x, bpm);
 
