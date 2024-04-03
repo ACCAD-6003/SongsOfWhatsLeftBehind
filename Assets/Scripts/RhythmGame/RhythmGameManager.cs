@@ -6,6 +6,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using Controller;
 using Sirenix.Utilities;
+using UI.Dialogue_System;
 
 namespace RhythmGame
 {
@@ -185,8 +186,8 @@ namespace RhythmGame
             notePool.ForEach(x => x.gameObject.SetActive(false));
             musicPlayer.StopSong();
             OnSongEnd?.Invoke();
-            UIController.Instance.SwapToGameplay();
             ToggleDisplay(false);
+            DialogueManager.Instance.StartDialogue(songData.dialogue);
         }
     }
 }

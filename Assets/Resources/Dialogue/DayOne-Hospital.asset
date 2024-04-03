@@ -32,3 +32,9 @@ MonoBehaviour:
       - 1
       inspectorDescription: hospitalViewed == 1
       State: hospitalViewed
+    - components:
+      - questType
+      - ==
+      - 3
+      inspectorDescription: questType == 3
+      State: questType

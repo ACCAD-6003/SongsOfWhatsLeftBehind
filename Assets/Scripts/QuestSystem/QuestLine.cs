@@ -11,19 +11,19 @@ namespace QuestSystem
     public class QuestLine : ScriptableObject
     {
         [SerializeField] private string questName;
-        [SerializeField] private string triggerEvent;
+        [SerializeField] private int triggerEvent;
         [SerializeField] private List<Task> tasks = new();
         
         private int currentTaskIndex = 0;
         
-        public string TriggerEvent => triggerEvent;
+        public int TriggerEvent => triggerEvent;
 
         public void SetupQuestLine(string sectionToParse)
         {
             var lines = sectionToParse.Split('\n').Where(x => !x.IsNullOrWhitespace()).ToArray();
-            triggerEvent = lines[0].Trim();
+            triggerEvent = int.Parse(lines[0].Trim());
             questName = lines[1].Trim();
-            name = triggerEvent;
+            name = "Quest" + triggerEvent;
             tasks.Clear();
             for (int i = 2; i < lines.Length; i++)
             {

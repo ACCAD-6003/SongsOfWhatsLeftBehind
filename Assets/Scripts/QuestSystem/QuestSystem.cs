@@ -29,7 +29,7 @@ namespace QuestSystem
         
         private void HandleWorldStateChanged()
         {
-            TryHandleNewQuest("");
+            TryHandleNewQuest();
 
             if (currentQuestLine == null 
                 || !currentQuestLine.CheckNextCompletionStatus(WorldState.GetState)) return;
@@ -37,10 +37,12 @@ namespace QuestSystem
             currentQuestLine.CompleteCurrentTask();
         }
         
-        private void TryHandleNewQuest(string eventName)
+        private void TryHandleNewQuest()
         {
-            if (questLines.All(x => x.TriggerEvent != eventName)) return;
-            currentQuestLine = questLines.Find(x => x.TriggerEvent == eventName);
+            if (currentQuestID == WorldState.GetState("questType")) return;
+            if (questLines.All(x => x.TriggerEvent != WorldState.GetState("questType"))) return;
+            currentQuestID = WorldState.GetState("questType");
+            currentQuestLine = questLines.Find(x => x.TriggerEvent == currentQuestID);
             currentQuestLine.ResetQuestLine();
         }
 

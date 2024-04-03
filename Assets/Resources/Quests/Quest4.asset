@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a19351fa36549739574611fa0bb79dd, type: 3}
-  m_Name: DeterminedQuest1
+  m_Name: Quest4
   m_EditorClassIdentifier: 
   questName: "Withdraw all of Garret\u2019s savings and give the money to his sister."
-  triggerEvent: DeterminedQuest1
+  triggerEvent: 4
   tasks:
   - label: Withdraw the money
   - label: "Deliver the money to Garret\u2019s sister"

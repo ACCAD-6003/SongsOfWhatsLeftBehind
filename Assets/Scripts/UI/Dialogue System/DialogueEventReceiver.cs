@@ -17,14 +17,14 @@ namespace UI.Dialogue_System
         
         private void OnEventTriggered(string eventToReceive)
         {
-            if (eventToReceive != this.eventToReceive) return;
+            if (this.eventToReceive != "" && eventToReceive != this.eventToReceive) return;
             TriggerEvent(eventToReceive);
         }
 
         [Button]
-        private void TriggerEvent(string eventToRecieve)
+        private void TriggerEvent(string eventLabel)
         {
-            onEventReceived?.Invoke(eventToReceive);
+            onEventReceived?.Invoke(eventLabel);
         }
         
         private void OnDisable()

@@ -38,3 +38,9 @@ MonoBehaviour:
       - 1
       inspectorDescription: bankTellerTalkedTo == 1
       State: bankTellerTalkedTo
+    - components:
+      - questType
+      - ==
+      - 4
+      inspectorDescription: questType == 4
+      State: questType

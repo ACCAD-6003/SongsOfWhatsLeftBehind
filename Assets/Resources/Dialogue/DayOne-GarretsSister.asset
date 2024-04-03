@@ -36,3 +36,9 @@ MonoBehaviour:
       - 1
       inspectorDescription: sisterTalkedTo == 1
       State: sisterTalkedTo
+    - components:
+      - questType
+      - ==
+      - 4
+      inspectorDescription: questType == 4
+      State: questType

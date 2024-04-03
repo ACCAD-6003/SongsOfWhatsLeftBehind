@@ -6,6 +6,7 @@
         public static string PhraseLabel = "Phrase: ";
         public static string BPMLabel = "BPM: ";
         public static string SpeedLabel = "Speed: ";
+        public static string DialogueLabel = "Dialogue: ";
         
         public static float ConvertBPMToOffset(float beats, SongData song)
         {

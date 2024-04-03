@@ -50,6 +50,10 @@ namespace RhythmGame.Editor
                 song.speed = float.Parse(NextLine()[SpeedLabel.Length..]);
                 RemoveLine();
             }
+            
+            AssertMarker(NextLine(), DialogueLabel);
+            song.dialogue = NextLine()[DialogueLabel.Length..];
+            RemoveLine();
 
             float BpmCalculator(string x) => ConvertBPMToOffset(x, bpm);
 

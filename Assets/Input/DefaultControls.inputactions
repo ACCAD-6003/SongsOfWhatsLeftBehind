@@ -142,6 +142,17 @@
                 },
                 {
                     "name": "",
+                    "id": "2e05e255-f083-41c9-b76a-fac82410364e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenQuestLog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ac569e60-5185-459a-9be5-cc848c1dce40",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",

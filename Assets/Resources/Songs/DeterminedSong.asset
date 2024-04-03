@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0eefdd0ca8314c78a9391514fcc1bf22, type: 3}
-  m_Name: HappySongv1
+  m_Name: DeterminedSong
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: bf0426c4bb8ca264b89377354dddd064, type: 3}
   phrases:
@@ -521,4 +521,4 @@ MonoBehaviour:
       notes: 0100000008000000
   bpm: 110
   speed: 1
-  dialogue: DayOne-HappySongEnd
+  dialogue: DayOne-DeterminedSongEnd

@@ -34,3 +34,9 @@ MonoBehaviour:
       - 1
       inspectorDescription: acappellaTalkedTo == 1
       State: acappellaTalkedTo
+    - components:
+      - questType
+      - ==
+      - 1
+      inspectorDescription: questType == 1
+      State: questType

@@ -34,3 +34,9 @@ MonoBehaviour:
       - 1
       inspectorDescription: spencerTalkedTo == 1
       State: spencerTalkedTo
+    - components:
+      - questType
+      - ==
+      - 2
+      inspectorDescription: questType == 2
+      State: questType

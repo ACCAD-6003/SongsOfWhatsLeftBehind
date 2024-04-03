@@ -1115,7 +1115,9 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
+    - {fileID: 11400000, guid: 04a90489d8d89aa4fb26960a6b27e165, type: 2}
     - {fileID: 11400000, guid: 0e50618c03a99894d8ee0405b321a514, type: 2}
+    - {fileID: 11400000, guid: 03c3d0a230df356429aa31daeddc855e, type: 2}
     - {fileID: 11400000, guid: 40d596dcd33f44e48aabfce4173886ea, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -1135,7 +1137,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 7
       Data: 
@@ -1168,7 +1170,7 @@ MonoBehaviour:
       Data: PlayAngrySong
     - Name: $v
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -1180,7 +1182,19 @@ MonoBehaviour:
       Data: PlaySadSong
     - Name: $v
       Entry: 10
-      Data: 2
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayTutorialSong
+    - Name: $v
+      Entry: 10
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -1450,10 +1464,6 @@ PrefabInstance:
     - target: {fileID: 8441142607620619466, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_Name
       value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8441142607620619466, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9082992164545186048, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: serializationData.Prefab

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a19351fa36549739574611fa0bb79dd, type: 3}
-  m_Name: SadQuest1
+  m_Name: Quest3
   m_EditorClassIdentifier: 
-  questName: "Find Garret\u2019s best friend Spencer and check on him."
-  triggerEvent: SadQuest1
+  questName: Visit the hospital in town and check to see that it is closed down.
+  triggerEvent: 3
   tasks:
-  - label: Speak to Spencer
+  - label: Go see the town hospital as it is now

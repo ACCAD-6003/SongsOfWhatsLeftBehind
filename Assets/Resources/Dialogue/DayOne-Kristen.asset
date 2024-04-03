@@ -22,10 +22,10 @@ MonoBehaviour:
       - speaker: 0
         Dialogue: "Bank, money, sister, report back to Garret. Let\u2019s go."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: DeterminedQuestOne'
+    - inspectorDescription: 'Prompt:  Leads to: exit'
       prompt: 
-      nextID: DeterminedQuestOne
-      isEvent: 1
+      nextID: exit
+      isEvent: 0
     StateChanges:
     - components:
       - questCompleted

@@ -18,8 +18,10 @@ namespace RhythmGame
 
         public void PlaySong(string songEventName)
         {
-            Debug.Assert(songMappings.ContainsKey(songEventName), "Failed to find song " + songEventName);
-            manager.PlaySong(songMappings[songEventName]);
+            if (songMappings.TryGetValue(songEventName, out var mapping))
+            {
+                manager.PlaySong(mapping);
+            }
         }
     }
 }
