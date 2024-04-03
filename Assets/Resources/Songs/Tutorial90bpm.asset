@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eefdd0ca8314c78a9391514fcc1bf22, type: 3}
   m_Name: Tutorial90bpm
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: 2f7ea7a6e51296541bf32cacc90f6fdd, type: 3}
+  song: {fileID: 8300000, guid: 0ff05a9d078a63645b71313186c56e95, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 5.3333335
