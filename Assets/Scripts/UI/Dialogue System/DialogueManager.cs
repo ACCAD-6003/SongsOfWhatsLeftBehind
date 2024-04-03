@@ -160,11 +160,16 @@ namespace UI.Dialogue_System
             }
         }
 
-        private bool CheckStateRequirements(string dialogueID)
+        public bool CheckStateRequirements(string dialogueID)
         {
             var data = conversationGroup.Where(x => x.Data.ID == dialogueID).ToList();
+            Debug.Log(data.Count);
             if (!data.Any()) return true;
 
+            foreach (var item in data)
+            {
+                Debug.Log(item.Data.StateRequirements);
+            }
             return data
                 .Select(x => x.Data.StateRequirements)
                 .Any(y => y.All(requirement => requirement.IsMet(WorldState.GetState(requirement.State))));
