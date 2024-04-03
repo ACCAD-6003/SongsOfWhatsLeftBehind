@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 
@@ -10,9 +11,9 @@ namespace QuestSystem
     public class Task
     {
         public string label;
-        private string completionCondition;
-        private ComparisonType comparisonType;
-        private int comparisonValue;
+        [SerializeField, ReadOnly] string completionCondition;
+        [SerializeField, ReadOnly] ComparisonType comparisonType;
+        [SerializeField, ReadOnly] private int comparisonValue;
         public enum ComparisonType { GreaterThan, LessThan, EqualTo, NotEqualTo, GreaterThanOrEqualTo, LessThanOrEqualTo }
         
         /*
@@ -51,6 +52,7 @@ namespace QuestSystem
         public bool IsCompleted(Func<string, int> getState)
         {
             var value = getState(completionCondition);
+            Debug.Log("Checking if " + completionCondition + " is " + comparisonType + " " + comparisonValue);
             return comparisonType switch
             {
                 ComparisonType.GreaterThan => value > comparisonValue,

@@ -29,7 +29,6 @@ namespace UI.Dialogue_System
         {
             DialogueManager.OnTextUpdated -= UpdateDialogue;
             DialogueManager.OnChoiceMenuOpen -= DisplayChoices;
-            Debug.Log("Hiding UI");
             
             foreach (Transform child in transform)
             {
@@ -42,7 +41,6 @@ namespace UI.Dialogue_System
         private void DisplayUI(ConversationData conversation, ConversantType playerWhoEnteredDialogue)
         {
             if (player != playerWhoEnteredDialogue) return;
-            Debug.Log("Displaying UI");
         
             foreach (Transform child in transform)
             {

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: TutorialDay-SongEnd
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: TutorialDay-SongEnd
+    Conversant: None
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: I feel weird.
+      - speaker: 0
+        Dialogue: "You sure you aren\u2019t here ghosts?"
+      - speaker: 0
+        Dialogue: "Something\u2019s in the air\u2026"
+      - speaker: 0
+        Dialogue: "Ok, then. That\u2019s enough practice for today, I guess. I\u2019ll
+          see you tomorrow, graveyard..."
+      - speaker: 0
+        Dialogue: "\u2026and my ghosties. I will meet you eventually."
+      - speaker: 0
+        Dialogue: '*Heehee* Okay, goodnight.'
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'
+      prompt: 
+      nextID: DayTransition
+      isEvent: 1
+    StateChanges: []
+    StateRequirements: []
+    Variation: 

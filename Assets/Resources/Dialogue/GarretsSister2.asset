@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: GarretsSister2
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: GarretsSister
+    Conversant: "Garret\u2019s Sister"
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: "Ah, it\u2019s you, isn\u2019t it?"
+      - speaker: 1
+        Dialogue: "Who\u2026m-me?"
+      - speaker: 0
+        Dialogue: "You\u2019re Garret\u2019s sister."
+      - speaker: 1
+        Dialogue: "Please, I don\u2019t want to talk right now."
+      - speaker: 0
+        Dialogue: "N-no you don\u2019t understand. He sent me."
+      - speaker: 1
+        Dialogue: '*Sniff* Huh?'
+      - speaker: 0
+        Dialogue: He wanted me to give you the last of his savings. Here.
+      - speaker: 1
+        Dialogue: "Thank you\u2026how did you?"
+      - speaker: 0
+        Dialogue: Would you believe me if I said I found him as a ghost?
+      - speaker: 1
+        Dialogue: Given the rumors about you, yes. *Sniff*
+      - speaker: 0
+        Dialogue: He loves you.
+      - speaker: 1
+        Dialogue: '*Sniff*...*Sniff*'
+      - speaker: 1
+        Dialogue: "Tell him I\u2019m okay."
+      - speaker: 0
+        Dialogue: I will.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges:
+    - components:
+      - sisterTalkedTo
+      - +=
+      - 1
+      inspectorDescription: sisterTalkedTo += 1
+      State: sisterTalkedTo
+    - components:
+      - questCompleted
+      - =
+      - 1
+      inspectorDescription: questCompleted = 1
+      State: questCompleted
+    StateRequirements:
+    - components:
+      - sisterTalkedTo
+      - ==
+      - 0
+      inspectorDescription: sisterTalkedTo == 0
+      State: sisterTalkedTo
+    - components:
+      - bankTellerTalkedTo
+      - ==
+      - 1
+      inspectorDescription: bankTellerTalkedTo == 1
+      State: bankTellerTalkedTo
+    - components:
+      - questType
+      - ==
+      - 4
+      inspectorDescription: questType == 4
+      State: questType
+    - components:
+      - day
+      - ==
+      - 1
+      inspectorDescription: day == 1
+      State: day
+    Variation: 2

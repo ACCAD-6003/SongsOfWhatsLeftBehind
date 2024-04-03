@@ -43,12 +43,14 @@ namespace UI.Dialogue_System
     
         [Button] private void DisplayWorldState() => Debug.Log(WorldState.GetCurrentWorldState());
         [Button] private void SetWorldState(string key, int value) => WorldState.SetState(key, _ => value);
+        [Button] private void ClearWorldState() => WorldState.ClearAllStates();
 
         protected override void Awake()
         {
             base.Awake();
             conversationGroup = Resources.LoadAll<SOConversationData>("Dialogue").ToList();
             conversationGroup.Sort((x, y) => x.Data.StateRequirements.Count > y.Data.StateRequirements.Count ? -1 : 1);
+            if (!BeingDestroyed) WorldState.ClearAllStates();
         }
 
         private void Start()
@@ -81,6 +83,17 @@ namespace UI.Dialogue_System
             AdvanceDialogue(conversation.Data.ID);
             StartDialogue(conversation.Data.ID);
         }
+        
+        public void StartDialogueName(string dialogueId)
+        {
+            if (inDialogue) return;
+            
+            inDialogue = true;
+            UIController.Instance.SwapToUI();
+            
+            AdvanceDialogue(dialogueId);
+            StartDialogue(dialogueId);
+        }
     
         private void AdvanceDialogue(string data)
         { 
@@ -102,10 +115,11 @@ namespace UI.Dialogue_System
                 return;
             }
 
-            var conversationDataPointer = conversationGroup.Find(data => data.Data.ID.ToLower().Equals(dialogueId.ToLower()) && CheckStateRequirements(dialogueId));
+            var conversationDataPointer = conversationGroup.Find(data => data.Data.ID.ToLower().Equals(dialogueId.ToLower()) && CheckStateRequirements(data.Data));
             if (conversationDataPointer == null)
             {
-                Debug.LogError("Could not find " + dialogueId + " in database");
+                Debug.Log("Could not find " + dialogueId + " in database with valid condition");
+                ExitDialogue();
                 return;
             }
 
@@ -147,6 +161,7 @@ namespace UI.Dialogue_System
             {
                 ExitDialogue();
                 OnEventTriggered?.Invoke(nextDialogue);
+                Debug.Log("Firing event: " + nextDialogue);
             }
             else
                 StartDialogue(nextDialogue);
@@ -156,23 +171,25 @@ namespace UI.Dialogue_System
         {
             foreach (var change in data.StateChanges)
             {
+                Debug.Log("Updating world state: " + change.State);
                 WorldState.SetState(change.State, change.Modifier);
+                Debug.Log("World State Now: " + WorldState.GetState(change.State));
             }
         }
 
         public bool CheckStateRequirements(string dialogueID)
         {
             var data = conversationGroup.Where(x => x.Data.ID == dialogueID).ToList();
-            Debug.Log(data.Count);
             if (!data.Any()) return true;
 
-            foreach (var item in data)
-            {
-                Debug.Log(item.Data.StateRequirements);
-            }
             return data
                 .Select(x => x.Data.StateRequirements)
                 .Any(y => y.All(requirement => requirement.IsMet(WorldState.GetState(requirement.State))));
+        }
+        
+        public bool CheckStateRequirements(ConversationData data)
+        {
+            return data.StateRequirements.All(requirement => requirement.IsMet(WorldState.GetState(requirement.State)));
         }
         
         public void SelectChoice(int choice) => choiceSelected = choice;
@@ -251,7 +268,7 @@ namespace UI.Dialogue_System
         private IEnumerator TypewriterDialogue(string name, ConversantType player, DialogueData dialogue)
         {
             currentDialogueSpeed = dialogueSpeed;
-            var loadedText = name;
+            var loadedText = "";
             var atSpecialCharacter = false;
             var line = dialogue.Dialogue;
             

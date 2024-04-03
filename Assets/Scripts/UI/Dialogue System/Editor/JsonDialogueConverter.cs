@@ -21,9 +21,8 @@ public static class JsonDialogueConverter
             SOConversationData conversation = ScriptableObject.CreateInstance<SOConversationData>();
             conversation.SetConversation(ConvertFromJson(ConvertToJson(ConvertToConversation(dialogueScene))));
 
-            string filePath = $"Assets/Resources/Dialogue/{conversation.Data.ID}.asset";
-            AssetDatabase.CreateAsset(conversation, filePath);
-            /*if (System.IO.File.Exists(filePath))
+            string filePath = $"Assets/Resources/Dialogue/{conversation.name}.asset";
+            if (System.IO.File.Exists(filePath))
             {
                 var file = AssetDatabase.LoadAssetAtPath(filePath, typeof(SOConversationData)) as SOConversationData;
                 file.SetConversation(conversation.Data);
@@ -31,7 +30,8 @@ public static class JsonDialogueConverter
             }
             else
             {
-            }*/
+                AssetDatabase.CreateAsset(conversation, filePath);
+            }
         }
     }
 
@@ -60,6 +60,12 @@ public static class JsonDialogueConverter
         conversation.ID = NextLine();
         Debug.Log($"Converting {NextLine()}");
         RemoveLine();
+
+        if (NextLine().StartsWith(VARIATION_MARKER))
+        {
+            conversation.Variation = NextLine()[VARIATION_MARKER.Length..];
+            RemoveLine();
+        }
         
         AssertMarker(NextLine(), CONDITIONAL_MARKER);
         conversation.StateRequirements = GetCondition(NextLine()[CONDITIONAL_MARKER.Length..]);

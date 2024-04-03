@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class SingletonMonoBehavior<T> : MonoBehaviour where T : SingletonMonoBehavior<T>
 {
+    protected bool BeingDestroyed;
     private static T instance;
     public static T Instance
     {
@@ -30,6 +31,7 @@ public abstract class SingletonMonoBehavior<T> : MonoBehaviour where T : Singlet
         else
         {
             Destroy(gameObject);
+            BeingDestroyed = true;
         }
     }
 }

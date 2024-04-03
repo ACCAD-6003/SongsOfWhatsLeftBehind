@@ -150,6 +150,7 @@ namespace RhythmGame
 
         private IEnumerator HandleSong(SongData songData, float songStart = 0)
         {
+            UIController.OnOverrideSkip += EndSong;
             timeToReachBottom = songData.speed;
             ToggleDisplay(true);
             musicPlayer.PlaySong(songData, songStart);
@@ -180,6 +181,7 @@ namespace RhythmGame
         [Button]
         private void EndSong()
         {
+            UIController.OnOverrideSkip -= EndSong;
             Debug.Log("Ending Song");
             RhythmGameController.OnNotePressedProcessed -= CheckForNoteInZone;
             StopAllCoroutines();

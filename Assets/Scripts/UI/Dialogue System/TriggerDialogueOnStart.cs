@@ -4,11 +4,11 @@ namespace UI.Dialogue_System
 {
     public class TriggerDialogueOnStart : MonoBehaviour
     {
-        [SerializeField] private SOConversationData conversation;
+        [SerializeField] private string conversation;
         
         private void Start()
         {
-            DialogueManager.Instance.StartDialogue(conversation);
+            DialogueManager.Instance.StartDialogueName(conversation);
         }
     }
 }

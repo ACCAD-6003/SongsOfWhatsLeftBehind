@@ -26,6 +26,7 @@ namespace UI.Dialogue_System
         public static readonly string PLAYER_SPEAKING_TO_EACH_OTHER_LABEL = "Player";
         public static readonly List<string> PREFIXES = new List<string>() { "F", "B", "A" };
         public static readonly string EVENT_MARKER = "*";
+        public static readonly string VARIATION_MARKER = "Variation: ";
 
         public static List<string> POTION_GIVEN_MARKERS => PREFIXES.Select(p => p + SUCCESS).Concat(PREFIXES.Select(p => p + FAILURE)).Select(p => p.ToLower()).ToList();
 
@@ -53,6 +54,7 @@ namespace UI.Dialogue_System
             public List<LeadsToPath> LeadsTo = new();
             public List<StateChange> StateChanges = new();
             public List<StateRequirement> StateRequirements = new();
+            public string Variation;
             public bool HasChoice => LeadsTo[0].prompt != "";
         }
         

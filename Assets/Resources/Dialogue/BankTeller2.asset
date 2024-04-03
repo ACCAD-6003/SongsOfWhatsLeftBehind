@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: BankTeller2
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: BankTeller
+    Conversant: Borris
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: Oh boy, what do you need?
+      - speaker: 0
+        Dialogue: I need to withdraw.
+      - speaker: 1
+        Dialogue: Uhh, *Chuckle* with the utmost respect, withdraw what?
+      - speaker: 0
+        Dialogue: "I need to withdraw from a friend\u2019s account. Doing a favor,
+          ya know?"
+      - speaker: 1
+        Dialogue: "Okay\u2026"
+      - speaker: 0
+        Dialogue: "\u2026"
+      - speaker: 1
+        Dialogue: Enter the pin number please.
+      - speaker: 0
+        Dialogue: There you go, sir!
+      - speaker: 1
+        Dialogue: "Alright\u2026how much?"
+      - speaker: 0
+        Dialogue: Well, uhh, all of it.
+      - speaker: 1
+        Dialogue: "Please, tell me you\u2019re joking and walk away right now."
+      - speaker: 0
+        Dialogue: "Borris, I need all of it, trust that I\u2019m a good person despite
+          the weird rumors, and please help me out."
+      - speaker: 1
+        Dialogue: "\u2026"
+      - speaker: 1
+        Dialogue: "Whatever you\u2019re doing better not be illegal."
+      - speaker: 0
+        Dialogue: Thank you.
+      - speaker: 1
+        Dialogue: Leave, please.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges:
+    - components:
+      - bankTellerTalkedTo
+      - +=
+      - 1
+      inspectorDescription: bankTellerTalkedTo += 1
+      State: bankTellerTalkedTo
+    StateRequirements:
+    - components:
+      - bankTellerTalkedTo
+      - ==
+      - 0
+      inspectorDescription: bankTellerTalkedTo == 0
+      State: bankTellerTalkedTo
+    - components:
+      - questType
+      - ==
+      - 4
+      inspectorDescription: questType == 4
+      State: questType
+    - components:
+      - day
+      - ==
+      - 1
+      inspectorDescription: day == 1
+      State: day
+    Variation: 2

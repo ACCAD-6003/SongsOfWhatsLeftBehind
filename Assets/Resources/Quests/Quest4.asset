@@ -16,4 +16,10 @@ MonoBehaviour:
   triggerEvent: 4
   tasks:
   - label: Withdraw the money
+    completionCondition: bankTellerTalkedTo
+    comparisonType: 2
+    comparisonValue: 1
   - label: "Deliver the money to Garret\u2019s sister"
+    completionCondition: sisterTalkedTo
+    comparisonType: 2
+    comparisonValue: 1

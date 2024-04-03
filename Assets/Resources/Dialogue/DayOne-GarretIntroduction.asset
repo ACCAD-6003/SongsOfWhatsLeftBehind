@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: DayOne-GarretIntroduction
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: DayOne-GarretIntroduction
+    Conversant: Garret
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: You make music??
+      - speaker: 0
+        Dialogue: GAH!
+      - speaker: 0
+        Dialogue: "W-what\u2026w-who\u2026"
+      - speaker: 0
+        Dialogue: "*Gasp*\u2026A ghost\u2026"
+      - speaker: 1
+        Dialogue: I- Well-
+      - speaker: 1
+        Dialogue: Yes. I am a ghost.
+      - speaker: 0
+        Dialogue: "Wow\u2026"
+      - speaker: 1
+        Dialogue: "So\u2026music?"
+      - speaker: 0
+        Dialogue: Oh, yes! I play the violin.
+      - speaker: 1
+        Dialogue: "Violin\u2026"
+      - speaker: 1
+        Dialogue: I sing.
+      - speaker: 0
+        Dialogue: Do you now, Mr. Ghost?
+      - speaker: 1
+        Dialogue: "\u2026"
+      - speaker: 0
+        Dialogue: Ghouly McGhastly
+      - speaker: 1
+        Dialogue: Stop.
+      - speaker: 0
+        Dialogue: "Oh\u2026sorry."
+      - speaker: 1
+        Dialogue: "\u2026"
+      - speaker: 0
+        Dialogue: "I didn\u2019t-"
+      - speaker: 1
+        Dialogue: My name is Garret. I will listen if you play.
+      - speaker: 0
+        Dialogue: S-sure. What kind of song do you want?
+      - speaker: 1
+        Dialogue: "\u2026What do I want?"
+      - speaker: 0
+        Dialogue: Yeah.
+      - speaker: 1
+        Dialogue: "\u2026You may choose for me."
+    LeadsTo:
+    - inspectorDescription: 'Prompt: Happy Triggers Event: PlayHappySong'
+      prompt: Happy
+      nextID: PlayHappySong
+      isEvent: 1
+    - inspectorDescription: 'Prompt: Sad Triggers Event: PlaySadSong'
+      prompt: Sad
+      nextID: PlaySadSong
+      isEvent: 1
+    - inspectorDescription: 'Prompt: Angry Triggers Event: PlayAngrySong'
+      prompt: Angry
+      nextID: PlayAngrySong
+      isEvent: 1
+    - inspectorDescription: 'Prompt: Determined Triggers Event: PlayDeterminedSong'
+      prompt: Determined
+      nextID: PlayDeterminedSong
+      isEvent: 1
+    StateChanges: []
+    StateRequirements: []
+    Variation: 

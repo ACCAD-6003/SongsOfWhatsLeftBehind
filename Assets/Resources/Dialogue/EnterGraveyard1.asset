@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: EnterGraveyard1
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: EnterGraveyard
+    Conversant: None
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: Should I end my day and go to the graveyard?
+    LeadsTo:
+    - inspectorDescription: 'Prompt: Go to the graveyard Triggers Event: NightTransition'
+      prompt: Go to the graveyard
+      nextID: NightTransition
+      isEvent: 1
+    - inspectorDescription: 'Prompt: Stay out in town a bit longer Leads to: exit'
+      prompt: Stay out in town a bit longer
+      nextID: exit
+      isEvent: 0
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - questCompleted
+      - ==
+      - 1
+      inspectorDescription: questCompleted == 1
+      State: questCompleted
+    Variation: 1

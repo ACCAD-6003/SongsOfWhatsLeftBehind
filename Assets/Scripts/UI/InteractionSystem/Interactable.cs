@@ -26,7 +26,7 @@ namespace UI.InteractionSystem
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!HasTag(other.gameObject, PLAYER_TAG) && !DialogueAvailable()) return;
+            if (!HasTag(other.gameObject, PLAYER_TAG) || !DialogueAvailable()) return;
 
             onInRange.Invoke();
             UIController.OnInteract += goToNextScene switch
@@ -63,7 +63,7 @@ namespace UI.InteractionSystem
         private void TriggerDialogue()
         {
             onTriggerDialogue.Invoke();
-            DialogueManager.Instance.StartDialogue(conversation);
+            DialogueManager.Instance.StartDialogueName(conversation);
         }
 
         private void OnDestroy()

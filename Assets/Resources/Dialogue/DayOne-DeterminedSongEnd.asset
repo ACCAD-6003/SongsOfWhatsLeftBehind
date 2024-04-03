@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: DayOne-DeterminedSongEnd
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: DayOne-DeterminedSongEnd
+    Conversant: Garret
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: "I can\u2019t help what happened to me."
+      - speaker: 1
+        Dialogue: "It\u2019s over now."
+      - speaker: 1
+        Dialogue: But I have things to take care of even from here.
+      - speaker: 0
+        Dialogue: Can I help?
+      - speaker: 1
+        Dialogue: Yes. You can.
+      - speaker: 0
+        Dialogue: '*Nod*'
+      - speaker: 1
+        Dialogue: Go into town tomorrow, access my savings account, take out all
+          of the money, and give it to my sister.
+      - speaker: 0
+        Dialogue: O-okay.
+      - speaker: 1
+        Dialogue: My pin is 4154.
+      - speaker: 0
+        Dialogue: Alright, just divulge that super private information then, I guess.
+      - speaker: 1
+        Dialogue: Yes.
+      - speaker: 0
+        Dialogue: "How do you know I won\u2019t just take the money for myself?"
+      - speaker: 1
+        Dialogue: "I\u2019m a ghost I can see everything, so you better not."
+      - speaker: 0
+        Dialogue: "Ha! I won\u2019t. Your baby sister is gettin\u2019 the big bucks
+          tomorrow."
+      - speaker: 1
+        Dialogue: "Go, and come back when you\u2019ve finished."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'
+      prompt: 
+      nextID: DayTransition
+      isEvent: 1
+    StateChanges:
+    - components:
+      - questType
+      - =
+      - 4
+      inspectorDescription: questType = 4
+      State: questType
+    StateRequirements: []
+    Variation: 

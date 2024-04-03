@@ -11,6 +11,7 @@ namespace UI.Dialogue_System
         public void SetConversation(ConversationData conversation)
         {
             conversationData = conversation;
+            name = conversationData.ID + conversationData.Variation;
         }
 
         public ConversationData Data => conversationData;

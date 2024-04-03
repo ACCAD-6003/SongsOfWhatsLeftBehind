@@ -16,3 +16,6 @@ MonoBehaviour:
   triggerEvent: 1
   tasks:
   - label: Speak to the a cappella group
+    completionCondition: acappellaTalkedTo
+    comparisonType: 2
+    comparisonValue: 1

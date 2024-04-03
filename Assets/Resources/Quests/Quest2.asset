@@ -16,3 +16,6 @@ MonoBehaviour:
   triggerEvent: 2
   tasks:
   - label: Speak to Spencer
+    completionCondition: spencerTalkedTo
+    comparisonType: 2
+    comparisonValue: 1

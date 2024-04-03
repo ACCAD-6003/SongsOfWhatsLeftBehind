@@ -16,3 +16,6 @@ MonoBehaviour:
   triggerEvent: 3
   tasks:
   - label: Go see the town hospital as it is now
+    completionCondition: doctorTalkedTo
+    comparisonType: 2
+    comparisonValue: 1

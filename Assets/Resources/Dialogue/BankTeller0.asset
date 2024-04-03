@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: BankTeller0
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: BankTeller
+    Conversant: Bank Teller
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: "Ahhh\u2026 Kristen\u2026"
+      - speaker: 1
+        Dialogue: "You\u2019ve got quite a few bills pending still\u2026 some college
+          debt on top of that\u2026 a credit card statement gathering interest."
+      - speaker: 1
+        Dialogue: "Any uhh\u2026 any interest in paying those today?"
+      - speaker: 0
+        Dialogue: "Not today, Borris, sorry. I\u2019ll have to wait until I make
+          some extra tip money."
+      - speaker: 1
+        Dialogue: "Well, *chuckle* you can\u2019t pay in ghost money, so\u2026"
+      - speaker: 0
+        Dialogue: What?
+      - speaker: 1
+        Dialogue: Oh, n-nothing. Sorry.
+      - speaker: 0
+        Dialogue: Yeah, okay.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges:
+    - components:
+      - bankTellerTalkedTo
+      - +=
+      - 1
+      inspectorDescription: bankTellerTalkedTo += 1
+      State: bankTellerTalkedTo
+    StateRequirements:
+    - components:
+      - bankTellerTalkedTo
+      - ==
+      - 0
+      inspectorDescription: bankTellerTalkedTo == 0
+      State: bankTellerTalkedTo
+    - components:
+      - day
+      - ==
+      - 0
+      inspectorDescription: day == 0
+      State: day
+    Variation: 0
