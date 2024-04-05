@@ -7,8 +7,7 @@ namespace RhythmGame
     public class NoteTemplate
     {
         public NoteType noteType;
-        public Color singleNoteIcon;
-        public Color longNoteIcon;
+        public Sprite noteIcon;
         public float position;
         public float marginX;
         public float endPointX;

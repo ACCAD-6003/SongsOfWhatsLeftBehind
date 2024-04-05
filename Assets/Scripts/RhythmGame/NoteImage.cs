@@ -26,25 +26,30 @@ namespace RhythmGame
         private NoteStyle style;
         private Action score;
         private Action loseScore;
+        private RectTransform connectorTransform;
+        private bool hasBeenHit;
+        private Action onBottomReached;
 
         private void Awake()
         {
             spriteRenderer = noteSprite.GetComponent<Image>();
+            connectorTransform = connector.GetComponent<RectTransform>();
         }
 
-        public void Setup(NoteTemplate noteTemplate, NoteStyle noteStyle = NoteStyle.Single)
+        public void Setup(NoteTemplate noteTemplate, Action onBottomReached, NoteStyle noteStyle = NoteStyle.Single)
         {
             noteType = noteTemplate.noteType;
             style = noteStyle;
             loseScore = null;
-            spriteRenderer.color =
-                noteStyle == NoteStyle.Single ? noteTemplate.singleNoteIcon : noteTemplate.longNoteIcon;
+            spriteRenderer.sprite = noteTemplate.noteIcon;
             connector.gameObject.SetActive(noteStyle != NoteStyle.Single);
             extendedNoteSprite.gameObject.SetActive(noteStyle != NoteStyle.Single);
-            extendedNoteSprite.color = spriteRenderer.color;
+            extendedNoteSprite.sprite = spriteRenderer.sprite;
             this.noteTemplate = noteTemplate;
+            hasBeenHit = false;
+            this.onBottomReached = onBottomReached;
         }
-        
+
         public void Send(float timeToReachBottom, float targetZone, Func<float, bool> withinThreshold, float length = 0)
         {
             startingHeight = Position;
@@ -52,12 +57,13 @@ namespace RhythmGame
             this.targetZone = targetZone;
             var speed = CalculateSpeed(timeToReachBottom, startingHeight, targetZone);
             SetPosition(extendedNoteSprite.transform, Position + length * -speed);
-            SetupConnector(connector, ExtendedPosition - Position);
+            SetupConnector(ExtendedPosition - Position);
             
             var currentX = transform.position.x;
             preMarginXSpeed = CalculateSpeed(timeToReachBottom, currentX, noteTemplate.marginX + currentX);
 
             postMarginXSpeed = 0;
+            SetPosition(noteSprite, Position);
             SetXOffset(noteSprite, 0);
             SetXOffset(extendedNoteSprite.transform, 0);
 
@@ -72,6 +78,7 @@ namespace RhythmGame
                     connector.color = Color.gray;
                     this.score = score;
                     this.loseScore = loseScore;
+                    score();
                     Controller.RhythmGameController.OnNoteReleasedProcessed -= UponRelease;
                     Controller.RhythmGameController.OnNoteReleasedProcessed += UponRelease;
                     break;
@@ -83,6 +90,7 @@ namespace RhythmGame
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+            hasBeenHit = true;
         }
 
         private void UponRelease(NoteType type)
@@ -109,9 +117,8 @@ namespace RhythmGame
             t.localPosition = temp;
         }
 
-        private void SetupConnector(Image connector, float distance)
+        private void SetupConnector(float distance)
         {
-            var connectorTransform = connector.GetComponent<RectTransform>();
             connectorTransform.localPosition = Vector3.up * distance / 2f;
             connectorTransform.sizeDelta = new Vector2(connectorTransform.rect.width, distance);
             connector.color = Color.white;
@@ -122,8 +129,9 @@ namespace RhythmGame
             var top = extendedNoteSprite.transform;
             var bottom = noteSprite.transform;
             var angle = Vector2.SignedAngle(Vector2.up, top.position - bottom.position);
-            connector.transform.localRotation = Quaternion.Euler(0, 0, angle);
-            connector.transform.localPosition = (top.localPosition + bottom.localPosition) / 2;
+            connectorTransform.localRotation = Quaternion.Euler(0, 0, angle);
+            connectorTransform.localPosition = (top.localPosition + bottom.localPosition) / 2;
+            connectorTransform.sizeDelta = new Vector2(connectorTransform.rect.width, Vector2.Distance(top.localPosition, bottom.localPosition));
         }
 
         // Should move the note to the bottom of the screen crossing through the notee margin x and then endpoint x
@@ -134,6 +142,7 @@ namespace RhythmGame
             Func<float> noMoveSprite = () => noteSprite.localPosition.x;
             Func<float> extendedNoteXOffset = () => extendedNoteSprite.transform.localPosition.x + preMarginXSpeed * Time.deltaTime;
             Func<float> noMoveExtended = () => extendedNoteSprite.transform.localPosition.x;
+            var thresholdPassed = false;
 
             while (ExtendedPosition > -startingHeight)
             {
@@ -142,11 +151,24 @@ namespace RhythmGame
                 var noteXOffset = ExtendedPosition < startingHeight && ExtendedPosition > targetZone 
                     ? extendedNoteXOffset : noMoveExtended;
 
+                if (hasBeenHit && style == NoteStyle.Hold && Position < targetZone) SetPosition(noteSprite, targetZone);
+                if (!thresholdPassed) thresholdPassed = ThresholdPassed();
+                
                 UpdatePosition(speed, spriteXOffset, noteXOffset);
                 yield return null;
             }
-            
+
             gameObject.SetActive(false);
+        }
+
+        private bool ThresholdPassed()
+        {
+            if (hasBeenHit) return false;
+            if (withinThreshold(Position)) return false;
+            if (Position > targetZone) return false;
+            
+            onBottomReached();
+            return true;
         }
 
         private void UpdatePosition(float speed, Func<float> noteSpriteXOffset, Func<float> extendedNoteXOffset)

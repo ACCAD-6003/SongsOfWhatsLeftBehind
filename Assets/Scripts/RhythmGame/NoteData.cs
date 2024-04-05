@@ -3,6 +3,13 @@ using System.Collections.Generic;
 
 namespace RhythmGame
 {
+    public enum NoteResult
+    {
+        Great,
+        Ok,
+        Miss
+    }
+
     [Serializable]
     public class NoteData
     {

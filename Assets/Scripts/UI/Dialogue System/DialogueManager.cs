@@ -235,7 +235,7 @@ namespace UI.Dialogue_System
             var speakerName = SpeakerName(dialogue, conversant);
             
             OnTextSet?.Invoke(speakerName + dialogue.Dialogue, ConversantType.Player, dialogue.speaker);
-            OnTextUpdated?.Invoke(speakerName, ConversantType.Player, dialogue.speaker);
+            OnTextUpdated?.Invoke("", ConversantType.Player, dialogue.speaker);
             yield return new WaitUntil(() => FadeToBlackSystem.FadeOutComplete);
 
             continueInputReceived = false;

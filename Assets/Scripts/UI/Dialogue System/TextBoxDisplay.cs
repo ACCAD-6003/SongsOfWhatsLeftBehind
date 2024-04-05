@@ -25,8 +25,8 @@ namespace UI.Dialogue_System
             var label = text.Split('\n')[0];
             nameTextField.text = label.Contains(':') ? label.Split(':')[0] : "";
             nameField.SetActive(nameTextField.text != "");
-            dialogueTextField.text = label.Contains(':') ? text.Replace(label, "").Trim('\n') : text;
             dialogueTextField.maxVisibleCharacters = 0;
+            dialogueTextField.text = label.Contains(':') ? text.Replace(label, "").Trim('\n') : text;
             continueIndicator.SetActive(false);
         }
         

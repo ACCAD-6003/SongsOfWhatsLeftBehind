@@ -25,6 +25,9 @@ namespace RhythmGame
         [SerializeField] private GameObject noteSpawnPositionMarker;
         [SerializeField] private RhythmGameMusicPlayer musicPlayer;
         [SerializeField] private Dictionary<NoteType, NoteTemplate> templates;
+        [SerializeField] private PerformanceIndicator performanceIndicator;
+        [SerializeField] private ScoreDisplay scoreDisplay;
+        [SerializeField] private GameObject noteContainer;
         
         List<NoteImage> notePool = new();
         float CorrectThreshold => targetZone.rect.height / 2;
@@ -35,8 +38,6 @@ namespace RhythmGame
             .Where(y => y.gameObject.activeInHierarchy)
             .ToList();
         
-        GameObject noteContainer;
-
         private void Start()
         {
             CreateNotePools();
@@ -63,13 +64,15 @@ namespace RhythmGame
 
         private void Score()
         {
-            Debug.Log("Score");
+            performanceIndicator.Show(NoteResult.Great);
+            scoreDisplay.OnScoreNote(NoteResult.Great);
         }
 
         private void LoseScore()
         {
-            Debug.Log("Lose Score");
             musicPlayer.PlayErrorSound();
+            performanceIndicator.Show(NoteResult.Miss);
+            scoreDisplay.OnScoreNote(NoteResult.Miss);
         }
 
         private bool WithinThreshold(float value)
@@ -88,10 +91,6 @@ namespace RhythmGame
         private void CreateNotePools()
         {
             notePool.Clear();
-            noteContainer = new GameObject("NoteContainer");
-            noteContainer.AddComponent<RectTransform>();
-            noteContainer.transform.SetParent(display.transform);
-            noteContainer.transform.localPosition = Vector3.zero;
             for (int i = 0; i < NOTE_POOL_SIZE; i++)
             {
                 var note = Instantiate(notePrefab, noteContainer.transform, true);
@@ -111,7 +110,7 @@ namespace RhythmGame
             }
             
             note.gameObject.SetActive(true);
-            note.Setup(templates[noteType], style);
+            note.Setup(templates[noteType], LoseScore, style);
             return note;
         }
         
