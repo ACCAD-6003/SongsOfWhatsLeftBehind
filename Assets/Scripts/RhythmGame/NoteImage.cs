@@ -14,6 +14,8 @@ namespace RhythmGame
 
         public NoteType NoteType => noteType;
         public float Position => transform.position.y;
+        public float HorizontalPosition => noteSprite.position.x;
+        public float VerticalPosition => noteSprite.position.y;
         public float ExtendedPosition => extendedNoteSprite.transform.position.y;
         
         private float startingHeight;

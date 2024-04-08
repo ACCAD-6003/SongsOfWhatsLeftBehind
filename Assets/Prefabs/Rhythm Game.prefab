@@ -765,6 +765,7 @@ MonoBehaviour:
   timeToReachBottom: 1
   targetZone: {fileID: 3074999125768955089}
   notePrefab: {fileID: 6287804035596968944, guid: e46c0619445f7634ab62138910bd4026, type: 3}
+  noteConnectorPrefab: {fileID: 9198724986308051278, guid: db60e7bd1c5f32a429eaed3b5c36caf9, type: 3}
   noteSpawnPositionMarker: {fileID: 3074999125242920833}
   musicPlayer: {fileID: 3074999126022103147}
   performanceIndicator: {fileID: 2976974683591398809}
@@ -1271,15 +1272,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3074999124981486819}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 150}
+  m_AnchoredPosition: {x: 0, y: -356}
+  m_SizeDelta: {x: 400, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5811539543920477902
 CanvasRenderer:
