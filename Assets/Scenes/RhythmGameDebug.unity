@@ -569,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
       propertyPath: songData
       value: 
-      objectReference: {fileID: 11400000, guid: 0e50618c03a99894d8ee0405b321a514, type: 2}
+      objectReference: {fileID: 11400000, guid: 8ed8319168711324186ea0ce364dad7b, type: 2}
     - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
       propertyPath: serializationData.Prefab
       value: 
