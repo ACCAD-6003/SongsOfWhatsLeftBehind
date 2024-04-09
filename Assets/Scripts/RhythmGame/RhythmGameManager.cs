@@ -7,6 +7,7 @@ using UnityEngine;
 using Controller;
 using Sirenix.Utilities;
 using UI.Dialogue_System;
+using UnityEngine.UI;
 
 namespace RhythmGame
 {
@@ -22,14 +23,16 @@ namespace RhythmGame
         [SerializeField, ReadOnly] private float timeToReachBottom;
         [SerializeField] private RectTransform targetZone;
         [SerializeField] private GameObject notePrefab;
+        [SerializeField] private GameObject noteConnectorPrefab;
         [SerializeField] private GameObject noteSpawnPositionMarker;
         [SerializeField] private RhythmGameMusicPlayer musicPlayer;
         [SerializeField] private Dictionary<NoteType, NoteTemplate> templates;
         [SerializeField] private PerformanceIndicator performanceIndicator;
         [SerializeField] private ScoreDisplay scoreDisplay;
         [SerializeField] private GameObject noteContainer;
-        
-        List<NoteImage> notePool = new();
+
+        readonly List<NoteImage> notePool = new();
+        readonly List<NoteConnector> noteConnectors = new();
         float CorrectThreshold => targetZone.rect.height / 2;
         float ThresholdCenter => targetZone.position.y;
         float NoteSpawnPosition => noteSpawnPositionMarker.transform.position.y;
@@ -81,21 +84,29 @@ namespace RhythmGame
                    < Mathf.Epsilon;
         }
         
-        private void DisplayNote(NoteType noteType, NoteStyle style, float length)
+        private NoteImage DisplayNote(NoteType noteType, NoteStyle style, float length)
         {
             var note = GetNoteFromPool(noteType, style);
             note.transform.position = new Vector3(display.transform.position.x + templates[noteType].position, NoteSpawnPosition);
             note.Send(timeToReachBottom, ThresholdCenter, WithinThreshold, length);
+
+            return note;
         }
-        
+
         private void CreateNotePools()
         {
-            notePool.Clear();
-            for (int i = 0; i < NOTE_POOL_SIZE; i++)
+            CreatePool(noteConnectors, noteConnectorPrefab, NOTE_POOL_SIZE / 3);
+            CreatePool(notePool, notePrefab, NOTE_POOL_SIZE);
+        }
+        
+        private void CreatePool<T>(ICollection<T> pool, GameObject prefab, int poolSize) where T : MonoBehaviour
+        {
+            pool.Clear();
+            for (int i = 0; i < poolSize; i++)
             {
-                var note = Instantiate(notePrefab, noteContainer.transform, true);
-                note.SetActive(false);
-                notePool.Add(note.GetComponent<NoteImage>());
+                var obj = Instantiate(prefab, noteContainer.transform, true);
+                obj.SetActive(false);
+                pool.Add(obj.GetComponent<T>());
             }
         }
 
@@ -112,6 +123,17 @@ namespace RhythmGame
             note.gameObject.SetActive(true);
             note.Setup(templates[noteType], LoseScore, style);
             return note;
+        }
+        
+        private void SetupConnector(NoteImage left, NoteImage right)
+        {
+            var connector = noteConnectors.FirstOrDefault(x => !x.gameObject.activeInHierarchy);
+            if (connector == null)
+            {
+                connector = Instantiate(noteConnectorPrefab, noteContainer.transform, true).GetComponent<NoteConnector>();
+                noteConnectors.Add(connector);
+            }
+            connector.Display(left, right);
         }
         
         [Button]
@@ -163,9 +185,15 @@ namespace RhythmGame
                 foreach (var note in phrase.notes.Where(x => x.offset + phrase.startTime - timeToReachBottom >= songStart))
                 {
                     yield return new WaitUntil(() => TimeElapsed() >= phrase.startTime - timeToReachBottom + note.offset);
+                    var sentNotes = new List<NoteImage>();
                     foreach (var noteType in note.notes)
                     {
-                        DisplayNote(noteType, note.style, note.noteLength);
+                        sentNotes.Add(DisplayNote(noteType, note.style, note.noteLength));
+                    }
+                    
+                    for (int i = 0; i < sentNotes.Count - 1; i++)
+                    {
+                        SetupConnector(sentNotes[i], sentNotes[i + 1]);
                     }
                 }
             }
@@ -185,6 +213,7 @@ namespace RhythmGame
             RhythmGameController.OnNotePressedProcessed -= CheckForNoteInZone;
             StopAllCoroutines();
             notePool.ForEach(x => x.gameObject.SetActive(false));
+            noteConnectors.ForEach(x => x.gameObject.SetActive(false));
             musicPlayer.StopSong();
             OnSongEnd?.Invoke();
             ToggleDisplay(false);
