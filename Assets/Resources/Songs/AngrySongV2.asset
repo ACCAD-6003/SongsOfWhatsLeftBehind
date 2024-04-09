@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0eefdd0ca8314c78a9391514fcc1bf22, type: 3}
-  m_Name: AngrySongWIthMetronome
+  m_Name: AngrySongV2
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: e0402f4a6806f5f40bd54c3cb27b0f90, type: 3}
   phrases:
