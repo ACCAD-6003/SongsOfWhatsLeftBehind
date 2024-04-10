@@ -28,7 +28,13 @@ MonoBehaviour:
       prompt: 
       nextID: DayOne-GarretIntroduction
       isEvent: 0
-    StateChanges: []
+    StateChanges:
+    - components:
+      - GarrettSeen
+      - =
+      - 1
+      inspectorDescription: GarrettSeen = 1
+      State: GarrettSeen
     StateRequirements:
     - components:
       - day
