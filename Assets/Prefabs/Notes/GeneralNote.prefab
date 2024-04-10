@@ -133,6 +133,7 @@ MonoBehaviour:
   noteSprite: {fileID: 6335815706136563796}
   extendedNoteSprite: {fileID: 1136473462196668293}
   connector: {fileID: 2961711667755327684}
+  pop: {fileID: 734189608879839710, guid: a900bfa3abf235444ab613df5548a330, type: 3}
 --- !u!222 &7561646450159695875
 CanvasRenderer:
   m_ObjectHideFlags: 0

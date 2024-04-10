@@ -8,12 +8,12 @@ namespace RhythmGame
         private RectTransform rectTransform;
         private NoteImage leftSide;
         private NoteImage rightSide;
-        
+
         private void Awake()
         {
             rectTransform = GetComponent<RectTransform>();
         }
-        
+
         public void Display(NoteImage leftSide, NoteImage rightSide)
         {
             this.leftSide = leftSide;
@@ -33,13 +33,14 @@ namespace RhythmGame
                 gameObject.SetActive(false);
             }
         }
-        
+
         private void UpdateTransform()
         {
             rectTransform.position = new Vector3(
-                (rightSide.HorizontalPosition + leftSide.HorizontalPosition) / 2f, 
+                (rightSide.HorizontalPosition + leftSide.HorizontalPosition) / 2f,
                 leftSide.VerticalPosition);
-            rectTransform.sizeDelta = new Vector2(rightSide.HorizontalPosition - leftSide.HorizontalPosition, rectTransform.sizeDelta.y);
+            rectTransform.sizeDelta = new Vector2(rightSide.HorizontalPosition - leftSide.HorizontalPosition,
+                rectTransform.sizeDelta.y);
         }
     }
 }

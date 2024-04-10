@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ namespace RhythmGame
         [SerializeField] private RectTransform noteSprite;
         [SerializeField] private Image extendedNoteSprite;
         [SerializeField] private Image connector;
+        [SerializeField] private GameObject pop;
 
         public NoteType NoteType => noteType;
         public float Position => transform.position.y;
@@ -88,6 +90,7 @@ namespace RhythmGame
                     this.loseScore = null;
                     gameObject.SetActive(false);
                     score();
+                    Instantiate(pop, new Vector3(noteSprite.position.x, targetZone), quaternion.identity, transform.parent);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
