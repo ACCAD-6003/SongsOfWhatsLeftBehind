@@ -15,6 +15,7 @@ namespace RhythmGame
     {
         [HideInInspector] public Action OnSongStart;
         [HideInInspector] public Action OnSongEnd;
+        [HideInInspector] public Action OnHit;
 
         private const int NOTE_POOL_SIZE = 30;
 
@@ -69,6 +70,7 @@ namespace RhythmGame
         {
             performanceIndicator.Show(NoteResult.Great);
             scoreDisplay.OnScoreNote(NoteResult.Great);
+            OnHit?.Invoke();
         }
 
         private void LoseScore()

@@ -9,6 +9,7 @@ namespace RhythmGame
     {
         [SerializeField] private TMP_Text scoreText;
         [SerializeField] private TMP_Text comboText;
+        [SerializeField] private TMP_Text streakText;
         [SerializeField] private int maxCombo;
         [SerializeField] private int hitsPerCombo;
         [SerializeField] private float duration = 1f;
@@ -52,6 +53,8 @@ namespace RhythmGame
         {
             scoreText.text = "Score: " + score;
             comboText.text = "Combo: " + Combo + "x";
+            streakText.text = currentHits + " Hits!";
+            streakText.enabled = currentHits != 0;
 
             StopCoroutine(nameof(Pulse));
             StartCoroutine(nameof(Pulse));
@@ -67,8 +70,7 @@ namespace RhythmGame
             {
                 timeToLive += Time.deltaTime;
                 timeToPulse += Time.deltaTime;
-                float scale;
-                scale = timeToPulse < pulseDuration 
+                var scale = timeToPulse < pulseDuration 
                     ? Mathf.Lerp(1, scaleMax, timeToPulse / pulseDuration) 
                     : Mathf.Lerp(scaleMax, 1, (timeToLive - pulseDuration) / (duration - pulseDuration));
                 

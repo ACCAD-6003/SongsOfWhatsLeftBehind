@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private PlayerMovement playerMovement;
     private Rigidbody2D rbody;
 
+    private bool canMove = true;
+
     private void Awake()
     {
         playerMovement = new PlayerMovement();
@@ -21,8 +24,26 @@ public class PlayerController : MonoBehaviour
         playerMovement.PlayerAcions.Jump.performed += Jump;
     }
 
+    private void Start()
+    {
+        Controller.UIController.Instance.OnSwapToUI += DisableInput;
+        Controller.UIController.Instance.OnSwapToGameplay += EnableInput;
+    }
+
+    private void EnableInput()
+    {
+        canMove = true;
+    }
+    
+    private void DisableInput()
+    {
+        canMove = false;
+    }
+
     private void Jump(InputAction.CallbackContext ctx)
     {
+        if (!canMove) return;
+        
         if (rbody.velocity.y == 0)
         {
             anim.SetBool("isJumping", true);
@@ -61,16 +82,14 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveInput.x = playerMovement.PlayerAcions.Movement.ReadValue<Vector2>().x;
+        moveInput.x = canMove ? playerMovement.PlayerAcions.Movement.ReadValue<Vector2>().x : 0;
         rbody.velocity = new Vector2(moveInput.x * speed, rbody.velocity.y);
-        if (rbody.velocity.x != 0)
-        {
-            anim.SetBool("isRunning", true);
-        }
-        else
-        {
-            anim.SetBool("isRunning", false);
-        }
+        UpdateAnimations();
+    }
+
+    private void UpdateAnimations()
+    {
+        anim.SetBool("isRunning", rbody.velocity.x != 0);
 
         if (rbody.velocity.y < 0)
         {
@@ -96,5 +115,11 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         playerMovement.PlayerAcions.Disable();
+    }
+    
+    private void OnDestroy()
+    {
+        Controller.UIController.Instance.OnSwapToUI -= DisableInput;
+        Controller.UIController.Instance.OnSwapToGameplay -= EnableInput;
     }
 }
