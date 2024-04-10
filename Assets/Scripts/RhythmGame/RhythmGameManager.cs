@@ -34,7 +34,7 @@ namespace RhythmGame
 
         readonly List<NoteImage> notePool = new();
         readonly List<NoteConnector> noteConnectors = new();
-        float CorrectThreshold => targetZone.rect.height / 2;
+        float CorrectThreshold => targetZone.rect.height / 1.5f;
         float ThresholdCenter => targetZone.position.y;
         float NoteSpawnPosition => noteSpawnPositionMarker.transform.position.y;
 

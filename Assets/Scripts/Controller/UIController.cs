@@ -61,6 +61,7 @@ namespace Controller
 
         public void Interact(InputAction.CallbackContext context)
         {
+            if (SceneTools.transistioning) return;
             if (context.started)
             {
                 OnInteract?.Invoke();
