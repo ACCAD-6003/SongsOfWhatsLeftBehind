@@ -11,9 +11,9 @@ namespace UI.Dialogue_System
         
         public static void SetState(string key, int value)
         {
-            if (CurrentState.TryGetValue(key, out var currentValue))
+            if (CurrentState.TryGetValue(key, out _))
             {
-                CurrentState[key] = currentValue + value;
+                CurrentState[key] = value;
             }
             else
             {

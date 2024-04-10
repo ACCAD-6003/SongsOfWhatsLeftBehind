@@ -2128,8 +2128,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3720138062532354342}
-        m_TargetAssemblyTypeName: UI.Menus.MenuBase, Assembly-CSharp
-        m_MethodName: CloseMenu
+        m_TargetAssemblyTypeName: UI.Menus.PauseMenu, Assembly-CSharp
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6138,8 +6138,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3720138062532354342}
-        m_TargetAssemblyTypeName: UI.Menus.MenuBase, Assembly-CSharp
-        m_MethodName: CloseMenu
+        m_TargetAssemblyTypeName: UI.Menus.PauseMenu, Assembly-CSharp
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

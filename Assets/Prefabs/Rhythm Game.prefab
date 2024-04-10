@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 1686162094778035527}
   - component: {fileID: 8850791285100256998}
   - component: {fileID: 4975775151401266842}
+  - component: {fileID: 5462754671728223326}
   m_Layer: 0
   m_Name: Kristen Animation
   m_TagString: Untagged
@@ -232,6 +233,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5462754671728223326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2396623461294977238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d693632babe44bd8bd47ee2f88ce809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.2
+  pulseDuration: 0.05
+  scaleMax: 1.05
 --- !u!1 &3074999124981486847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1240,7 @@ GameObject:
   - component: {fileID: 9041498597777279921}
   - component: {fileID: 8869585685909122477}
   - component: {fileID: 1792755497696975459}
+  - component: {fileID: 6090233395189231740}
   m_Layer: 0
   m_Name: Garrett The Ghost
   m_TagString: Untagged
@@ -1304,6 +1321,21 @@ MonoBehaviour:
   key: GarrettSeen
   value: 1
   invert: 0
+--- !u!114 &6090233395189231740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7581377939719298031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d693632babe44bd8bd47ee2f88ce809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.2
+  pulseDuration: 0.05
+  scaleMax: 1.05
 --- !u!1 &7953032778494707521
 GameObject:
   m_ObjectHideFlags: 0

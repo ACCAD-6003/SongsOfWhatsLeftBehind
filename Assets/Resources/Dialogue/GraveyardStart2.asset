@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: GraveyardStart0
+  m_Name: GraveyardStart2
   m_EditorClassIdentifier: 
   conversationData:
     ID: GraveyardStart
@@ -18,15 +18,18 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 0
-        Dialogue: "*Huff*\u2026"
+        Dialogue: I hope I see Garret again.
       - speaker: 0
-        Dialogue: Today was long.
+        Dialogue: "I did what he asked, but\u2026maybe his presence was *dramatic
+          sigh*\u2026fleeting."
       - speaker: 0
-        Dialogue: What do you think, ghosts? Long for you too?
+        Dialogue: '*Doing an impression* Perhaps I vex him and he left this mortal
+          world because I am just too weird to tolerate.'
       - speaker: 0
-        Dialogue: "\u2026"
+        Dialogue: "HAHA! No, that\u2019s not it."
       - speaker: 0
-        Dialogue: "Yeah\u2026"
+        Dialogue: "Well, if he\u2019s not here, then I guess everyone in town is
+          right, and I\u2019m just seeing ghosts after all."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
@@ -36,15 +39,21 @@ MonoBehaviour:
     - components:
       - day
       - =
-      - 0
-      inspectorDescription: day = 0
+      - 2
+      inspectorDescription: day = 2
       State: day
     StateRequirements:
     - components:
       - day
       - ==
-      - 0
-      inspectorDescription: day == 0
+      - 1
+      inspectorDescription: day == 1
       State: day
-    Variation: 0
+    - components:
+      - questCompleted
+      - ==
+      - 1
+      inspectorDescription: questCompleted == 1
+      State: questCompleted
+    Variation: 2
     AudioCue: 

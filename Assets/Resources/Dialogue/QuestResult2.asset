@@ -10,59 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: DayOne-GarretIntroduction
+  m_Name: QuestResult2
   m_EditorClassIdentifier: 
   conversationData:
-    ID: DayOne-GarretIntroduction
+    ID: QuestResult
     Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        Dialogue: You make music??
+        Dialogue: You must have seen the hospital, yes?
       - speaker: 0
-        Dialogue: GAH!
+        Dialogue: "Yeah, I did. It\u2019s shutting down."
+      - speaker: 1
+        Dialogue: Good.
       - speaker: 0
-        Dialogue: "W-what\u2026w-who\u2026"
+        Dialogue: "\u2026May I ask\u2026"
+      - speaker: 1
+        Dialogue: No, you may not.
       - speaker: 0
-        Dialogue: "*Gasp*\u2026A ghost\u2026"
+        Dialogue: -sorry.
       - speaker: 1
-        Dialogue: I- Well-
-      - speaker: 1
-        Dialogue: Yes. I am a ghost.
+        Dialogue: "It\u2019s fine. It\u2019s just\u2026It was a little while ago,
+          but it\u2019s still fresh."
       - speaker: 0
-        Dialogue: "Wow\u2026"
+        Dialogue: Mmm.
       - speaker: 1
-        Dialogue: "So\u2026music?"
+        Dialogue: "Maybe someday\u2026I guess it depends on how long you keep visiting
+          me."
       - speaker: 0
-        Dialogue: Oh, yes! I play the violin.
+        Dialogue: You mean how long YOU keep visiting ME. This was my spot, you know.
       - speaker: 1
-        Dialogue: "Violin\u2026"
-      - speaker: 1
-        Dialogue: I sing.
+        Dialogue: "Yeah, but it\u2019s my eternal resting place."
       - speaker: 0
-        Dialogue: Do you now, Mr. Ghost?
+        Dialogue: "Touch\xE9."
       - speaker: 1
-        Dialogue: "\u2026"
+        Dialogue: Will you play more music today?
       - speaker: 0
-        Dialogue: Ghouly McGhastly
-      - speaker: 1
-        Dialogue: Stop.
-      - speaker: 0
-        Dialogue: "Oh\u2026sorry."
-      - speaker: 1
-        Dialogue: "\u2026"
-      - speaker: 0
-        Dialogue: "I didn\u2019t-"
-      - speaker: 1
-        Dialogue: My name is Garret. I will listen if you play.
-      - speaker: 0
-        Dialogue: "S-sure. I\u2019m Kristen. What kind of song do you want?"
-      - speaker: 1
-        Dialogue: "\u2026What do I want?"
-      - speaker: 0
-        Dialogue: Yeah.
-      - speaker: 1
-        Dialogue: "\u2026You may choose for me."
+        Dialogue: Sure, thing. What are we feeling?
     LeadsTo:
     - inspectorDescription: 'Prompt: Happy Triggers Event: PlayHappySong'
       prompt: Happy
@@ -80,7 +64,25 @@ MonoBehaviour:
       prompt: Determined
       nextID: PlayDeterminedSong
       isEvent: 1
-    StateChanges: []
-    StateRequirements: []
-    Variation: 
+    StateChanges:
+    - components:
+      - day
+      - =
+      - 1
+      inspectorDescription: day = 1
+      State: day
+    StateRequirements:
+    - components:
+      - questType
+      - ==
+      - 3
+      inspectorDescription: questType == 3
+      State: questType
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    Variation: 2
     AudioCue: 

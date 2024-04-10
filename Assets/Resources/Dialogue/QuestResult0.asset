@@ -10,59 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: DayOne-GarretIntroduction
+  m_Name: QuestResult0
   m_EditorClassIdentifier: 
   conversationData:
-    ID: DayOne-GarretIntroduction
+    ID: QuestResult
     Conversant: Garret
     DialoguesSeries:
     - dialogues:
-      - speaker: 1
-        Dialogue: You make music??
       - speaker: 0
-        Dialogue: GAH!
+        Dialogue: Heehee! You were quite the singer,  huh?
+      - speaker: 1
+        Dialogue: Ha! So you found my group?
       - speaker: 0
-        Dialogue: "W-what\u2026w-who\u2026"
+        Dialogue: "I did\u2026bunch a\u2019 nerds."
+      - speaker: 1
+        Dialogue: "Don\u2019t slander a cappella, Kristen."
       - speaker: 0
-        Dialogue: "*Gasp*\u2026A ghost\u2026"
+        Dialogue: "I wouldn\u2019t dare."
       - speaker: 1
-        Dialogue: I- Well-
-      - speaker: 1
-        Dialogue: Yes. I am a ghost.
+        Dialogue: "Haha\u2026So, they\u2019re okay?"
       - speaker: 0
-        Dialogue: "Wow\u2026"
+        Dialogue: "Kickin\u2019 it as always, but they miss you."
       - speaker: 1
-        Dialogue: "So\u2026music?"
+        Dialogue: "Hmm\u2026those baritone harmonies won\u2019t sing themselves."
       - speaker: 0
-        Dialogue: Oh, yes! I play the violin.
+        Dialogue: You should haunt them while they perform, singing your part with
+          the choir.
       - speaker: 1
-        Dialogue: "Violin\u2026"
-      - speaker: 1
-        Dialogue: I sing.
+        Dialogue: "Nah, haunting isn\u2019t really my thing."
       - speaker: 0
-        Dialogue: Do you now, Mr. Ghost?
+        Dialogue: Well, just let me know if it could be. I could give you a scary
+          soundtrack.
       - speaker: 1
-        Dialogue: "\u2026"
+        Dialogue: Will you play more music today?
       - speaker: 0
-        Dialogue: Ghouly McGhastly
-      - speaker: 1
-        Dialogue: Stop.
-      - speaker: 0
-        Dialogue: "Oh\u2026sorry."
-      - speaker: 1
-        Dialogue: "\u2026"
-      - speaker: 0
-        Dialogue: "I didn\u2019t-"
-      - speaker: 1
-        Dialogue: My name is Garret. I will listen if you play.
-      - speaker: 0
-        Dialogue: "S-sure. I\u2019m Kristen. What kind of song do you want?"
-      - speaker: 1
-        Dialogue: "\u2026What do I want?"
-      - speaker: 0
-        Dialogue: Yeah.
-      - speaker: 1
-        Dialogue: "\u2026You may choose for me."
+        Dialogue: Sure, thing. What are we feeling?
     LeadsTo:
     - inspectorDescription: 'Prompt: Happy Triggers Event: PlayHappySong'
       prompt: Happy
@@ -80,7 +62,25 @@ MonoBehaviour:
       prompt: Determined
       nextID: PlayDeterminedSong
       isEvent: 1
-    StateChanges: []
-    StateRequirements: []
-    Variation: 
+    StateChanges:
+    - components:
+      - day
+      - =
+      - 1
+      inspectorDescription: day = 1
+      State: day
+    StateRequirements:
+    - components:
+      - questType
+      - ==
+      - 1
+      inspectorDescription: questType == 1
+      State: questType
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    Variation: 0
     AudioCue: 

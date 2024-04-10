@@ -10,41 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: GraveyardStart0
+  m_Name: StartSong2
   m_EditorClassIdentifier: 
   conversationData:
-    ID: GraveyardStart
+    ID: StartSong
     Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
-        Dialogue: "*Huff*\u2026"
-      - speaker: 0
-        Dialogue: Today was long.
-      - speaker: 0
-        Dialogue: What do you think, ghosts? Long for you too?
+        Dialogue: "Garret?\u2026"
       - speaker: 0
         Dialogue: "\u2026"
       - speaker: 0
-        Dialogue: "Yeah\u2026"
+        Dialogue: "I came to play for you again\u2026"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
+    - inspectorDescription: 'Prompt:  Leads to: DayTwo-GarretIntroduction'
       prompt: 
-      nextID: end
+      nextID: DayTwo-GarretIntroduction
       isEvent: 0
-    StateChanges:
-    - components:
-      - day
-      - =
-      - 0
-      inspectorDescription: day = 0
-      State: day
+    StateChanges: []
     StateRequirements:
     - components:
       - day
       - ==
-      - 0
-      inspectorDescription: day == 0
+      - 2
+      inspectorDescription: day == 2
       State: day
-    Variation: 0
+    Variation: 2
     AudioCue: 

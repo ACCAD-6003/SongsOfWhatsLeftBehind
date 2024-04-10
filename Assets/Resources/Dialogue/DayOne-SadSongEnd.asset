@@ -22,7 +22,7 @@ MonoBehaviour:
       - speaker: 0
         Dialogue: Are- Umm- Are you okay?
       - speaker: 1
-        Dialogue: "Last night\u2026Last night I\u2026"
+        Dialogue: "A couple weeks ago\u2026when it happened\u2026I\u2026"
       - speaker: 0
         Dialogue: "You don\u2019t have to say it. I think I know."
       - speaker: 1

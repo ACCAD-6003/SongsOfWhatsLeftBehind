@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: DayTwo-GarretIntroduction
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: DayTwo-GarretIntroduction
+    Conversant: Garret
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: Hello.
+      - speaker: 0
+        Dialogue: HELLO!
+      - speaker: 0
+        Dialogue: "\u2026"
+      - speaker: 0
+        Dialogue: "I guess we\u2019re still in the awkward phase of this friendship."
+      - speaker: 1
+        Dialogue: Awkward phase?
+      - speaker: 0
+        Dialogue: "Yeah, you know\u2026"
+      - speaker: 1
+        Dialogue: "\u2026"
+      - speaker: 0
+        Dialogue: "This\u2026the small talk and timid \u201Chello\u201D\u2019s phase."
+      - speaker: 1
+        Dialogue: "Ah. Well, I don\u2019t get awkward so,"
+      - speaker: 0
+        Dialogue: "Because you\u2019re a ghost!"
+      - speaker: 1
+        Dialogue: "No\u2026because of my personality."
+      - speaker: 0
+        Dialogue: Oh, okay. Yeah I love your personality.
+      - speaker: 1
+        Dialogue: Was that genuine?
+      - speaker: 0
+        Dialogue: "Who knows\u2026"
+      - speaker: 1
+        Dialogue: Soooo you have updates?
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: QuestResult'
+      prompt: 
+      nextID: QuestResult
+      isEvent: 0
+    StateChanges: []
+    StateRequirements: []
+    Variation: 
+    AudioCue: 

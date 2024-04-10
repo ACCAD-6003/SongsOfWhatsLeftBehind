@@ -29,11 +29,15 @@ MonoBehaviour:
       - speaker: 0
         Dialogue: Garret!
       - speaker: 1
-        Dialogue: H-how do you know about Garret?
+        Dialogue: "Uhhh\u2026"
+      - speaker: 1
+        Dialogue: '*Sniff*'
+      - speaker: 1
+        Dialogue: "\u2026H-how do you know about Garret?"
       - speaker: 0
         Dialogue: "Like I said\u2026I met him. *Wink*"
       - speaker: 1
-        Dialogue: H- Ha- HAHAHAHA! Aca-scuse me??
+        Dialogue: '*Sniff* H- Ha- HAHAHAHA! Aca-scuse me??'
       - speaker: 0
         Dialogue: Aca-believe it!
       - speaker: 1
@@ -43,9 +47,11 @@ MonoBehaviour:
       - speaker: 1
         Dialogue: He sang for you??
       - speaker: 0
-        Dialogue: Mhm. Smooth like butter.
+        Dialogue: "Mhm\u2014accompanied him with my violin. He has a voice smooth
+          like butter."
       - speaker: 1
-        Dialogue: Tell him we miss him. We sing for him now.
+        Dialogue: "Yeah he did\u2026Tell him we miss him. We sing for him now. All
+          our performances are dedicated to Garret."
       - speaker: 0
         Dialogue: Will, do, nerds.
       - speaker: 1

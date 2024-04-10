@@ -64,7 +64,7 @@ namespace UI.Dialogue_System
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
                 dialogueProgress.Clear();
-                
+                WorldState.ClearAllStates();
             }
         }
 
@@ -172,9 +172,8 @@ namespace UI.Dialogue_System
         {
             foreach (var change in data.StateChanges)
             {
-                Debug.Log("Updating world state: " + change.State);
                 WorldState.SetState(change.State, change.Modifier);
-                Debug.Log("World State Now: " + WorldState.GetState(change.State));
+                Debug.Log("Updating " + change.State + " to " + WorldState.GetState(change.State));
             }
         }
 

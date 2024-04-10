@@ -29,21 +29,33 @@ namespace QuestSystem
         
         private void HandleWorldStateChanged()
         {
-            TryHandleNewQuest();
+            if (TryHandleNewQuest()) return;
+            if (NeedResetQuest()) return;
 
-            if (currentQuestLine == null 
-                || !currentQuestLine.CheckNextCompletionStatus(WorldState.GetState)) return;
+            while (currentQuestLine != null
+                   && currentQuestLine.CheckNextCompletionStatus(WorldState.GetState))
+            {
+                currentQuestLine.CompleteCurrentTask();
+            }
+        }
 
-            currentQuestLine.CompleteCurrentTask();
+        private bool NeedResetQuest()
+        {
+            if (!WorldState.InState("questNeedsReset")) return false;
+            WorldState.SetState("questNeedsReset", 0);
+            currentQuestLine.ResetQuestLine();
+            return true;
         }
         
-        private void TryHandleNewQuest()
+        private bool TryHandleNewQuest()
         {
-            if (currentQuestID == WorldState.GetState("questType")) return;
-            if (questLines.All(x => x.TriggerEvent != WorldState.GetState("questType"))) return;
+            if (currentQuestID == WorldState.GetState("questType")) return false;
+            if (questLines.All(x => x.TriggerEvent != WorldState.GetState("questType"))) return false;
             currentQuestID = WorldState.GetState("questType");
             currentQuestLine = questLines.Find(x => x.TriggerEvent == currentQuestID);
             currentQuestLine.ResetQuestLine();
+
+            return true;
         }
 
         private void OpenUI()

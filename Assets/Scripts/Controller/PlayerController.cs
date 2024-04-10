@@ -28,6 +28,14 @@ public class PlayerController : MonoBehaviour
     {
         Controller.UIController.Instance.OnSwapToUI += DisableInput;
         Controller.UIController.Instance.OnSwapToGameplay += EnableInput;
+        if (Controller.UIController.Instance.InGameplay)
+        {
+            EnableInput();
+        }
+        else
+        {
+            DisableInput();
+        }
     }
 
     private void EnableInput()
@@ -119,6 +127,8 @@ public class PlayerController : MonoBehaviour
     
     private void OnDestroy()
     {
+        if (Controller.UIController.Instance == null) return;
+        
         Controller.UIController.Instance.OnSwapToUI -= DisableInput;
         Controller.UIController.Instance.OnSwapToGameplay -= EnableInput;
     }
