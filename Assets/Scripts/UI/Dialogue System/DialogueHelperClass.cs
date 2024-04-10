@@ -27,6 +27,7 @@ namespace UI.Dialogue_System
         public static readonly List<string> PREFIXES = new List<string>() { "F", "B", "A" };
         public static readonly string EVENT_MARKER = "*";
         public static readonly string VARIATION_MARKER = "Variation: ";
+        public static readonly string MUSIC_MARKER = "Cue Audio: ";
 
         public static List<string> POTION_GIVEN_MARKERS => PREFIXES.Select(p => p + SUCCESS).Concat(PREFIXES.Select(p => p + FAILURE)).Select(p => p.ToLower()).ToList();
 
@@ -55,6 +56,7 @@ namespace UI.Dialogue_System
             public List<StateChange> StateChanges = new();
             public List<StateRequirement> StateRequirements = new();
             public string Variation;
+            public string AudioCue;
             public bool HasChoice => LeadsTo[0].prompt != "";
         }
         

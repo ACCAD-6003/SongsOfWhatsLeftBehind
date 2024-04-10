@@ -8,7 +8,7 @@ using UnityEditor;
 using static UI.Dialogue_System.DialogueHelperClass;
 
 public static class JsonDialogueConverter
-{ 
+{
     public static string ConvertToJson(ConversationData conversation)
     {
         return JsonUtility.ToJson(conversation, true);
@@ -66,7 +66,7 @@ public static class JsonDialogueConverter
             conversation.Variation = NextLine()[VARIATION_MARKER.Length..];
             RemoveLine();
         }
-        
+
         AssertMarker(NextLine(), CONDITIONAL_MARKER);
         conversation.StateRequirements = GetCondition(NextLine()[CONDITIONAL_MARKER.Length..]);
         RemoveLine();
@@ -78,6 +78,12 @@ public static class JsonDialogueConverter
         AssertMarker(NextLine(), CONVERSANT_MARKER);
         conversation.Conversant = NextLine()[CONVERSANT_MARKER.Length..];
         RemoveLine();
+
+        if (NextLine().StartsWith(MUSIC_MARKER))
+        {
+            conversation.AudioCue = NextLine()[MUSIC_MARKER.Length..];
+            RemoveLine();
+        }
 
         AssertMarker(NextLine(), DIALOGUE_MARKER);
         RemoveLine();

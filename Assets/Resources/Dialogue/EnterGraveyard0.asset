@@ -33,3 +33,4 @@ MonoBehaviour:
       inspectorDescription: questCompleted == 0
       State: questCompleted
     Variation: 0
+    AudioCue: 

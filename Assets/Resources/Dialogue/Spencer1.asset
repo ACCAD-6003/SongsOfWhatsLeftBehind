@@ -47,3 +47,4 @@ MonoBehaviour:
       inspectorDescription: day == 1
       State: day
     Variation: 1
+    AudioCue: 

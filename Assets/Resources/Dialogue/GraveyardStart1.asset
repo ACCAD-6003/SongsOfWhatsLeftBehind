@@ -18,15 +18,13 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 0
-        Dialogue: "*Huff*\u2026"
+        Dialogue: Maybe I should just live here.
       - speaker: 0
-        Dialogue: Today was long.
+        Dialogue: "I\u2019ve got trees to sleep in, grass and leaves to eat, and
+          plenty of friends!"
       - speaker: 0
-        Dialogue: What do you think, ghosts? Long for you too?
-      - speaker: 0
-        Dialogue: "\u2026"
-      - speaker: 0
-        Dialogue: "Yeah\u2026"
+        Dialogue: All my friends are in the dirt and do not reciprocate my acts of
+          friendship, but who cares!
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
@@ -36,8 +34,8 @@ MonoBehaviour:
     - components:
       - day
       - =
-      - 0
-      inspectorDescription: day = 0
+      - 1
+      inspectorDescription: day = 1
       State: day
     StateRequirements:
     - components:
@@ -46,4 +44,11 @@ MonoBehaviour:
       - 0
       inspectorDescription: day == 0
       State: day
+    - components:
+      - questCompleted
+      - ==
+      - 1
+      inspectorDescription: questCompleted == 1
+      State: questCompleted
     Variation: 1
+    AudioCue: 

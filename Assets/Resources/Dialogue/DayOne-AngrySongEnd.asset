@@ -65,3 +65,4 @@ MonoBehaviour:
       State: questType
     StateRequirements: []
     Variation: 
+    AudioCue: 

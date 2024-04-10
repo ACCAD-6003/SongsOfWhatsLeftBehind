@@ -53,3 +53,4 @@ MonoBehaviour:
       inspectorDescription: questType == 4
       State: questType
     Variation: 4
+    AudioCue: 

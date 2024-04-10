@@ -20,6 +20,7 @@ namespace UI.Dialogue_System
         public static Action<string, ConversantType, ConversantType> OnTextSet;
         public static Action<List<string>> OnChoiceMenuOpen;
         public static Action OnChoiceMenuClose;
+        public static Action<string> OnAudioCue;
         
         // Triggered when an event dialogue is reached, will exit the dialogue first then trigger the event
         public static Action<string> OnEventTriggered;
@@ -214,6 +215,10 @@ namespace UI.Dialogue_System
         {
             abortDialogue = false;
             UIController.OnOverrideSkip += OnAbort;
+            if (!string.IsNullOrEmpty(data.AudioCue))
+            {
+                OnAudioCue?.Invoke(data.AudioCue);
+            }
 
             var dialogueIndex = dialogueProgress.TryGetValue(data.ID, out var progress)
                 ? Mathf.Min(progress, data.DialoguesSeries.Count - 1)
