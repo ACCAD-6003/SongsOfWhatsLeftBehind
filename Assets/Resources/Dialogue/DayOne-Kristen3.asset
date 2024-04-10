@@ -39,6 +39,12 @@ MonoBehaviour:
       - 0
       inspectorDescription: doctorTalkedTo = 0
       State: doctorTalkedTo
+    - components:
+      - questNeedsReset
+      - =
+      - 1
+      inspectorDescription: questNeedsReset = 1
+      State: questNeedsReset
     StateRequirements:
     - components:
       - questType

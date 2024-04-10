@@ -46,6 +46,12 @@ MonoBehaviour:
       - 1
       inspectorDescription: day = 1
       State: day
+    - components:
+      - questNeedsReset
+      - =
+      - 1
+      inspectorDescription: questNeedsReset = 1
+      State: questNeedsReset
     StateRequirements:
     - components:
       - questType

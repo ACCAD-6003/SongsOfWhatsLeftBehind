@@ -45,6 +45,12 @@ MonoBehaviour:
       - 0
       inspectorDescription: bankTellerTalkedTo = 0
       State: bankTellerTalkedTo
+    - components:
+      - questNeedsReset
+      - =
+      - 1
+      inspectorDescription: questNeedsReset = 1
+      State: questNeedsReset
     StateRequirements:
     - components:
       - questType
