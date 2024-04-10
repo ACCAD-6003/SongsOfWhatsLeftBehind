@@ -38,7 +38,7 @@ namespace QuestSystem
 
         public string GetTaskDescription()
         {
-            var description = "> " + questName;
+            var description = questName;
             for (int i = 0; i < currentTaskIndex; i++)
             {
                 description += $"\n    -<s>{tasks[i].label}</s>";

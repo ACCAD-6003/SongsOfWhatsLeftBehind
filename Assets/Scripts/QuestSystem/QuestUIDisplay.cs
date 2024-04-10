@@ -8,9 +8,9 @@ namespace QuestSystem
         [SerializeField] private GameObject display;
         [SerializeField] private TMP_Text questDescriptionText;
 
-        public void Display(string description = "> No quest yet check back later!")
+        public void Display(string description = "No quest yet check back later!")
         {
-            description ??= "> No quest yet check back later!";
+            description ??= "No quest yet check back later!";
             questDescriptionText.text = description;
             display.SetActive(true);
         }
