@@ -55,13 +55,13 @@ public class PlayerController : MonoBehaviour
         if (rbody.velocity.y == 0)
         {
             anim.SetBool("isJumping", true);
-            // Debug.Log("Bruh");
+            rbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
     }
-    public void AddJumpForce()
+    /*public void AddJumpForce()
     {
         rbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-    }
+    }*/
 
     public void Update()
     {

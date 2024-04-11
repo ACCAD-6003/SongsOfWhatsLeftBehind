@@ -100,9 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09ef44c8e90119141801496b05d836c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 10
   moveInput: {x: 0, y: 0}
-  jumpHeight: 10
+  jumpHeight: 17
 --- !u!50 &3428871405307334555
 Rigidbody2D:
   serializedVersion: 4
@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: db39c85e4879d4243a4a25005afc78e9, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
