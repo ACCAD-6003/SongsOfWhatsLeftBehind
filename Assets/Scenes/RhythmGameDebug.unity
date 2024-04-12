@@ -491,11 +491,11 @@ PrefabInstance:
     - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
       propertyPath: songData
       value: 
-      objectReference: {fileID: 11400000, guid: 8ed8319168711324186ea0ce364dad7b, type: 2}
+      objectReference: {fileID: 11400000, guid: 03c3d0a230df356429aa31daeddc855e, type: 2}
     - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
       value: 0
