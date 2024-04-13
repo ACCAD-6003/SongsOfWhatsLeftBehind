@@ -155,9 +155,12 @@ namespace UI.Dialogue_System
             yield return AwaitChoice(data);
             var nextDialogue = choiceSelected == -1 ? "end" : 
                 data.LeadsTo.Where(x => CheckStateRequirements(x.nextID)).ToList()[choiceSelected].nextID;
-
-            if (nextDialogue.ToLower().StartsWith("end"))
+            
+            if (nextDialogue.ToLower().Equals("end"))
+            {
+                Debug.Log("Exiting dialogue");
                 ExitDialogue();
+            }
             else if (data.LeadsTo.Where(x => CheckStateRequirements(x.nextID)).ToList()[choiceSelected].isEvent)
             {
                 ExitDialogue();

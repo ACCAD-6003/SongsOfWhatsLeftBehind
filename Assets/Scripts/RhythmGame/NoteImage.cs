@@ -60,7 +60,7 @@ namespace RhythmGame
             this.withinThreshold = withinThreshold;
             this.targetZone = targetZone;
             var speed = CalculateSpeed(timeToReachBottom, startingHeight, targetZone);
-            SetPosition(extendedNoteSprite.transform, Position + length * -speed);
+            extendedNoteSprite.transform.position = transform.position;
             SetupConnector(ExtendedPosition - Position);
             
             var currentX = transform.position.x;
@@ -69,8 +69,8 @@ namespace RhythmGame
             postMarginXSpeed = 0;
             SetPosition(noteSprite, Position);
             SetXOffset(noteSprite, 0);
-            SetXOffset(extendedNoteSprite.transform, 0);
 
+            StartCoroutine(HoldForDuration(length));
             StartCoroutine(MoveToBottom(speed));
         }
 
@@ -164,6 +164,20 @@ namespace RhythmGame
             }
 
             gameObject.SetActive(false);
+        }
+        
+        private IEnumerator HoldForDuration(float duration)
+        {
+            float timeElapsed = 0;
+            var startingPosition = extendedNoteSprite.transform.position;
+            extendedNoteSprite.enabled = false;
+            while (timeElapsed < duration)
+            {
+                timeElapsed += Time.deltaTime;
+                extendedNoteSprite.transform.position = startingPosition;
+                yield return null;
+            }
+            extendedNoteSprite.enabled = true;
         }
 
         private bool ThresholdPassed()

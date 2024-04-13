@@ -9,6 +9,21 @@ namespace UI.Dialogue_System
         private static readonly Dictionary<string, int> CurrentState = new(); 
         public static Action OnWorldStateChanged;
         
+        public static Dictionary<string, int> GetWorldState()
+        {
+            return CurrentState;
+        }
+        
+        public static void LoadWorldState(Dictionary<string, int> worldState)
+        {
+            CurrentState.Clear();
+            foreach (var (key, value) in worldState)
+            {
+                CurrentState[key] = value;
+            }
+            OnWorldStateChanged?.Invoke();
+        }
+
         public static void SetState(string key, int value)
         {
             if (CurrentState.TryGetValue(key, out _))

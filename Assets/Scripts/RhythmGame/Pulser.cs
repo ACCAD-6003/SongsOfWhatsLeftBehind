@@ -8,6 +8,8 @@ namespace RhythmGame
         [SerializeField] private float duration = 0.2f;
         [SerializeField] private float pulseDuration = .05f;
         [SerializeField] private float scaleMax = 1.05f;
+        [SerializeField] private bool pulseToBeat = true;
+        [SerializeField] private bool pulseToHit = false;
 
         private RhythmGameManager rhythmGame;
 
@@ -18,10 +20,11 @@ namespace RhythmGame
 
         private void OnEnable()
         {
-            rhythmGame.OnHit += TriggerPulse;
+            if (pulseToBeat) rhythmGame.OnPulse += TriggerPulse;
+            if (pulseToHit) rhythmGame.OnHit += TriggerPulse;
         }
 
-        public void TriggerPulse()
+        private void TriggerPulse()
         {
             StopCoroutine(nameof(Pulse));
             StartCoroutine(nameof(Pulse));
@@ -37,8 +40,7 @@ namespace RhythmGame
             {
                 timeToLive += Time.deltaTime;
                 timeToPulse += Time.deltaTime;
-                float scale;
-                scale = timeToPulse < pulseDuration 
+                var scale = timeToPulse < pulseDuration 
                     ? Mathf.Lerp(1, scaleMax, timeToPulse / pulseDuration) 
                     : Mathf.Lerp(scaleMax, 1, (timeToLive - pulseDuration) / (duration - pulseDuration));
                 
@@ -50,6 +52,7 @@ namespace RhythmGame
         
         private void OnDisable()
         {
+            rhythmGame.OnPulse -= TriggerPulse;
             rhythmGame.OnHit -= TriggerPulse;
         }
     }
