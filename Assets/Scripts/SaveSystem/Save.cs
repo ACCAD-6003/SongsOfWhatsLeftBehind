@@ -9,42 +9,43 @@ namespace SaveSystem
     [Serializable]
     public class Save
     {
-        public string saveName;
-        public List<WorldStateEntry> worldState;
-        public Vector2 playerPosition;
+        [SerializeField] private List<WorldStateEntry> worldState;
         public DateTime saveTime;
         public int sceneIndex;
+        public bool isEmpty;
+
+        public Save()
+        {
+            isEmpty = true;
+            sceneIndex = 0;
+            saveTime = DateTime.Now;
+            worldState = new List<WorldStateEntry>();
+        }
         
-        public Save(Dictionary<string, int> currentWorldState, Vector2 playerPosition, int sceneIndex)
+        public Save(Save save)
+        {
+            worldState = new List<WorldStateEntry>(save.worldState);
+            saveTime = save.saveTime;
+            sceneIndex = save.sceneIndex;
+            isEmpty = save.isEmpty;
+        }
+        
+        public Save(Dictionary<string, int> currentWorldState, int sceneIndex)
         {
             UpdateWorldState(currentWorldState);
             saveTime = DateTime.Now;
-            this.playerPosition = playerPosition;
             this.sceneIndex = sceneIndex;
+            isEmpty = false;
         }
         
         private void UpdateWorldState(Dictionary<string, int> currentWorldState)
         {
-            worldState.Clear();
             worldState = currentWorldState.Select(state => new WorldStateEntry(state.Key, state.Value)).ToList();
         }
         
         public Dictionary<string, int> GetWorldState()
         {
             return worldState.ToDictionary(entry => entry.entryName, entry => entry.entryValue);
-        }
-
-        [Serializable]
-        public class WorldStateEntry
-        {
-            public string entryName;
-            public int entryValue;
-            
-            public WorldStateEntry(string entryName, int entryValue)
-            {
-                this.entryName = entryName;
-                this.entryValue = entryValue;
-            }
         }
     }
 }

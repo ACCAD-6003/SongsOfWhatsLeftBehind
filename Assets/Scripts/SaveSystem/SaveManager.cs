@@ -2,20 +2,49 @@
 using Sirenix.OdinInspector;
 using UI.Dialogue_System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SaveSystem
 {
-    public class SaveManager : SingletonMonoBehavior<SaveManager>
+    public class SaveManager : SerializedMonoBehaviour
     {
-        private int currentSaveIndex;
-        private Save CurrentSave => Saves[currentSaveIndex];
+        private static SaveManager instance;
+        private static SaveManager Instance 
+        {
+            get { if (instance == null) instance = FindObjectOfType<SaveManager>(); return instance; }
+        }
 
-        public List<Save> Saves { get; private set; } = new(3);
+        readonly List<Save> saves = new () {new Save(), new Save(), new Save()};
+        private Save savePrepared = new Save();
+        private int currentSaveIndex;
+        private bool isLoading;
+        
+        private void Awake()
+        {
+            if (Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            
+            DontDestroyOnLoad(gameObject);
+        }
+
+        private void Start()
+        {
+            SceneTools.onSceneTransitionStart += PrepareSave;
+            ReadSavesFromFile();
+        }
+        
+        private void PrepareSave(int sceneIndex)
+        {
+            savePrepared = new Save(WorldState.GetWorldState(), sceneIndex);
+        }
 
         [Button]
         public void Save(int slotIndex)
         {
-            Saves[slotIndex] = new Save(WorldState.GetWorldState(), Vector2.zero, SceneTools.CurrentSceneIndex);
+            saves[slotIndex] = new Save(savePrepared);
             Debug.Log("Saved to slot " + slotIndex);
         }
         
@@ -23,15 +52,26 @@ namespace SaveSystem
         public void Load(int saveIndex)
         {
             currentSaveIndex = saveIndex;
-            WorldState.LoadWorldState(CurrentSave.GetWorldState());
-            StartCoroutine(SceneTools.TransitionToScene(CurrentSave.sceneIndex));
+            WorldState.LoadWorldState(saves[currentSaveIndex].GetWorldState());
+            StartCoroutine(SceneTools.TransitionToScene(saves[currentSaveIndex].sceneIndex));
+            isLoading = true;
+            SceneManager.sceneLoaded += OnSceneLoaded;
             Debug.Log("Loaded from slot " + saveIndex);
+        }
+        
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            if (!isLoading) return;
+            
+            isLoading = false;
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
         [Button]
         public void WriteSavesToFile()
         {
-            var jsonData = JsonUtility.ToJson(Saves);
+            var jsonData = JsonUtility.ToJson(new SavesJson(saves), true);
+            Debug.Log(jsonData);
             if (Application.isEditor)
             {
                 System.IO.File.WriteAllText(Application.dataPath + "/saves.json", jsonData);
@@ -42,9 +82,26 @@ namespace SaveSystem
             }
         }
 
+        private void ReadSavesFromFile()
+        {
+            var path = Application.isEditor ? Application.dataPath : Application.persistentDataPath;
+            if (!System.IO.File.Exists(path + "/saves.json")) return;
+            
+            var jsonData = System.IO.File.ReadAllText(path + "/saves.json");
+            var loadedData = JsonUtility.FromJson<SavesJson>(jsonData);
+            saves.Clear();
+            saves.AddRange(loadedData.saves);
+        }
+
         public void DeleteSave(int saveIndex)
         {
-            Saves[saveIndex] = null;
+            saves[saveIndex] = null;
+        }
+        
+        private void OnDestroy()
+        {
+            SceneTools.onSceneTransitionStart -= PrepareSave;
+            WriteSavesToFile();
         }
     }
 }

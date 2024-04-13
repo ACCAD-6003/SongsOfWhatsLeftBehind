@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public static class SceneTools
 {
-    public static Action onSceneTransitionStart;
+    // Returns next scene index
+    public static Action<int> onSceneTransitionStart;
     public static bool transistioning = false;
 
     public static bool NextSceneExists => 
@@ -22,7 +24,7 @@ public static class SceneTools
         if (!transistioning)
         {
             transistioning = true;
-            onSceneTransitionStart?.Invoke();
+            onSceneTransitionStart?.Invoke(sceneIndex);
             yield return FadeToBlackSystem.TryCueFadeInToBlack(1f);
             SceneManager.LoadScene(sceneIndex);
             transistioning = false;
