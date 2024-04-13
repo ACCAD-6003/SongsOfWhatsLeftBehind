@@ -51,7 +51,6 @@ namespace UI.Dialogue_System
             base.Awake();
             conversationGroup = Resources.LoadAll<SOConversationData>("Dialogue").ToList();
             conversationGroup.Sort((x, y) => x.Data.StateRequirements.Count > y.Data.StateRequirements.Count ? -1 : 1);
-            if (!BeingDestroyed) WorldState.ClearAllStates();
         }
 
         private void Start()

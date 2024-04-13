@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UI.Dialogue_System;
 using UnityEngine;
@@ -9,10 +10,11 @@ namespace SaveSystem
     public class SaveManager : SerializedMonoBehaviour
     {
         private static SaveManager instance;
-        private static SaveManager Instance 
+        public static SaveManager Instance 
         {
             get { if (instance == null) instance = FindObjectOfType<SaveManager>(); return instance; }
         }
+        public List<Save> Saves => saves;
 
         readonly List<Save> saves = new () {new Save(), new Save(), new Save()};
         private Save savePrepared = new Save();
@@ -55,16 +57,7 @@ namespace SaveSystem
             WorldState.LoadWorldState(saves[currentSaveIndex].GetWorldState());
             StartCoroutine(SceneTools.TransitionToScene(saves[currentSaveIndex].sceneIndex));
             isLoading = true;
-            SceneManager.sceneLoaded += OnSceneLoaded;
             Debug.Log("Loaded from slot " + saveIndex);
-        }
-        
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            if (!isLoading) return;
-            
-            isLoading = false;
-            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
         [Button]
@@ -101,7 +94,10 @@ namespace SaveSystem
         private void OnDestroy()
         {
             SceneTools.onSceneTransitionStart -= PrepareSave;
-            WriteSavesToFile();
+            if (Instance == this)
+            {
+                WriteSavesToFile();
+            }
         }
     }
 }
