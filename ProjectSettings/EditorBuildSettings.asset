@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Town Whitebox.unity
     guid: c6fc6edf9df704f46bcced18b46a896c
+  - enabled: 1
+    path: Assets/Scenes/FreePlay.unity
+    guid: d8b1a7f75c3b9564e8b912e6d230938f
   m_configObjects: {}

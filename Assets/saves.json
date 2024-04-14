@@ -1,0 +1,33 @@
+{
+    "saves": [
+        {
+            "worldState": [],
+            "sceneIndex": 1,
+            "isEmpty": false
+        },
+        {
+            "worldState": [
+                {
+                    "entryName": "day",
+                    "entryValue": 0
+                }
+            ],
+            "sceneIndex": 2,
+            "isEmpty": false
+        },
+        {
+            "worldState": [
+                {
+                    "entryName": "day",
+                    "entryValue": 0
+                },
+                {
+                    "entryName": "questCompleted",
+                    "entryValue": 1
+                }
+            ],
+            "sceneIndex": 1,
+            "isEmpty": false
+        }
+    ]
+}

@@ -7,14 +7,14 @@ namespace RhythmGame
 {
     public class ScoreDisplay : MonoBehaviour
     {
-        [SerializeField] private TMP_Text scoreText;
+        [SerializeField] private PointsDisplay pointsDisplay;
         [SerializeField] private TMP_Text comboText;
         [SerializeField] private TMP_Text streakText;
         [SerializeField] private int maxCombo;
         [SerializeField] private int hitsPerCombo;
-        [SerializeField] private float duration = 1f;
-        [SerializeField] private float pulseDuration = .2f;
-        [SerializeField] private float scaleMax = 1.2f;
+        
+        [Header("Temp")]
+        [SerializeField] private int maxScore;
 
         private int score;
         private int Combo => Mathf.Min(currentHits / hitsPerCombo + 1, maxCombo);
@@ -51,33 +51,10 @@ namespace RhythmGame
         
         private void UpdateDisplay()
         {
-            scoreText.text = "Score: " + score;
+            pointsDisplay.UpdateScore(score, maxScore);
             comboText.text = "Combo: " + Combo + "x";
             streakText.text = currentHits + " Hits!";
             streakText.enabled = currentHits != 0;
-
-            StopCoroutine(nameof(Pulse));
-            StartCoroutine(nameof(Pulse));
-        }
-
-        private IEnumerator Pulse()
-        {
-            var timeToLive = 0f;
-            var timeToPulse = 0f;
-            transform.localScale = Vector3.one;
-            
-            while (timeToLive < duration)
-            {
-                timeToLive += Time.deltaTime;
-                timeToPulse += Time.deltaTime;
-                var scale = timeToPulse < pulseDuration 
-                    ? Mathf.Lerp(1, scaleMax, timeToPulse / pulseDuration) 
-                    : Mathf.Lerp(scaleMax, 1, (timeToLive - pulseDuration) / (duration - pulseDuration));
-                
-                transform.localScale = new Vector3(scale, scale, 1);
-
-                yield return null;
-            }
         }
     }
 }

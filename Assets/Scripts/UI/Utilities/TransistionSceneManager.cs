@@ -26,6 +26,11 @@ public class TransistionSceneManager : MonoBehaviour
         StartCoroutine(SceneTools.TransitionToScene(SceneTools.CurrentSceneIndex - 1));
     }
     
+    public void TransitionToScene(int sceneIndex)
+    {
+        StartCoroutine(SceneTools.TransitionToScene(sceneIndex));
+    }
+    
     [Button]
     public void ExitGame()
     {

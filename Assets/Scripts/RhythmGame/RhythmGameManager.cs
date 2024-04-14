@@ -16,6 +16,7 @@ namespace RhythmGame
         [HideInInspector] public Action OnSongStart;
         [HideInInspector] public Action OnSongEnd;
         [HideInInspector] public Action OnHit;
+        [HideInInspector] public Action OnPulse;
 
         private const int NOTE_POOL_SIZE = 30;
 
@@ -37,6 +38,7 @@ namespace RhythmGame
         float CorrectThreshold => targetZone.rect.height / 1.5f;
         float ThresholdCenter => targetZone.position.y;
         float NoteSpawnPosition => noteSpawnPositionMarker.transform.position.y;
+        private Coroutine pulser;
 
         private IEnumerable<NoteImage> ActiveNotes => notePool
             .Where(y => y.gameObject.activeInHierarchy)
@@ -179,8 +181,9 @@ namespace RhythmGame
             musicPlayer.PlaySong(songData, songStart);
             RhythmGameController.OnNotePressedProcessed += CheckForNoteInZone;
             UIController.Instance.SwapToUI();
-            var startTime = Time.realtimeSinceStartup;
-            float TimeElapsed() => Time.realtimeSinceStartup - startTime + songStart;
+            var startTime = Time.time;
+            pulser = StartCoroutine(Pulser(songData.bpm, songData.song.length - songStart));
+            float TimeElapsed() => Time.time - startTime + songStart;
             foreach (var phrase in songData.phrases)
             {
                 yield return new WaitUntil(() => TimeElapsed() >= phrase.startTime - timeToReachBottom);
@@ -204,12 +207,25 @@ namespace RhythmGame
             yield return new WaitUntil(() => songData.song.length < TimeElapsed());
             EndSong();
         }
-        
-        
+
+        private IEnumerator Pulser(float bpm, float songLength)
+        {
+            float timePassed = 0;
+            while (timePassed < songLength)
+            {
+                timePassed += Time.deltaTime;
+                OnPulse?.Invoke();
+                yield return new WaitForSeconds(60 / bpm);
+            }
+        }
 
         [Button]
         private void EndSong()
         {
+            if (pulser != null)
+            {
+                StopCoroutine(pulser);
+            }
             UIController.OnOverrideSkip -= EndSong;
             Debug.Log("Ending Song");
             RhythmGameController.OnNotePressedProcessed -= CheckForNoteInZone;
