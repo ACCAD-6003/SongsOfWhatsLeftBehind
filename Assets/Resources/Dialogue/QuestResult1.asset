@@ -56,13 +56,7 @@ MonoBehaviour:
       prompt: Determined
       nextID: PlayDeterminedSong
       isEvent: 1
-    StateChanges:
-    - components:
-      - day
-      - =
-      - 1
-      inspectorDescription: day = 1
-      State: day
+    StateChanges: []
     StateRequirements:
     - components:
       - questType

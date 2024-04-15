@@ -10,25 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: AcappellaGroup2
+  m_Name: AcappellaGroup-FreeEnd
   m_EditorClassIdentifier: 
   conversationData:
-    ID: AcappellaGroup
+    ID: AcappellaGroup-FreeEnd
     Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        Dialogue: "*Sniff* Ugh, sorry. Hey, Kristen. What\u2019s up?"
+        Dialogue: Ey! That was awesome!
+      - speaker: 0
+        Dialogue: Why thank you, young men.
     LeadsTo:
-    - inspectorDescription: 'Prompt: I wanna talk! Leads to: AcappellaGroup-Conversation'
-      prompt: I wanna talk!
-      nextID: AcappellaGroup-Conversation
+    - inspectorDescription: 'Prompt: Let''s play another! Leads to: FreePlay'
+      prompt: Let's play another!
+      nextID: FreePlay
       isEvent: 0
-    - inspectorDescription: "Prompt: Let\u2019s practice music! Leads to: AcappellaGroup-FreePlay"
-      prompt: "Let\u2019s practice music!"
-      nextID: AcappellaGroup-FreePlay
-      isEvent: 0
+    - inspectorDescription: 'Prompt: Let''s call it a day Triggers Event: EndPractice'
+      prompt: Let's call it a day
+      nextID: EndPractice
+      isEvent: 1
     StateChanges: []
     StateRequirements: []
-    Variation: 2
+    Variation: 
     AudioCue: 

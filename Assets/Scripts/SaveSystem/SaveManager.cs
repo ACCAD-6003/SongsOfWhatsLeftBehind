@@ -40,7 +40,7 @@ namespace SaveSystem
         
         private void PrepareSave(int sceneIndex)
         {
-            savePrepared = new Save(WorldState.GetWorldState(), sceneIndex);
+            savePrepared = new Save(WorldState.GetWorldState(), sceneIndex, WorldState.GetState("saveDay"));
         }
 
         [Button]

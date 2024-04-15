@@ -18,33 +18,17 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        Dialogue: He slayed with his vocal cords! Go tell him that.
-      - speaker: 0
-        Dialogue: I will. You all are the best.
+        Dialogue: "*Sniff* Ugh, sorry. Hey, Kristen. What\u2019s up?"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
+    - inspectorDescription: 'Prompt: I wanna talk! Leads to: AcappellaGroup-Conversation'
+      prompt: I wanna talk!
+      nextID: AcappellaGroup-Conversation
+      isEvent: 0
+    - inspectorDescription: "Prompt: Let\u2019s practice music! Leads to: AcappellaGroup-FreePlay"
+      prompt: "Let\u2019s practice music!"
+      nextID: AcappellaGroup-FreePlay
       isEvent: 0
     StateChanges: []
-    StateRequirements:
-    - components:
-      - acappellaTalkedTo
-      - ==
-      - 1
-      inspectorDescription: acappellaTalkedTo == 1
-      State: acappellaTalkedTo
-    - components:
-      - questType
-      - ==
-      - 1
-      inspectorDescription: questType == 1
-      State: questType
-    - components:
-      - day
-      - ==
-      - 1
-      inspectorDescription: day == 1
-      State: day
+    StateRequirements: []
     Variation: 3
     AudioCue: 
