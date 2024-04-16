@@ -7,6 +7,7 @@ namespace RhythmGame
     public class SongData : ScriptableObject
     {
         public AudioClip song;
+        public AudioClip violinLayer;
         public List<PhraseData> phrases = new();
         public float bpm;
         public string SongName => name;

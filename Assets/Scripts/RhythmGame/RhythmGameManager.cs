@@ -16,6 +16,7 @@ namespace RhythmGame
         [HideInInspector] public Action OnSongStart;
         [HideInInspector] public Action OnSongEnd;
         [HideInInspector] public Action OnHit;
+        [HideInInspector] public Action OnMiss;
         [HideInInspector] public Action OnPulse;
 
         private const int NOTE_POOL_SIZE = 30;
@@ -80,6 +81,7 @@ namespace RhythmGame
             musicPlayer.PlayErrorSound();
             performanceIndicator.Show(NoteResult.Miss);
             scoreDisplay.OnScoreNote(NoteResult.Miss);
+            OnMiss?.Invoke();
         }
 
         private bool WithinThreshold(float value)

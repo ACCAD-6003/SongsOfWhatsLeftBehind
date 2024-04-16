@@ -2771,10 +2771,20 @@ PrefabInstance:
     - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"templates.{2es}.marginX","value":{"$id":0,"$type":"System.Single,
+        mscorlib",-90}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
+      value: '"path":"templates.{4es}.marginX","value":{"$id":0,"$type":"System.Single,
+        mscorlib",90}'
       objectReference: {fileID: 0}
     - target: {fileID: 3074999126022103145, guid: 82b8a2d55bf662a4c805d5c9731ee809, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
