@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UI;
+using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace RhythmGame
@@ -6,11 +8,13 @@ namespace RhythmGame
     [RequireComponent(typeof(AudioSource))]
     public class RhythmGameMusicPlayer : MonoBehaviour
     {
+        [SerializeField] private float volumeTransitionDuration = 0.2f;
         [SerializeField] private AudioClip errorSound;
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioSource violinTrack;
         [SerializeField] private RhythmGameManager rhythmGameManager;
-        
+
+        private Coroutine transition;
 
         private void Awake()
         {
@@ -22,21 +26,36 @@ namespace RhythmGame
         {
             audioSource.clip = songData.song;
             audioSource.time = startTime;
+            audioSource.volume = PlayerPreferences.MusicVolume;
             audioSource.Play();
             violinTrack.clip = songData.violinLayer;
             violinTrack.time = startTime;
-            violinTrack.volume = 1f;
+            violinTrack.volume = PlayerPreferences.ViolinVolume;
             if (violinTrack.clip != null) violinTrack.Play();
         }
 
         private void IncreaseVolume()
         {
-            violinTrack.volume = 1f;
+            if (transition != null) StopCoroutine(transition);
+            transition = StartCoroutine(TransitionVolume(PlayerPreferences.ViolinVolume));
         }
 
         private void DecreaseVolume()
         {
-            violinTrack.volume = 0f;
+            if (transition != null) StopCoroutine(transition);
+            transition = StartCoroutine(TransitionVolume(0f));
+        }
+        
+        private IEnumerator TransitionVolume(float targetVolume)
+        {
+            var startVolume = violinTrack.volume;
+            var startTime = Time.time;
+            while (Time.time - startTime < volumeTransitionDuration)
+            {
+                violinTrack.volume = Mathf.Lerp(startVolume, targetVolume, (Time.time - startTime) / volumeTransitionDuration);
+                yield return null;
+            }
+            violinTrack.volume = targetVolume;
         }
         
         public void PlayErrorSound()
