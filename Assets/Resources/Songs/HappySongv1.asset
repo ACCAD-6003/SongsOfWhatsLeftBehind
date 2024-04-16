@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HappySongv1
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: bf0426c4bb8ca264b89377354dddd064, type: 3}
-  violinLayer: {fileID: 0}
+  violinLayer: {fileID: 8300000, guid: 256bbef45e1271840a4b8aa1fff2880e, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 3.8181818
