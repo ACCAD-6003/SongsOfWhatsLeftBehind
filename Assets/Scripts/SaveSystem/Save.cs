@@ -13,13 +13,15 @@ namespace SaveSystem
         public DateTime saveTime;
         public int sceneIndex;
         public bool isEmpty;
+        public int day;
 
         public Save()
         {
             isEmpty = true;
-            sceneIndex = 0;
+            sceneIndex = 1;
             saveTime = DateTime.Now;
             worldState = new List<WorldStateEntry>();
+            day = 0;
         }
         
         public Save(Save save)
@@ -28,14 +30,16 @@ namespace SaveSystem
             saveTime = save.saveTime;
             sceneIndex = save.sceneIndex;
             isEmpty = save.isEmpty;
+            day = save.day + 1;
         }
         
-        public Save(Dictionary<string, int> currentWorldState, int sceneIndex)
+        public Save(Dictionary<string, int> currentWorldState, int sceneIndex, int day)
         {
             UpdateWorldState(currentWorldState);
             saveTime = DateTime.Now;
             this.sceneIndex = sceneIndex;
             isEmpty = false;
+            this.day = day;
         }
         
         private void UpdateWorldState(Dictionary<string, int> currentWorldState)

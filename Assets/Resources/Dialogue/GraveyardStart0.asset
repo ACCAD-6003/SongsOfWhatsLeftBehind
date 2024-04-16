@@ -39,6 +39,12 @@ MonoBehaviour:
       - 0
       inspectorDescription: day = 0
       State: day
+    - components:
+      - saveDay
+      - =
+      - 1
+      inspectorDescription: saveDay = 1
+      State: saveDay
     StateRequirements:
     - components:
       - day

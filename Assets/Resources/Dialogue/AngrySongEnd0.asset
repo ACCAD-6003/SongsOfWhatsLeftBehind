@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: AngrySongEnd0
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: AngrySongEnd
+    Conversant: Garret
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: "\u2026"
+      - speaker: 0
+        Dialogue: "\u2026"
+      - speaker: 0
+        Dialogue: Are you-
+      - speaker: 1
+        Dialogue: "I just can\u2019t believe it."
+      - speaker: 1
+        Dialogue: "My family, my friends\u2026they\u2019re alone now. No one listened.
+          He didn\u2019t listen."
+      - speaker: 1
+        Dialogue: And here we are.
+      - speaker: 0
+        Dialogue: "I\u2019m mad, and I don\u2019t even know what you\u2019re talking
+          about."
+      - speaker: 1
+        Dialogue: That place better be closed.
+      - speaker: 0
+        Dialogue: What place?
+      - speaker: 1
+        Dialogue: The hospital.
+      - speaker: 1
+        Dialogue: You know what?
+      - speaker: 0
+        Dialogue: What?
+      - speaker: 1
+        Dialogue: Go see it for me.
+      - speaker: 1
+        Dialogue: Go see it, and it better be shut down.
+      - speaker: 1
+        Dialogue: Then, come back and tell me all about it.
+      - speaker: 0
+        Dialogue: Will do.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'
+      prompt: 
+      nextID: DayTransition
+      isEvent: 1
+    StateChanges:
+    - components:
+      - questType
+      - =
+      - 3
+      inspectorDescription: questType = 3
+      State: questType
+    StateRequirements:
+    - components:
+      - day
+      - ==
+      - 1
+      inspectorDescription: day == 1
+      State: day
+    Variation: 0
+    AudioCue: 

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TutorialSongWithMetronome
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 2acf85c139c64054392cb8c9ecc04ef4, type: 3}
+  violinLayer: {fileID: 8300000, guid: abe99ef63c9842f4fa56d04acdbf5891, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 6
@@ -348,3 +349,4 @@ MonoBehaviour:
       notes: 0200000004000000
   bpm: 80
   speed: 2
+  dialogue: 
