@@ -53,10 +53,19 @@ namespace RhythmGame
 
         private void CheckForNoteInZone(NoteType type)
         {
-            var notesInZone = ActiveNotes
+            var closestNote = ActiveNotes
                 .Where(x => WithinThreshold(x.Position))
+                .OrderBy(x => Mathf.Abs(x.Position - ThresholdCenter))
+                .FirstOrDefault();
+            if (closestNote == null)
+            {
+                LoseScore();
+                return;
+            }
+            var notesInZone = ActiveNotes
+                .Where(x => Mathf.Approximately(x.Position, closestNote.Position))
                 .ToList();
-            if (notesInZone.Count == 0 || notesInZone.Any(x => (x.NoteType & type) == 0))
+            if (notesInZone.Any(x => (x.NoteType & type) == 0))
             {
                 LoseScore();
             }
