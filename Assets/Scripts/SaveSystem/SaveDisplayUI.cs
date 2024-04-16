@@ -9,6 +9,12 @@ namespace SaveSystem
 
         private void OnEnable()
         {
+            if (SaveManager.Instance == null)
+            {
+                enabled = false;
+                Debug.Log("SaveManager not found. SaveDisplayUI disabled.");
+                return;
+            }
             Display(SaveManager.Instance.Saves);
         }
 
