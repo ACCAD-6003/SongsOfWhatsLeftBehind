@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: AcappellaGroup-Conversation5
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: AcappellaGroup-Conversation
+    Conversant: Singing Group of Young Dudes
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: "Would you ever consider\u2026.another member?"
+      - speaker: 1
+        Dialogue: Haha! Can you sing?
+      - speaker: 0
+        Dialogue: Mmmm I can hold a pitch.
+      - speaker: 1
+        Dialogue: "Well, that\u2019s basically it!"
+      - speaker: 0
+        Dialogue: Really??
+      - speaker: 1
+        Dialogue: "\u2026No, not really."
+      - speaker: 0
+        Dialogue: "Man\u2026gettin\u2019 my hopes up."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - questType
+      - '!='
+      - 4
+      inspectorDescription: questType != 4
+      State: questType
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    Variation: 5
+    AudioCue: 

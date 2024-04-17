@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Ending4
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Ending
+    Conversant: Garret
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: Just never go to the doctor I had.
+      - speaker: 0
+        Dialogue: "Yeah, what\u2026."
+      - speaker: 0
+        Dialogue: Garret, what happened?
+      - speaker: 1
+        Dialogue: "\u2026"
+      - speaker: 1
+        Dialogue: "He didn\u2019t listen to me when I was in pain, so things just
+          got worse and worse and worse and\u2026"
+      - speaker: 1
+        Dialogue: "Well, eventually things couldn\u2019t get any worse, and I lost
+          everything."
+      - speaker: 0
+        Dialogue: "Oh\u2026that\u2019s horrible."
+      - speaker: 1
+        Dialogue: It makes me sick, thinking it could happen to someone else.
+      - speaker: 0
+        Dialogue: "I won\u2019t let it."
+      - speaker: 1
+        Dialogue: "I\u2019ll help. I\u2019ll haunt him."
+      - speaker: 0
+        Dialogue: "We\u2019ll make sure he gets fired everywhere."
+      - speaker: 1
+        Dialogue: Mmm we make a good team.
+      - speaker: 0
+        Dialogue: We do.
+      - speaker: 1
+        Dialogue: See you later, partner.
+      - speaker: 0
+        Dialogue: See you very soon.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'
+      prompt: 
+      nextID: EndScreen
+      isEvent: 1
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    - components:
+      - questCompleted
+      - ==
+      - 1
+      inspectorDescription: questCompleted == 1
+      State: questCompleted
+    - components:
+      - questType
+      - ==
+      - 3
+      inspectorDescription: questType == 3
+      State: questType
+    Variation: 4
+    AudioCue: 

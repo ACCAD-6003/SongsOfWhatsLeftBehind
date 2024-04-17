@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Ending3
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Ending
+    Conversant: Garret
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: My sister would probably look up to you. You could spend some time
+          with her.
+      - speaker: 0
+        Dialogue: "Yeah I don\u2019t think she likes me."
+      - speaker: 1
+        Dialogue: Why do you say that?
+      - speaker: 0
+        Dialogue: Every time I approach, she kinda seems like she wants me to leave.
+      - speaker: 1
+        Dialogue: "Yeah she\u2019s kinda like that."
+      - speaker: 1
+        Dialogue: She pushes everyone away, but secretly wants them to stay.
+      - speaker: 0
+        Dialogue: "That\u2019s\u2026.so real of her."
+      - speaker: 1
+        Dialogue: I know.
+      - speaker: 1
+        Dialogue: "She has a lot of growing to do. I don\u2019t want to leave her
+          behind."
+      - speaker: 0
+        Dialogue: I know.
+      - speaker: 1
+        Dialogue: "I know it might be asking a lot but\u2026"
+      - speaker: 0
+        Dialogue: "I\u2019ll take care of her."
+      - speaker: 1
+        Dialogue: '*Sniff* Thank you.'
+      - speaker: 1
+        Dialogue: "Maybe I should stay\u2026"
+      - speaker: 0
+        Dialogue: "No. You deserve peace. You get to worry about yourself for once.
+          All of these people will miss you\u2026"
+      - speaker: 0
+        Dialogue: But you want this, so you should have it.
+      - speaker: 0
+        Dialogue: No one would expect you to keep watch for all of eternity.
+      - speaker: 0
+        Dialogue: You need to rest.
+      - speaker: 1
+        Dialogue: "I\u2019m so tired."
+      - speaker: 0
+        Dialogue: So go. Sleep.
+      - speaker: 1
+        Dialogue: "Yeah, I\u2019ll sleep."
+      - speaker: 0
+        Dialogue: "I\u2019ll be here. Guardian of the graveyard."
+      - speaker: 1
+        Dialogue: "I\u2019ll see you again."
+      - speaker: 0
+        Dialogue: I believe that too.
+      - speaker: 1
+        Dialogue: Goodbye, Kristen.
+      - speaker: 0
+        Dialogue: Goodbye, Garret.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'
+      prompt: 
+      nextID: EndScreen
+      isEvent: 1
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    - components:
+      - questCompleted
+      - ==
+      - 1
+      inspectorDescription: questCompleted == 1
+      State: questCompleted
+    - components:
+      - questType
+      - ==
+      - 2
+      inspectorDescription: questType == 2
+      State: questType
+    Variation: 3
+    AudioCue: 

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Spencer7
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Spencer
+    Conversant: Spencer
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: Hold on to the ones you love. You just never know when something
+          might happen to them.
+      - speaker: 0
+        Dialogue: "That\u2019s\u2026really depressing, but yeah sure."
+      - speaker: 1
+        Dialogue: Good.
+      - speaker: 0
+        Dialogue: Do you need a hug?
+      - speaker: 1
+        Dialogue: "I don\u2019t like hugs, but I\u2019ll take an air-hug or a virtual-hug."
+      - speaker: 0
+        Dialogue: I love me some air-hugs. *Hugs* How was that?
+      - speaker: 1
+        Dialogue: Exquisite air hug.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - questType
+      - '!='
+      - 1
+      inspectorDescription: questType != 1
+      State: questType
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    Variation: 7
+    AudioCue: 
