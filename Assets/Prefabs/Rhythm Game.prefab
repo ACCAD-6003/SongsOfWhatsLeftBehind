@@ -1310,6 +1310,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 11007ec48c3bb9148b6d0afe3a99b3fb, type: 2}
     - {fileID: 11400000, guid: 7d42fb311d692b6469e23b0814a430f5, type: 2}
     - {fileID: 11400000, guid: 571e4ec1bb1394145a90cc983711f0a6, type: 2}
+    - {fileID: 11400000, guid: 161526005d571f84a934be3435f9fe93, type: 2}
+    - {fileID: 11400000, guid: f5e73d71c2d6aba40b4a2e945f9f0bbc, type: 2}
+    - {fileID: 11400000, guid: c54a8571737ae1943a4097918d902d4c, type: 2}
+    - {fileID: 11400000, guid: ed712d6a409f14a4999f183b36318df2, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1328,7 +1332,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 9
+      Data: 13
     - Name: 
       Entry: 7
       Data: 
@@ -1434,6 +1438,54 @@ MonoBehaviour:
     - Name: $v
       Entry: 10
       Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayHappySongDayTwo
+    - Name: $v
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlaySadSongDayTwo
+    - Name: $v
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayAngrySongDayTwo
+    - Name: $v
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayDeterminedSongDayTwo
+    - Name: $v
+      Entry: 10
+      Data: 12
     - Name: 
       Entry: 8
       Data: 
@@ -1784,7 +1836,6 @@ MonoBehaviour:
   streakText: {fileID: 3740793784866129990}
   maxCombo: 3
   hitsPerCombo: 5
-  maxScore: 1000
 --- !u!1 &7581377939719298031
 GameObject:
   m_ObjectHideFlags: 0

@@ -245,6 +245,8 @@ namespace RhythmGame
             notePool.ForEach(x => x.gameObject.SetActive(false));
             noteConnectors.ForEach(x => x.gameObject.SetActive(false));
             musicPlayer.StopSong();
+            int finalScore = scoreDisplay.FinalScore;
+            if (songData.mainSong) WorldState.SetState("Friendship", x => x + finalScore);
             OnSongEnd?.Invoke();
             ToggleDisplay(false);
             DialogueManager.Instance.StartDialogue(songData.dialogue);
