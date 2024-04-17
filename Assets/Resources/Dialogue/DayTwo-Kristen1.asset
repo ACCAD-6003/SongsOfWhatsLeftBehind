@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: DayTwo-Kristen1
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: DayTwo-Kristen
+    Conversant: None
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: Whatever!
+      - speaker: 0
+        Dialogue: "Let\u2019s go talk to one of the people that made Garret happiest\u2013Spencey
+          boy."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: exit'
+      prompt: 
+      nextID: exit
+      isEvent: 0
+    StateChanges:
+    - components:
+      - questCompleted
+      - =
+      - 0
+      inspectorDescription: questCompleted = 0
+      State: questCompleted
+    - components:
+      - spencerTalkedTo
+      - =
+      - 0
+      inspectorDescription: spencerTalkedTo = 0
+      State: spencerTalkedTo
+    - components:
+      - day
+      - =
+      - 2
+      inspectorDescription: day = 2
+      State: day
+    - components:
+      - questNeedsReset
+      - =
+      - 1
+      inspectorDescription: questNeedsReset = 1
+      State: questNeedsReset
+    StateRequirements:
+    - components:
+      - questType
+      - ==
+      - 1
+      inspectorDescription: questType == 1
+      State: questType
+    Variation: 1
+    AudioCue: 

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: BankTeller5
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: BankTeller
+    Conversant: Borris
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: If you have more life advice,...kindly, save it for someone else.
+      - speaker: 0
+        Dialogue: Can I give you a life suggestion?
+      - speaker: 1
+        Dialogue: Absolutely not.
+      - speaker: 0
+        Dialogue: I like you, Borris.
+      - speaker: 1
+        Dialogue: Gross, please leave.
+      - speaker: 0
+        Dialogue: "Can\u2019t we be friends?"
+      - speaker: 1
+        Dialogue: "With your unpaid credit cards? Not a chance\u2026*Snicker*"
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - bankTellerTalkedTo
+      - ==
+      - 1
+      inspectorDescription: bankTellerTalkedTo == 1
+      State: bankTellerTalkedTo
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    Variation: 5
+    AudioCue: 

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: GarretsSister4
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: GarretsSister
+    Conversant: "Garret\u2019s Sister"
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: "Garret\u2019s sister\u2026"
+      - speaker: 1
+        Dialogue: "That\u2019s me."
+      - speaker: 1
+        Dialogue: My name is Lizzy by the way.
+      - speaker: 0
+        Dialogue: Got it, Lizzy. Pretty name.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: PlaySadSong'
+      prompt: 
+      nextID: PlaySadSong
+      isEvent: 1
+    StateChanges:
+    - components:
+      - sisterTalkedTo
+      - +=
+      - 1
+      inspectorDescription: sisterTalkedTo += 1
+      State: sisterTalkedTo
+    StateRequirements:
+    - components:
+      - sisterTalkedTo
+      - ==
+      - 0
+      inspectorDescription: sisterTalkedTo == 0
+      State: sisterTalkedTo
+    - components:
+      - questType
+      - ==
+      - 2
+      inspectorDescription: questType == 2
+      State: questType
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    Variation: 4
+    AudioCue: 

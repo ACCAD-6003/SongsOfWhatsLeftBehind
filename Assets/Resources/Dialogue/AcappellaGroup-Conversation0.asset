@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: AcappellaGroup-Conversation0
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: AcappellaGroup-Conversation
+    Conversant: Singing Group of Young Dudes
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: Hello again, singing group of young dudes!
+      - speaker: 1
+        Dialogue: Hey again, older woman that talks to ghosts!
+      - speaker: 0
+        Dialogue: "I do talk to ghosts actually. You\u2019ll never guess who I met
+          last night."
+      - speaker: 1
+        Dialogue: "\u2026Who?"
+      - speaker: 0
+        Dialogue: Garret!
+      - speaker: 1
+        Dialogue: "Uhhh\u2026"
+      - speaker: 1
+        Dialogue: '*Sniff*'
+      - speaker: 1
+        Dialogue: "\u2026H-how do you know about Garret?"
+      - speaker: 0
+        Dialogue: "Like I said\u2026I met him. *Wink*"
+      - speaker: 1
+        Dialogue: '*Sniff* H- Ha- HAHAHAHA! Aca-scuse me??'
+      - speaker: 0
+        Dialogue: Aca-believe it!
+      - speaker: 1
+        Dialogue: He was our baritone. A beautiful singer.
+      - speaker: 0
+        Dialogue: I agree. His singing is gorgeous.
+      - speaker: 1
+        Dialogue: He sang for you??
+      - speaker: 0
+        Dialogue: "Mhm\u2014accompanied him with my violin. He has a voice smooth
+          like butter."
+      - speaker: 1
+        Dialogue: "Yeah he did\u2026Tell him we miss him. We sing for him now. All
+          our performances are dedicated to Garret."
+      - speaker: 0
+        Dialogue: Will, do, nerds.
+      - speaker: 1
+        Dialogue: '*Singing* Lalala La!'
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges:
+    - components:
+      - acappellaTalkedTo
+      - +=
+      - 1
+      inspectorDescription: acappellaTalkedTo += 1
+      State: acappellaTalkedTo
+    - components:
+      - questCompleted
+      - =
+      - 1
+      inspectorDescription: questCompleted = 1
+      State: questCompleted
+    StateRequirements:
+    - components:
+      - acappellaTalkedTo
+      - ==
+      - 0
+      inspectorDescription: acappellaTalkedTo == 0
+      State: acappellaTalkedTo
+    - components:
+      - questType
+      - ==
+      - 1
+      inspectorDescription: questType == 1
+      State: questType
+    - components:
+      - day
+      - ==
+      - 1
+      inspectorDescription: day == 1
+      State: day
+    Variation: 0
+    AudioCue: 

@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: AcappellaGroup-Conversation2
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: AcappellaGroup-Conversation
+    Conversant: Singing Group of Young Dudes
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: Hello again, singing group of young dudes!
+      - speaker: 1
+        Dialogue: Hey again, older woman that talks to ghosts!
+      - speaker: 0
+        Dialogue: You guys are funny.
+      - speaker: 1
+        Dialogue: "Thanks\u2026"
+      - speaker: 0
+        Dialogue: Anyway, I came for Garret.
+      - speaker: 1
+        Dialogue: "Garret\u2026"
+      - speaker: 0
+        Dialogue: You miss him right?
+      - speaker: 1
+        Dialogue: '*Sniff* Well, obviously.'
+      - speaker: 0
+        Dialogue: How would you like to sing one more of his arrangements?
+      - speaker: 1
+        Dialogue: "No way\u2026"
+      - speaker: 0
+        Dialogue: You up for it?
+      - speaker: 1
+        Dialogue: "Obviously! Let\u2019s do it."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: PlayDeterminedSong'
+      prompt: 
+      nextID: PlayDeterminedSong
+      isEvent: 1
+    StateChanges:
+    - components:
+      - acappellaTalkedTo
+      - +=
+      - 1
+      inspectorDescription: acappellaTalkedTo += 1
+      State: acappellaTalkedTo
+    StateRequirements:
+    - components:
+      - acappellaTalkedTo
+      - ==
+      - 0
+      inspectorDescription: acappellaTalkedTo == 0
+      State: acappellaTalkedTo
+    - components:
+      - questType
+      - ==
+      - 4
+      inspectorDescription: questType == 4
+      State: questType
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    Variation: 2
+    AudioCue: 

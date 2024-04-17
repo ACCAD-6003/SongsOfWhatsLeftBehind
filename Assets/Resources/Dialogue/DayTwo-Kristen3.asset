@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: DayTwo-Kristen3
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: DayTwo-Kristen
+    Conversant: None
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 0
+        Dialogue: Ugh! Will they just shut up??
+      - speaker: 0
+        Dialogue: "Whatever. I\u2019m gonna find this doctor and give him a piece
+          of my mind."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: exit'
+      prompt: 
+      nextID: exit
+      isEvent: 0
+    StateChanges:
+    - components:
+      - questCompleted
+      - =
+      - 0
+      inspectorDescription: questCompleted = 0
+      State: questCompleted
+    - components:
+      - doctorTalkedTo
+      - =
+      - 0
+      inspectorDescription: doctorTalkedTo = 0
+      State: doctorTalkedTo
+    - components:
+      - questNeedsReset
+      - =
+      - 1
+      inspectorDescription: questNeedsReset = 1
+      State: questNeedsReset
+    StateRequirements:
+    - components:
+      - questType
+      - ==
+      - 3
+      inspectorDescription: questType == 3
+      State: questType
+    Variation: 3
+    AudioCue: 

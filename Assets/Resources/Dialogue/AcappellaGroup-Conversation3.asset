@@ -18,9 +18,12 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        Dialogue: He slayed with his vocal cords! Go tell him that.
+        Dialogue: That arrangement was so beautiful. Tell him for us? Oh! And tell
+          him we appreciate him! Oh! And tell him-
       - speaker: 0
-        Dialogue: I will. You all are the best.
+        Dialogue: I will tell him all the things.
+      - speaker: 1
+        Dialogue: Good good.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
@@ -37,14 +40,14 @@ MonoBehaviour:
     - components:
       - questType
       - ==
-      - 1
-      inspectorDescription: questType == 1
+      - 4
+      inspectorDescription: questType == 4
       State: questType
     - components:
       - day
       - ==
-      - 1
-      inspectorDescription: day == 1
+      - 2
+      inspectorDescription: day == 2
       State: day
     Variation: 3
     AudioCue: 

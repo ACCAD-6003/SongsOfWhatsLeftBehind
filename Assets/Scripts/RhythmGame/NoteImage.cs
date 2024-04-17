@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using UI;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -70,7 +71,8 @@ namespace RhythmGame
             SetPosition(noteSprite, Position);
             SetXOffset(noteSprite, 0);
 
-            StartCoroutine(HoldForDuration(length));
+            StartCoroutine(HoldForDuration(spriteRenderer, 0));
+            StartCoroutine(HoldForDuration(extendedNoteSprite, length));
             StartCoroutine(MoveToBottom(speed));
         }
 
@@ -147,11 +149,12 @@ namespace RhythmGame
             Func<float> noMoveSprite = () => noteSprite.localPosition.x;
             Func<float> extendedNoteXOffset = () => extendedNoteSprite.transform.localPosition.x + preMarginXSpeed * Time.deltaTime;
             Func<float> noMoveExtended = () => extendedNoteSprite.transform.localPosition.x;
+            Func<float> noteSpriteY = () => noteSprite.position.y;
             var thresholdPassed = false;
 
             while (ExtendedPosition > -startingHeight)
             {
-                var spriteXOffset = Position > targetZone 
+                var spriteXOffset = noteSpriteY() > targetZone 
                     ? noteSpriteXOffset : noMoveSprite;
                 var noteXOffset = ExtendedPosition < startingHeight && ExtendedPosition > targetZone 
                     ? extendedNoteXOffset : noMoveExtended;
@@ -166,18 +169,18 @@ namespace RhythmGame
             gameObject.SetActive(false);
         }
         
-        private IEnumerator HoldForDuration(float duration)
+        private static IEnumerator HoldForDuration(Image note, float duration)
         {
             float timeElapsed = 0;
-            var startingPosition = extendedNoteSprite.transform.position;
-            extendedNoteSprite.enabled = false;
+            var startingPosition = note.transform.position;
+            note.enabled = false;
             while (timeElapsed < duration)
             {
                 timeElapsed += Time.deltaTime;
-                extendedNoteSprite.transform.position = startingPosition;
+                note.transform.position = startingPosition;
                 yield return null;
             }
-            extendedNoteSprite.enabled = true;
+            note.enabled = true;
         }
 
         private bool ThresholdPassed()

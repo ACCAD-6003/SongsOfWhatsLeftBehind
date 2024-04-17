@@ -24,8 +24,9 @@ MonoBehaviour:
       prompt: I wanna talk!
       nextID: AcappellaGroup-Conversation
       isEvent: 0
-    - inspectorDescription: "Prompt: Let\u2019s practice music! Leads to: AcappellaGroup-FreePlay"
-      prompt: "Let\u2019s practice music!"
+    - inspectorDescription: "Prompt: Let\u2019s practice music! (Freeplay) Leads
+        to: AcappellaGroup-FreePlay"
+      prompt: "Let\u2019s practice music! (Freeplay)"
       nextID: AcappellaGroup-FreePlay
       isEvent: 0
     StateChanges: []

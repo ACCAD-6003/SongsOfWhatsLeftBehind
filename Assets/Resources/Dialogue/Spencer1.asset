@@ -17,10 +17,10 @@ MonoBehaviour:
     Conversant: Spencer
     DialoguesSeries:
     - dialogues:
-      - speaker: 0
-        Dialogue: He was lucky to have a friend like you.
       - speaker: 1
-        Dialogue: I was the lucky one.
+        Dialogue: Sorry, I-
+      - speaker: 0
+        Dialogue: Yep, yep, you need to be alone, got it, got it. My bad.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
@@ -34,17 +34,5 @@ MonoBehaviour:
       - 1
       inspectorDescription: spencerTalkedTo == 1
       State: spencerTalkedTo
-    - components:
-      - questType
-      - ==
-      - 2
-      inspectorDescription: questType == 2
-      State: questType
-    - components:
-      - day
-      - ==
-      - 1
-      inspectorDescription: day == 1
-      State: day
     Variation: 1
     AudioCue: 
