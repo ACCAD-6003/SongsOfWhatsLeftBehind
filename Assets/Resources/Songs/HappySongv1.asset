@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: bf0426c4bb8ca264b89377354dddd064, type: 3}
   maxScore: 19000
+  mainSong: 0
   violinLayer: {fileID: 8300000, guid: 256bbef45e1271840a4b8aa1fff2880e, type: 3}
   phrases:
   - phraseName: Phrase
@@ -523,4 +524,4 @@ MonoBehaviour:
       notes: 0100000008000000
   bpm: 110
   speed: 1
-  dialogue: DayOne-HappySongEnd
+  dialogue: HappySongEnd

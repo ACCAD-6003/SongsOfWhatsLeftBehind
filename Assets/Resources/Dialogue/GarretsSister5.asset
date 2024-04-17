@@ -26,9 +26,9 @@ MonoBehaviour:
       - speaker: 0
         Dialogue: Got it, Lizzy. Pretty name.
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlaySadSong'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlaySadSongDayTwo'
       prompt: 
-      nextID: PlaySadSong
+      nextID: PlaySadSongDayTwo
       isEvent: 1
     StateChanges:
     - components:

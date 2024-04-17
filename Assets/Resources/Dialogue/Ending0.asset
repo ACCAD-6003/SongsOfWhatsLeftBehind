@@ -66,8 +66,8 @@ MonoBehaviour:
     - components:
       - friendship
       - <=
-      - 1
-      inspectorDescription: friendship <= 1
+      - 2
+      inspectorDescription: friendship <= 2
       State: friendship
     Variation: 0
     AudioCue: 

@@ -97,5 +97,17 @@ MonoBehaviour:
       - 2
       inspectorDescription: questType == 2
       State: questType
+    - components:
+      - friendship
+      - '>'
+      - 2
+      inspectorDescription: friendship > 2
+      State: friendship
+    - components:
+      - friendship
+      - <=
+      - 4
+      inspectorDescription: friendship <= 4
+      State: friendship
     Variation: 3
     AudioCue: 

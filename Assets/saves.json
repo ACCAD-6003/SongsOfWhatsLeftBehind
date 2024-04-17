@@ -1,10 +1,19 @@
 {
     "saves": [
         {
-            "worldState": [],
-            "sceneIndex": 1,
+            "worldState": [
+                {
+                    "entryName": "day",
+                    "entryValue": 0
+                },
+                {
+                    "entryName": "saveDay",
+                    "entryValue": 1
+                }
+            ],
+            "sceneIndex": 2,
             "isEmpty": false,
-            "day": 1
+            "day": 2
         },
         {
             "worldState": [
