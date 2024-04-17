@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: TutorialV3
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 0ff05a9d078a63645b71313186c56e95, type: 3}
-  violinLayer: {fileID: 8300000, guid: abe99ef63c9842f4fa56d04acdbf5891, type: 3}
+  maxScore: 10000
+  violinLayer: {fileID: 8300000, guid: c2ba935999133cf4fb332ba4ba909134, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 5.3333335
