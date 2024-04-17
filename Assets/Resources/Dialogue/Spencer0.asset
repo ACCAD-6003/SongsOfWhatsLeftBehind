@@ -18,39 +18,14 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        Dialogue: "Hey, I\u2019m not really in the mood to talk."
+        Dialogue: "Hey, I\u2019m sure you\u2019re nice and everything, but I\u2019m
+          not really in the mood to talk."
       - speaker: 0
-        Dialogue: I understand. I just-
+        Dialogue: Oh, my bad I get it. Not a social day today, huh?
       - speaker: 1
-        Dialogue: "\u2026?"
+        Dialogue: Not at all. So, if you could-
       - speaker: 0
-        Dialogue: I came to check on you. To see if you were okay.
-      - speaker: 1
-        Dialogue: "\u2026"
-      - speaker: 1
-        Dialogue: Not really okay, but surviving.
-      - speaker: 0
-        Dialogue: "I can\u2019t imagine what you\u2019re going through, but this
-          crazy ghost lady is here to help if you need it."
-      - speaker: 1
-        Dialogue: Heh. Thank you.
-      - speaker: 0
-        Dialogue: "If you could tell him- If you could tell Garret one last thing\u2026what
-          would it be?"
-      - speaker: 1
-        Dialogue: '*Sniff* *Sigh* That he was sexy while he was alive.'
-      - speaker: 0
-        Dialogue: "*Chuckle* *Sniff* I\u2019ll relay the message."
-      - speaker: 1
-        Dialogue: To your ghosts in the graveyard?
-      - speaker: 0
-        Dialogue: Exactly.
-      - speaker: 1
-        Dialogue: "*Sniff* \u2026"
-      - speaker: 1
-        Dialogue: Take care of him for me.
-      - speaker: 1
-        Dialogue: He loved music.
+        Dialogue: Yeah, yeah, no problem. Carry on, soldier.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
@@ -63,12 +38,6 @@ MonoBehaviour:
       - 1
       inspectorDescription: spencerTalkedTo += 1
       State: spencerTalkedTo
-    - components:
-      - questCompleted
-      - =
-      - 1
-      inspectorDescription: questCompleted = 1
-      State: questCompleted
     StateRequirements:
     - components:
       - spencerTalkedTo
@@ -77,16 +46,10 @@ MonoBehaviour:
       inspectorDescription: spencerTalkedTo == 0
       State: spencerTalkedTo
     - components:
-      - questType
-      - ==
-      - 2
-      inspectorDescription: questType == 2
-      State: questType
-    - components:
       - day
       - ==
-      - 1
-      inspectorDescription: day == 1
+      - 0
+      inspectorDescription: day == 0
       State: day
     Variation: 0
     AudioCue: 

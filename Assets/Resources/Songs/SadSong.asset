@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SadSong
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 180a6a41c7caefd49a4fa9976aeee7db, type: 3}
+  maxScore: 20000
   violinLayer: {fileID: 8300000, guid: ab1dbc0d9d5205346bdaf6aef7b2430e, type: 3}
   phrases:
   - phraseName: Phrase
@@ -23,7 +24,7 @@ MonoBehaviour:
       style: 0
       notes: 02000000
     - offset: 3
-      noteLength: 0.75
+      noteLength: 1.5
       style: 1
       notes: 01000000
   - phraseName: Phrase
@@ -38,7 +39,7 @@ MonoBehaviour:
       style: 0
       notes: 04000000
     - offset: 3
-      noteLength: 0.75
+      noteLength: 1.5
       style: 1
       notes: 02000000
   - phraseName: Phrase
@@ -62,9 +63,9 @@ MonoBehaviour:
     - offset: 0.75
       noteLength: 0
       style: 0
-      notes: 0800000002000000
+      notes: 0200000008000000
     - offset: 1.5
-      noteLength: 0.75
+      noteLength: 1.5
       style: 1
       notes: 04000000
   - phraseName: Phrase
@@ -108,7 +109,7 @@ MonoBehaviour:
     startTime: 26.25
     notes:
     - offset: 0.75
-      noteLength: 0.75
+      noteLength: 1.5
       style: 1
       notes: 0400000008000000
   - phraseName: Phrase
@@ -142,7 +143,7 @@ MonoBehaviour:
     startTime: 32.25
     notes:
     - offset: 0.75
-      noteLength: 0.75
+      noteLength: 1.5
       style: 1
       notes: 0100000002000000
   - phraseName: Phrase
@@ -176,7 +177,7 @@ MonoBehaviour:
     startTime: 38.25
     notes:
     - offset: 0.75
-      noteLength: 0.75
+      noteLength: 1.5
       style: 1
       notes: 0100000002000000
   - phraseName: Phrase
@@ -210,7 +211,7 @@ MonoBehaviour:
     startTime: 44.25
     notes:
     - offset: 0.75
-      noteLength: 0.75
+      noteLength: 1.5
       style: 1
       notes: 0100000002000000
   - phraseName: Phrase
@@ -221,7 +222,7 @@ MonoBehaviour:
       style: 0
       notes: 04000000
     - offset: 1.5
-      noteLength: 0.75
+      noteLength: 1.5
       style: 1
       notes: 08000000
   - phraseName: Phrase
@@ -268,7 +269,7 @@ MonoBehaviour:
     - offset: 2.25
       noteLength: 0
       style: 0
-      notes: 02000000
+      notes: 0200000004000000
     - offset: 3.375
       noteLength: 0
       style: 0
@@ -306,7 +307,7 @@ MonoBehaviour:
     - offset: 2.25
       noteLength: 0
       style: 0
-      notes: 02000000
+      notes: 0200000004000000
     - offset: 3.375
       noteLength: 0
       style: 0
@@ -372,25 +373,32 @@ MonoBehaviour:
       style: 0
       notes: 08000000
     - offset: 3
-      noteLength: 3
-      style: 1
+      noteLength: 0
+      style: 0
       notes: 04000000
+  - phraseName: Phrase
+    startTime: 80.25
+    notes:
+    - offset: 0.75
+      noteLength: 2.25
+      style: 1
+      notes: 0400000002000000
   - phraseName: Phrase
     startTime: 83.25
     notes:
     - offset: 0.75
-      noteLength: 1.125
+      noteLength: 0.75
       style: 1
       notes: 01000000
+    - offset: 1.875
+      noteLength: 0
+      style: 0
+      notes: 02000000
     - offset: 2.25
       noteLength: 0
       style: 0
       notes: 02000000
     - offset: 2.625
-      noteLength: 0
-      style: 0
-      notes: 02000000
-    - offset: 3
       noteLength: 0.375
       style: 1
       notes: 04000000
@@ -423,9 +431,9 @@ MonoBehaviour:
     startTime: 98.25
     notes:
     - offset: 0.75
-      noteLength: 2.25
+      noteLength: 3
       style: 1
       notes: 01000000020000000400000008000000
   bpm: 80
-  speed: 2
+  speed: 1
   dialogue: SadSongEnd

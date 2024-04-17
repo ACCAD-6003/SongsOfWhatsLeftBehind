@@ -13,7 +13,7 @@ namespace RhythmGame
 {
     public class RhythmGameManager : SerializedMonoBehaviour
     {
-        [HideInInspector] public Action OnSongStart;
+        [HideInInspector] public Action<SongData> OnSongStart;
         [HideInInspector] public Action OnSongEnd;
         [HideInInspector] public Action OnHit;
         [HideInInspector] public Action OnMiss;
@@ -154,8 +154,8 @@ namespace RhythmGame
         [Button]
         public void StartSong(float startBeat)
         {
-            OnSongStart?.Invoke();
-            
+            OnSongStart?.Invoke(songData);
+
             if(IsValidSong(songData)) StartCoroutine(HandleSong(songData, RhythmHelper.ConvertBPMToOffset(startBeat, songData)));
         }
 
@@ -193,6 +193,7 @@ namespace RhythmGame
             RhythmGameController.OnNotePressedProcessed += CheckForNoteInZone;
             UIController.Instance.SwapToUI();
             var startTime = Time.time;
+            scoreDisplay.SetMaxScore(songData.maxScore);
             pulser = StartCoroutine(Pulser(songData.bpm, songData.song.length - songStart));
             float TimeElapsed() => Time.time - startTime + songStart;
             foreach (var phrase in songData.phrases)

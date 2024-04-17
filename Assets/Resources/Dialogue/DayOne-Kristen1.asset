@@ -20,7 +20,7 @@ MonoBehaviour:
       - speaker: 0
         Dialogue: Whatever!
       - speaker: 0
-        Dialogue: "A cappella group. Gotta find them. Maybe they\u2019ll serenade
+        Dialogue: "acappella group. Gotta find them. Maybe they\u2019ll serenade
           me with their manly voices."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: exit'
@@ -40,12 +40,6 @@ MonoBehaviour:
       - 0
       inspectorDescription: acappellaTalkedTo = 0
       State: acappellaTalkedTo
-    - components:
-      - day
-      - =
-      - 1
-      inspectorDescription: day = 1
-      State: day
     - components:
       - questNeedsReset
       - =

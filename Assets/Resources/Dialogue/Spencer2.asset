@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Spencer2
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Spencer
+    Conversant: Spencer
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: "Hey, I\u2019m not really in the mood to talk."
+      - speaker: 0
+        Dialogue: I understand. I just-
+      - speaker: 1
+        Dialogue: "\u2026?"
+      - speaker: 0
+        Dialogue: I came to check on you. To see if you were okay.
+      - speaker: 1
+        Dialogue: "\u2026"
+      - speaker: 1
+        Dialogue: Not really okay, but surviving.
+      - speaker: 0
+        Dialogue: "I can\u2019t imagine what you\u2019re going through, but this
+          crazy ghost lady is here to help if you need it."
+      - speaker: 1
+        Dialogue: Heh. Thank you.
+      - speaker: 0
+        Dialogue: "If you could tell him- If you could tell Garret one last thing\u2026what
+          would it be?"
+      - speaker: 1
+        Dialogue: '*Sniff* *Sigh* That he was sexy while he was alive.'
+      - speaker: 0
+        Dialogue: "*Chuckle* *Sniff* I\u2019ll relay the message."
+      - speaker: 1
+        Dialogue: To your ghosts in the graveyard?
+      - speaker: 0
+        Dialogue: Exactly.
+      - speaker: 1
+        Dialogue: "*Sniff* \u2026"
+      - speaker: 1
+        Dialogue: Take care of him for me.
+      - speaker: 1
+        Dialogue: He loved music.
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: end'
+      prompt: 
+      nextID: end
+      isEvent: 0
+    StateChanges:
+    - components:
+      - spencerTalkedTo
+      - +=
+      - 1
+      inspectorDescription: spencerTalkedTo += 1
+      State: spencerTalkedTo
+    - components:
+      - questCompleted
+      - =
+      - 1
+      inspectorDescription: questCompleted = 1
+      State: questCompleted
+    StateRequirements:
+    - components:
+      - spencerTalkedTo
+      - ==
+      - 0
+      inspectorDescription: spencerTalkedTo == 0
+      State: spencerTalkedTo
+    - components:
+      - questType
+      - ==
+      - 2
+      inspectorDescription: questType == 2
+      State: questType
+    - components:
+      - day
+      - ==
+      - 1
+      inspectorDescription: day == 1
+      State: day
+    Variation: 2
+    AudioCue: 

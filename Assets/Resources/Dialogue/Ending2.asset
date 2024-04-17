@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Ending2
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Ending
+    Conversant: Garret
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        Dialogue: You remind me of my friend Spencer a lot.
+      - speaker: 1
+        Dialogue: Go bother my boy haha!
+      - speaker: 0
+        Dialogue: Oh, I will. He seems cool.
+      - speaker: 1
+        Dialogue: He is quite cool, yes.
+      - speaker: 0
+        Dialogue: "I\u2019m just gonna follow all the cool people."
+      - speaker: 1
+        Dialogue: "Thank you for everything. You\u2019ve made me happier than I thought
+          I could be."
+      - speaker: 0
+        Dialogue: Yeah, of course.
+      - speaker: 0
+        Dialogue: "Some advice for someone who\u2019s still living, before you go?"
+      - speaker: 1
+        Dialogue: Why, of course.
+      - speaker: 0
+        Dialogue: What part of life made you the happiest?
+      - speaker: 1
+        Dialogue: "\u2026"
+      - speaker: 1
+        Dialogue: "Hmmm\u2026you know\u2026"
+      - speaker: 1
+        Dialogue: I had someone tell me that you can choose to be happy.
+      - speaker: 0
+        Dialogue: "Interesting\u2026"
+      - speaker: 1
+        Dialogue: "I don\u2019t think that\u2019s true."
+      - speaker: 0
+        Dialogue: "I was gonna say\u2026"
+      - speaker: 1
+        Dialogue: "But I do think\u2026"
+      - speaker: 1
+        Dialogue: That your soul will naturally be drawn to happiness.
+      - speaker: 1
+        Dialogue: You can feel your mind and body chasing the things that you most
+          want.
+      - speaker: 1
+        Dialogue: My advice to you is to let them lead you there.
+      - speaker: 1
+        Dialogue: "Don\u2019t resist the waves of passion that naturally happen in
+          you."
+      - speaker: 1
+        Dialogue: "Don\u2019t be scared of what you love."
+      - speaker: 0
+        Dialogue: "The town is scared of me\u2026"
+      - speaker: 1
+        Dialogue: "They\u2019re scared of your passion because it violates this idea
+          of compliance."
+      - speaker: 0
+        Dialogue: "Whoa big words\u2026"
+      - speaker: 1
+        Dialogue: "You don\u2019t blend in. And they hate that. Because they\u2019re
+          too afraid not to blend in."
+      - speaker: 0
+        Dialogue: "Huh\u2026."
+      - speaker: 1
+        Dialogue: "It\u2019s a gift to be so open about the things you love."
+      - speaker: 0
+        Dialogue: "Sure thing\u2026."
+      - speaker: 0
+        Dialogue: Thank you.
+      - speaker: 1
+        Dialogue: Always.
+      - speaker: 1
+        Dialogue: Goodbye for now, Kristen.
+      - speaker: 0
+        Dialogue: Until we meet again?
+      - speaker: 1
+        Dialogue: "Yeah\u2026until we meet again."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'
+      prompt: 
+      nextID: EndScreen
+      isEvent: 1
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    - components:
+      - questCompleted
+      - ==
+      - 1
+      inspectorDescription: questCompleted == 1
+      State: questCompleted
+    - components:
+      - questType
+      - ==
+      - 1
+      inspectorDescription: questType == 1
+      State: questType
+    - components:
+      - friendship
+      - ==
+      - 3
+      inspectorDescription: friendship == 3
+      State: friendship
+    Variation: 2
+    AudioCue: 

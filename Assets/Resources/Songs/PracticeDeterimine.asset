@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PracticeDeterimine
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: d6a4613ee1df51d439423cdbc00f9af0, type: 3}
+  maxScore: 15000
   violinLayer: {fileID: 0}
   phrases:
   - phraseName: Phrase
@@ -720,5 +721,5 @@ MonoBehaviour:
       style: 1
       notes: 08000000
   bpm: 130
-  speed: 0.65
-  dialogue: DayOne-DeterminedSongEnd
+  speed: 1
+  dialogue: FreeEnd

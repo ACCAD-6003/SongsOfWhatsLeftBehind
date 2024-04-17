@@ -17,40 +17,83 @@ MonoBehaviour:
     Conversant: Garret
     DialoguesSeries:
     - dialogues:
-      - speaker: 1
-        Dialogue: Hello.
       - speaker: 0
-        Dialogue: HELLO!
+        Dialogue: Why does today feel weird?
+      - speaker: 0
+        Dialogue: "You\u2026seem weird."
+      - speaker: 1
+        Dialogue: I heard you play the song. You killed it.
+      - speaker: 0
+        Dialogue: I mean, I always do.
+      - speaker: 1
+        Dialogue: Yeah. Truly a rockstar.
+      - speaker: 0
+        Dialogue: You said it not me.
+      - speaker: 1
+        Dialogue: "\u2026"
       - speaker: 0
         Dialogue: "\u2026"
       - speaker: 0
-        Dialogue: "I guess we\u2019re still in the awkward phase of this friendship."
+        Dialogue: "What\u2019s going on?..."
       - speaker: 1
-        Dialogue: Awkward phase?
+        Dialogue: "I think\u2026"
       - speaker: 0
-        Dialogue: "Yeah, you know\u2026"
-      - speaker: 1
         Dialogue: "\u2026"
-      - speaker: 0
-        Dialogue: "This\u2026the small talk and timid \u201Chello\u201D\u2019s phase."
       - speaker: 1
-        Dialogue: "Ah. Well, I don\u2019t get awkward so,"
+        Dialogue: "I think it\u2019s time for me to go for now."
       - speaker: 0
-        Dialogue: "Because you\u2019re a ghost!"
+        Dialogue: What?? What do you mean?
       - speaker: 1
-        Dialogue: "No\u2026because of my personality."
+        Dialogue: I need to rest a little. I WANT to rest a little.
       - speaker: 0
-        Dialogue: Oh, okay. Yeah I love your personality.
+        Dialogue: Rest how?...
       - speaker: 1
-        Dialogue: Was that genuine?
+        Dialogue: "I mean, there\u2019s a reason you don\u2019t see any other ghosts
+          around here."
+      - speaker: 1
+        Dialogue: "They\u2019re all at peace, resting beyond this world, and carrying
+          on."
       - speaker: 0
-        Dialogue: "Who knows\u2026"
+        Dialogue: And you wanna do that too?
       - speaker: 1
-        Dialogue: Soooo you have updates?
+        Dialogue: "I don\u2019t know if I\u2019m ready for it, but\u2026I want to
+          try."
+      - speaker: 0
+        Dialogue: "Oh\u2026"
+      - speaker: 1
+        Dialogue: "You\u2019re the reason, you know."
+      - speaker: 0
+        Dialogue: "The reason\u2026?"
+      - speaker: 1
+        Dialogue: "You\u2019re the reason I\u2019ve been able to find some peace.
+          You\u2019re a good friend and a good person."
+      - speaker: 0
+        Dialogue: "I don\u2019t know about that."
+      - speaker: 1
+        Dialogue: "You are, I promise. I\u2019m a great judge of character."
+      - speaker: 0
+        Dialogue: "Hmm you\u2019re confident today."
+      - speaker: 1
+        Dialogue: "Which is something I haven\u2019t felt until you came along."
+      - speaker: 1
+        Dialogue: You made me stronger.
+      - speaker: 1
+        Dialogue: You listened.
+      - speaker: 1
+        Dialogue: "And it\u2019s about time people start listening to you, too."
+      - speaker: 1
+        Dialogue: "All of the people I loved\u2026they can be yours too."
+      - speaker: 0
+        Dialogue: "They won\u2019t want me."
+      - speaker: 1
+        Dialogue: "They will want you. You\u2019ve shown them so much kindness already.
+          Seek them out, be yourself, and trust me."
+      - speaker: 0
+        Dialogue: "I\u2019ll try\u2026"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: QuestResult'
+    - inspectorDescription: 'Prompt:  Leads to: Ending'
       prompt: 
-      nextID: QuestResult
+      nextID: Ending
       isEvent: 0
     StateChanges: []
     StateRequirements: []

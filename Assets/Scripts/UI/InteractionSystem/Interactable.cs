@@ -40,7 +40,9 @@ namespace UI.InteractionSystem
         {
             if (conversation == null) return true;
 
-            return DialogueManager.Instance.CheckStateRequirements(conversation);
+            var dialogueAvailable = DialogueManager.Instance.CheckStateRequirements(conversation);
+            if (!dialogueAvailable) Debug.Log("Dialogue not available");
+            return dialogueAvailable;
         }
         
         private void GoToNextScene()

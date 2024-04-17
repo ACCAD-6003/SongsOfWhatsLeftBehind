@@ -27,10 +27,16 @@ namespace RhythmGame
             audioSource.clip = songData.song;
             audioSource.time = startTime;
             audioSource.volume = PlayerPreferences.MusicVolume;
-            audioSource.Play();
             violinTrack.clip = songData.violinLayer;
             violinTrack.time = startTime;
             violinTrack.volume = PlayerPreferences.ViolinVolume;
+            StartCoroutine(PlayAfterDelay());
+        }
+        
+        private IEnumerator PlayAfterDelay()
+        {
+            yield return new WaitForSeconds(PlayerPreferences.VisualDelay);
+            audioSource.Play();
             if (violinTrack.clip != null) violinTrack.Play();
         }
 
