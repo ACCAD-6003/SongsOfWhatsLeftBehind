@@ -26,6 +26,12 @@ MonoBehaviour:
       isEvent: 0
     StateChanges:
     - components:
+      - day
+      - =
+      - 3
+      inspectorDescription: day = 3
+      State: day
+    - components:
       - saveDay
       - =
       - 4

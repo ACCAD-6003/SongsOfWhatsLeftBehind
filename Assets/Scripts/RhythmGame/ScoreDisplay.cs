@@ -19,6 +19,8 @@ namespace RhythmGame
         private int Combo => Mathf.Min(currentHits / hitsPerCombo + 1, maxCombo);
         private int currentHits;
 
+        public int FinalScore => Mathf.Clamp(Mathf.FloorToInt(score / (float)maxScore * 3), 1, 3);
+        
         private void OnEnable()
         {
             score = 0;

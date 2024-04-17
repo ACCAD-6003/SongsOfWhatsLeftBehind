@@ -8,6 +8,7 @@ namespace RhythmGame
     {
         public AudioClip song;
         public int maxScore;
+        public bool mainSong;
         public AudioClip violinLayer;
         public List<PhraseData> phrases = new();
         public float bpm;

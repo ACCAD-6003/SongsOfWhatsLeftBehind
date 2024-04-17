@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FreePlay.unity
     guid: d8b1a7f75c3b9564e8b912e6d230938f
+  - enabled: 1
+    path: Assets/Scenes/End Screen.unity
+    guid: 92339f7382cec8f48aa9c162e1eef187
   m_configObjects: {}
