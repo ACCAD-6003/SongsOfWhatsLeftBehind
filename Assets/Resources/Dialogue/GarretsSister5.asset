@@ -14,27 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GarretsSister
-    Conversant: Lizzy
+    Conversant: "Garret\u2019s Sister"
     DialoguesSeries:
     - dialogues:
       - speaker: 0
-        Dialogue: "It\u2019ll be okay."
+        Dialogue: "Garret\u2019s sister\u2026"
       - speaker: 1
-        Dialogue: I promise, I believe you. Thank you again.
+        Dialogue: "That\u2019s me."
+      - speaker: 1
+        Dialogue: My name is Lizzy by the way.
       - speaker: 0
-        Dialogue: Always.
+        Dialogue: Got it, Lizzy. Pretty name.
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlaySadSong'
       prompt: 
-      nextID: end
-      isEvent: 0
-    StateChanges: []
+      nextID: PlaySadSong
+      isEvent: 1
+    StateChanges:
+    - components:
+      - sisterTalkedTo
+      - +=
+      - 1
+      inspectorDescription: sisterTalkedTo += 1
+      State: sisterTalkedTo
     StateRequirements:
     - components:
       - sisterTalkedTo
       - ==
-      - 1
-      inspectorDescription: sisterTalkedTo == 1
+      - 0
+      inspectorDescription: sisterTalkedTo == 0
       State: sisterTalkedTo
     - components:
       - questType

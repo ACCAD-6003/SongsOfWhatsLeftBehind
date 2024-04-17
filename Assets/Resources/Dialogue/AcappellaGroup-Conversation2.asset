@@ -17,60 +17,32 @@ MonoBehaviour:
     Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
-      - speaker: 0
-        Dialogue: Hello again, singing group of young dudes!
       - speaker: 1
-        Dialogue: Hey again, older woman that talks to ghosts!
+        Dialogue: "It\u2019s really hard to be missing a member."
       - speaker: 0
-        Dialogue: You guys are funny.
+        Dialogue: I bet. I feel like that would put a stop to everything.
       - speaker: 1
-        Dialogue: "Thanks\u2026"
+        Dialogue: No, we have to keep going. Garret would want that.
       - speaker: 0
-        Dialogue: Anyway, I came for Garret.
-      - speaker: 1
-        Dialogue: "Garret\u2026"
-      - speaker: 0
-        Dialogue: You miss him right?
-      - speaker: 1
-        Dialogue: '*Sniff* Well, obviously.'
-      - speaker: 0
-        Dialogue: How would you like to sing one more of his arrangements?
-      - speaker: 1
-        Dialogue: "No way\u2026"
-      - speaker: 0
-        Dialogue: You up for it?
-      - speaker: 1
-        Dialogue: "Obviously! Let\u2019s do it."
+        Dialogue: "Yeah\u2026poor Garret."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayDeterminedSong'
+    - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
-      nextID: PlayDeterminedSong
-      isEvent: 1
-    StateChanges:
-    - components:
-      - acappellaTalkedTo
-      - +=
-      - 1
-      inspectorDescription: acappellaTalkedTo += 1
-      State: acappellaTalkedTo
+      nextID: end
+      isEvent: 0
+    StateChanges: []
     StateRequirements:
     - components:
-      - acappellaTalkedTo
-      - ==
-      - 0
-      inspectorDescription: acappellaTalkedTo == 0
-      State: acappellaTalkedTo
-    - components:
       - questType
-      - ==
-      - 4
-      inspectorDescription: questType == 4
+      - '!='
+      - 1
+      inspectorDescription: questType != 1
       State: questType
     - components:
       - day
       - ==
-      - 2
-      inspectorDescription: day == 2
+      - 1
+      inspectorDescription: day == 1
       State: day
     Variation: 2
     AudioCue: 

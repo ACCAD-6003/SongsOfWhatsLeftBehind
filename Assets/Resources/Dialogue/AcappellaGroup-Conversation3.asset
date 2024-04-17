@@ -17,25 +17,48 @@ MonoBehaviour:
     Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
-      - speaker: 1
-        Dialogue: That arrangement was so beautiful. Tell him for us? Oh! And tell
-          him we appreciate him! Oh! And tell him-
       - speaker: 0
-        Dialogue: I will tell him all the things.
+        Dialogue: Hello again, singing group of young dudes!
       - speaker: 1
-        Dialogue: Good good.
+        Dialogue: Hey again, older woman that talks to ghosts!
+      - speaker: 0
+        Dialogue: You guys are funny.
+      - speaker: 1
+        Dialogue: "Thanks\u2026"
+      - speaker: 0
+        Dialogue: Anyway, I came for Garret.
+      - speaker: 1
+        Dialogue: "Garret\u2026"
+      - speaker: 0
+        Dialogue: You miss him right?
+      - speaker: 1
+        Dialogue: '*Sniff* Well, obviously.'
+      - speaker: 0
+        Dialogue: How would you like to sing one more of his arrangements?
+      - speaker: 1
+        Dialogue: "No way\u2026"
+      - speaker: 0
+        Dialogue: You up for it?
+      - speaker: 1
+        Dialogue: "Obviously! Let\u2019s do it."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlayDeterminedSong'
       prompt: 
-      nextID: end
-      isEvent: 0
-    StateChanges: []
+      nextID: PlayDeterminedSong
+      isEvent: 1
+    StateChanges:
+    - components:
+      - acappellaTalkedTo
+      - +=
+      - 1
+      inspectorDescription: acappellaTalkedTo += 1
+      State: acappellaTalkedTo
     StateRequirements:
     - components:
       - acappellaTalkedTo
       - ==
-      - 1
-      inspectorDescription: acappellaTalkedTo == 1
+      - 0
+      inspectorDescription: acappellaTalkedTo == 0
       State: acappellaTalkedTo
     - components:
       - questType

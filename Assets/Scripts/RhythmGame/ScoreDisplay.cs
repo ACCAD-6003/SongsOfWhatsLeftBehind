@@ -13,9 +13,8 @@ namespace RhythmGame
         [SerializeField] private int maxCombo;
         [SerializeField] private int hitsPerCombo;
         
-        [Header("Temp")]
-        [SerializeField] private int maxScore;
 
+        private int maxScore;
         private int score;
         private int Combo => Mathf.Min(currentHits / hitsPerCombo + 1, maxCombo);
         private int currentHits;
@@ -25,6 +24,11 @@ namespace RhythmGame
             score = 0;
             currentHits = 0;
             UpdateDisplay();
+        }
+        
+        public void SetMaxScore(int score)
+        {
+            maxScore = score;
         }
 
         public void OnScoreNote(NoteResult result)
@@ -55,6 +59,11 @@ namespace RhythmGame
             comboText.text = "Combo: " + Combo + "x";
             streakText.text = currentHits + " Hits!";
             streakText.enabled = currentHits != 0;
+        }
+
+        private void OnDisable()
+        {
+            Debug.Log("Final Score: " + score);
         }
     }
 }

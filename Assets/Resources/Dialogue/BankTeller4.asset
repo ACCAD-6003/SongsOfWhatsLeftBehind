@@ -17,54 +17,33 @@ MonoBehaviour:
     Conversant: Borris
     DialoguesSeries:
     - dialogues:
-      - speaker: 1
-        Dialogue: Oh please no.
       - speaker: 0
-        Dialogue: Relax.
+        Dialogue: Good day, Borris.
       - speaker: 1
-        Dialogue: "Unless you\u2019re here to pay off your debts? *Smiles*"
+        Dialogue: Oh, Kristen. If only you had something better to do than to talk
+          to me.
       - speaker: 0
-        Dialogue: "Borris\u2026do you like your job?"
+        Dialogue: Ouch that was a lot.
       - speaker: 1
-        Dialogue: "\u2026huh??"
-      - speaker: 0
-        Dialogue: Your current employment. Do you enjoy it?
-      - speaker: 1
-        Dialogue: '*Sigh*...'
-      - speaker: 1
-        Dialogue: I mean not really.
-      - speaker: 0
-        Dialogue: "I\u2019m sorry."
-      - speaker: 1
-        Dialogue: "It\u2019s fine?"
-      - speaker: 0
-        Dialogue: I hope you can get a job you like someday. Like me.
-      - speaker: 1
-        Dialogue: "Yeah\u2026okay."
+        Dialogue: You really try me with your presence.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
       nextID: end
       isEvent: 0
-    StateChanges:
-    - components:
-      - bankTellerTalkedTo
-      - +=
-      - 1
-      inspectorDescription: bankTellerTalkedTo += 1
-      State: bankTellerTalkedTo
+    StateChanges: []
     StateRequirements:
     - components:
-      - bankTellerTalkedTo
-      - ==
-      - 0
-      inspectorDescription: bankTellerTalkedTo == 0
-      State: bankTellerTalkedTo
+      - questType
+      - '!='
+      - 4
+      inspectorDescription: questType != 4
+      State: questType
     - components:
       - day
       - ==
-      - 2
-      inspectorDescription: day == 2
+      - 1
+      inspectorDescription: day == 1
       State: day
     Variation: 4
     AudioCue: 

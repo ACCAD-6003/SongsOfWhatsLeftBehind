@@ -51,6 +51,12 @@ namespace RhythmGame.Editor
                 RemoveLine();
             }
             
+            if (NextLine().StartsWith(ScoreLabel))
+            {
+                song.maxScore = int.Parse(NextLine()[ScoreLabel.Length..]);
+                RemoveLine();
+            }
+
             AssertMarker(NextLine(), DialogueLabel);
             song.dialogue = NextLine()[DialogueLabel.Length..];
             RemoveLine();

@@ -14,60 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Doctor
-    Conversant: Doctor
+    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
-        Dialogue: "Hey. You\u2019re him aren\u2019t you?"
-      - speaker: 1
-        Dialogue: "I\u2019m who?"
-      - speaker: 0
-        Dialogue: "You\u2019re the doctor that treated Garret."
-      - speaker: 1
-        Dialogue: "\u2026I don\u2019t know who you are, but that is a sensitive subject-"
-      - speaker: 0
-        Dialogue: "It sure is. And you\u2019re gonna listen to me speak on it."
-      - speaker: 1
-        Dialogue: "Miss\u2026"
-      - speaker: 0
-        Dialogue: "Uh uh don\u2019t \u201Cmiss\u201D me. Just sit back, don\u2019t
-          relax, and listen to my song."
-      - speaker: 1
-        Dialogue: I-
-      - speaker: 0
-        Dialogue: "Maybe then you\u2019ll feel the extent of our anger."
-      - speaker: 1
-        Dialogue: "Don\u2019t-"
+        Dialogue: "I\u2019ve heard bad things about the hospital. And it looks like
+          it might be closing down."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayAngrySong'
+    - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
-      nextID: PlayAngrySong
-      isEvent: 1
-    StateChanges:
-    - components:
-      - doctorTalkedTo
-      - +=
-      - 1
-      inspectorDescription: doctorTalkedTo += 1
-      State: doctorTalkedTo
+      nextID: end
+      isEvent: 0
+    StateChanges: []
     StateRequirements:
     - components:
-      - doctorTalkedTo
-      - ==
-      - 0
-      inspectorDescription: doctorTalkedTo == 0
-      State: doctorTalkedTo
-    - components:
       - questType
-      - ==
+      - '!='
       - 3
-      inspectorDescription: questType == 3
+      inspectorDescription: questType != 3
       State: questType
     - components:
       - day
       - ==
-      - 2
-      inspectorDescription: day == 2
+      - 1
+      inspectorDescription: day == 1
       State: day
     Variation: 4
     AudioCue: 

@@ -18,31 +18,47 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        Dialogue: If you have more life advice,...kindly, save it for someone else.
+        Dialogue: Oh please no.
       - speaker: 0
-        Dialogue: Can I give you a life suggestion?
+        Dialogue: Relax.
       - speaker: 1
-        Dialogue: Absolutely not.
+        Dialogue: "Unless you\u2019re here to pay off your debts? *Smiles*"
       - speaker: 0
-        Dialogue: I like you, Borris.
+        Dialogue: "Borris\u2026do you like your job?"
       - speaker: 1
-        Dialogue: Gross, please leave.
+        Dialogue: "\u2026huh??"
       - speaker: 0
-        Dialogue: "Can\u2019t we be friends?"
+        Dialogue: Your current employment. Do you enjoy it?
       - speaker: 1
-        Dialogue: "With your unpaid credit cards? Not a chance\u2026*Snicker*"
+        Dialogue: '*Sigh*...'
+      - speaker: 1
+        Dialogue: I mean not really.
+      - speaker: 0
+        Dialogue: "I\u2019m sorry."
+      - speaker: 1
+        Dialogue: "It\u2019s fine?"
+      - speaker: 0
+        Dialogue: I hope you can get a job you like someday. Like me.
+      - speaker: 1
+        Dialogue: "Yeah\u2026okay."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
       nextID: end
       isEvent: 0
-    StateChanges: []
+    StateChanges:
+    - components:
+      - bankTellerTalkedTo
+      - +=
+      - 1
+      inspectorDescription: bankTellerTalkedTo += 1
+      State: bankTellerTalkedTo
     StateRequirements:
     - components:
       - bankTellerTalkedTo
       - ==
-      - 1
-      inspectorDescription: bankTellerTalkedTo == 1
+      - 0
+      inspectorDescription: bankTellerTalkedTo == 0
       State: bankTellerTalkedTo
     - components:
       - day

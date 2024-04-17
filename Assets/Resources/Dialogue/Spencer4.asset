@@ -17,70 +17,36 @@ MonoBehaviour:
     Conversant: Spencer
     DialoguesSeries:
     - dialogues:
-      - speaker: 1
-        Dialogue: "Hey, I\u2019m not really in the mood to talk."
       - speaker: 0
-        Dialogue: I understand. I just-
+        Dialogue: Anything I can do for you today?
       - speaker: 1
-        Dialogue: "\u2026?"
+        Dialogue: "I lost my friend recently, and it still hurts\u2026no matter how
+          much time passes."
       - speaker: 0
-        Dialogue: I came to check on you. To see if you were okay.
+        Dialogue: "I think it will hurt for a while, but that doesn\u2019t mean it
+          won\u2019t get better."
       - speaker: 1
-        Dialogue: "\u2026"
-      - speaker: 1
-        Dialogue: Not really okay, but surviving.
+        Dialogue: "That kinda makes sense\u2026"
       - speaker: 0
-        Dialogue: "I can\u2019t imagine what you\u2019re going through, but this
-          crazy ghost lady is here to help if you need it."
-      - speaker: 1
-        Dialogue: Heh. Thank you.
-      - speaker: 0
-        Dialogue: "If you could tell him- If you could tell Garret one last thing\u2026what
-          would it be?"
-      - speaker: 1
-        Dialogue: '*Sniff* *Sigh* That he was sexy while he was alive.'
-      - speaker: 0
-        Dialogue: "*Chuckle* *Sniff* I\u2019ll relay the message."
-      - speaker: 1
-        Dialogue: To your ghosts in the graveyard?
-      - speaker: 0
-        Dialogue: Exactly.
-      - speaker: 1
-        Dialogue: "*Sniff* \u2026"
-      - speaker: 1
-        Dialogue: Take care of him for me.
-      - speaker: 1
-        Dialogue: He loved music.
+        Dialogue: "Yeah\u2026"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayHappySong'
+    - inspectorDescription: 'Prompt:  Leads to: end'
       prompt: 
-      nextID: PlayHappySong
-      isEvent: 1
-    StateChanges:
-    - components:
-      - spencerTalkedTo
-      - +=
-      - 1
-      inspectorDescription: spencerTalkedTo += 1
-      State: spencerTalkedTo
+      nextID: end
+      isEvent: 0
+    StateChanges: []
     StateRequirements:
     - components:
-      - spencerTalkedTo
-      - ==
-      - 0
-      inspectorDescription: spencerTalkedTo == 0
-      State: spencerTalkedTo
-    - components:
       - questType
-      - ==
-      - 1
-      inspectorDescription: questType == 1
+      - '!='
+      - 2
+      inspectorDescription: questType != 2
       State: questType
     - components:
       - day
       - ==
-      - 2
-      inspectorDescription: day == 2
+      - 1
+      inspectorDescription: day == 1
       State: day
     Variation: 4
     AudioCue: 
