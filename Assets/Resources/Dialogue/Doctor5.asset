@@ -39,9 +39,9 @@ MonoBehaviour:
       - speaker: 1
         Dialogue: "Don\u2019t-"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayAngrySong'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlayAngrySongDayTwo'
       prompt: 
-      nextID: PlayAngrySong
+      nextID: PlayAngrySongDayTwo
       isEvent: 1
     StateChanges:
     - components:

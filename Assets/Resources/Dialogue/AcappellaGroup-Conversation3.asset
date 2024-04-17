@@ -42,9 +42,9 @@ MonoBehaviour:
       - speaker: 1
         Dialogue: "Obviously! Let\u2019s do it."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayDeterminedSong'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlayDeterminedSongDayTwo'
       prompt: 
-      nextID: PlayDeterminedSong
+      nextID: PlayDeterminedSongDayTwo
       isEvent: 1
     StateChanges:
     - components:

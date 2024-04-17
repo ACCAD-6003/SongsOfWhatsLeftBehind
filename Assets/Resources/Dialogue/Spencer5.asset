@@ -52,9 +52,9 @@ MonoBehaviour:
       - speaker: 1
         Dialogue: He loved music.
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayHappySong'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlayHappySongDayTwo'
       prompt: 
-      nextID: PlayHappySong
+      nextID: PlayHappySongDayTwo
       isEvent: 1
     StateChanges:
     - components:

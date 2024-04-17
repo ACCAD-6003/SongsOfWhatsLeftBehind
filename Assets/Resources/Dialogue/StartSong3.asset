@@ -20,9 +20,9 @@ MonoBehaviour:
       - speaker: 0
         Dialogue: "There you are\u2026"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: DayTwo-GarretIntroduction'
+    - inspectorDescription: 'Prompt:  Leads to: DayThree-GarretIntroduction'
       prompt: 
-      nextID: DayTwo-GarretIntroduction
+      nextID: DayThree-GarretIntroduction
       isEvent: 0
     StateChanges: []
     StateRequirements:
