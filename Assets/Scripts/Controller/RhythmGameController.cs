@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace Controller
 {
+    
+    
+    
     public class RhythmGameController : MonoBehaviour
     {
         public static Action<NoteType> OnNotePressedProcessed;

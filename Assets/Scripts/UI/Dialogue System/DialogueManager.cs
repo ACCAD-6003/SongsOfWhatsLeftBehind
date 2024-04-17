@@ -266,7 +266,7 @@ namespace UI.Dialogue_System
                 ConversantType.Conversant => conversant + ": ",
                 _ => speakerName
             };
-            speakerName = $"<u>{speakerName}</u>" + "\n";
+            speakerName = $"<b>{speakerName}</b>" + "\n";
 
             return speakerName;
         }
