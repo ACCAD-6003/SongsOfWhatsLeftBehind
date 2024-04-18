@@ -14,17 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: TutorialDay-Kristen
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Huh.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "They talk, but they\u2019ve never been to the graveyard. It\u2019s
           so peaceful. Perfect for my music."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "They can say whatever they want about me. I don\u2019t care\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Okay. Let\u2019s get the day over with."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

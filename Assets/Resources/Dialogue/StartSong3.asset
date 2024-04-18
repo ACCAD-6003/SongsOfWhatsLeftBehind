@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: StartSong
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "There you are\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: DayThree-GarretIntroduction'

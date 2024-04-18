@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: FreeEnd
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: "That was beautiful\u2013really powerful."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Thanks!
     LeadsTo:
     - inspectorDescription: 'Prompt: Let''s play another! Leads to: FreePlayChoice'

@@ -14,22 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BankTeller
-    Conversant: Borris
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Borris
         Dialogue: If you have more life advice,...kindly, save it for someone else.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Can I give you a life suggestion?
       - speaker: 1
+        speakerName: Borris
         Dialogue: Absolutely not.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I like you, Borris.
       - speaker: 1
+        speakerName: Borris
         Dialogue: Gross, please leave.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Can\u2019t we be friends?"
       - speaker: 1
+        speakerName: Borris
         Dialogue: "With your unpaid credit cards? Not a chance\u2026*Snicker*"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

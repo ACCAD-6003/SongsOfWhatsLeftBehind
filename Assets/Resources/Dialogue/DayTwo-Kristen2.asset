@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DayTwo-Kristen
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: '*Sigh* When will it stop?'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Garret\u2019s sister must be missing him. *Sigh*"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: exit'

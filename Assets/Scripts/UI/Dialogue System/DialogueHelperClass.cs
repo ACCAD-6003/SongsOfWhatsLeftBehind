@@ -24,7 +24,31 @@ namespace UI.Dialogue_System
         public class DialogueData
         {
             public ConversantType speaker;
+            public string speakerName;
             [SerializeField, TextArea()] public string Dialogue;
+            
+            public DialogueData(string line)
+            {
+                if (line.StartsWith(PLAYER_MARKER)) speaker = ConversantType.Player;
+                else if (line.StartsWith(VOICE_MARKER)) speaker = ConversantType.Other;
+                else speaker = ConversantType.Conversant;
+                
+                speakerName = speaker switch
+                {
+                    ConversantType.Player => PLAYER_MARKER.Split(':')[0],
+                    ConversantType.Conversant => line.Split(':')[0],
+                    _ => ""
+                };
+                
+                Dialogue = ConversantType.Other == speaker 
+                    ? line[VOICE_MARKER.Length..] 
+                    : line[speakerName.Length..].Split(':')[1].Trim();
+            }
+            
+            public void AppendDialogue(string line)
+            {
+                Dialogue += "\n" + line;
+            }
         }
     
         public enum ConversantType
@@ -38,7 +62,6 @@ namespace UI.Dialogue_System
         public class ConversationData
         {
             public string ID;
-            public string Conversant;
             public List<DialogueChain> DialoguesSeries = new();
             public List<LeadsToPath> LeadsTo = new();
             public List<StateChange> StateChanges = new();

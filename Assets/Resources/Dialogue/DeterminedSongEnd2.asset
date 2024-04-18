@@ -14,20 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DeterminedSongEnd
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: That was sick.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "That\u2019s what I was thinking."
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: Thank you for everything.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, no problem. The pleasure was mine.
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "Our bro will live on forever\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Got that right.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

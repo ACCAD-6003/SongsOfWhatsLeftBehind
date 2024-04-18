@@ -14,20 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: TownStart
-    Conversant: Passerby
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "She went to the cemetery again\u2026"
       - speaker: 1
+        speakerName: Passerby
         Dialogue: Do you think the ghosts got her this time?
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "I kind of hope they do\u2026"
       - speaker: 1
+        speakerName: Passerby
         Dialogue: Scott!
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "What?? I\u2019m just saying hehe."
       - speaker: 1
+        speakerName: Passerby
         Dialogue: She should just stay there.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: DayTwo-Kristen'

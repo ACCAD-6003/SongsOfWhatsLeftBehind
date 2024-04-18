@@ -14,42 +14,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Spencer
-    Conversant: Spencer
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "Hey, I\u2019m not really in the mood to talk."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I understand. I just-
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "\u2026?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I came to check on you. To see if you were okay.
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Not really okay, but surviving.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I can\u2019t imagine what you\u2019re going through, but this
           crazy ghost lady is here to help if you need it."
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Heh. Thank you.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "If you could tell him- If you could tell Garret one last thing\u2026what
           would it be?"
       - speaker: 1
+        speakerName: Spencer
         Dialogue: '*Sniff* *Sigh* That he was sexy while he was alive.'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "*Chuckle* *Sniff* I\u2019ll relay the message."
       - speaker: 1
+        speakerName: Spencer
         Dialogue: To your ghosts in the graveyard?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Exactly.
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "*Sniff* \u2026"
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Take care of him for me.
       - speaker: 1
+        speakerName: Spencer
         Dialogue: He loved music.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

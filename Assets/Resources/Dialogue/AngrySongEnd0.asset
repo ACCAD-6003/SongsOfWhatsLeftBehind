@@ -14,42 +14,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AngrySongEnd
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Are you-
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I just can\u2019t believe it."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "My family, my friends\u2026they\u2019re alone now. No one listened.
           He didn\u2019t listen."
       - speaker: 1
+        speakerName: Garret
         Dialogue: And here we are.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m mad, and I don\u2019t even know what you\u2019re talking
           about."
       - speaker: 1
+        speakerName: Garret
         Dialogue: That place better be closed.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: What place?
       - speaker: 1
+        speakerName: Garret
         Dialogue: The hospital.
       - speaker: 1
+        speakerName: Garret
         Dialogue: You know what?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: What?
       - speaker: 1
+        speakerName: Garret
         Dialogue: Go see it for me.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Go see it, and it better be shut down.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Then, come back and tell me all about it.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Will do.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'

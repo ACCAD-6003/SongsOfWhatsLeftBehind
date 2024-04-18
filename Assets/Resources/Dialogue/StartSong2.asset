@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: StartSong
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Garret?\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I came to play for you again\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: DayTwo-GarretIntroduction'

@@ -14,63 +14,88 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Ending
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: My sister would probably look up to you. You could spend some time
           with her.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah I don\u2019t think she likes me."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Why do you say that?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Every time I approach, she kinda seems like she wants me to leave.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Yeah she\u2019s kinda like that."
       - speaker: 1
+        speakerName: Garret
         Dialogue: She pushes everyone away, but secretly wants them to stay.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "That\u2019s\u2026.so real of her."
       - speaker: 1
+        speakerName: Garret
         Dialogue: I know.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "She has a lot of growing to do. I don\u2019t want to leave her
           behind."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I know.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I know it might be asking a lot but\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019ll take care of her."
       - speaker: 1
+        speakerName: Garret
         Dialogue: '*Sniff* Thank you.'
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Maybe I should stay\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "No. You deserve peace. You get to worry about yourself for once.
           All of these people will miss you\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: But you want this, so you should have it.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: No one would expect you to keep watch for all of eternity.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You need to rest.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I\u2019m so tired."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: So go. Sleep.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Yeah, I\u2019ll sleep."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019ll be here. Guardian of the graveyard."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I\u2019ll see you again."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I believe that too.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Goodbye, Kristen.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Goodbye, Garret.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'

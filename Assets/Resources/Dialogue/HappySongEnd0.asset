@@ -14,44 +14,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: HappySongEnd
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: "That\u2026made me feel better actually."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I\u2019ve had a bad last 24 hours."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, I bet. Haha!
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Hahaha! But maybe\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Maybe there\u2019s beauty and fun in where I am now."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I mean, I happen to think ghosts are really cool.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Ha, I gathered that.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: What made you happy in your mortal life, oh ghost?
       - speaker: 1
+        speakerName: Garret
         Dialogue: Why I sang in an acappella group. It was the best time of my life.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "They still kickin\u2019 it?"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Yes. In the center of town, in fact. Would you\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yes?
       - speaker: 1
+        speakerName: Garret
         Dialogue: Would you go see them for me?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Hmmmm
       - speaker: 1
+        speakerName: Garret
         Dialogue: "If you can\u2019t-"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Of course! It would be my honor.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Ok then. Will you be back tomorrow?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Don\u2019t insult me. I\u2019m here every night, buddy. But, I\u2019ll
           give you a pass. I know you\u2019re new here."
     LeadsTo:

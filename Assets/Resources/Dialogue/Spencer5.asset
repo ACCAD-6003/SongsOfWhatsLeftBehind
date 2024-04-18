@@ -14,36 +14,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Spencer
-    Conversant: Spencer
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Hey, ghost lady.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Mmmmm that\u2019s an acceptable nickname, I guess."
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Very good.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "You\u2019re a funny guy. I can see why Garret likes you."
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Are you-
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Are you really speaking with him somehow?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I know it seems far fetched-
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "No\u2026I actually\u2026I actually believe you."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Niiiiiiiiice.
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Hehe.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: He wanted me to play you a happy little tune.
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "\u201CA happy little tune\u201D huh?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yes.
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Play away!
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: PlayHappySongDayTwo'

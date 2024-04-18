@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DayTwo-Kristen
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Whatever!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Let\u2019s go talk to one of the people that made Garret happiest\u2013Spencey
           boy."
     LeadsTo:

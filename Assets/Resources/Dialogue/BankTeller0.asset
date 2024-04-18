@@ -14,26 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BankTeller
-    Conversant: Bank Teller
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Bank Teller
         Dialogue: "Ahhh\u2026 Kristen\u2026"
       - speaker: 1
+        speakerName: Bank Teller
         Dialogue: "You\u2019ve got quite a few bills pending still\u2026 some college
           debt on top of that\u2026 a credit card statement gathering interest."
       - speaker: 1
+        speakerName: Bank Teller
         Dialogue: "Any uhh\u2026 any interest in paying those today?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Not today, Borris, sorry. I\u2019ll have to wait until I make
           some extra tip money."
       - speaker: 1
+        speakerName: Bank Teller
         Dialogue: "Well, *chuckle* you can\u2019t pay in ghost money, so\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: What?
       - speaker: 1
+        speakerName: Bank Teller
         Dialogue: Oh, n-nothing. Sorry.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, okay.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

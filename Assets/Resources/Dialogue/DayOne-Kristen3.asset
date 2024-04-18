@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DayOne-Kristen
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Ugh! Will they just shut up??
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Let\u2019s find this hospital and hope we see its demise."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: exit'

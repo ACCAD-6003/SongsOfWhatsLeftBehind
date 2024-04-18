@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GarretsSister
-    Conversant: Lizzy
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "It\u2019ll be okay."
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: I promise, I believe you. Thank you again.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Always.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

@@ -14,16 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BankTeller
-    Conversant: Borris
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Borris
         Dialogue: "If I find out you\u2019ve done something shady, I\u2019m gonna-"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Whoa! Don\u2019t say something illegal there."
       - speaker: 1
+        speakerName: Borris
         Dialogue: "*Sigh* just don\u2019t do it."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m not, jeez!"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

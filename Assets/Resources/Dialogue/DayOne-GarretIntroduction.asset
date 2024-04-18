@@ -14,54 +14,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DayOne-GarretIntroduction
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: You make music??
       - speaker: 0
+        speakerName: Kristen
         Dialogue: GAH!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "W-what\u2026w-who\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "*Gasp*\u2026A ghost\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: I- Well-
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yes. I am a ghost.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Wow\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "So\u2026music?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Oh, yes! I play the violin.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Violin\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: I sing.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Do you now, Mr. Ghost?
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Ghouly McGhastly
       - speaker: 1
+        speakerName: Garret
         Dialogue: Stop.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Oh\u2026sorry."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I didn\u2019t-"
       - speaker: 1
+        speakerName: Garret
         Dialogue: My name is Garret. I will listen if you play.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "S-sure. I\u2019m Kristen. What kind of song do you want?"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026What do I want?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026You may choose for me."
     LeadsTo:
     - inspectorDescription: 'Prompt: Happy Triggers Event: PlayHappySong'

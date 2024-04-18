@@ -14,27 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GarretsSister
-    Conversant: Lizzy
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "What\u2019s your name?"
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: "\u2026Lizzy."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I like that name, it\u2019s pretty."
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: Thanks, I guess.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Maybe I can play some music for you sometime and get you ice cream?
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: No thanks.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Hmmm you drive a hard bargain.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "If you ever need it, the offer stands, but I\u2019ll leave you
           be for now."
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: Thanks.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

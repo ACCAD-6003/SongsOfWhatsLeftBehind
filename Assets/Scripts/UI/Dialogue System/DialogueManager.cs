@@ -12,12 +12,10 @@ namespace UI.Dialogue_System
 {
     public class DialogueManager : SingletonMonoBehavior<DialogueManager>
     {
-        private const ConversantType PLAYER = ConversantType.Player;
-
-        public static Action<ConversationData, ConversantType> OnDialogueStarted;
+        public static Action<ConversationData> OnDialogueStarted;
         public static Action OnDialogueEnded;
-        public static Action<string, ConversantType, ConversantType> OnTextUpdated;
-        public static Action<string, ConversantType, ConversantType> OnTextSet;
+        public static Action<DialogueData> OnTextSet;
+        public static Action<string> OnTextUpdated;
         public static Action<List<string>> OnChoiceMenuOpen;
         public static Action OnChoiceMenuClose;
         public static Action<string> OnAudioCue;
@@ -143,7 +141,7 @@ namespace UI.Dialogue_System
 
         private IEnumerator HandleConversation(ConversationData data)
         {
-            OnDialogueStarted?.Invoke(data, PLAYER);
+            OnDialogueStarted?.Invoke(data);
             yield return DisplayDialogue(data);
             UpdateWorldState(data);
             yield return ProceedToNextDialogue(data);
@@ -228,7 +226,7 @@ namespace UI.Dialogue_System
 
             foreach (var dialogue in dialogues.TakeWhile(_ => !abortDialogue))
             {
-                yield return ProcessDialogue(dialogue, data.Conversant);
+                yield return ProcessDialogue(dialogue);
             }
 
             UIController.OnOverrideSkip -= OnAbort;
@@ -236,18 +234,18 @@ namespace UI.Dialogue_System
 
         private void OnContinueInput() => continueInputReceived = true;
 
-        private IEnumerator ProcessDialogue(DialogueData dialogue, string conversant)
+        private IEnumerator ProcessDialogue(DialogueData dialogue)
         {
-            var speakerName = SpeakerName(dialogue, conversant);
+            var speakerName = dialogue.speakerName;
             
-            OnTextSet?.Invoke(speakerName + dialogue.Dialogue, ConversantType.Player, dialogue.speaker);
-            OnTextUpdated?.Invoke("", ConversantType.Player, dialogue.speaker);
+            OnTextSet?.Invoke(dialogue);
+            OnTextUpdated?.Invoke("");
             yield return new WaitUntil(() => FadeToBlackSystem.FadeOutComplete);
 
             continueInputReceived = false;
 
             UIController.OnNextDialogue += SpeedUpText;
-            yield return TypewriterDialogue(speakerName, PLAYER, dialogue);
+            yield return TypewriterDialogue(speakerName, dialogue);
             UIController.OnNextDialogue -= SpeedUpText;
             
             UIController.OnNextDialogue += OnContinueInput;
@@ -255,23 +253,7 @@ namespace UI.Dialogue_System
             UIController.OnNextDialogue -= OnContinueInput;
         }
 
-        private static string SpeakerName(DialogueData dialogue, string conversant)
-        {
-            var speakerName = "";
-            if (dialogue.speaker == ConversantType.Other) return speakerName;
-            
-            speakerName = dialogue.speaker switch
-            {
-                ConversantType.Player => PLAYER_MARKER,
-                ConversantType.Conversant => conversant + ": ",
-                _ => speakerName
-            };
-            speakerName = $"<b>{speakerName}</b>" + "\n";
-
-            return speakerName;
-        }
-
-        private IEnumerator TypewriterDialogue(string name, ConversantType player, DialogueData dialogue)
+        private IEnumerator TypewriterDialogue(string name, DialogueData dialogue)
         {
             currentDialogueSpeed = dialogueSpeed;
             var loadedText = "";
@@ -286,11 +268,11 @@ namespace UI.Dialogue_System
                 atSpecialCharacter = letter == '<' || atSpecialCharacter;
                 if (atSpecialCharacter && letter != '>') continue;
                 atSpecialCharacter = false;
-                OnTextUpdated?.Invoke(loadedText, player, dialogue.speaker);
+                OnTextUpdated?.Invoke(loadedText);
                 yield return new WaitForSeconds(1 / currentDialogueSpeed);
                 
                 if (!abortDialogue) continue;
-                OnTextUpdated?.Invoke(name + line, player, dialogue.speaker);
+                OnTextUpdated?.Invoke(name + line);
                 break;
             }
             

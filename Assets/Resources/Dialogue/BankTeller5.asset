@@ -14,32 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BankTeller
-    Conversant: Borris
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Borris
         Dialogue: Oh please no.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Relax.
       - speaker: 1
+        speakerName: Borris
         Dialogue: "Unless you\u2019re here to pay off your debts? *Smiles*"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Borris\u2026do you like your job?"
       - speaker: 1
+        speakerName: Borris
         Dialogue: "\u2026huh??"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Your current employment. Do you enjoy it?
       - speaker: 1
+        speakerName: Borris
         Dialogue: '*Sigh*...'
       - speaker: 1
+        speakerName: Borris
         Dialogue: I mean not really.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m sorry."
       - speaker: 1
+        speakerName: Borris
         Dialogue: "It\u2019s fine?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I hope you can get a job you like someday. Like me.
       - speaker: 1
+        speakerName: Borris
         Dialogue: "Yeah\u2026okay."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Spencer
-    Conversant: Spencer
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Anything I can do for you today?
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "I lost my friend recently, and it still hurts\u2026no matter how
           much time passes."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I think it will hurt for a while, but that doesn\u2019t mean it
           won\u2019t get better."
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "That kinda makes sense\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

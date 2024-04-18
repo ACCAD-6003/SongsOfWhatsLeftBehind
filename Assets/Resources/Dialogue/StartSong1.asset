@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: StartSong
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Who needs this town?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "They don\u2019t care about me, so I don\u2019t care about them."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Whatever. Let\u2019s play."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: DayOne-GarretIntroduction'

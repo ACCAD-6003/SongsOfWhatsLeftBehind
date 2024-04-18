@@ -14,36 +14,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GarretsSister
-    Conversant: "Garret\u2019s Sister"
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Ah, it\u2019s you, isn\u2019t it?"
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: "Who\u2026m-me?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "You\u2019re Garret\u2019s sister."
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: "Please, I don\u2019t want to talk right now."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "N-no you don\u2019t understand. He sent me."
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: '*Sniff* Huh?'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: He wanted me to give you the last of his savings. Here.
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: "Thank you\u2026how did you?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Would you believe me if I said I found him as a ghost?
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: Given the rumors about you, yes. *Sniff*
       - speaker: 0
+        speakerName: Kristen
         Dialogue: He loves you.
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: '*Sniff*...*Sniff*'
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: "Tell him I\u2019m okay."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I will.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DayTwo-Kristen
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "They can\u2019t stray me."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I gotta find acappella group and create beautiful music, with my
           arrangement. Sick.
     LeadsTo:

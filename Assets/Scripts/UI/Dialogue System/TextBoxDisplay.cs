@@ -13,26 +13,22 @@ namespace UI.Dialogue_System
 
         private DialogueHelperClass.ConversantType conversant;
 
-        public void Display(DialogueHelperClass.ConversantType conversantToShow)
+        public void Display()
         {
             ToggleChildrenDisplay(true);
-            conversant = conversantToShow;
         }
 
-        public void SetDialogueText(string text, DialogueHelperClass.ConversantType playerListening)
+        public void SetDialogueText(string speakerName, string dialogue)
         {
-            if (playerListening != conversant) return;
-            var label = text.Split('\n')[0];
-            nameTextField.text = label.Contains(':') ? label.Split(':')[0] : "";
+            nameTextField.text = speakerName;
             nameField.SetActive(nameTextField.text != "");
             dialogueTextField.maxVisibleCharacters = 0;
-            dialogueTextField.text = label.Contains(':') ? text.Replace(label, "").Trim('\n') : text;
+            dialogueTextField.text = dialogue;
             continueIndicator.SetActive(false);
         }
         
-        public void UpdateDialogueText(string text, DialogueHelperClass.ConversantType playerListening)
+        public void UpdateDialogueText(string text)
         {
-            if (playerListening != conversant) return;
             dialogueTextField.maxVisibleCharacters = text.Length;
             continueIndicator.SetActive(dialogueTextField.text != "" &&
                 dialogueTextField.maxVisibleCharacters >= dialogueTextField.text.Length);

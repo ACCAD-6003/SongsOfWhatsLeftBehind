@@ -14,16 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AcappellaGroup
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Hello, singing group of young dudes!
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: Hey, older woman that plays violin to ghosts!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "That\u2019s fair."
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: '*All wink synchronously*'
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

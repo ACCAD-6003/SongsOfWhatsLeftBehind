@@ -14,40 +14,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Ending
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: Just never go to the doctor I had.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah, what\u2026."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Garret, what happened?
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "He didn\u2019t listen to me when I was in pain, so things just
           got worse and worse and worse and\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Well, eventually things couldn\u2019t get any worse, and I lost
           everything."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Oh\u2026that\u2019s horrible."
       - speaker: 1
+        speakerName: Garret
         Dialogue: It makes me sick, thinking it could happen to someone else.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I won\u2019t let it."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I\u2019ll help. I\u2019ll haunt him."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "We\u2019ll make sure he gets fired everywhere."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Mmm we make a good team.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: We do.
       - speaker: 1
+        speakerName: Garret
         Dialogue: See you later, partner.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: See you very soon.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'

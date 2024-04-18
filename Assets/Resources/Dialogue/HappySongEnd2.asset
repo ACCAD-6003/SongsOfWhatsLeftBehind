@@ -14,27 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: HappySongEnd
-    Conversant: Spencer
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Yes! Yes! I love that!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "HAHA! I\u2019m so glad."
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Thank you for visiting me for Garret.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, no biggie, my guy.
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "I feel like he\u2019s telling me that things will be okay. That
           he\u2019s speaking through your song."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I think that\u2019s epic."
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "Yeah\u2026epic."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Just keep carrying on, okay?
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "Yeah, hehe, I\u2019ll do my very best."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

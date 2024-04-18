@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Spencer
-    Conversant: Spencer
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: He was lucky to have a friend like you.
       - speaker: 1
+        speakerName: Spencer
         Dialogue: I was the lucky one.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

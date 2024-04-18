@@ -14,15 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AcappellaGroup-Conversation
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: That arrangement was so beautiful. Tell him for us? Oh! And tell
           him we appreciate him! Oh! And tell him-
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I will tell him all the things.
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: Good good.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

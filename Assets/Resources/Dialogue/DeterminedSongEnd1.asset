@@ -14,93 +14,133 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DeterminedSongEnd
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I can\u2019t give up."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "That\u2019s the truth."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Why should I have to give up what I love just because I\u2019m
           dead?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah!...
       - speaker: 1
+        speakerName: Garret
         Dialogue: I can do all the same things!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yes!...you\u2026can?"
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yes!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Okay\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I can\u2019t do all the same things."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "But that\u2019s okay."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Yeah, that\u2019s okay."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You can do new things! Like haunt people, fly through stuff, fly
           in general,...
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Befriend the town\u2019s notorious, crazy violin player."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: The greatest achievement out of all of them, I think.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Haha!
       - speaker: 1
+        speakerName: Garret
         Dialogue: I have to make the most out of this life I have now.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "That\u2019s the spirit."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Did you know I used to arrange music for my acappella group?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I did not!
       - speaker: 1
+        speakerName: Garret
         Dialogue: Well imagine this.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m listening, I\u2019m listening."
       - speaker: 1
+        speakerName: Garret
         Dialogue: The piece you just played for me, but I arrange the acappella version.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Oh, yeah.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Give me a moment\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026*Scribble*..."
       - speaker: 1
+        speakerName: Garret
         Dialogue: '*Scribble*...*Scribble* *Scribble*...'
       - speaker: 1
+        speakerName: Garret
         Dialogue: Done.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Did you just arrange that in like two seconds?
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yeah, of course.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Oh, uh, okay.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Can\u2019t leave the player waiting, can we?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: WHO??
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Oh, uh, I don\u2019t know."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: ANYWAY! All the voice parts are finished! And you can accompany
           us of course, well,...them.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "And you\u2019ll be there? Watching from afar?"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026Yeah. Yeah, I\u2019ll be there."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: To your acappella group, then.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'

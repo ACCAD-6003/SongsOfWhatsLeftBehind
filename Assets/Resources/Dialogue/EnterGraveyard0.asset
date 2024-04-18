@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: EnterGraveyard
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m not done here. Garret needs me!"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: exit'

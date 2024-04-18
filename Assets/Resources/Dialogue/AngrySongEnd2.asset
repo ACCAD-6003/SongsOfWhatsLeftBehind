@@ -14,38 +14,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AngrySongEnd
-    Conversant: Doctor
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Doctor
         Dialogue: Stop. I get it.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Do you, though?
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "I made a mistake. I didn\u2019t listen to Garret, and I\u2019m
           paying for it."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "No, you\u2019re not paying for it. Garret is."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "You still have your job, you still have your loved ones, you still
           have your life. The only thing you\u2019re paying with is this guilt you
           feel."
       - speaker: 1
+        speakerName: Doctor
         Dialogue: Guilt is a horrible thing to live with.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Oh, boo hoo. Come to me when you\u2019ve experienced actual consequences."
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "The only thing you\u2019re mourning is your self-image."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Congratulations on being able to carry on as normal. Lots of people
           don\u2019t get that privilege."
       - speaker: 1
+        speakerName: Doctor
         Dialogue: Listen here-
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I will listen when you finally do. Goodbye.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

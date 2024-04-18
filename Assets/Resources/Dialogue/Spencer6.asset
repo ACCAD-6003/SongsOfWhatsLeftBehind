@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Spencer
-    Conversant: Spencer
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019ll be back sometime to play more sweet tunes?"
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Yes, please!
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

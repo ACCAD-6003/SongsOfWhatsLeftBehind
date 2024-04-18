@@ -14,15 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GraveyardStart
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Maybe I should just live here.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019ve got trees to sleep in, grass and leaves to eat, and
           plenty of friends!"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: All my friends are in the dirt and do not reciprocate my acts of
           friendship, but who cares!
     LeadsTo:

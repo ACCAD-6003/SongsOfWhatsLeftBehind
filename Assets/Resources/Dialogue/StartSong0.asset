@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: StartSong
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Every single day I\u2019ve come here to play, but\u2026something
           seems different about tonight."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "*Giggle* Is it you, ghosts? Are you finally coming out to visit
           with lil\u2019 ol\u2019 me?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Hmm\u2026I guess not."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "That\u2019s okay. You can just listen like usual."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: PlayTutorialSong'

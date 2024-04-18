@@ -14,27 +14,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Doctor
-    Conversant: Doctor
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Why are you standing out here?
       - speaker: 1
+        speakerName: Doctor
         Dialogue: Excuse me, now is not a good time.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Aren\u2019t there people in there who need your help?"
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "Not anymore\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m sorry, HUH???"
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "I am quite busy. Any other day I\u2019d be happy to assist walk-in
           patients."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Wh-
       - speaker: 1
+        speakerName: Doctor
         Dialogue: If you need something, speak to my nurse.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Dude-
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

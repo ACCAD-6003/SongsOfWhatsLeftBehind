@@ -14,16 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AcappellaGroup-Conversation
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "It\u2019s really hard to be missing a member."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I bet. I feel like that would put a stop to everything.
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: No, we have to keep going. Garret would want that.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah\u2026poor Garret."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

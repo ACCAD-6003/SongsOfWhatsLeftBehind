@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: EnterGraveyard
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Should I end my day and go to the graveyard?
     LeadsTo:
     - inspectorDescription: 'Prompt: Go to the graveyard Triggers Event: NightTransition'

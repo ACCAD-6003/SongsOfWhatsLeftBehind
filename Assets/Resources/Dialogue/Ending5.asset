@@ -14,43 +14,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Ending
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: Go join my acappella group.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I mean\u2026they do have an empty spot. I heard one of their members
           died."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Sor-
       - speaker: 1
+        speakerName: Garret
         Dialogue: HAHAHAHA!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: HAHAHA!
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yeah, he sucked though. Horrible singer.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I beg to differ. His voice is like an angel.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Well, I am an angel.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "No, you\u2019re a ghost."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Technicalities.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: '*Giggle*'
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I\u2019ll sing my way to the heavens."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "And I\u2019ll watch in awe as you ascend."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Goodbye, Kristen. I know I\u2019ll see you again."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I know so too.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'

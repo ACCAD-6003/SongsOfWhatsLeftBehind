@@ -14,42 +14,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BankTeller
-    Conversant: Borris
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Borris
         Dialogue: Oh boy, what do you need?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I need to withdraw.
       - speaker: 1
+        speakerName: Borris
         Dialogue: Uhh, *Chuckle* with the utmost respect, withdraw what?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I need to withdraw from a friend\u2019s account. Doing a favor,
           ya know?"
       - speaker: 1
+        speakerName: Borris
         Dialogue: "Okay\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Borris
         Dialogue: Enter the pin number please.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: There you go, sir!
       - speaker: 1
+        speakerName: Borris
         Dialogue: "Alright\u2026how much?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Well, uhh, all of it.
       - speaker: 1
+        speakerName: Borris
         Dialogue: "Please, tell me you\u2019re joking and walk away right now."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Borris, I need all of it, trust that I\u2019m a good person despite
           the weird rumors, and please help me out."
       - speaker: 1
+        speakerName: Borris
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Borris
         Dialogue: "Whatever you\u2019re doing better not be illegal."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Thank you.
       - speaker: 1
+        speakerName: Borris
         Dialogue: Leave, please.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

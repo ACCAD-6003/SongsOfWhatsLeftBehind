@@ -14,20 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GraveyardStart
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I hope I see Garret again.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I did what he asked, but\u2026maybe his presence was *dramatic
           sigh*\u2026fleeting."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: '*Doing an impression* Perhaps I vex him and he left this mortal
           world because I am just too weird to tolerate.'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "HAHA! No, that\u2019s not it."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Well, if he\u2019s not here, then I guess everyone in town is
           right, and I\u2019m just seeing ghosts after all."
     LeadsTo:

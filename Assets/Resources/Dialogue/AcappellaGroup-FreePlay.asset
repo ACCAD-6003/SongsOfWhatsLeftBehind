@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AcappellaGroup-FreePlay
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "What kind a\u2019 song we playin\u2019?"
     LeadsTo:
     - inspectorDescription: 'Prompt: Happy Triggers Event: PlayPracticeHappySong'

@@ -14,72 +14,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: SadSongEnd
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: That song was really beautiful.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026Thanks."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I think\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You think?
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Nah, it\u2019s okay. You\u2019ve listened to me babble enough."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I love to listen.
       - speaker: 1
+        speakerName: Garret
         Dialogue: You do?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Mhm. It\u2019s nice to have someone else to talk to- Someone to
           listen to."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "It\u2019s nice to have someone who listens."
       - speaker: 1
+        speakerName: Garret
         Dialogue: '*Sniff*'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: What will you miss the most?
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026my sister."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah?
       - speaker: 1
+        speakerName: Garret
         Dialogue: "You don\u2019t realize how much your siblings mean to you until
           it\u2019s too late."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "She\u2019s my best friend."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I never would\u2019ve said that before I died."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "But now that I\u2019m without her, I realize what a big space
           she took up."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Her presence wasn\u2019t just obligatory because we were family."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I\u2019ve realized I would choose her\u2026if given the choice."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Sadly, with death you don\u2019t really get a choice."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m sorry you were robbed of more time with her."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Thank you. Me too.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I know she feels the same.
       - speaker: 1
+        speakerName: Garret
         Dialogue: You should visit her. Play her the same song you played for me
           just now.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Really?
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yes. Please?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, sure Ghosty Garret.
       - speaker: 1
+        speakerName: Garret
         Dialogue: -in all of my supernatural glory.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'

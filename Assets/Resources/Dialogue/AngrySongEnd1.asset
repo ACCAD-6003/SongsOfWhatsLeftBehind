@@ -14,71 +14,98 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AngrySongEnd
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I feel sorta cynical after playing that.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yeah.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Are you okay?
       - speaker: 1
+        speakerName: Garret
         Dialogue: '*Sigh* I mean- No?'
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I wish I wasn\u2019t so angry. I wish I could be at peace with
           what\u2019s happened."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "But I\u2019m furious. I\u2019m livid. I\u2019m confused. I\u2019m
           in disbelief."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I\u2019m scared."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Even though the worst has happened, I\u2019m still afraid, and
           that manifests into just\u2026rage."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Who are you angry at, Garret?
       - speaker: 1
+        speakerName: Garret
         Dialogue: The doctor who treated me.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Because you died anyway?
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Because he didn\u2019t listen."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "He didn\u2019t-"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I don\u2019t want to talk about it."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Got it.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Sorry. I shouldn\u2019t throw punches at you."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "It\u2019s fine. I\u2019m used to being random people\u2019s punching
           bag."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "You\u2019re mad too huh?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Heh. I mean\u2026are we mad or are we tired? Tired of people letting
           us down?"
       - speaker: 1
+        speakerName: Garret
         Dialogue: This feels like therapy.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: If I was your therapist, I would say to speak with your heart instead
           of keeping it so caged up.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Hmm.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Then, take this song to my doctor. I want him to feel my anger
           through what you\u2019ve played."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Are you giving me permission to tell someone off?
       - speaker: 1
+        speakerName: Garret
         Dialogue: I am.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m off to battle."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'

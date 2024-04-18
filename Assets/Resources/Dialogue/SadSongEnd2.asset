@@ -14,24 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: SadSongEnd
-    Conversant: Lizzy
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: '*Sniff* That was beautiful.'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "It\u2019s not much."
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: No, your music is powerful. Thank you for using it to speak to
           me.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, anytime.
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: I know the town has you misunderstood. My brother was misunderstood
           too.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: We can all be misunderstood together.
       - speaker: 1
+        speakerName: Lizzy
         Dialogue: That sounds great.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

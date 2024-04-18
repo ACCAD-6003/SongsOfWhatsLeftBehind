@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: FreePlay
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: You gonna play for me, Kristen?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You bet, Ghosty Boy Garret!
       - speaker: 1
+        speakerName: Garret
         Dialogue: How are you feeling?
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: FreePlayChoice'

@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DayOne-Kristen
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "They can\u2019t stray me."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Bank, money, sister, report back to Garret. Let\u2019s go."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: exit'

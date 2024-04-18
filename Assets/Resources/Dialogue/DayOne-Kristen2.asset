@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DayOne-Kristen
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: '*Sigh* When will it stop?'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I have to find this Spencer person and make sure he\u2019s okay."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: exit'

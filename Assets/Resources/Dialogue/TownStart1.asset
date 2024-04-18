@@ -14,22 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: TownStart
-    Conversant: Passerby
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "She\u2019s back again."
       - speaker: 1
+        speakerName: Passerby
         Dialogue: Miss Ghost Lady-
       - speaker: 1
+        speakerName: Passerby
         Dialogue: I heard more tunes from the hill last night.
       - speaker: 1
+        speakerName: Passerby
         Dialogue: Does she sleep?
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "She\u2019s nocturnal."
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "Maybe she\u2019s actually a ghost herself-"
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "In disguise\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: DayOne-Kristen'

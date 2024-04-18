@@ -14,17 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Spencer
-    Conversant: Spencer
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Spencer
         Dialogue: "Hey, I\u2019m sure you\u2019re nice and everything, but I\u2019m
           not really in the mood to talk."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Oh, my bad I get it. Not a social day today, huh?
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Not at all. So, if you could-
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, yeah, no problem. Carry on, soldier.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

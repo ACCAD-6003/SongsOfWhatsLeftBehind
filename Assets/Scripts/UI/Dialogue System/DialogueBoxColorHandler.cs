@@ -17,9 +17,9 @@ namespace UI.Dialogue_System
             DialogueManager.OnTextSet += SetColor;
         }
         
-        private void SetColor(string text, ConversantType playerWhoEnteredDialogue, ConversantType _)
+        private void SetColor(DialogueData dialogue)
         {
-            var characterName = text.Split(":")[0].Replace("<b>", "");
+            var characterName = dialogue.speakerName;
             dialogueBox.color = colors.GetValueOrDefault(characterName, defaultColor);
         }
         

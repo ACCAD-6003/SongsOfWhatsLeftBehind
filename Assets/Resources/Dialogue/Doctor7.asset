@@ -14,21 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Doctor
-    Conversant: Doctor
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m sure you have better things to do than stand outside
           right?"
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Hmmm\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Aren\u2019t you supposed to be working right now?"
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, okay.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

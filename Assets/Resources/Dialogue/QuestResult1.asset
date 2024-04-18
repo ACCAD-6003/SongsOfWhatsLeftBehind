@@ -14,30 +14,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: QuestResult
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah, I met Spencer. He\u2019s sweet."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yeah, he is. *Sniff*
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You miss him a lot?
       - speaker: 1
+        speakerName: Garret
         Dialogue: '*Sob* Of course. *Sniff*'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "He says you\u2019re sexy, by the way."
       - speaker: 1
+        speakerName: Garret
         Dialogue: '*Sniff* H-huh?'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: And I agree. Even in death, you are radiant, Garret the Ghost.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Mmm. Take care of him for me.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah!
       - speaker: 1
+        speakerName: Garret
         Dialogue: Will you play more music today?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Sure, thing. What are we feeling?
     LeadsTo:
     - inspectorDescription: 'Prompt: Happy Triggers Event: PlayHappySong'

@@ -14,24 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GarretsSister
-    Conversant: "Garret\u2019s Sister"
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Garret\u2019s sister\u2026"
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: "That\u2019s me."
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: My name is Lizzy by the way.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Got it, Lizzy. Pretty name.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I played some music for your brother, and-
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Well, he wanted me to play it for you too.
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: "\u2026Sure."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Alright.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: PlaySadSongDayTwo'

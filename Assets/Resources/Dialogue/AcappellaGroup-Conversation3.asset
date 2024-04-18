@@ -14,32 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AcappellaGroup-Conversation
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Hello again, singing group of young dudes!
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: Hey again, older woman that talks to ghosts!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You guys are funny.
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "Thanks\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Anyway, I came for Garret.
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "Garret\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You miss him right?
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: '*Sniff* Well, obviously.'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: How would you like to sing one more of his arrangements?
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "No way\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You up for it?
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "Obviously! Let\u2019s do it."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: PlayDeterminedSongDayTwo'

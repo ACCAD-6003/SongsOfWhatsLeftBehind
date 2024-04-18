@@ -14,18 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Doctor
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Good\u2026it\u2019s closed down."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I didn\u2019t even ask Garret why it would be."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I guess I just assumed they deserved it.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: ...I wonder if he would tell me?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "When he\u2019s ready. Until then, good riddance to this place."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

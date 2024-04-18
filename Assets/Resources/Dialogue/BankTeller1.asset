@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BankTeller
-    Conversant: Borris
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Borris
         Dialogue: "Just\u2026 get on those bills\u2026 when you can."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yes, sir! *Sigh*
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

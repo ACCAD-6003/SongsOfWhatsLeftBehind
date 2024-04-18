@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Spencer
-    Conversant: Spencer
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Spencer
         Dialogue: Sorry, I-
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yep, yep, you need to be alone, got it, got it. My bad.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

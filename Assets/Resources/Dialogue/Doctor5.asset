@@ -14,29 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Doctor
-    Conversant: Doctor
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Hey. You\u2019re him aren\u2019t you?"
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "I\u2019m who?"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "You\u2019re the doctor that treated Garret."
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "\u2026I don\u2019t know who you are, but that is a sensitive subject-"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "It sure is. And you\u2019re gonna listen to me speak on it."
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "Miss\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Uh uh don\u2019t \u201Cmiss\u201D me. Just sit back, don\u2019t
           relax, and listen to my song."
       - speaker: 1
+        speakerName: Doctor
         Dialogue: I-
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Maybe then you\u2019ll feel the extent of our anger."
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "Don\u2019t-"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: PlayAngrySongDayTwo'

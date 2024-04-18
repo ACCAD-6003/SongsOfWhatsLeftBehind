@@ -14,38 +14,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: QuestResult
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: You must have seen the hospital, yes?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah, I did. It\u2019s shutting down."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Good.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026May I ask\u2026"
       - speaker: 1
+        speakerName: Garret
         Dialogue: No, you may not.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: -sorry.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "It\u2019s fine. It\u2019s just\u2026It was a little while ago,
           but it\u2019s still fresh."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Mmm.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Maybe someday\u2026I guess it depends on how long you keep visiting
           me."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: You mean how long YOU keep visiting ME. This was my spot, you know.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Yeah, but it\u2019s my eternal resting place."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Touch\xE9."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Will you play more music today?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Sure, thing. What are we feeling?
     LeadsTo:
     - inspectorDescription: 'Prompt: Happy Triggers Event: PlayHappySong'

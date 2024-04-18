@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AcappellaGroup
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "*Sniff* Ugh, sorry. Hey, Kristen. What\u2019s up?"
     LeadsTo:
     - inspectorDescription: 'Prompt: I wanna talk! Leads to: AcappellaGroup-Conversation'

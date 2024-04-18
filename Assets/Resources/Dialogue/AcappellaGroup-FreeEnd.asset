@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AcappellaGroup-FreeEnd
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: Ey! That was awesome!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Why thank you, young men.
     LeadsTo:
     - inspectorDescription: 'Prompt: Let''s play another! Leads to: FreePlay'

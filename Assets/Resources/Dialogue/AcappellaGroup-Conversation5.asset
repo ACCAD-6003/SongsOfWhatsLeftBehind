@@ -14,22 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: AcappellaGroup-Conversation
-    Conversant: Singing Group of Young Dudes
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Would you ever consider\u2026.another member?"
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: Haha! Can you sing?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Mmmm I can hold a pitch.
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "Well, that\u2019s basically it!"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Really??
       - speaker: 1
+        speakerName: Singing Group of Young Dudes
         Dialogue: "\u2026No, not really."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Man\u2026gettin\u2019 my hopes up."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Doctor
-    Conversant: Doctor
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Doctor
         Dialogue: Today is a busy day for the hospital. Please move along.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yikes\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

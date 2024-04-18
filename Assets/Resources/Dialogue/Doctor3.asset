@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Doctor
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "It\u2019s ugly anyway\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

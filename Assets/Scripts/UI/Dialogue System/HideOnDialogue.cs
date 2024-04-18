@@ -10,7 +10,7 @@ namespace UI.Dialogue_System
             DialogueManager.OnDialogueEnded += Show;
         }
 
-        private void Hide(DialogueHelperClass.ConversationData _, DialogueHelperClass.ConversantType __)
+        private void Hide(DialogueHelperClass.ConversationData _)
         {
             foreach (Transform child in transform) child.gameObject.SetActive(false);
         }

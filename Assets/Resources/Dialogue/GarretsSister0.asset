@@ -14,18 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GarretsSister
-    Conversant: Little Girl
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Hey, are you ok?
       - speaker: 1
+        speakerName: Little Girl
         Dialogue: '*Sniffs*'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "You\u2019re crying\u2026"
       - speaker: 1
+        speakerName: Little Girl
         Dialogue: Go away!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Geez, okay\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

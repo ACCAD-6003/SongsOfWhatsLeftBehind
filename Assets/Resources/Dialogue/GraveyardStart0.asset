@@ -14,18 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GraveyardStart
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "*Huff*\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Today was long.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: What do you think, ghosts? Long for you too?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

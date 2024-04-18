@@ -67,9 +67,8 @@ public static class JsonDialogueConverter
             {VARIATION_MARKER, () => conversation.Variation = MarkerText()},
             {CONDITIONAL_MARKER, () => conversation.StateRequirements = GetCondition(MarkerText())},
             {CHANGES_MARKER, () => conversation.StateChanges = GetWorldStateChanges(MarkerText())},
-            {CONVERSANT_MARKER, () => conversation.Conversant = MarkerText()},
             {MUSIC_MARKER, () => conversation.AudioCue = MarkerText()},
-        };  
+        };
         
         while (!ReachedDialogue())
         {
@@ -163,24 +162,14 @@ public static class JsonDialogueConverter
 
     private static void AddDialogueToChain(ConversationData conversation, string line)
     {
-        var markersToCheck = new List<(string label, ConversantType type)>
+        var dialogueChain = conversation.DialoguesSeries.Last().dialogues;
+        if (line.Contains(":"))
         {
-            (PLAYER_MARKER, ConversantType.Player), 
-            (VOICE_MARKER, ConversantType.Other), ($"{conversation.Conversant}: ", ConversantType.Conversant)
-        };
-
-        var markerFound = markersToCheck.FirstOrDefault(x => line.StartsWith(x.label));
-
-        if (markerFound == default)
-        {
-            conversation.DialoguesSeries[^1].dialogues[^1].Dialogue += " " + line;
+            dialogueChain.Add(new DialogueData(line));
         }
         else
         {
-            var dialogueLine = line[markerFound.label.Length..].Trim();
-            var dialogueData = new DialogueData { Dialogue = dialogueLine, speaker = markerFound.type };
-
-            conversation.DialoguesSeries[^1].dialogues.Add(dialogueData);
+            dialogueChain.Last().AppendDialogue(line);
         }
     }
 

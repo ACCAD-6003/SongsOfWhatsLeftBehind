@@ -14,22 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: TownStart
-    Conversant: Passerby
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Passerby
         Dialogue: There she is *haha*.
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "The ghost whisperer\u2026"
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "She\u2019s cursed!"
       - speaker: 1
+        speakerName: Passerby
         Dialogue: "She\u2019s so weird\u2026"
       - speaker: 1
+        speakerName: Passerby
         Dialogue: I heard Kristen kissed a ghost. Gross.
       - speaker: 1
+        speakerName: Passerby
         Dialogue: Do the authorities know about her trespassing?
       - speaker: 1
+        speakerName: Passerby
         Dialogue: Maybe try doing a concert for some living people sometime!
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: TutorialDay-Kristen'

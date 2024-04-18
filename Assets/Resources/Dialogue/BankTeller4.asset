@@ -14,17 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: BankTeller
-    Conversant: Borris
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Good day, Borris.
       - speaker: 1
+        speakerName: Borris
         Dialogue: Oh, Kristen. If only you had something better to do than to talk
           to me.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Ouch that was a lot.
       - speaker: 1
+        speakerName: Borris
         Dialogue: You really try me with your presence.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Doctor
-    Conversant: Doctor
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "You\u2019re horrible."
       - speaker: 1
+        speakerName: Doctor
         Dialogue: "\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

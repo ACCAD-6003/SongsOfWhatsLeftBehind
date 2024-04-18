@@ -12,11 +12,7 @@ namespace UI.Dialogue_System
     public class DialogueUIController : SerializedMonoBehaviour
     {
         [SerializeField] private TextBoxDisplay textBoxDisplay;
-        [SerializeField] private ConversantType player;
-        [SerializeField] private Dictionary<ConversantType, DialogueDisplay> dialogueBackgrounds;
         [SerializeField] private ChoicesDisplay choicesDisplay;
-        [SerializeField] private Image grayBackground;
-        [SerializeField] private Image playerPortrait;
         
         private void OnEnable()
         {
@@ -38,16 +34,14 @@ namespace UI.Dialogue_System
             textBoxDisplay.Hide();
         }
 
-        private void DisplayUI(ConversationData conversation, ConversantType playerWhoEnteredDialogue)
+        private void DisplayUI(ConversationData conversation)
         {
-            if (player != playerWhoEnteredDialogue) return;
-        
             foreach (Transform child in transform)
             {
                 child.gameObject.SetActive(true);
             }
         
-            textBoxDisplay.Display(player);
+            textBoxDisplay.Display();
             DialogueManager.OnTextUpdated -= UpdateDialogue;
             DialogueManager.OnTextSet -= SetDialogue;
             DialogueManager.OnChoiceMenuOpen -= DisplayChoices;
@@ -57,29 +51,21 @@ namespace UI.Dialogue_System
             DialogueManager.OnChoiceMenuOpen += DisplayChoices;
         }
 
-        private void SetDialogue(string text, ConversantType playerListener, ConversantType speaker)
+        private void SetDialogue(DialogueData dialogue)
         {
-            if (player != playerListener) return;
-            
-            grayBackground.enabled = DialogueManager.Instance.InInternalDialogue || speaker == ConversantType.Other;
-            playerPortrait.enabled = DialogueManager.Instance.InInternalDialogue;
-            textBoxDisplay.UpdateDialogueText("", playerListener);
-            textBoxDisplay.SetDialogueText(text, playerListener);
-            dialogueBackgrounds.Values.Select(x => x.background).ForEach(x => x.SetActive(false));
-            dialogueBackgrounds[speaker].background.SetActive(true);
-            textBoxDisplay.SwapDialogueTextField(dialogueBackgrounds[speaker].textField);
+            textBoxDisplay.UpdateDialogueText("");
+            textBoxDisplay.SetDialogueText(dialogue.speakerName, dialogue.Dialogue);
         }
         
-        private void UpdateDialogue(string text, ConversantType playerListener, ConversantType speaker)
+        private void UpdateDialogue(string text)
         {
-            if (player != playerListener) return;
-            textBoxDisplay.UpdateDialogueText(text, playerListener);
+            textBoxDisplay.UpdateDialogueText(text);
         }
         
         private void DisplayChoices(List<string> choices)
         {
             choicesDisplay.Display(choices, OnChoiceSelected);
-            textBoxDisplay.SetDialogueText("", player);
+            textBoxDisplay.SetDialogueText("", "");
         }
         
         private void OnChoiceSelected(int index)

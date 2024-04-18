@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GarretsSister
-    Conversant: "Garret\u2019s Sister"
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "It\u2019ll be okay."
       - speaker: 1
+        speakerName: "Garret\u2019s Sister"
         Dialogue: I believe you. Thank you for this.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Yeah\u2026"
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

@@ -21,13 +21,13 @@ namespace UI.Dialogue_System
             DialogueManager.OnTextUpdated += PlayBlip;
         }
         
-        private void SetBlip(string text, DialogueHelperClass.ConversantType playerWhoEnteredDialogue, DialogueHelperClass.ConversantType speaker)
+        private void SetBlip(DialogueHelperClass.DialogueData dialogue)
         {
-            var characterName = text.Split(":")[0].Replace("<b>", "");
+            var characterName = dialogue.speakerName;
             pitch = characterPitches.GetValueOrDefault(characterName, defaultPitch);
         }
         
-        private void PlayBlip(string text, DialogueHelperClass.ConversantType playerListener, DialogueHelperClass.ConversantType speaker)
+        private void PlayBlip(string text)
         {
             if (text.Length % frequency != 0) return;
             audioSource.pitch = Random.Range(-1f, 1f) * variation + pitch;

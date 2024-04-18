@@ -14,24 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: GarretsSister
-    Conversant: Little Girl
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Little Girl
         Dialogue: '*Sniff*'
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "You\u2019re so sad\u2026"
       - speaker: 1
+        speakerName: Little Girl
         Dialogue: I am so sad.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Is there anything I can do to help?
       - speaker: 1
+        speakerName: Little Girl
         Dialogue: Can you bring back the dead?
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I can talk to the dead. *Wink*
       - speaker: 1
+        speakerName: Little Girl
         Dialogue: "\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Sorry.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: end'

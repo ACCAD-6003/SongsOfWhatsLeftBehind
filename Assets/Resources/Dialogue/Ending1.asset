@@ -14,49 +14,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: Ending
-    Conversant: Garret
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: You remind me of my friend Spencer a lot.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Go bother my boy haha!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Oh, I will. He seems cool.
       - speaker: 1
+        speakerName: Garret
         Dialogue: He is quite cool, yes.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019m just gonna follow all the cool people."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "I\u2019ve loved this little friendship of ours."
       - speaker: 1
+        speakerName: Garret
         Dialogue: Me too.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: What was your favorite part?
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Hmmmm\u2026"
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Tell me tell me.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Watching you fumble around talking to Spencer, for real.
       - speaker: 1
+        speakerName: Garret
         Dialogue: They loved you.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Well, I love him. He\u2019s so silly."
       - speaker: 1
+        speakerName: Garret
         Dialogue: HAHA! That he is.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: I loved it all. All of it was my favorite.
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Thank you for everything. You\u2019ve made me happier than I thought
           I could be."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Yeah, of course.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Goodbye for now, Kristen.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Until we meet again?
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Yeah\u2026until we meet again."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'

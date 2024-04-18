@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: DayOne-Kristen
-    Conversant: None
     DialoguesSeries:
     - dialogues:
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Whatever!
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "acappella group. Gotta find them. Maybe they\u2019ll serenade
           me with their manly voices."
     LeadsTo:
