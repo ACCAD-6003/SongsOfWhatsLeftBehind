@@ -68,7 +68,7 @@ namespace UI.Dialogue_System
             public List<StateRequirement> StateRequirements = new();
             public string Variation;
             public string AudioCue;
-            public bool HasChoice => LeadsTo[0].prompt != "";
+            public bool HasChoice => LeadsTo.Count > 0 && LeadsTo[0].prompt != "";
         }
         
         [Serializable]

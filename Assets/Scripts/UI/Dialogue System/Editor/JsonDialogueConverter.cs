@@ -49,7 +49,7 @@ public static class JsonDialogueConverter
     {
         var conversation = new ConversationData();
         var lines = text.Split('\n').Where(x => !x.IsNullOrWhitespace()).Select(x => x.Trim()).ToList();
-        string NextLine() => lines[0];
+        string NextLine() => MoreLinesToProcess() ? lines[0] : "";
         void RemoveLine() => lines.RemoveAt(0);
         bool MoreLinesToProcess() => lines.Count > 0;
         void CreateNewChain() => conversation.DialoguesSeries.Add(new DialogueChain());
@@ -70,12 +70,11 @@ public static class JsonDialogueConverter
             {MUSIC_MARKER, () => conversation.AudioCue = MarkerText()},
         };
         
-        while (!ReachedDialogue())
+        while (!ReachedDialogue() && !ReachedLeadsTo() && MoreLinesToProcess())
         {
             Debug.Assert(markerActions.ContainsKey(Marker()), $"Unknown marker {Marker()} in {conversation.ID}");
             if (markerActions.TryGetValue(Marker(), out var action))
             {
-                Debug.Log($"Triggering {Marker()} with {MarkerText()}");
                 action();
             }
             RemoveLine();
@@ -85,22 +84,24 @@ public static class JsonDialogueConverter
         {
             RemoveLine();
             CreateNewChain();
-            while (!ReachedLeadsTo())
+            while (!ReachedLeadsTo() && MoreLinesToProcess())
             {
                 AddDialogueToChain(conversation, NextLine());
                 RemoveLine();
             }
         }
 
-        AssertMarker(NextLine(), LEADS_TO_MARKER);
-        if(!NextLine().Trim().EndsWith(LEADS_TO_MARKER))
-            conversation.LeadsTo.Add(GetChoice(NextLine()[LEADS_TO_MARKER.Length..].Trim()));
-        RemoveLine();
-
-        while (MoreLinesToProcess())
+        if (NextLine().StartsWith(LEADS_TO_MARKER))
         {
-            conversation.LeadsTo.Add(GetChoice(NextLine().Trim()));
+            if (!NextLine().Trim().EndsWith(LEADS_TO_MARKER))
+                conversation.LeadsTo.Add(GetChoice(NextLine()[LEADS_TO_MARKER.Length..].Trim()));
             RemoveLine();
+
+            while (MoreLinesToProcess())
+            {
+                conversation.LeadsTo.Add(GetChoice(NextLine().Trim()));
+                RemoveLine();
+            }
         }
 
         return conversation;
