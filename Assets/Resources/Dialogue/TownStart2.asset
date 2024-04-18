@@ -39,11 +39,7 @@ MonoBehaviour:
       prompt: 
       nextID: DayTwo-Kristen
       isEvent: 0
-    StateChanges:
-    - components:
-      - none
-      inspectorDescription: none
-      State: none
+    StateChanges: []
     StateRequirements:
     - components:
       - day

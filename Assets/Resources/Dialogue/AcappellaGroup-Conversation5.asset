@@ -37,11 +37,7 @@ MonoBehaviour:
       - speaker: 0
         speakerName: Kristen
         Dialogue: "Man\u2026gettin\u2019 my hopes up."
-    LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
-      isEvent: 0
+    LeadsTo: []
     StateChanges: []
     StateRequirements:
     - components:

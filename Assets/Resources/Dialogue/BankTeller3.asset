@@ -28,11 +28,7 @@ MonoBehaviour:
       - speaker: 0
         speakerName: Kristen
         Dialogue: "I\u2019m not, jeez!"
-    LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
-      isEvent: 0
+    LeadsTo: []
     StateChanges: []
     StateRequirements:
     - components:

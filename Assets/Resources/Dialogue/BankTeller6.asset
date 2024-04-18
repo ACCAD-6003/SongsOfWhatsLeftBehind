@@ -37,11 +37,7 @@ MonoBehaviour:
       - speaker: 1
         speakerName: Borris
         Dialogue: "With your unpaid credit cards? Not a chance\u2026*Snicker*"
-    LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
-      isEvent: 0
+    LeadsTo: []
     StateChanges: []
     StateRequirements:
     - components:

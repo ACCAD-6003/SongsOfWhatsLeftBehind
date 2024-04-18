@@ -44,11 +44,7 @@ MonoBehaviour:
       - speaker: 1
         speakerName: Spencer
         Dialogue: "Yeah, hehe, I\u2019ll do my very best."
-    LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
-      isEvent: 0
+    LeadsTo: []
     StateChanges:
     - components:
       - questCompleted

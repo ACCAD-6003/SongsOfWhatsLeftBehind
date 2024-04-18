@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversationData:
     ID: FreePlayChoice
-    DialoguesSeries:
-    - dialogues: []
+    DialoguesSeries: []
     LeadsTo:
     - inspectorDescription: 'Prompt: Happy Triggers Event: PlayPracticeHappySong'
       prompt: Happy

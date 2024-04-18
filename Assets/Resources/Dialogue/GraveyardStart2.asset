@@ -34,11 +34,7 @@ MonoBehaviour:
         speakerName: Kristen
         Dialogue: "Well, if he\u2019s not here, then I guess everyone in town is
           right, and I\u2019m just seeing ghosts after all."
-    LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
-      isEvent: 0
+    LeadsTo: []
     StateChanges:
     - components:
       - day
@@ -52,6 +48,10 @@ MonoBehaviour:
       - 3
       inspectorDescription: saveDay = 3
       State: saveDay
+    - components:
+      - '!GarretIsVisible'
+      inspectorDescription: '!GarretIsVisible'
+      State: GarretIsVisible
     StateRequirements:
     - components:
       - day

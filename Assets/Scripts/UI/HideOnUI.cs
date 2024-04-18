@@ -25,6 +25,7 @@ namespace UI
         
         private void OnDestroy()
         {
+            if (Controller.UIController.Instance == null) return;
             Controller.UIController.Instance.OnSwapToUI -= Hide;
             Controller.UIController.Instance.OnSwapToGameplay -= Show;
         }

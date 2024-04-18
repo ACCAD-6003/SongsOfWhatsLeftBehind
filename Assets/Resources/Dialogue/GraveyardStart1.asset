@@ -27,11 +27,7 @@ MonoBehaviour:
         speakerName: Kristen
         Dialogue: All my friends are in the dirt and do not reciprocate my acts of
           friendship, but who cares!
-    LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
-      isEvent: 0
+    LeadsTo: []
     StateChanges:
     - components:
       - day

@@ -75,7 +75,7 @@ namespace QuestSystem
             UIController.OnOpenQuestLog -= OpenUI;
         }
         
-        private void CloseUI()
+        public void CloseUI()
         {
             UIController.Instance.SwapToGameplay();
             questUIDisplay.Hide();

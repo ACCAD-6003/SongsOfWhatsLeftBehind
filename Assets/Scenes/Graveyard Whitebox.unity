@@ -4794,7 +4794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9239ba8f794f429a4bc6fb6b991a1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: GarrettSeen
+  key: GarretIsVisible
   value: 1
   invert: 0
 --- !u!1001 &3428871405699618487

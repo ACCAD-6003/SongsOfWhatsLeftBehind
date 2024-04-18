@@ -38,11 +38,7 @@ MonoBehaviour:
       - speaker: 1
         speakerName: Spencer
         Dialogue: Exquisite air hug.
-    LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
-      isEvent: 0
+    LeadsTo: []
     StateChanges: []
     StateRequirements:
     - components:

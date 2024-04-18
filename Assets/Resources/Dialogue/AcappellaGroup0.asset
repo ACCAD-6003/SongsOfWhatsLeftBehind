@@ -28,11 +28,7 @@ MonoBehaviour:
       - speaker: 1
         speakerName: Singing Group of Young Dudes
         Dialogue: '*All wink synchronously*'
-    LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: end'
-      prompt: 
-      nextID: end
-      isEvent: 0
+    LeadsTo: []
     StateChanges:
     - components:
       - acappellaTalkedTo

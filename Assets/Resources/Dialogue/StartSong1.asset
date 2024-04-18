@@ -37,6 +37,10 @@ MonoBehaviour:
       - 1
       inspectorDescription: GarrettSeen = 1
       State: GarrettSeen
+    - components:
+      - GarretIsVisible
+      inspectorDescription: GarretIsVisible
+      State: GarretIsVisible
     StateRequirements:
     - components:
       - day
