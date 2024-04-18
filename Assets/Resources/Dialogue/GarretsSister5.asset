@@ -25,6 +25,14 @@ MonoBehaviour:
         Dialogue: My name is Lizzy by the way.
       - speaker: 0
         Dialogue: Got it, Lizzy. Pretty name.
+      - speaker: 0
+        Dialogue: I played some music for your brother, and-
+      - speaker: 0
+        Dialogue: Well, he wanted me to play it for you too.
+      - speaker: 1
+        Dialogue: "\u2026Sure."
+      - speaker: 0
+        Dialogue: Alright.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: PlaySadSongDayTwo'
       prompt: 

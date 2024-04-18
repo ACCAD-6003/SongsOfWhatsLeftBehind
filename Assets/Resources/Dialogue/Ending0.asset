@@ -48,8 +48,8 @@ MonoBehaviour:
     - components:
       - day
       - ==
-      - 2
-      inspectorDescription: day == 2
+      - 3
+      inspectorDescription: day == 3
       State: day
     - components:
       - questCompleted

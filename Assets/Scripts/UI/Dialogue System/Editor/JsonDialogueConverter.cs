@@ -53,47 +53,46 @@ public static class JsonDialogueConverter
         void RemoveLine() => lines.RemoveAt(0);
         bool MoreLinesToProcess() => lines.Count > 0;
         void CreateNewChain() => conversation.DialoguesSeries.Add(new DialogueChain());
-        bool ReachedChoices() => NextLine().StartsWith(CHOICES_MARKER);
         bool ReachedDialogue() => NextLine().StartsWith(DIALOGUE_MARKER);
         bool ReachedLeadsTo() => NextLine().StartsWith(LEADS_TO_MARKER);
+        string Marker() => NextLine().Split(":")[0].Trim();
+        string MarkerText() => NextLine().Split(":")[1].Trim();
 
         conversation.ID = NextLine();
         Debug.Log($"Converting {NextLine()}");
         RemoveLine();
-
-        if (NextLine().StartsWith(VARIATION_MARKER))
+        
+        var markerActions = new Dictionary<string, Action>
         {
-            conversation.Variation = NextLine()[VARIATION_MARKER.Length..];
+            {VARIATION_MARKER, () => conversation.Variation = MarkerText()},
+            {CONDITIONAL_MARKER, () => conversation.StateRequirements = GetCondition(MarkerText())},
+            {CHANGES_MARKER, () => conversation.StateChanges = GetWorldStateChanges(MarkerText())},
+            {CONVERSANT_MARKER, () => conversation.Conversant = MarkerText()},
+            {MUSIC_MARKER, () => conversation.AudioCue = MarkerText()},
+        };  
+        
+        while (!ReachedDialogue())
+        {
+            Debug.Assert(markerActions.ContainsKey(Marker()), $"Unknown marker {Marker()} in {conversation.ID}");
+            if (markerActions.TryGetValue(Marker(), out var action))
+            {
+                Debug.Log($"Triggering {Marker()} with {MarkerText()}");
+                action();
+            }
             RemoveLine();
         }
 
-        AssertMarker(NextLine(), CONDITIONAL_MARKER);
-        conversation.StateRequirements = GetCondition(NextLine()[CONDITIONAL_MARKER.Length..]);
-        RemoveLine();
-        
-        AssertMarker(NextLine(), CHANGES_MARKER);
-        conversation.StateChanges = GetWorldStateChanges(NextLine()[CHANGES_MARKER.Length..]);
-        RemoveLine();
-        
-        AssertMarker(NextLine(), CONVERSANT_MARKER);
-        conversation.Conversant = NextLine()[CONVERSANT_MARKER.Length..];
-        RemoveLine();
-
-        if (NextLine().StartsWith(MUSIC_MARKER))
+        if (Marker() == DIALOGUE_MARKER)
         {
-            conversation.AudioCue = NextLine()[MUSIC_MARKER.Length..];
             RemoveLine();
+            CreateNewChain();
+            while (!ReachedLeadsTo())
+            {
+                AddDialogueToChain(conversation, NextLine());
+                RemoveLine();
+            }
         }
 
-        AssertMarker(NextLine(), DIALOGUE_MARKER);
-        RemoveLine();
-        CreateNewChain();
-        while (!ReachedLeadsTo())
-        {
-            AddDialogueToChain(conversation, NextLine());
-            RemoveLine();
-        }
-        
         AssertMarker(NextLine(), LEADS_TO_MARKER);
         if(!NextLine().Trim().EndsWith(LEADS_TO_MARKER))
             conversation.LeadsTo.Add(GetChoice(NextLine()[LEADS_TO_MARKER.Length..].Trim()));

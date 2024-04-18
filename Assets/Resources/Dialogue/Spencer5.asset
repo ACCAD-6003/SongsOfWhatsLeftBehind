@@ -18,39 +18,33 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        Dialogue: "Hey, I\u2019m not really in the mood to talk."
+        Dialogue: Hey, ghost lady.
       - speaker: 0
-        Dialogue: I understand. I just-
+        Dialogue: "Mmmmm that\u2019s an acceptable nickname, I guess."
       - speaker: 1
-        Dialogue: "\u2026?"
+        Dialogue: Very good.
       - speaker: 0
-        Dialogue: I came to check on you. To see if you were okay.
+        Dialogue: "You\u2019re a funny guy. I can see why Garret likes you."
       - speaker: 1
-        Dialogue: "\u2026"
+        Dialogue: Are you-
       - speaker: 1
-        Dialogue: Not really okay, but surviving.
+        Dialogue: Are you really speaking with him somehow?
       - speaker: 0
-        Dialogue: "I can\u2019t imagine what you\u2019re going through, but this
-          crazy ghost lady is here to help if you need it."
+        Dialogue: I know it seems far fetched-
       - speaker: 1
-        Dialogue: Heh. Thank you.
+        Dialogue: "No\u2026I actually\u2026I actually believe you."
       - speaker: 0
-        Dialogue: "If you could tell him- If you could tell Garret one last thing\u2026what
-          would it be?"
+        Dialogue: Niiiiiiiiice.
       - speaker: 1
-        Dialogue: '*Sniff* *Sigh* That he was sexy while he was alive.'
+        Dialogue: Hehe.
       - speaker: 0
-        Dialogue: "*Chuckle* *Sniff* I\u2019ll relay the message."
+        Dialogue: He wanted me to play you a happy little tune.
       - speaker: 1
-        Dialogue: To your ghosts in the graveyard?
+        Dialogue: "\u201CA happy little tune\u201D huh?"
       - speaker: 0
-        Dialogue: Exactly.
+        Dialogue: Yes.
       - speaker: 1
-        Dialogue: "*Sniff* \u2026"
-      - speaker: 1
-        Dialogue: Take care of him for me.
-      - speaker: 1
-        Dialogue: He loved music.
+        Dialogue: Play away!
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: PlayHappySongDayTwo'
       prompt: 
