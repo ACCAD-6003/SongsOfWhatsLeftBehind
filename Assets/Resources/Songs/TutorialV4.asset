@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: TutorialV4
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 0ff05a9d078a63645b71313186c56e95, type: 3}
-  maxScore: 10000
-  violinLayer: {fileID: 8300000, guid: c2ba935999133cf4fb332ba4ba909134, type: 3}
+  maxScore: 0
+  mainSong: 0
+  violinLayer: {fileID: 0}
   phrases:
   - phraseName: Phrase
     startTime: 5.3333335
     notes:
     - offset: 0.6666667
-      noteLength: 0.8333333
+      noteLength: 0.99999994
       style: 1
       notes: 01000000
     - offset: 2
@@ -31,7 +32,7 @@ MonoBehaviour:
     startTime: 7.3333335
     notes:
     - offset: 0.6666667
-      noteLength: 0.8333333
+      noteLength: 0.99999994
       style: 1
       notes: 04000000
     - offset: 2
