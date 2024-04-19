@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -14,6 +15,18 @@ namespace UI.Dialogue_System
         [SerializeField] private int frequency = 3;
 
         private float pitch = 1;
+        
+        [Button]
+        public void EditorCreateAudioDictionary()
+        {
+            characterPitches = new Dictionary<string, float>();
+            Resources.LoadAll<SOConversationData>("Dialogue")
+                .SelectMany(x => x.Data.DialoguesSeries)
+                .SelectMany(y => y.dialogues)
+                .Select(z => z.speakerName)
+                .Distinct()
+                .ToList().ForEach(x => characterPitches.Add(x, defaultPitch));
+        }
         
         private void OnEnable()
         {

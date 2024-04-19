@@ -8837,7 +8837,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.645
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8955,7 +8955,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 7
+      Data: 11
     - Name: 
       Entry: 7
       Data: 
@@ -8965,6 +8965,18 @@ MonoBehaviour:
     - Name: $v
       Entry: 4
       Data: 1.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Singing Group of Young Dudes
+    - Name: $v
+      Entry: 4
+      Data: 0.8
     - Name: 
       Entry: 8
       Data: 
@@ -8985,22 +8997,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: Garret's Sister
+      Data: Doctor
     - Name: $v
       Entry: 4
-      Data: 1.2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: Spencer
-    - Name: $v
-      Entry: 4
-      Data: 0.8
+      Data: 1.1
     - Name: 
       Entry: 8
       Data: 
@@ -9021,10 +9021,58 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: Doctor
+      Data: Borris
     - Name: $v
       Entry: 4
-      Data: 1.1
+      Data: 0.9
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Little Girl
+    - Name: $v
+      Entry: 4
+      Data: 1.2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: "Garret\u2019s Sister"
+    - Name: $v
+      Entry: 4
+      Data: 1.2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Lizzy
+    - Name: $v
+      Entry: 4
+      Data: 1.2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Spencer
+    - Name: $v
+      Entry: 4
+      Data: 0.85
     - Name: 
       Entry: 8
       Data: 
@@ -9048,7 +9096,7 @@ MonoBehaviour:
       Data: 
   audioSource: {fileID: 950592224274152110}
   defaultPitch: 1
-  blipSound: {fileID: 8300000, guid: ff4f11f21f5c34c4bbae845392b80b69, type: 3}
+  blipSound: {fileID: 8300000, guid: be31fcf20606a0c47bd09344e36da822, type: 3}
   variation: 0.1
   frequency: 4
 --- !u!1 &4904075376365877017

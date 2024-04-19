@@ -28,7 +28,13 @@ namespace UI.Dialogue_System
         private void OnEnable()
         {
             DialogueManager.OnTextSet += SetColor;
+            DialogueManager.OnChoiceMenuOpen += SetColorForChoices;
             SetColor(DialogueManager.Instance.CurrentDialogue);
+        }
+        
+        private void SetColorForChoices(List<string> choices)
+        {
+            dialogueBox.color = colors.GetValueOrDefault(PLAYER_MARKER.Split(":")[0], defaultColor);
         }
         
         private void SetColor(DialogueData dialogue)
@@ -41,6 +47,7 @@ namespace UI.Dialogue_System
         private void OnDisable()
         {
             DialogueManager.OnTextSet -= SetColor;
+            DialogueManager.OnChoiceMenuOpen -= SetColorForChoices;
         }
     }
 }
