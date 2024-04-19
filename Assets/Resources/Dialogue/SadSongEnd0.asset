@@ -18,58 +18,21 @@ MonoBehaviour:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: '*Sniff*'
+        Dialogue: "I mean\u2026I could tell the song was sad underneath all the mistakes."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Are- Umm- Are you okay?
+        Dialogue: Yeah, whoopsies.
       - speaker: 1
         speakerName: Garret
-        Dialogue: "A couple weeks ago\u2026when it happened\u2026I\u2026"
+        Dialogue: I still understood it.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "You don\u2019t have to say it. I think I know."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "All the time I lost\u2026All the time I lost with the ones I love
-          most-"
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "It\u2019s horrible."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: It is.
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "Thank you for listening. No one listened\u2026"
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "What do you need? If it\u2019s not too late."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "I have a friend\u2026a best friend. His name is Spencer."
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: '*Sniff*'
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "He must feel sad\u2026and lonely. Check on him for me?"
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "Yeah. Yeah, I\u2019ll do that."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Thank you. Come back tomorrow. Please. I feel like I need it.
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "I\u2019ll be back. Hold on, okay?"
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "Sure\u2026"
+        Dialogue: "I\u2019m glad."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'
+    - inspectorDescription: 'Prompt:  Leads to: SadDialogue'
       prompt: 
-      nextID: DayTransition
-      isEvent: 1
+      nextID: SadDialogue
+      isEvent: 0
     StateChanges:
     - components:
       - questType
@@ -84,5 +47,11 @@ MonoBehaviour:
       - 1
       inspectorDescription: day == 1
       State: day
+    - components:
+      - latestScore
+      - <=
+      - 1
+      inspectorDescription: latestScore <= 1
+      State: latestScore
     Variation: 0
     AudioCue: 

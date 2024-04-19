@@ -18,59 +18,100 @@ MonoBehaviour:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: "\u2026"
+        Dialogue: "I got the mad energy, even if it wasn\u2019t played very well."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "\u2026"
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: Are you-
+        Dialogue: Yikes, sorry.
       - speaker: 1
         speakerName: Garret
-        Dialogue: "I just can\u2019t believe it."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "My family, my friends\u2026they\u2019re alone now. No one listened.
-          He didn\u2019t listen."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: And here we are.
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "I\u2019m mad, and I don\u2019t even know what you\u2019re talking
-          about."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: That place better be closed.
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: What place?
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: The hospital.
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: You know what?
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: What?
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Go see it for me.
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Go see it, and it better be shut down.
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Then, come back and tell me all about it.
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: Will do.
+        Dialogue: "It\u2019s okay. It\u2019s whatever."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'
+    - inspectorDescription: 'Prompt:  Leads to: AngryDialogue'
       prompt: 
-      nextID: DayTransition
-      isEvent: 1
+      nextID: AngryDialogue
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: D: AngrySongEnd'
+      prompt: 
+      nextID: 'D: AngrySongEnd'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Variation: 1'
+      prompt: 
+      nextID: 'Variation: 1'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Conditions: day == 1 and latestScore
+        == 2'
+      prompt: 
+      nextID: 'Conditions: day == 1 and latestScore == 2'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Changes: questType = 3'
+      prompt: 
+      nextID: 'Changes: questType = 3'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Dialogue:'
+      prompt: 
+      nextID: 'Dialogue:'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Garret: Dang, that was pretty good.'
+      prompt: 
+      nextID: 'Garret: Dang, that was pretty good.'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Garret: Definitely feeling a little
+        more mad.'
+      prompt: 
+      nextID: 'Garret: Definitely feeling a little more mad.'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Kristen: Yeah, same.'
+      prompt: 
+      nextID: 'Kristen: Yeah, same.'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Leads To: AngryDialogue'
+      prompt: 
+      nextID: 'Leads To: AngryDialogue'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: D: AngrySongEnd'
+      prompt: 
+      nextID: 'D: AngrySongEnd'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Variation: 2'
+      prompt: 
+      nextID: 'Variation: 2'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Conditions: day == 1 and latestScore
+        == 3'
+      prompt: 
+      nextID: 'Conditions: day == 1 and latestScore == 3'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Changes: questType = 3'
+      prompt: 
+      nextID: 'Changes: questType = 3'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Dialogue:'
+      prompt: 
+      nextID: 'Dialogue:'
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Garret: Ugh that was so good.'
+      prompt: 
+      nextID: 'Garret: Ugh that was so good.'
+      isEvent: 0
+    - inspectorDescription: "Prompt:  Leads to: Kristen: And that\u2019s a good thing
+        right?"
+      prompt: 
+      nextID: "Kristen: And that\u2019s a good thing right?"
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Garret: Yeah, but it made me feel
+        angry.'
+      prompt: 
+      nextID: 'Garret: Yeah, but it made me feel angry.'
+      isEvent: 0
+    - inspectorDescription: "Prompt:  Leads to: Kristen: That\u2019s what it was
+        meant to do."
+      prompt: 
+      nextID: "Kristen: That\u2019s what it was meant to do."
+      isEvent: 0
+    - inspectorDescription: 'Prompt:  Leads to: Leads To: AngryDialogue'
+      prompt: 
+      nextID: 'Leads To: AngryDialogue'
+      isEvent: 0
     StateChanges:
     - components:
       - questType
@@ -85,5 +126,11 @@ MonoBehaviour:
       - 1
       inspectorDescription: day == 1
       State: day
+    - components:
+      - latestScore
+      - <=
+      - 1
+      inspectorDescription: latestScore <= 1
+      State: latestScore
     Variation: 0
     AudioCue: 

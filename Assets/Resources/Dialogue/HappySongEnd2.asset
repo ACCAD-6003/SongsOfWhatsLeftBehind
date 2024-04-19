@@ -17,53 +17,44 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        speakerName: Spencer
-        Dialogue: Yes! Yes! I love that!
+        speakerName: Garret
+        Dialogue: Whoa that was amazing.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "HAHA! I\u2019m so glad."
+        Dialogue: You think so?
       - speaker: 1
-        speakerName: Spencer
-        Dialogue: Thank you for visiting me for Garret.
+        speakerName: Garret
+        Dialogue: "The energy I got from that was crazy. You\u2019re so talented."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Yeah, no biggie, my guy.
+        Dialogue: Daw shucks.
       - speaker: 1
-        speakerName: Spencer
-        Dialogue: "I feel like he\u2019s telling me that things will be okay. That
-          he\u2019s speaking through your song."
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "I think that\u2019s epic."
-      - speaker: 1
-        speakerName: Spencer
-        Dialogue: "Yeah\u2026epic."
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: Just keep carrying on, okay?
-      - speaker: 1
-        speakerName: Spencer
-        Dialogue: "Yeah, hehe, I\u2019ll do my very best."
-    LeadsTo: []
+        speakerName: Garret
+        Dialogue: "That was amazing, and\u2026"
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: HappyDialogue'
+      prompt: 
+      nextID: HappyDialogue
+      isEvent: 0
     StateChanges:
     - components:
-      - questCompleted
+      - questType
       - =
       - 1
-      inspectorDescription: questCompleted = 1
-      State: questCompleted
+      inspectorDescription: questType = 1
+      State: questType
     StateRequirements:
     - components:
       - day
       - ==
-      - 2
-      inspectorDescription: day == 2
+      - 1
+      inspectorDescription: day == 1
       State: day
     - components:
-      - questCompleted
+      - latestScore
       - ==
-      - 0
-      inspectorDescription: questCompleted == 0
-      State: questCompleted
+      - 3
+      inspectorDescription: latestScore == 3
+      State: latestScore
     Variation: 2
     AudioCue: 

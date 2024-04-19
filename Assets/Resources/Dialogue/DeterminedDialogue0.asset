@@ -10,57 +10,71 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: DayOne-DeterminedSongEnd
+  m_Name: DeterminedDialogue0
   m_EditorClassIdentifier: 
   conversationData:
-    ID: DayOne-DeterminedSongEnd
-    Conversant: Garret
+    ID: DeterminedDialogue
     DialoguesSeries:
     - dialogues:
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I can\u2019t help what happened to me."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "It\u2019s over now."
       - speaker: 1
+        speakerName: Garret
         Dialogue: But I have things to take care of even from here.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Can I help?
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yes. You can.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: '*Nod*'
       - speaker: 1
+        speakerName: Garret
         Dialogue: Go into town tomorrow, access my savings account, take out all
           of the money, and give it to my sister.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: O-okay.
       - speaker: 1
+        speakerName: Garret
         Dialogue: My pin is 4154.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: Alright, just divulge that super private information then, I guess.
       - speaker: 1
+        speakerName: Garret
         Dialogue: Yes.
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "How do you know I won\u2019t just take the money for myself?"
       - speaker: 1
+        speakerName: Garret
         Dialogue: "I\u2019m a ghost I can see everything, so you better not."
       - speaker: 0
+        speakerName: Kristen
         Dialogue: "Ha! I won\u2019t. Your baby sister is gettin\u2019 the big bucks
           tomorrow."
       - speaker: 1
+        speakerName: Garret
         Dialogue: "Go, and come back when you\u2019ve finished."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'
       prompt: 
       nextID: DayTransition
       isEvent: 1
-    StateChanges:
+    StateChanges: []
+    StateRequirements:
     - components:
-      - questType
-      - =
-      - 4
-      inspectorDescription: questType = 4
-      State: questType
-    StateRequirements: []
-    Variation: 
+      - day
+      - ==
+      - 1
+      inspectorDescription: day == 1
+      State: day
+    Variation: 0
     AudioCue: 

@@ -21,7 +21,7 @@ MonoBehaviour:
         Dialogue: Whatever!
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "acappella group. Gotta find them. Maybe they\u2019ll serenade
+        Dialogue: "Acappella group. Gotta find them. Maybe they\u2019ll serenade
           me with their manly voices."
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: exit'

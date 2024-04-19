@@ -118,8 +118,8 @@ MonoBehaviour:
     - components:
       - questType
       - ==
-      - 1
-      inspectorDescription: questType == 1
+      - 5
+      inspectorDescription: questType == 5
       State: questType
     - components:
       - friendship

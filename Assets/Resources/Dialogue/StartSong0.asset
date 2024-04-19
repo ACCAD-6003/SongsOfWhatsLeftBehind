@@ -33,10 +33,13 @@ MonoBehaviour:
       - speaker: 0
         speakerName: Kristen
         Dialogue: "That\u2019s okay. You can just listen like usual."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Let me just tune up first.
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlaySong-Tutorial'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlaySong-Tuning'
       prompt: 
-      nextID: PlaySong-Tutorial
+      nextID: PlaySong-Tuning
       isEvent: 1
     StateChanges: []
     StateRequirements:

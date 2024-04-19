@@ -34,8 +34,8 @@ MonoBehaviour:
     - components:
       - questType
       - ==
-      - 3
-      inspectorDescription: questType == 3
+      - 7
+      inspectorDescription: questType == 7
       State: questType
     - components:
       - day

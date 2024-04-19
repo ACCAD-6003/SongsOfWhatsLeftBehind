@@ -50,8 +50,8 @@ MonoBehaviour:
     - components:
       - questType
       - '!='
-      - 2
-      inspectorDescription: questType != 2
+      - 6
+      inspectorDescription: questType != 6
       State: questType
     - components:
       - day

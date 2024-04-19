@@ -17,48 +17,44 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        speakerName: Lizzy
-        Dialogue: '*Sniff* That was beautiful.'
+        speakerName: Garret
+        Dialogue: "That was\u2026really devastating at some parts actually."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "It\u2019s not much."
+        Dialogue: Yeah, you liked it??
       - speaker: 1
-        speakerName: Lizzy
-        Dialogue: No, your music is powerful. Thank you for using it to speak to
-          me.
+        speakerName: Garret
+        Dialogue: It was really powerful.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Yeah, anytime.
+        Dialogue: Good.
       - speaker: 1
-        speakerName: Lizzy
-        Dialogue: I know the town has you misunderstood. My brother was misunderstood
-          too.
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: We can all be misunderstood together.
-      - speaker: 1
-        speakerName: Lizzy
-        Dialogue: That sounds great.
-    LeadsTo: []
+        speakerName: Garret
+        Dialogue: "Wow, yeah, you\u2019re really good\u2026"
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: SadDialogue'
+      prompt: 
+      nextID: SadDialogue
+      isEvent: 0
     StateChanges:
     - components:
-      - questCompleted
+      - questType
       - =
-      - 1
-      inspectorDescription: questCompleted = 1
-      State: questCompleted
+      - 2
+      inspectorDescription: questType = 2
+      State: questType
     StateRequirements:
     - components:
       - day
       - ==
-      - 2
-      inspectorDescription: day == 2
+      - 1
+      inspectorDescription: day == 1
       State: day
     - components:
-      - questCompleted
+      - latestScore
       - ==
-      - 0
-      inspectorDescription: questCompleted == 0
-      State: questCompleted
+      - 3
+      inspectorDescription: latestScore == 3
+      State: latestScore
     Variation: 2
     AudioCue: 

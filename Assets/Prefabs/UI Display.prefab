@@ -3398,8 +3398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -39.60939}
-  m_SizeDelta: {x: 0, y: -79.2188}
+  m_AnchoredPosition: {x: 0, y: -39.122528}
+  m_SizeDelta: {x: 0, y: -78.2451}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6016906761759355823
 MonoBehaviour:
@@ -9706,7 +9706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 33, y: 0}
+  m_AnchoredPosition: {x: 33, y: -10}
   m_SizeDelta: {x: -40, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2085710235986648505
@@ -9739,8 +9739,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quest Log
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bcbbd3d0df7ebb343b1d8c03f0b3d49b, type: 2}
-  m_sharedMaterial: {fileID: -7841902080438518287, guid: bcbbd3d0df7ebb343b1d8c03f0b3d49b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1e73ff95a114b4458726e4d74ad062d, type: 2}
+  m_sharedMaterial: {fileID: -8445703187902198472, guid: d1e73ff95a114b4458726e4d74ad062d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9764,8 +9764,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9917,7 +9917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34, y: -89}
+  m_AnchoredPosition: {x: 34, y: -97}
   m_SizeDelta: {x: 560, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7912405639538915403
@@ -9951,8 +9951,8 @@ MonoBehaviour:
   m_text: "Learn about Garrets Past\n   - <s>Speak to the baker </s>\n   - Speak
     to the farmer"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bcbbd3d0df7ebb343b1d8c03f0b3d49b, type: 2}
-  m_sharedMaterial: {fileID: -7841902080438518287, guid: bcbbd3d0df7ebb343b1d8c03f0b3d49b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1e73ff95a114b4458726e4d74ad062d, type: 2}
+  m_sharedMaterial: {fileID: -8445703187902198472, guid: d1e73ff95a114b4458726e4d74ad062d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9976,8 +9976,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9988,7 +9988,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 5
+  m_lineSpacing: 40.91
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

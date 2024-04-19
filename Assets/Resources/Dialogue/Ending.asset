@@ -18,120 +18,113 @@ MonoBehaviour:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: My acappella boys seem all pumped up and determined again.
+        Dialogue: "My sister\u2026thank you for going to see her."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: You think so??
+        Dialogue: "Of course, Garret. She seems really cool\u2026you know\u2026underneath
+          that layer of sadness."
       - speaker: 1
         speakerName: Garret
-        Dialogue: "Yeah. They\u2019ve looked real out of it since I left. Which makes
-          sense."
+        Dialogue: "Yeah\u2026"
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Yeah?
+        Dialogue: "You don\u2019t need to feel guilty."
       - speaker: 1
         speakerName: Garret
-        Dialogue: Yeah.
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: I started the group, so without me leading it, it will take them
-          a minute to find themselves.
+        Dialogue: "I wish I didn\u2019t."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Maybe I can help?
+        Dialogue: "You\u2019re valid, dude, but, I promise you don\u2019t need to."
       - speaker: 1
         speakerName: Garret
-        Dialogue: They would love it. They were so inspired by you.
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "They deserve to keep doing what they love even after I\u2019m
-          gone."
+        Dialogue: "It feels like she needs me, and I\u2019m leaving her."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "Yeah\u2026doing what you love\u2026"
+        Dialogue: How come?
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "My parents and I didn\u2019t get along. When I stormed out, she
+          decided to come with me. We\u2019ve been roommates our entire lives."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "She lost her one and only roommate, her one and only brother,
+          her one and only family\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "If I were her, I\u2019d be so lost\u2026"
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Did you guys ever get made fun of for doing that?
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Doing what?
+        Dialogue: "\u2026"
       - speaker: 0
         speakerName: Kristen
-        Dialogue: What you love-
+        Dialogue: "Your sister\u2026is she strong?"
       - speaker: 1
         speakerName: Garret
-        Dialogue: Oh, of course.
+        Dialogue: The strongest.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: And you kept going, despite everyone making fun of you.
+        Dialogue: "She\u2019s smart?"
       - speaker: 1
         speakerName: Garret
-        Dialogue: "Yes\u2026"
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "Don\u2019t be scared of what you love and who you are, Kristen."
+        Dialogue: So smart.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "The town is scared of me\u2026"
+        Dialogue: You trust her?
       - speaker: 1
         speakerName: Garret
-        Dialogue: "They\u2019re scared of your spirit because you don\u2019t comply."
+        Dialogue: Of course.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "Whoa big words\u2026"
+        Dialogue: "Then\u2026she\u2019ll be fine."
       - speaker: 1
         speakerName: Garret
-        Dialogue: "You don\u2019t blend in. And they hate that. Because they\u2019re
-          too afraid not to blend in."
+        Dialogue: I know, but-
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "Huh\u2026."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "It\u2019s a gift to be so open about the things you love."
+        Dialogue: "Garret, she\u2019ll be fine. She was loved by you, she\u2019ll
+          never forget you, and she\u2019ll be fine."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "Sure thing\u2026."
+        Dialogue: "I\u2019ll keep watch over her for you, and I promise that I will
+          see her heal."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Why is everything temporary?
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Thank you.
+        Dialogue: "If it were all permanent, it wouldn\u2019t be special."
       - speaker: 1
         speakerName: Garret
-        Dialogue: "It\u2019s the least I could do."
+        Dialogue: The good things are just so fleeting.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "I\u2019m going to keep being weird, and I\u2019m gonna do it just
-          for you Garret."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "You\u2019re so kind."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Do it for you too.
+        Dialogue: "So are the bad things, though it just doesn\u2019t always feel
+          like it."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Yes, sir.
+        Dialogue: You ran out of time here, but now you get more time for another
+          adventure. Try to have fun with it.
       - speaker: 1
         speakerName: Garret
-        Dialogue: "I\u2019m going to miss you."
+        Dialogue: '*Sniff* Sure.'
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Same.
+        Dialogue: "I\u2019ll see you soon. Maybe when I run out of time too."
       - speaker: 1
         speakerName: Garret
-        Dialogue: "I\u2019ll see you again, right?"
+        Dialogue: Take care of yourself, Kristen.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "I\u2019ll be here\u2026"
+        Dialogue: "I promise I will. I\u2019ll take care of the ones you love too."
       - speaker: 1
         speakerName: Garret
-        Dialogue: "Heh\u2026"
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Until next time, Ghost Lady.
+        Dialogue: Goodbye.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "Until next time\u2026Garret."
+        Dialogue: Goodbye, Garret.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'
       prompt: 
@@ -154,8 +147,8 @@ MonoBehaviour:
     - components:
       - questType
       - ==
-      - 4
-      inspectorDescription: questType == 4
+      - 6
+      inspectorDescription: questType == 6
       State: questType
     - components:
       - friendship

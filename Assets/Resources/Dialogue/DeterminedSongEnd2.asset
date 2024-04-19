@@ -17,43 +17,41 @@ MonoBehaviour:
     DialoguesSeries:
     - dialogues:
       - speaker: 1
-        speakerName: Singing Group of Young Dudes
-        Dialogue: That was sick.
+        speakerName: Garret
+        Dialogue: I feel like a character in their dramatic renewal arc.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "That\u2019s what I was thinking."
+        Dialogue: Yes!
       - speaker: 1
-        speakerName: Singing Group of Young Dudes
-        Dialogue: Thank you for everything.
+        speakerName: Garret
+        Dialogue: That was absolutely incredible.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Yeah, no problem. The pleasure was mine.
-      - speaker: 1
-        speakerName: Singing Group of Young Dudes
-        Dialogue: "Our bro will live on forever\u2026"
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: Got that right.
-    LeadsTo: []
+        Dialogue: "I\u2019m so glad."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Leads to: DeterminedDialogue'
+      prompt: 
+      nextID: DeterminedDialogue
+      isEvent: 0
     StateChanges:
     - components:
-      - questCompleted
+      - questType
       - =
-      - 1
-      inspectorDescription: questCompleted = 1
-      State: questCompleted
+      - 4
+      inspectorDescription: questType = 4
+      State: questType
     StateRequirements:
     - components:
       - day
       - ==
-      - 2
-      inspectorDescription: day == 2
+      - 1
+      inspectorDescription: day == 1
       State: day
     - components:
-      - questCompleted
+      - latestScore
       - ==
-      - 0
-      inspectorDescription: questCompleted == 0
-      State: questCompleted
+      - 3
+      inspectorDescription: latestScore == 3
+      State: latestScore
     Variation: 2
     AudioCue: 
