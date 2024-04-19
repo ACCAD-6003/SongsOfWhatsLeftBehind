@@ -55,21 +55,21 @@ MonoBehaviour:
         speakerName: Kristen
         Dialogue: Sure, thing. What are we feeling?
     LeadsTo:
-    - inspectorDescription: 'Prompt: Happy Triggers Event: PlayHappySong'
+    - inspectorDescription: 'Prompt: Happy Triggers Event: PlaySong-Happy'
       prompt: Happy
-      nextID: PlayHappySong
+      nextID: PlaySong-Happy
       isEvent: 1
-    - inspectorDescription: 'Prompt: Sad Triggers Event: PlaySadSong'
+    - inspectorDescription: 'Prompt: Sad Triggers Event: PlaySong-Sad'
       prompt: Sad
-      nextID: PlaySadSong
+      nextID: PlaySong-Sad
       isEvent: 1
-    - inspectorDescription: 'Prompt: Angry Triggers Event: PlayAngrySong'
+    - inspectorDescription: 'Prompt: Angry Triggers Event: PlaySong-Angry'
       prompt: Angry
-      nextID: PlayAngrySong
+      nextID: PlaySong-Angry
       isEvent: 1
-    - inspectorDescription: 'Prompt: Determined Triggers Event: PlayDeterminedSong'
+    - inspectorDescription: 'Prompt: Determined Triggers Event: PlaySong-Determined'
       prompt: Determined
-      nextID: PlayDeterminedSong
+      nextID: PlaySong-Determined
       isEvent: 1
     StateChanges: []
     StateRequirements:

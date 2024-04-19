@@ -59,9 +59,9 @@ MonoBehaviour:
         speakerName: Spencer
         Dialogue: Play away!
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayHappySongDayTwo'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlaySong-Happy'
       prompt: 
-      nextID: PlayHappySongDayTwo
+      nextID: PlaySong-Happy
       isEvent: 1
     StateChanges:
     - components:

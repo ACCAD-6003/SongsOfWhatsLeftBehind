@@ -18,19 +18,68 @@ MonoBehaviour:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: You remind me of my friend Spencer a lot.
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Go bother my boy haha!
+        Dialogue: I could tell my friend Spencer really liked you.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Oh, I will. He seems cool.
+        Dialogue: Oh, really?
       - speaker: 1
         speakerName: Garret
-        Dialogue: He is quite cool, yes.
+        Dialogue: "Yes! And he\u2019s not quick to enjoy a new person\u2019s company,
+          so\u2026"
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "I\u2019m just gonna follow all the cool people."
+        Dialogue: "I\u2019m special."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yes, you\u2019re very special."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "\u2026that felt sarcastic, or something like that\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Ding ding!
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "You know what? I don\u2019t care if you leave. *Hmph*"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Noooo don\u2019t be like that."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Spencer is my new best friend.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: '*Gasp* Stealing mine and giving me up? Cruel.'
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Haha!...I\u2019ve loved this little friendship of ours."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Me too.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: What was your favorite part?
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Hmmmm\u2026"
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Tell me tell me.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Watching you fumble around talking to Spencer, for real.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: They loved you.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Well, I love him. He\u2019s so silly."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: HAHA! That he is.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: I loved it all. All of it was my favorite.
       - speaker: 1
         speakerName: Garret
         Dialogue: "Thank you for everything. You\u2019ve made me happier than I thought
@@ -75,8 +124,8 @@ MonoBehaviour:
     - components:
       - friendship
       - <=
-      - 2
-      inspectorDescription: friendship <= 2
+      - 4
+      inspectorDescription: friendship <= 4
       State: friendship
     Variation: 0
     AudioCue: 

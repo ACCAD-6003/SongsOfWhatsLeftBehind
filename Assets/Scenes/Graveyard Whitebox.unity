@@ -3904,6 +3904,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  eventFormat: 2
 --- !u!114 &1711796348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3932,6 +3933,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  eventFormat: 2
 --- !u!1 &1796630959
 GameObject:
   m_ObjectHideFlags: 0

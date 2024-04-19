@@ -4,6 +4,7 @@ using RhythmGame;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace Controller
 {
@@ -56,7 +57,23 @@ namespace Controller
             operation.Dispose();
             playerInput.enabled = true;
         }
+
+        private void Start()
+        {
+            SceneManager.activeSceneChanged += ActivateInput;
+            SceneTools.onSceneTransitionStart += DeactivateInput;
+        }
+
+        private void ActivateInput(Scene _, Scene __)
+        {
+            playerInput.enabled = true;
+        }
         
+        private void DeactivateInput(int _)
+        {
+            playerInput.enabled = false;
+        }
+
         #region Gameplay Layout
 
         public void Interact(InputAction.CallbackContext context)
@@ -211,5 +228,11 @@ namespace Controller
         }
 
         #endregion
+
+        private void OnDestroy()
+        {
+            SceneManager.activeSceneChanged -= ActivateInput;
+            SceneTools.onSceneTransitionStart -= DeactivateInput;
+        }
     }
 }

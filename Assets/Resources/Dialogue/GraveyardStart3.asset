@@ -33,10 +33,6 @@ MonoBehaviour:
       - 4
       inspectorDescription: saveDay = 4
       State: saveDay
-    - components:
-      - '!GarretIsVisible'
-      inspectorDescription: '!GarretIsVisible'
-      State: GarretIsVisible
     StateRequirements:
     - components:
       - day

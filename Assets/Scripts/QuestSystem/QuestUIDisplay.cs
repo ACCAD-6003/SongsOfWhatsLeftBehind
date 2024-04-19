@@ -5,12 +5,13 @@ namespace QuestSystem
 {
     public class QuestUIDisplay : MonoBehaviour
     {
+        private const string NO_QUEST_TEXT = "No quest yet, check back later!";
         [SerializeField] private GameObject display;
         [SerializeField] private TMP_Text questDescriptionText;
 
-        public void Display(string description = "No quest yet check back later!")
+        public void Display(string description = NO_QUEST_TEXT)
         {
-            description ??= "No quest yet check back later!";
+            description ??= NO_QUEST_TEXT;
             questDescriptionText.text = description;
             display.SetActive(true);
         }

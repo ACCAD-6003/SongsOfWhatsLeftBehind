@@ -41,9 +41,9 @@ MonoBehaviour:
         speakerName: Kristen
         Dialogue: Alright.
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlaySadSongDayTwo'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlaySong-Sad'
       prompt: 
-      nextID: PlaySadSongDayTwo
+      nextID: PlaySong-Sad
       isEvent: 1
     StateChanges:
     - components:

@@ -48,9 +48,9 @@ MonoBehaviour:
         speakerName: Doctor
         Dialogue: "Don\u2019t-"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayAngrySongDayTwo'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlaySong-Angry'
       prompt: 
-      nextID: PlayAngrySongDayTwo
+      nextID: PlaySong-Angry
       isEvent: 1
     StateChanges:
     - components:

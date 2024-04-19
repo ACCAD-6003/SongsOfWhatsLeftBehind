@@ -15,10 +15,12 @@ namespace UI.Dialogue_System
         private void OnEnable()
         {
             DialogueManager.OnTextSet += SetColor;
+            SetColor(DialogueManager.Instance.CurrentDialogue);
         }
         
         private void SetColor(DialogueData dialogue)
         {
+            if (dialogue == null) return;
             var characterName = dialogue.speakerName;
             dialogueBox.color = colors.GetValueOrDefault(characterName, defaultColor);
         }

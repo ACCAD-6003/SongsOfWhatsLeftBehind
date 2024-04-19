@@ -34,12 +34,15 @@ namespace UI.Dialogue_System
         private bool continueInputReceived;
         private bool abortDialogue;
         private int choiceSelected;
+        private DialogueData currentDialogue;
         public bool InDialogue => inDialogue;
         public bool InInternalDialogue { get; private set; }
 
         public bool ValidateID(string id) => conversationGroup.Find(data => data.Data.ID.ToLower().Equals(id.ToLower()));
         private int playersReady;
-    
+
+        public DialogueData CurrentDialogue => currentDialogue;
+        
         [Button] private void DisplayWorldState() => Debug.Log(WorldState.GetCurrentWorldState());
         [Button] private void SetWorldState(string key, int value) => WorldState.SetState(key, _ => value);
         [Button] private void ClearWorldState() => WorldState.ClearAllStates();
@@ -142,7 +145,7 @@ namespace UI.Dialogue_System
         private IEnumerator HandleConversation(ConversationData data)
         {
             OnDialogueStarted?.Invoke(data);
-            yield return DisplayDialogue(data);
+            if (data.DialoguesSeries.Count > 0) yield return DisplayDialogue(data);
             UpdateWorldState(data);
             yield return ProceedToNextDialogue(data);
         }
@@ -218,7 +221,7 @@ namespace UI.Dialogue_System
             {
                 OnAudioCue?.Invoke(data.AudioCue);
             }
-
+            
             var dialogueIndex = dialogueProgress.TryGetValue(data.ID, out var progress)
                 ? Mathf.Min(progress, data.DialoguesSeries.Count - 1)
                 : 0;
@@ -238,6 +241,7 @@ namespace UI.Dialogue_System
         {
             var speakerName = dialogue.speakerName;
             
+            currentDialogue = dialogue;
             OnTextSet?.Invoke(dialogue);
             OnTextUpdated?.Invoke("");
             yield return new WaitUntil(() => FadeToBlackSystem.FadeOutComplete);

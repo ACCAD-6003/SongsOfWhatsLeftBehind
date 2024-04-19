@@ -16,21 +16,21 @@ MonoBehaviour:
     ID: FreePlayChoice
     DialoguesSeries: []
     LeadsTo:
-    - inspectorDescription: 'Prompt: Happy Triggers Event: PlayPracticeHappySong'
+    - inspectorDescription: 'Prompt: Happy Triggers Event: PlaySong-Happy-FreeEnd'
       prompt: Happy
-      nextID: PlayPracticeHappySong
+      nextID: PlaySong-Happy-FreeEnd
       isEvent: 1
-    - inspectorDescription: 'Prompt: Sad Triggers Event: PlayPracticeSadSong'
+    - inspectorDescription: 'Prompt: Sad Triggers Event: PlaySong-Sad-FreeEnd'
       prompt: Sad
-      nextID: PlayPracticeSadSong
+      nextID: PlaySong-Sad-FreeEnd
       isEvent: 1
-    - inspectorDescription: 'Prompt: Angry Triggers Event: PlayPracticeAngrySong'
+    - inspectorDescription: 'Prompt: Angry Triggers Event: PlaySong-Angry-FreeEnd'
       prompt: Angry
-      nextID: PlayPracticeAngrySong
+      nextID: PlaySong-Angry-FreeEnd
       isEvent: 1
-    - inspectorDescription: 'Prompt: Determined Triggers Event: PlayPracticeDeterminedSong'
+    - inspectorDescription: 'Prompt: Determined Triggers Event: PlaySong-Determined-FreeEnd'
       prompt: Determined
-      nextID: PlayPracticeDeterminedSong
+      nextID: PlaySong-Determined-FreeEnd
       isEvent: 1
     StateChanges: []
     StateRequirements: []

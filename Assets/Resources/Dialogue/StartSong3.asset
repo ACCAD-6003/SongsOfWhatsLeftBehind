@@ -24,11 +24,7 @@ MonoBehaviour:
       prompt: 
       nextID: DayThree-GarretIntroduction
       isEvent: 0
-    StateChanges:
-    - components:
-      - GarretIsVisible
-      inspectorDescription: GarretIsVisible
-      State: GarretIsVisible
+    StateChanges: []
     StateRequirements:
     - components:
       - day

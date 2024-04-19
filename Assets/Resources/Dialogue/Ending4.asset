@@ -18,51 +18,85 @@ MonoBehaviour:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: Just never go to the doctor I had.
+        Dialogue: My sister would probably look up to you. You could spend some time
+          with her.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "Yeah, what\u2026."
+        Dialogue: "Yeah I don\u2019t think she likes me."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Why do you say that?
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Garret, what happened?
+        Dialogue: Every time I approach, she seems like she wants me to leave.
       - speaker: 1
         speakerName: Garret
-        Dialogue: "\u2026"
+        Dialogue: "Yeah she\u2019s kinda like that."
       - speaker: 1
         speakerName: Garret
-        Dialogue: "He didn\u2019t listen to me when I was in pain, so things just
-          got worse and worse and worse and\u2026"
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "Well, eventually things couldn\u2019t get any worse, and I lost
-          everything."
+        Dialogue: She pushes everyone away, but secretly wants them to stay.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "Oh\u2026that\u2019s horrible."
+        Dialogue: "That\u2019s\u2026.so sad."
       - speaker: 1
         speakerName: Garret
-        Dialogue: It makes me sick, thinking it could happen to someone else.
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "I won\u2019t let it."
+        Dialogue: I know.
       - speaker: 1
         speakerName: Garret
-        Dialogue: "I\u2019ll help. I\u2019ll haunt him."
+        Dialogue: "She has a lot of growing to do. I don\u2019t want to leave her
+          behind."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "We\u2019ll make sure he gets fired everywhere."
+        Dialogue: I know.
       - speaker: 1
         speakerName: Garret
-        Dialogue: Mmm we make a good team.
+        Dialogue: "I know it might be asking a lot but\u2026"
       - speaker: 0
         speakerName: Kristen
-        Dialogue: We do.
+        Dialogue: "I\u2019ll take care of her."
       - speaker: 1
         speakerName: Garret
-        Dialogue: See you later, partner.
+        Dialogue: '*Sniff* Thank you.'
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Maybe I should just stay\u2026"
       - speaker: 0
         speakerName: Kristen
-        Dialogue: See you very soon.
+        Dialogue: "No. You deserve peace. You get to worry about yourself for once.
+          All of these people will miss you, but\u2026"
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: But you want this, so you should have it.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: No one would expect you to keep watch for all of eternity.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: You need to rest.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yeah\u2026I\u2019m so tired."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: So go. Sleep.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yeah, I\u2019ll sleep."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "I\u2019ll be here. Guardian of the graveyard."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "I\u2019ll see you again."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: I believe it.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Goodbye, Kristen.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Goodbye, Garret.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'
       prompt: 
@@ -85,15 +119,9 @@ MonoBehaviour:
     - components:
       - questType
       - ==
-      - 3
-      inspectorDescription: questType == 3
-      State: questType
-    - components:
-      - friendship
-      - '>'
       - 2
-      inspectorDescription: friendship > 2
-      State: friendship
+      inspectorDescription: questType == 2
+      State: questType
     - components:
       - friendship
       - <=

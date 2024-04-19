@@ -40,6 +40,7 @@ namespace RhythmGame
         float ThresholdCenter => targetZone.position.y;
         float NoteSpawnPosition => noteSpawnPositionMarker.transform.position.y;
         private Coroutine pulser;
+        private string nextDialogue;
 
         private IEnumerable<NoteImage> ActiveNotes => notePool
             .Where(y => y.gameObject.activeInHierarchy)
@@ -155,6 +156,7 @@ namespace RhythmGame
         public void StartSong(float startBeat)
         {
             OnSongStart?.Invoke(songData);
+            nextDialogue = "";
 
             if(IsValidSong(songData)) StartCoroutine(HandleSong(songData, RhythmHelper.ConvertBPMToOffset(startBeat, songData)));
         }
@@ -163,6 +165,13 @@ namespace RhythmGame
         {
             songData = song;
             StartSong(0);
+        }
+        
+        public void PlaySong(SongData song, string nextDialogue)
+        {
+            songData = song;
+            StartSong(0);
+            this.nextDialogue = nextDialogue;
         }
 
         [Button]
@@ -248,8 +257,11 @@ namespace RhythmGame
             int finalScore = scoreDisplay.FinalScore;
             if (songData.mainSong) WorldState.SetState("Friendship", x => x + finalScore);
             OnSongEnd?.Invoke();
+            if (!string.IsNullOrEmpty(nextDialogue))
+            {
+                DialogueManager.Instance.StartDialogue(nextDialogue);
+            }
             ToggleDisplay(false);
-            DialogueManager.Instance.StartDialogue(songData.dialogue);
         }
     }
 }

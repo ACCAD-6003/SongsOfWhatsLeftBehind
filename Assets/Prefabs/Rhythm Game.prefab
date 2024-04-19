@@ -1269,7 +1269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c67c293bab4693b809e9cf543ffb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventToReceive: 
+  eventToReceive: PlaySong-
   onEventReceived:
     m_PersistentCalls:
       m_Calls:
@@ -1285,6 +1285,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  eventFormat: 0
 --- !u!114 &3074999126022103185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,18 +1303,10 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 81eed45a25deab744b72d0a420da3f48, type: 2}
+    - {fileID: 11400000, guid: 03c3d0a230df356429aa31daeddc855e, type: 2}
     - {fileID: 11400000, guid: 04a90489d8d89aa4fb26960a6b27e165, type: 2}
     - {fileID: 11400000, guid: 8ed8319168711324186ea0ce364dad7b, type: 2}
-    - {fileID: 11400000, guid: 03c3d0a230df356429aa31daeddc855e, type: 2}
-    - {fileID: 11400000, guid: 40d596dcd33f44e48aabfce4173886ea, type: 2}
-    - {fileID: 11400000, guid: ee25eb71ad36d624eb7acd825af8a736, type: 2}
-    - {fileID: 11400000, guid: 11007ec48c3bb9148b6d0afe3a99b3fb, type: 2}
-    - {fileID: 11400000, guid: 7d42fb311d692b6469e23b0814a430f5, type: 2}
-    - {fileID: 11400000, guid: 571e4ec1bb1394145a90cc983711f0a6, type: 2}
-    - {fileID: 11400000, guid: 161526005d571f84a934be3435f9fe93, type: 2}
-    - {fileID: 11400000, guid: f5e73d71c2d6aba40b4a2e945f9f0bbc, type: 2}
-    - {fileID: 11400000, guid: c54a8571737ae1943a4097918d902d4c, type: 2}
-    - {fileID: 11400000, guid: ed712d6a409f14a4999f183b36318df2, type: 2}
+    - {fileID: 11400000, guid: fed8ec56a07443e46a9adba6d3612f7e, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -1332,13 +1325,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 13
+      Data: 5
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 1
-      Data: PlayHappySong
+      Data: Happy
     - Name: $v
       Entry: 10
       Data: 0
@@ -1350,7 +1343,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PlayDeterminedSong
+      Data: Sad
     - Name: $v
       Entry: 10
       Data: 1
@@ -1362,7 +1355,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PlayAngrySong
+      Data: Determined
     - Name: $v
       Entry: 10
       Data: 2
@@ -1374,7 +1367,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PlaySadSong
+      Data: Angry
     - Name: $v
       Entry: 10
       Data: 3
@@ -1386,106 +1379,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PlayTutorialSong
+      Data: Tutorial
     - Name: $v
       Entry: 10
       Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: PlayPracticeHappySong
-    - Name: $v
-      Entry: 10
-      Data: 5
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: PlayPracticeAngrySong
-    - Name: $v
-      Entry: 10
-      Data: 6
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: PlayPracticeDeterminedSong
-    - Name: $v
-      Entry: 10
-      Data: 7
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: PlayPracticeSadSong
-    - Name: $v
-      Entry: 10
-      Data: 8
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: PlayHappySongDayTwo
-    - Name: $v
-      Entry: 10
-      Data: 9
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: PlaySadSongDayTwo
-    - Name: $v
-      Entry: 10
-      Data: 10
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: PlayAngrySongDayTwo
-    - Name: $v
-      Entry: 10
-      Data: 11
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: PlayDeterminedSongDayTwo
-    - Name: $v
-      Entry: 10
-      Data: 12
     - Name: 
       Entry: 8
       Data: 

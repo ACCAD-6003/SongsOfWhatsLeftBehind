@@ -18,19 +18,84 @@ MonoBehaviour:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: You remind me of my friend Spencer a lot.
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: Go bother my boy haha!
+        Dialogue: Watching you talk to Spencer reminded me of the day I first met
+          him.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Oh, I will. He seems cool.
+        Dialogue: Oh my gosh is it story time??
       - speaker: 1
         speakerName: Garret
-        Dialogue: He is quite cool, yes.
+        Dialogue: If you want it to be.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "I\u2019m just gonna follow all the cool people."
+        Dialogue: Yes yes!
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Well, we both worked night shifts at the grocery store a couple
+          years ago.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Not the grocery store\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yes. It was horrible\u2013horrible hours, horrible boss, dirty
+          bathrooms, messed up inventory\u2026"
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: '*Shivers*'
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "We didn\u2019t really talk to each other ever. We just did our
+          jobs, nodded as we passed by, and opened the door for each other."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: And then you locked eyes one night and started kissing??
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "\u2026close!"
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Really???
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: No.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: AWW!
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: One night, Spencer was stocking the top shelves, and the ladder
+          we use came down on top of the window to the office. I was on the other
+          side.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "No\u2026."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: I was fine! We spent the whole night laughing, cleaning up glass,
+          a little bit of my blood, and ladder parts.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: We made all of these elaborate fake stories to tell our boss about
+          how it happened.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Wow\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: It was the most fun.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: One ladder falling and you got a whole friendship.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Thank you, gravity.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Yeah\u2026gravity rocks."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "\u2026"
       - speaker: 1
         speakerName: Garret
         Dialogue: "Thank you for everything. You\u2019ve made me happier than I thought
@@ -46,7 +111,7 @@ MonoBehaviour:
         Dialogue: Why, of course.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: What part of life made you the happiest?
+        Dialogue: How can I be happy like you and Spencer were?
       - speaker: 1
         speakerName: Garret
         Dialogue: "\u2026"
@@ -80,34 +145,8 @@ MonoBehaviour:
         Dialogue: My advice to you is to let them lead you there.
       - speaker: 1
         speakerName: Garret
-        Dialogue: "Don\u2019t resist the waves of passion that naturally happen in
-          you."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "Don\u2019t be scared of what you love."
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "The town is scared of me\u2026"
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "They\u2019re scared of your passion because it violates this idea
-          of compliance."
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "Whoa big words\u2026"
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "You don\u2019t blend in. And they hate that. Because they\u2019re
-          too afraid not to blend in."
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "Huh\u2026."
-      - speaker: 1
-        speakerName: Garret
-        Dialogue: "It\u2019s a gift to be so open about the things you love."
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "Sure thing\u2026."
+        Dialogue: Let the ladder fall. Because something good could happen if it
+          does.
       - speaker: 0
         speakerName: Kristen
         Dialogue: Thank you.

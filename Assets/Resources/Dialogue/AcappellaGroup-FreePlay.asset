@@ -20,21 +20,21 @@ MonoBehaviour:
         speakerName: Singing Group of Young Dudes
         Dialogue: "What kind a\u2019 song we playin\u2019?"
     LeadsTo:
-    - inspectorDescription: 'Prompt: Happy Triggers Event: PlayPracticeHappySong'
+    - inspectorDescription: 'Prompt: Happy Triggers Event: PlaySong-Happy-AcappellaGroupFreeEnd'
       prompt: Happy
-      nextID: PlayPracticeHappySong
+      nextID: PlaySong-Happy-AcappellaGroupFreeEnd
       isEvent: 1
-    - inspectorDescription: 'Prompt: Sad Triggers Event: PlayPracticeSadSong'
+    - inspectorDescription: 'Prompt: Sad Triggers Event: PlaySong-Sad-AcappellaGroupFreeEnd'
       prompt: Sad
-      nextID: PlayPracticeSadSong
+      nextID: PlaySong-Sad-AcappellaGroupFreeEnd
       isEvent: 1
-    - inspectorDescription: 'Prompt: Angry Triggers Event: PlayPracticeAngrySong'
+    - inspectorDescription: 'Prompt: Angry Triggers Event: PlaySong-Angry-AcappellaGroupFreeEnd'
       prompt: Angry
-      nextID: PlayPracticeAngrySong
+      nextID: PlaySong-Angry-AcappellaGroupFreeEnd
       isEvent: 1
-    - inspectorDescription: 'Prompt: Determined Triggers Event: PlayPracticeDeterminedSong'
+    - inspectorDescription: 'Prompt: Determined Triggers Event: PlaySong-Determined-AcappellaGroupFreeEnd'
       prompt: Determined
-      nextID: PlayPracticeDeterminedSong
+      nextID: PlaySong-Determined-AcappellaGroupFreeEnd
       isEvent: 1
     StateChanges: []
     StateRequirements: []

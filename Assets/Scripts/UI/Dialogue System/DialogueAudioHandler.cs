@@ -18,11 +18,13 @@ namespace UI.Dialogue_System
         private void OnEnable()
         {
             DialogueManager.OnTextSet += SetBlip;
+            SetBlip(DialogueManager.Instance.CurrentDialogue);
             DialogueManager.OnTextUpdated += PlayBlip;
         }
         
         private void SetBlip(DialogueHelperClass.DialogueData dialogue)
         {
+            if (dialogue == null) return;
             var characterName = dialogue.speakerName;
             pitch = characterPitches.GetValueOrDefault(characterName, defaultPitch);
         }

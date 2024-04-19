@@ -53,9 +53,9 @@ MonoBehaviour:
         speakerName: Singing Group of Young Dudes
         Dialogue: "Obviously! Let\u2019s do it."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlayDeterminedSongDayTwo'
+    - inspectorDescription: 'Prompt:  Triggers Event: PlaySong-Determined'
       prompt: 
-      nextID: PlayDeterminedSongDayTwo
+      nextID: PlaySong-Determined
       isEvent: 1
     StateChanges:
     - components:

@@ -9,9 +9,17 @@
                 {
                     "entryName": "saveDay",
                     "entryValue": 1
+                },
+                {
+                    "entryName": "questCompleted",
+                    "entryValue": 1
+                },
+                {
+                    "entryName": "bankTellerTalkedTo",
+                    "entryValue": 1
                 }
             ],
-            "sceneIndex": 2,
+            "sceneIndex": 1,
             "isEmpty": false,
             "day": 2
         },
