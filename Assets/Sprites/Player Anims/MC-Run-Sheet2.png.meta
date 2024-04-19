@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec0c3e4dc19c3c843be7eb9df783cf71
+guid: 9556ac4942797ae448fd9272bdbe2f2a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,169 +104,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC-Run-Sheet_0
+      name: MC-Run-Sheet2_0
       rect:
         serializedVersion: 2
-        x: 30
+        x: 0
         y: 0
-        width: 155
-        height: 350
+        width: 220
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6ad6d72795a43e49918c712d50b6985
-      internalID: 1843435856
+      spriteID: 51c9a6718d93bc1439389926d11d2bb8
+      internalID: 909311859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC-Run-Sheet_1
+      name: MC-Run-Sheet2_1
       rect:
         serializedVersion: 2
-        x: 230
+        x: 220
         y: 0
-        width: 190
-        height: 345
+        width: 220
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2406ae3e34f283743bc5f3bd9ec2873b
-      internalID: 120429847
+      spriteID: 09558f8615ee58b4c85932a2fdb67afd
+      internalID: 450314322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC-Run-Sheet_2
+      name: MC-Run-Sheet2_2
       rect:
         serializedVersion: 2
-        x: 450
+        x: 440
         y: 0
-        width: 160
-        height: 350
+        width: 220
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f365255768ae25742a7667c6e164149a
-      internalID: 366481897
+      spriteID: 9d3554ca79a79ce49b42742e9bef1c80
+      internalID: -604574194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC-Run-Sheet_3
+      name: MC-Run-Sheet2_3
       rect:
         serializedVersion: 2
-        x: 680
+        x: 660
         y: 0
-        width: 145
-        height: 355
+        width: 220
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd41a687769b606448affbda34fdb7e7
-      internalID: -1344744807
+      spriteID: 811039bce15a07c4eb2f28fb0433bcc1
+      internalID: 1045566544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC-Run-Sheet_4
+      name: MC-Run-Sheet2_4
       rect:
         serializedVersion: 2
-        x: 910
+        x: 880
         y: 0
-        width: 145
-        height: 350
+        width: 220
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9d0b1652d41a3c42b6877ee273a041e
-      internalID: 983784715
+      spriteID: d5f2b855cf344a843bce0f2d53cc4bdd
+      internalID: 931560127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC-Run-Sheet_5
+      name: MC-Run-Sheet2_5
       rect:
         serializedVersion: 2
-        x: 1110
+        x: 1100
         y: 0
-        width: 190
-        height: 345
+        width: 220
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15871877b1c46e64aa5513da22cc2ad9
-      internalID: 1596449846
+      spriteID: b2abf7a3b2b95b14ab4ba1c73ea4e40c
+      internalID: 1581039189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC-Run-Sheet_6
+      name: MC-Run-Sheet2_6
       rect:
         serializedVersion: 2
-        x: 1350
+        x: 1320
         y: 0
-        width: 150
-        height: 350
+        width: 220
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc894d9614cabf14490978df676d8208
-      internalID: 51291674
+      spriteID: 1577a78315c4594478d9d2f74f6c9351
+      internalID: 244963947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC-Run-Sheet_7
+      name: MC-Run-Sheet2_7
       rect:
         serializedVersion: 2
-        x: 1570
+        x: 1540
         y: 0
-        width: 150
-        height: 355
+        width: 220
+        height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da640387570c51247990a62708d14b17
-      internalID: -732003361
+      spriteID: b4a8abf1b6c7d624c9b990117ff33f49
+      internalID: 1026102879
       vertices: []
       indices: 
       edges: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MC-Run-Sheet_4: 983784715
-      MC-Run-Sheet_5: 1596449846
-      MC-Run-Sheet_0: 1843435856
-      MC-Run-Sheet_6: 51291674
-      MC-Run-Sheet_1: 120429847
-      MC-Run-Sheet_2: 366481897
-      MC-Run-Sheet_7: -732003361
-      MC-Run-Sheet_3: -1344744807
+      MC-Run-Sheet2_0: 909311859
+      MC-Run-Sheet2_4: 931560127
+      MC-Run-Sheet2_2: -604574194
+      MC-Run-Sheet2_7: 1026102879
+      MC-Run-Sheet2_3: 1045566544
+      MC-Run-Sheet2_5: 1581039189
+      MC-Run-Sheet2_6: 244963947
+      MC-Run-Sheet2_1: 450314322
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

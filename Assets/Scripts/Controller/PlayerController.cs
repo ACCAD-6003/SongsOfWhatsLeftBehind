@@ -55,12 +55,8 @@ public class PlayerController : MonoBehaviour
         if (rbody.velocity.y == 0)
         {
             anim.SetBool("isJumping", true);
-            // rbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            rbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
-    }
-    public void AddJumpForce()
-    {
-        rbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
     }
 
     public void Update()
