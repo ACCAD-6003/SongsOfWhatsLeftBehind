@@ -65,7 +65,7 @@ namespace UI.Dialogue_System
         private void DisplayChoices(List<string> choices)
         {
             choicesDisplay.Display(choices, OnChoiceSelected);
-            textBoxDisplay.SetDialogueText("", "");
+            textBoxDisplay.SetDialogueText("Choose", "");
         }
         
         private void OnChoiceSelected(int index)
