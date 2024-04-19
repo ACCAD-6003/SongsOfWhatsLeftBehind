@@ -35,6 +35,10 @@ MonoBehaviour:
       - GarretIsVisible
       inspectorDescription: GarretIsVisible
       State: GarretIsVisible
+    - components:
+      - ShowGarretInSong
+      inspectorDescription: ShowGarretInSong
+      State: ShowGarretInSong
     StateRequirements:
     - components:
       - day

@@ -32,11 +32,9 @@ MonoBehaviour:
       isEvent: 0
     StateChanges:
     - components:
-      - GarrettSeen
-      - =
-      - 1
-      inspectorDescription: GarrettSeen = 1
-      State: GarrettSeen
+      - ShowGarretInSong
+      inspectorDescription: ShowGarretInSong
+      State: ShowGarretInSong
     - components:
       - GarretIsVisible
       inspectorDescription: GarretIsVisible

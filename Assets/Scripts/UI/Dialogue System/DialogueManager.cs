@@ -47,6 +47,15 @@ namespace UI.Dialogue_System
         [Button] private void SetWorldState(string key, int value) => WorldState.SetState(key, _ => value);
         [Button] private void ClearWorldState() => WorldState.ClearAllStates();
 
+        [Button]
+        private void DisplayConversants() =>
+            Resources.LoadAll<SOConversationData>("Dialogue")
+                .SelectMany(x => x.Data.DialoguesSeries)
+                .SelectMany(y => y.dialogues)
+                .Select(z => z.speakerName)
+                .Distinct()
+                .ToList().ForEach(Debug.Log);
+
         protected override void Awake()
         {
             base.Awake();

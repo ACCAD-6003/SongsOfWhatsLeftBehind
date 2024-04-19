@@ -36,7 +36,11 @@ MonoBehaviour:
       prompt: Determined
       nextID: PlaySong-Determined-AcappellaGroupFreeEnd
       isEvent: 1
-    StateChanges: []
+    StateChanges:
+    - components:
+      - '!ShowGarretInSong'
+      inspectorDescription: '!ShowGarretInSong'
+      State: ShowGarretInSong
     StateRequirements: []
     Variation: 
     AudioCue: 

@@ -39,8 +39,21 @@ namespace Controller
 
         [SerializeField] PlayerInput playerInput;
 
-        public void SwapToUI() { playerInput.SwitchCurrentActionMap("UI"); OnSwapToUI?.Invoke(); inGameplay = false; }
-        public void SwapToGameplay() { playerInput.SwitchCurrentActionMap("Gameplay"); OnSwapToGameplay?.Invoke(); inGameplay = true; }
+        public void SwapToUI()
+        {
+            var isActive = playerInput.enabled;
+            if (!isActive) ActivateInput(default, default);
+            playerInput.SwitchCurrentActionMap("UI"); OnSwapToUI?.Invoke(); inGameplay = false;
+            if (!isActive) DeactivateInput(default);
+        }
+
+        public void SwapToGameplay()
+        {
+            var isActive = playerInput.enabled;
+            if (!isActive) ActivateInput(default, default);
+            playerInput.SwitchCurrentActionMap("Gameplay"); OnSwapToGameplay?.Invoke(); inGameplay = true;
+            if (!isActive) DeactivateInput(default);
+        }
         public string GetKey(string keyName)
         {
             try { return playerInput.actions.FindAction(keyName).GetBindingDisplayString(0); }

@@ -53,6 +53,7 @@ namespace QuestSystem
             if (questLines.All(x => x.TriggerEvent != WorldState.GetState("questType"))) return false;
             currentQuestID = WorldState.GetState("questType");
             currentQuestLine = questLines.Find(x => x.TriggerEvent == currentQuestID);
+            Debug.Log("Swapping to quest " + currentQuestID + " quest.");
             currentQuestLine.ResetQuestLine();
 
             return true;

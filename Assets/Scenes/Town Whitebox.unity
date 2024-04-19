@@ -3171,6 +3171,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  eventFormat: 2
 --- !u!114 &1017462070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4762,6 +4763,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2012182878960721947, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 2012182878960721947, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
+    - target: {fileID: 2211588015883816416, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 2211588015883816416, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
     - target: {fileID: 2640675736515261921, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4894,6 +4903,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5202932198745884585, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 5202932198745884585, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
     - target: {fileID: 5696350453149775381, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5010,10 +5023,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8994104343934960133, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8994104343934960133, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
     - target: {fileID: 9082992164545186048, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 9082992164545186048, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
+    - target: {fileID: 9197271211738109175, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 9197271211738109175, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c8b9e992168c234a94bf96f2296e0ff, type: 3}
 --- !u!1 &1534954429

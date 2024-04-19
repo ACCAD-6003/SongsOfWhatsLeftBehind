@@ -70,6 +70,10 @@ MonoBehaviour:
       - 1
       inspectorDescription: spencerTalkedTo += 1
       State: spencerTalkedTo
+    - components:
+      - '!ShowGarretInSong'
+      inspectorDescription: '!ShowGarretInSong'
+      State: ShowGarretInSong
     StateRequirements:
     - components:
       - spencerTalkedTo
