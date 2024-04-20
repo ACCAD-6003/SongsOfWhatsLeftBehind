@@ -15,7 +15,7 @@ MonoBehaviour:
   song: {fileID: 8300000, guid: d6a4613ee1df51d439423cdbc00f9af0, type: 3}
   maxScore: 40000
   mainSong: 0
-  violinLayer: {fileID: 0}
+  violinLayer: {fileID: 8300000, guid: 72a2c788fcc271344a5e390c18784a6e, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 10.615385
