@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AngrySongV2
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: e0402f4a6806f5f40bd54c3cb27b0f90, type: 3}
-  maxScore: 19000
+  maxScore: 20000
   mainSong: 0
   violinLayer: {fileID: 8300000, guid: a86808cd5042ca143861842d5e1577b9, type: 3}
   phrases:
@@ -108,14 +108,14 @@ MonoBehaviour:
     - offset: 0.7826087
       noteLength: 1.5652173
       style: 1
-      notes: 010000000400000008000000
+      notes: 0200000004000000
   - phraseName: Phrase
     startTime: 22.434782
     notes:
     - offset: 0.7826087
       noteLength: 1.3043478
       style: 1
-      notes: 0200000008000000
+      notes: 0400000008000000
     - offset: 2.347826
       noteLength: 0
       style: 0
@@ -142,94 +142,90 @@ MonoBehaviour:
   - phraseName: Phrase
     startTime: 26.608696
     notes:
-    - offset: 1.0434783
+    - offset: 1.173913
       noteLength: 0
       style: 0
       notes: 02000000
-    - offset: 1.3043479
+    - offset: 1.4347826
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 1.5652174
+    - offset: 1.6956521
       noteLength: 0
       style: 0
       notes: 08000000
-    - offset: 1.826087
+    - offset: 1.9565217
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 2.0869565
+    - offset: 2.2173913
       noteLength: 0
       style: 0
       notes: 02000000
-    - offset: 2.347826
+    - offset: 2.4782608
       noteLength: 0
       style: 0
       notes: 01000000
   - phraseName: Phrase
     startTime: 28.695652
     notes:
-    - offset: 0.5217391
+    - offset: 0.65217394
       noteLength: 0
       style: 0
       notes: 01000000
-    - offset: 0.7826087
+    - offset: 0.9130435
       noteLength: 1.826087
       style: 1
       notes: 0200000008000000
   - phraseName: Phrase
     startTime: 30.782608
     notes:
-    - offset: 1.0434783
+    - offset: 1.173913
       noteLength: 0
       style: 0
       notes: 02000000
-    - offset: 1.3043479
+    - offset: 1.4347826
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 1.5652174
+    - offset: 1.6956521
       noteLength: 0
       style: 0
       notes: 08000000
-    - offset: 1.826087
+    - offset: 1.9565217
       noteLength: 0
       style: 0
       notes: 04000000
-    - offset: 2.0869565
+    - offset: 2.2173913
       noteLength: 0
       style: 0
       notes: 02000000
-    - offset: 2.347826
+    - offset: 2.4782608
       noteLength: 0
       style: 0
       notes: 01000000
   - phraseName: Phrase
     startTime: 32.869564
     notes:
-    - offset: 0.5217391
+    - offset: 0.65217394
       noteLength: 0
       style: 0
       notes: 01000000
-    - offset: 0.7826087
-      noteLength: 1.5652173
+    - offset: 0.9130435
+      noteLength: 1.6956522
       style: 1
       notes: 0200000008000000
   - phraseName: Phrase
     startTime: 34.95652
     notes:
-    - offset: 0.5217391
-      noteLength: 0.78260875
+    - offset: 0.7826087
+      noteLength: 0.5217392
       style: 1
       notes: 0100000002000000
     - offset: 1.5652174
-      noteLength: 0.7826086
+      noteLength: 0.6521739
       style: 1
-      notes: 0100000002000000
-    - offset: 1.5652174
-      noteLength: 0.7826086
-      style: 1
-      notes: 04000000
+      notes: 0200000004000000
   - phraseName: Phrase
     startTime: 37.04348
     notes:
@@ -257,10 +253,6 @@ MonoBehaviour:
       noteLength: 0
       style: 0
       notes: 01000000
-    - offset: 2.347826
-      noteLength: 0
-      style: 0
-      notes: 02000000
   - phraseName: Phrase
     startTime: 39.130436
     notes:
@@ -291,10 +283,6 @@ MonoBehaviour:
       noteLength: 0.65217394
       style: 1
       notes: 0200000004000000
-    - offset: 1.4347826
-      noteLength: 0
-      style: 0
-      notes: 02000000
     - offset: 1.5652174
       noteLength: 0
       style: 0
@@ -302,38 +290,38 @@ MonoBehaviour:
     - offset: 1.6956521
       noteLength: 0
       style: 0
-      notes: 01000000
+      notes: 02000000
     - offset: 1.826087
-      noteLength: 0.65217376
+      noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 1.9565217
+      noteLength: 0.521739
       style: 1
       notes: 02000000
   - phraseName: Phrase
     startTime: 45.391304
     notes:
-    - offset: 2.4782608
+    - offset: 2.6086957
       noteLength: 0
       style: 0
       notes: 02000000
-    - offset: 2.6086957
+    - offset: 2.7391305
       noteLength: 0
       style: 0
       notes: 02000000
   - phraseName: Phrase
     startTime: 47.47826
     notes:
-    - offset: 0.65217394
+    - offset: 0.7826087
       noteLength: 0
       style: 0
       notes: 01000000
-    - offset: 0.9130435
+    - offset: 1.0434783
       noteLength: 0
       style: 0
       notes: 02000000
-    - offset: 1.173913
-      noteLength: 0
-      style: 0
-      notes: 04000000
-    - offset: 1.4347826
+    - offset: 1.3043479
       noteLength: 0
       style: 0
       notes: 04000000
@@ -342,7 +330,11 @@ MonoBehaviour:
       style: 0
       notes: 04000000
     - offset: 1.6956521
-      noteLength: 0.9130436
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 1.826087
+      noteLength: 0.78260875
       style: 1
       notes: 0400000008000000
   - phraseName: Phrase
@@ -440,21 +432,21 @@ MonoBehaviour:
     - offset: 0.7826087
       noteLength: 1.3043478
       style: 1
-      notes: 010000000200000004000000
+      notes: 0100000008000000
   - phraseName: Phrase
     startTime: 66.26087
     notes:
     - offset: 0.7826087
       noteLength: 1.695652
       style: 1
-      notes: 010000000400000008000000
+      notes: 0100000004000000
   - phraseName: Phrase
     startTime: 68.347824
     notes:
     - offset: 0.7304348
       noteLength: 1.2521739
       style: 1
-      notes: 0200000004000000
+      notes: 0200000008000000
     - offset: 2.347826
       noteLength: 0
       style: 0
@@ -462,20 +454,20 @@ MonoBehaviour:
   - phraseName: Phrase
     startTime: 70.434784
     notes:
-    - offset: 0.5217391
-      noteLength: 0
-      style: 0
-      notes: 02000000
     - offset: 0.65217394
       noteLength: 0
       style: 0
-      notes: 04000000
+      notes: 02000000
     - offset: 0.7826087
       noteLength: 0
       style: 0
-      notes: 02000000
+      notes: 04000000
     - offset: 0.9130435
-      noteLength: 1.5652173
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 1.0434783
+      noteLength: 1.4347825
       style: 1
       notes: 08000000
     - offset: 2.6086957
@@ -536,5 +528,5 @@ MonoBehaviour:
       style: 0
       notes: 01000000
   bpm: 115
-  speed: 0.65
-  dialogue: AngrySongEnd
+  speed: 1
+  dialogue: DayOne-AngrySongEnd
