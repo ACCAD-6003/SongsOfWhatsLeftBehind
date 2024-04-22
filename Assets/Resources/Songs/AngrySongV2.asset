@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eefdd0ca8314c78a9391514fcc1bf22, type: 3}
   m_Name: AngrySongV2
   m_EditorClassIdentifier: 
-  song: {fileID: 8300000, guid: e0402f4a6806f5f40bd54c3cb27b0f90, type: 3}
+  song: {fileID: 8300000, guid: c871c281d81514c49a3a773cb13704ca, type: 3}
   maxScore: 20000
   mainSong: 0
-  violinLayer: {fileID: 8300000, guid: a86808cd5042ca143861842d5e1577b9, type: 3}
+  violinLayer: {fileID: 8300000, guid: c5b2be78de7c2e9468fe98f5860db54d, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 3.652174
