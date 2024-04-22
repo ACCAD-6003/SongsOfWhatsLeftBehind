@@ -15,11 +15,142 @@ MonoBehaviour:
   song: {fileID: 8300000, guid: 1ba3dec7050ee5b409ba76eb0c895e71, type: 3}
   maxScore: 5000
   mainSong: 0
-  violinLayer: {fileID: 0}
+  violinLayer: {fileID: 8300000, guid: 3daed0acc23fc3e4281d28661df454f3, type: 3}
   phrases:
   - phraseName: Phrase
+    startTime: 2.25
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 01000000
+  - phraseName: Phrase
     startTime: 5.25
-    notes: []
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 02000000
+  - phraseName: Phrase
+    startTime: 8.25
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 04000000
+  - phraseName: Phrase
+    startTime: 11.25
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 08000000
+  - phraseName: Phrase
+    startTime: 14.25
+    notes:
+    - offset: 0.75
+      noteLength: 1.5
+      style: 1
+      notes: 0100000002000000
+  - phraseName: Phrase
+    startTime: 17.25
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 3
+      noteLength: 0
+      style: 0
+      notes: 08000000
+  - phraseName: Phrase
+    startTime: 20.25
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 01000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 3
+      noteLength: 0
+      style: 0
+      notes: 08000000
+  - phraseName: Phrase
+    startTime: 26.25
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 0800000004000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 3
+      noteLength: 0
+      style: 0
+      notes: 01000000
+  - phraseName: Phrase
+    startTime: 29.25
+    notes:
+    - offset: 0.75
+      noteLength: 0
+      style: 0
+      notes: 0800000004000000
+    - offset: 1.5
+      noteLength: 0
+      style: 0
+      notes: 04000000
+    - offset: 2.25
+      noteLength: 0
+      style: 0
+      notes: 02000000
+    - offset: 3
+      noteLength: 0
+      style: 0
+      notes: 01000000
+  - phraseName: Phrase
+    startTime: 32.25
+    notes:
+    - offset: 0.75
+      noteLength: 3
+      style: 1
+      notes: 0100000008000000
   bpm: 80
-  speed: 1
-  dialogue: ???????
+  speed: 2
+  dialogue: TutorialDay-SongEnd
