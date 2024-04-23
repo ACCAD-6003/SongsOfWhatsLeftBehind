@@ -78,5 +78,10 @@ namespace UI.Menus
             OpenTrigger -= OpenMenu;
             CloseTrigger -= CloseMenu;
         }
+
+        private void OnDestroy()
+        {
+            Controller.UIController.OnGoBack -= JumpToStartPage;
+        }
     }
 }

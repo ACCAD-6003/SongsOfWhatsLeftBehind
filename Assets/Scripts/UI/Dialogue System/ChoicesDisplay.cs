@@ -32,6 +32,7 @@ namespace UI.Dialogue_System
                 choices.Add(instance.GetComponent<RectTransform>());
                 choiceButtons.Add(uiButton);
             }
+            choiceButtons[0].ToggleSelected(true);
 
             this.OnClick = OnClick;
         }

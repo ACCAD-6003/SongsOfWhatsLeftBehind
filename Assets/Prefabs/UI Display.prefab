@@ -2090,7 +2090,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5498,6 +5498,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: {fileID: 5213484690495011649}
   sceneName: {fileID: 1185981278334463743}
+  skewText: 0
+  daySize: 80
+  sceneSize: 60
 --- !u!1 &2715349182937689529
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,6 +5999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7793508246519186706}
   - component: {fileID: 846673399750865736}
+  - component: {fileID: 6401778092828913236}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -6051,6 +6055,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!114 &6401778092828913236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3102829881512930913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f738202f9f6a94f44bb29b4f976f3949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3121274625909426136
 GameObject:
   m_ObjectHideFlags: 0
@@ -7111,6 +7127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: {fileID: 1321793930808885365}
   sceneName: {fileID: 5840885302860294659}
+  skewText: 0
+  daySize: 80
+  sceneSize: 60
 --- !u!1 &3953259542154082418
 GameObject:
   m_ObjectHideFlags: 0
@@ -7639,6 +7658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 733211318036084730}
   - component: {fileID: 1507637428141382200}
+  - component: {fileID: 716615859273993712}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -7694,6 +7714,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!114 &716615859273993712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154045716843167064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f738202f9f6a94f44bb29b4f976f3949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4166022270545553659
 GameObject:
   m_ObjectHideFlags: 0
@@ -7704,6 +7736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3276942821478403692}
   - component: {fileID: 7776012803322721220}
+  - component: {fileID: 2813478347562358090}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -7760,6 +7793,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!114 &2813478347562358090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4166022270545553659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f738202f9f6a94f44bb29b4f976f3949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4186093872726363803
 GameObject:
   m_ObjectHideFlags: 0
@@ -8285,6 +8330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7048397071922543596}
   - component: {fileID: 2523812940481588759}
+  - component: {fileID: 2021725687638734387}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -8339,6 +8385,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!114 &2021725687638734387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4648559962035331361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f738202f9f6a94f44bb29b4f976f3949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4775579095808411646
 GameObject:
   m_ObjectHideFlags: 0
@@ -9443,6 +9501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 561927819794357380}
   - component: {fileID: 5195978186671371716}
+  - component: {fileID: 5282769066598838573}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -9499,6 +9558,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!114 &5282769066598838573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259925737740722687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f738202f9f6a94f44bb29b4f976f3949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5284246789860244537
 GameObject:
   m_ObjectHideFlags: 0
@@ -10082,7 +10153,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10423,7 +10494,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -12134,6 +12205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: {fileID: 7039725437816899223}
   sceneName: {fileID: 680732517652219442}
+  skewText: 0
+  daySize: 80
+  sceneSize: 60
 --- !u!1 &6792948193564338767
 GameObject:
   m_ObjectHideFlags: 0
@@ -12258,6 +12332,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: {fileID: 1636221660425761408}
   sceneName: {fileID: 8537623964100118544}
+  skewText: 0
+  daySize: 80
+  sceneSize: 60
 --- !u!1 &6888383140913883455
 GameObject:
   m_ObjectHideFlags: 0
@@ -13021,6 +13098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4029046357919904933}
   - component: {fileID: 4794987395191874369}
+  - component: {fileID: 2429726740140377781}
   m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
@@ -13076,6 +13154,18 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!114 &2429726740140377781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7588308150765672095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f738202f9f6a94f44bb29b4f976f3949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7630415598484410056
 GameObject:
   m_ObjectHideFlags: 0
@@ -13779,6 +13869,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: {fileID: 5591156319990085669}
   sceneName: {fileID: 399422219578869649}
+  skewText: 0
+  daySize: 80
+  sceneSize: 60
 --- !u!1 &8100825213963929084
 GameObject:
   m_ObjectHideFlags: 0
@@ -14565,6 +14658,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: {fileID: 3402872219709880192}
   sceneName: {fileID: 2370478103548673362}
+  skewText: 0
+  daySize: 80
+  sceneSize: 60
 --- !u!1 &8441142607620619466
 GameObject:
   m_ObjectHideFlags: 0
