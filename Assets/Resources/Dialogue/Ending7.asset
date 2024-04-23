@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Ending7
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Ending
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: My acappella boys seem all pumped up and determined again.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: You think so??
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yeah. They\u2019ve looked real out of it since I left. Which makes
+          sense."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Yeah?
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Yeah.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: I started the group, so without me leading it, it will take them
+          a minute to find themselves.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Maybe I can help?
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: They would love it. They were so inspired by you.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "They deserve to keep doing what they love even after I\u2019m
+          gone."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Yeah\u2026doing what you love\u2026"
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Did you guys ever get made fun of for doing that?
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Doing what?
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: What you love-
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Oh, of course.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: And you kept going, despite everyone making fun of you.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yes\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Don\u2019t be scared of what you love and who you are, Kristen."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "The town is scared of me\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "They\u2019re scared of your spirit because you don\u2019t comply."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Whoa big words\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "You don\u2019t blend in. And they hate that. Because they\u2019re
+          too afraid not to blend in."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Huh\u2026."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "It\u2019s a gift to be so open about the things you love."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Sure thing\u2026."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Thank you.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "It\u2019s the least I could do."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "I\u2019m going to keep being weird, and I\u2019m gonna do it just
+          for you Garret."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "You\u2019re so kind."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Do it for you too.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Yes, sir.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "I\u2019m going to miss you."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Same.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "I\u2019ll see you again, right?"
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "I\u2019ll be here\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Heh\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Until next time, Ghost Lady.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Until next time\u2026Garret."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'
+      prompt: 
+      nextID: EndScreen
+      isEvent: 1
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - day
+      - ==
+      - 3
+      inspectorDescription: day == 3
+      State: day
+    - components:
+      - questCompleted
+      - ==
+      - 1
+      inspectorDescription: questCompleted == 1
+      State: questCompleted
+    - components:
+      - questType
+      - ==
+      - 8
+      inspectorDescription: questType == 8
+      State: questType
+    - components:
+      - friendship
+      - '>'
+      - 4
+      inspectorDescription: friendship > 4
+      State: friendship
+    Variation: 7
+    AudioCue: 

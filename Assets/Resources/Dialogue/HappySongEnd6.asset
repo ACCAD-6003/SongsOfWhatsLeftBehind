@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: HappySongEnd6
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: HappySongEnd
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        speakerName: Spencer
+        Dialogue: Yes! Yes! I love that!
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "HAHA! I\u2019m so glad."
+      - speaker: 1
+        speakerName: Spencer
+        Dialogue: Thank you for visiting me for Garret.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Yeah, no biggie, my guy.
+      - speaker: 1
+        speakerName: Spencer
+        Dialogue: "I feel like he\u2019s telling me that things will be okay. That
+          he\u2019s speaking through your song."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "I think that\u2019s epic."
+      - speaker: 1
+        speakerName: Spencer
+        Dialogue: "Yeah\u2026epic."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Just keep carrying on, okay?
+      - speaker: 1
+        speakerName: Spencer
+        Dialogue: "Yeah, hehe, I\u2019ll do my very best."
+    LeadsTo: []
+    StateChanges:
+    - components:
+      - questCompleted
+      - =
+      - 1
+      inspectorDescription: questCompleted = 1
+      State: questCompleted
+    StateRequirements:
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    - components:
+      - questCompleted
+      - ==
+      - 0
+      inspectorDescription: questCompleted == 0
+      State: questCompleted
+    Variation: 6
+    AudioCue: 

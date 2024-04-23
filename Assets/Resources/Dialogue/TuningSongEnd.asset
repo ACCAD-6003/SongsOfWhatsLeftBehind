@@ -22,9 +22,16 @@ MonoBehaviour:
       - speaker: 0
         speakerName: Kristen
         Dialogue: I think I know what piece I will play today.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "But\u2026should I warm up again just to make sure?"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Triggers Event: PlaySong-Tutorial'
-      prompt: 
+    - inspectorDescription: 'Prompt: Yes, warm up again Triggers Event: PlaySong-Tuning'
+      prompt: Yes, warm up again
+      nextID: PlaySong-Tuning
+      isEvent: 1
+    - inspectorDescription: "Prompt: Nope, let\u2019s play! Triggers Event: PlaySong-Tutorial"
+      prompt: "Nope, let\u2019s play!"
       nextID: PlaySong-Tutorial
       isEvent: 1
     StateChanges: []

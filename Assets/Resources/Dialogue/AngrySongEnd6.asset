@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: AngrySongEnd6
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: AngrySongEnd
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        speakerName: Doctor
+        Dialogue: Stop. I get it.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Do you, though?
+      - speaker: 1
+        speakerName: Doctor
+        Dialogue: "\u2026"
+      - speaker: 1
+        speakerName: Doctor
+        Dialogue: "I made a mistake. I didn\u2019t listen to Garret, and I\u2019m
+          paying for it."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "No, you\u2019re not paying for it. Garret is."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "You still have your job, you still have your loved ones, you still
+          have your life. The only thing you\u2019re paying with is this guilt you
+          feel."
+      - speaker: 1
+        speakerName: Doctor
+        Dialogue: Guilt is a horrible thing to live with.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Oh, boo hoo. Come to me when you\u2019ve experienced actual consequences."
+      - speaker: 1
+        speakerName: Doctor
+        Dialogue: "\u2026"
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "The only thing you\u2019re mourning is your self-image."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Congratulations on being able to carry on as normal. Lots of people
+          don\u2019t get that privilege."
+      - speaker: 1
+        speakerName: Doctor
+        Dialogue: Listen here-
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: I will listen when you finally do. Goodbye.
+    LeadsTo: []
+    StateChanges:
+    - components:
+      - questCompleted
+      - =
+      - 1
+      inspectorDescription: questCompleted = 1
+      State: questCompleted
+    StateRequirements:
+    - components:
+      - day
+      - ==
+      - 2
+      inspectorDescription: day == 2
+      State: day
+    - components:
+      - questCompleted
+      - ==
+      - 0
+      inspectorDescription: questCompleted == 0
+      State: questCompleted
+    Variation: 6
+    AudioCue: 

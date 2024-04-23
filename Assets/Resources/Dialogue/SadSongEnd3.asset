@@ -10,48 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: AngrySongEnd2
+  m_Name: SadSongEnd3
   m_EditorClassIdentifier: 
   conversationData:
-    ID: AngrySongEnd
+    ID: SadSongEnd
     DialoguesSeries:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: Ugh that was so good.
+        Dialogue: "I mean\u2026I could tell the song was sad underneath all the mistakes."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "And that\u2019s a good thing right?"
+        Dialogue: Yeah, whoopsies.
       - speaker: 1
         speakerName: Garret
-        Dialogue: Yeah, but it made me feel angry.
+        Dialogue: I still understood it.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "That\u2019s what it was meant to do."
+        Dialogue: "I\u2019m glad."
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: AngryDialogue'
+    - inspectorDescription: 'Prompt:  Leads to: SadDialogue'
       prompt: 
-      nextID: AngryDialogue
+      nextID: SadDialogue
       isEvent: 0
-    StateChanges:
-    - components:
-      - questType
-      - =
-      - 3
-      inspectorDescription: questType = 3
-      State: questType
+    StateChanges: []
     StateRequirements:
     - components:
       - day
       - ==
-      - 1
-      inspectorDescription: day == 1
+      - 2
+      inspectorDescription: day == 2
       State: day
     - components:
       - latestScore
-      - ==
-      - 3
-      inspectorDescription: latestScore == 3
+      - <=
+      - 1
+      inspectorDescription: latestScore <= 1
       State: latestScore
-    Variation: 2
+    - components:
+      - questCompleted
+      inspectorDescription: questCompleted
+      State: questCompleted
+    Variation: 3
     AudioCue: 
