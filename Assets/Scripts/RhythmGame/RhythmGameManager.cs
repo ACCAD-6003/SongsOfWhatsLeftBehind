@@ -255,7 +255,8 @@ namespace RhythmGame
             noteConnectors.ForEach(x => x.gameObject.SetActive(false));
             musicPlayer.StopSong();
             int finalScore = scoreDisplay.FinalScore;
-            if (songData.mainSong) WorldState.SetState("Friendship", x => x + finalScore);
+            if (WorldState.InState("ShowGarretInSong")) WorldState.SetState("Friendship", x => x + finalScore);
+            WorldState.SetState("latestScore", _ => finalScore);
             OnSongEnd?.Invoke();
             if (!string.IsNullOrEmpty(nextDialogue))
             {

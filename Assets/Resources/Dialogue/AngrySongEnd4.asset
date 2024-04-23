@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: AngrySongEnd2
+  m_Name: AngrySongEnd4
   m_EditorClassIdentifier: 
   conversationData:
     ID: AngrySongEnd
@@ -18,40 +18,31 @@ MonoBehaviour:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: Ugh that was so good.
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "And that\u2019s a good thing right?"
+        Dialogue: Dang, that was pretty good.
       - speaker: 1
         speakerName: Garret
-        Dialogue: Yeah, but it made me feel angry.
+        Dialogue: Definitely feeling a little more mad.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "That\u2019s what it was meant to do."
+        Dialogue: Yeah, same.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Leads to: AngryDialogue'
       prompt: 
       nextID: AngryDialogue
       isEvent: 0
-    StateChanges:
-    - components:
-      - questType
-      - =
-      - 3
-      inspectorDescription: questType = 3
-      State: questType
+    StateChanges: []
     StateRequirements:
     - components:
       - day
       - ==
-      - 1
-      inspectorDescription: day == 1
+      - 2
+      inspectorDescription: day == 2
       State: day
     - components:
       - latestScore
       - ==
-      - 3
-      inspectorDescription: latestScore == 3
+      - 2
+      inspectorDescription: latestScore == 2
       State: latestScore
-    Variation: 2
+    Variation: 4
     AudioCue: 

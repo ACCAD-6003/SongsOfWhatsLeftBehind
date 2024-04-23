@@ -10,48 +10,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
-  m_Name: AngrySongEnd2
+  m_Name: HappySongEnd4
   m_EditorClassIdentifier: 
   conversationData:
-    ID: AngrySongEnd
+    ID: HappySongEnd
     DialoguesSeries:
     - dialogues:
       - speaker: 1
         speakerName: Garret
-        Dialogue: Ugh that was so good.
-      - speaker: 0
-        speakerName: Kristen
-        Dialogue: "And that\u2019s a good thing right?"
+        Dialogue: Wow that was pretty good!
       - speaker: 1
         speakerName: Garret
-        Dialogue: Yeah, but it made me feel angry.
+        Dialogue: "You\u2019re not half bad."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "That\u2019s what it was meant to do."
+        Dialogue: "I\u2019ll take that as a compliment, thank you."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Hehe! Very happy piece.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "In fact\u2026"
     LeadsTo:
-    - inspectorDescription: 'Prompt:  Leads to: AngryDialogue'
+    - inspectorDescription: 'Prompt:  Leads to: HappyDialogue'
       prompt: 
-      nextID: AngryDialogue
+      nextID: HappyDialogue
       isEvent: 0
-    StateChanges:
-    - components:
-      - questType
-      - =
-      - 3
-      inspectorDescription: questType = 3
-      State: questType
+    StateChanges: []
     StateRequirements:
     - components:
       - day
       - ==
-      - 1
-      inspectorDescription: day == 1
+      - 2
+      inspectorDescription: day == 2
       State: day
     - components:
       - latestScore
       - ==
-      - 3
-      inspectorDescription: latestScore == 3
+      - 2
+      inspectorDescription: latestScore == 2
       State: latestScore
-    Variation: 2
+    - components:
+      - questCompleted
+      inspectorDescription: questCompleted
+      State: questCompleted
+    Variation: 4
     AudioCue: 

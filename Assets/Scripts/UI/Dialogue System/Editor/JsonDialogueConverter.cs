@@ -16,11 +16,21 @@ public static class JsonDialogueConverter
 
     public static void ConvertToJson(string text)
     {
+        List<string> dialogueAdded = new List<string>();
         foreach (string dialogueScene in text.Split(ID_MARKER, StringSplitOptions.RemoveEmptyEntries)) {
             Debug.Log(dialogueScene);
             SOConversationData conversation = ScriptableObject.CreateInstance<SOConversationData>();
             conversation.SetConversation(ConvertFromJson(ConvertToJson(ConvertToConversation(dialogueScene))));
 
+            if (dialogueAdded.Contains(conversation.Data.ID + conversation.Data.Variation))
+            {
+                Debug.LogWarning("Duplication detected " + conversation.Data.ID + conversation.Data.Variation);
+            }
+            else
+            {
+                dialogueAdded.Add(conversation.Data.ID + conversation.Data.Variation);
+            }
+            
             string filePath = $"Assets/Resources/Dialogue/{conversation.name}.asset";
             if (System.IO.File.Exists(filePath))
             {

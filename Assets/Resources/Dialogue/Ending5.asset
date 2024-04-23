@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4c86d78dfd55d47a03b069c598849c, type: 3}
+  m_Name: Ending5
+  m_EditorClassIdentifier: 
+  conversationData:
+    ID: Ending
+    DialoguesSeries:
+    - dialogues:
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Just don\u2019t bother with that doctor\u2026ever."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: In fact, just stay away from him.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "I take it that he didn\u2019t treat you well."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Definitely not.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "\u2026"
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Do you wanna talk about it?
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "It\u2019s not a good story."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "I can take it\u2013if you need an ear."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "I\u2019m just\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: So angry.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: A few years ago, I got really sick.
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Okay\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: It all just happened so fast. I went to the doctor, they sent me
+          home with some random medicine, and I tried to carry on.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: Things got better, but then they got even worse, and then they
+          got better again, and then they got worse.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "And finally, one day, when it got worse, it got the worst that
+          it possibly could, and now I\u2019m here."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Oh, Garret\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "He\u2026didn\u2019t believe me, and just gave me a bunch of stuff
+          that didn\u2019t work."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "I should\u2019ve trusted my gut and called him out on it."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "He just\u2026let me go."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "I\u2019m mad too. How dare he."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yeah\u2026"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "But I can\u2019t be mad forever. I have to move on."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Mmmm I\u2019d rather be mad forever."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "I don\u2019t want to spend eternity being pissy."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "You don\u2019t worry about it then. I\u2019ll be furious for you
+          here."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "I\u2019ll hold down the angry fort."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "I can\u2019t wait to see that."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "Garret, hold space to be mad, but eventually\u2026let it go."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "You don\u2019t deserve to let him hurt you after it\u2019s all
+          over."
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yeah\u2026thank you."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "You\u2019re welcome. I will see you again, right?"
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Yes. I\u2019m sure."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: Take care, Garebear.
+      - speaker: 1
+        speakerName: Garret
+        Dialogue: "Heh\u2026I\u2019ll try my best."
+      - speaker: 0
+        speakerName: Kristen
+        Dialogue: "You\u2019ll do great."
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: EndScreen'
+      prompt: 
+      nextID: EndScreen
+      isEvent: 1
+    StateChanges: []
+    StateRequirements:
+    - components:
+      - day
+      - ==
+      - 3
+      inspectorDescription: day == 3
+      State: day
+    - components:
+      - questCompleted
+      - ==
+      - 1
+      inspectorDescription: questCompleted == 1
+      State: questCompleted
+    - components:
+      - questType
+      - ==
+      - 7
+      inspectorDescription: questType == 7
+      State: questType
+    - components:
+      - friendship
+      - '>'
+      - 4
+      inspectorDescription: friendship > 4
+      State: friendship
+    Variation: 5
+    AudioCue: 
