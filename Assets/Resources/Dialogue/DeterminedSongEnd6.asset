@@ -42,6 +42,10 @@ MonoBehaviour:
       - 1
       inspectorDescription: questCompleted = 1
       State: questCompleted
+    - components:
+      - AcappellaAtEnd
+      inspectorDescription: AcappellaAtEnd
+      State: AcappellaAtEnd
     StateRequirements:
     - components:
       - day
