@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,12 +8,9 @@ namespace UI.Dialogue_System
     public class EndingsDisplayHandler : MonoBehaviour
     {
         private static int endingsUnlocked = 0;
-        [SerializeField] private List<Image> endingImages;
+        [SerializeField] private List<EndingNode> endingImages;
 
-        public static void UnlockEnding(int quest)
-        {
-            endingsUnlocked |= 1 << quest;
-        }
+        private bool currentlyInQuest;
 
         private void OnEnable()
         {
@@ -21,9 +19,20 @@ namespace UI.Dialogue_System
             SaveEndings();
         }
         
+        private void UnlockEnding(int endingIndex)
+        {
+            endingsUnlocked |= 1 << endingIndex;
+            DisplayEndingImages();
+        }
+
         private void LoadEndings()
         {
-            endingsUnlocked = endingsUnlocked | PlayerPrefs.GetInt("Endings", 0);
+            for (int i = 0; i < endingImages.Count; i++)
+            {
+                if (WorldState.InState(endingImages[i].unlock)) UnlockEnding(i);
+            }
+            
+            endingsUnlocked |= PlayerPrefs.GetInt("Endings", 0);
         }
         
         private void SaveEndings()
@@ -35,8 +44,15 @@ namespace UI.Dialogue_System
         {
             for (var i = 0; i < endingImages.Count; i++)
             {
-                endingImages[i].enabled = (endingsUnlocked & 1 << i) != 0;
+                endingImages[i].image.enabled = (endingsUnlocked & 1 << i) != 0;
             }
+        }
+        
+        [Serializable]
+        private class EndingNode
+        {
+            public string unlock;
+            public Image image;
         }
     }
 }
