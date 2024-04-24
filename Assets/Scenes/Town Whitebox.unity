@@ -515,6 +515,7 @@ GameObject:
   - component: {fileID: 133450421}
   - component: {fileID: 133450420}
   - component: {fileID: 133450422}
+  - component: {fileID: 133450423}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -532,7 +533,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 48f6c2a3184b6f846b92505cfc618257, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9b0f7672c5736c0478b3843b8c4a7efe, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -647,6 +648,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rhythmGameManager: {fileID: 428406188}
   fadeDuration: 0.5
+--- !u!114 &133450423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133450419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575679bc595d4773b2b5b4e19c71495a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 1
 --- !u!1 &140523869
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,7 +6533,7 @@ MonoBehaviour:
   m_ScrollWheelAction: {fileID: 6240969308177333660, guid: 3a38a074a4fc0f74384ec76bd7cdb82b, type: 3}
   m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: 3a38a074a4fc0f74384ec76bd7cdb82b, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: 3a38a074a4fc0f74384ec76bd7cdb82b, type: 3}
-  m_DeselectOnBackgroundClick: 1
+  m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
 --- !u!114 &1798014700

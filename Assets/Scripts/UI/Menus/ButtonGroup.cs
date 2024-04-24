@@ -24,5 +24,10 @@ namespace UI.Menus
             Debug.Assert(index >= 0 && index < buttons.Count, "Invalid button index");
             buttons[index].ToggleSelected(true);
         }
+
+        public void Refresh()
+        {
+            GetComponentInChildren<IButton>().ToggleSelected(true);
+        }
     }
 }

@@ -31,7 +31,11 @@ MonoBehaviour:
       - speaker: 0
         speakerName: Kristen
         Dialogue: "Yeah\u2026"
-    LeadsTo: []
+    LeadsTo:
+    - inspectorDescription: 'Prompt:  Triggers Event: OpenTutorialPopup'
+      prompt: 
+      nextID: OpenTutorialPopup
+      isEvent: 1
     StateChanges:
     - components:
       - day

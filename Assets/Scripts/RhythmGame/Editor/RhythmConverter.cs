@@ -58,7 +58,7 @@ namespace RhythmGame.Editor
             }
 
             AssertMarker(NextLine(), DialogueLabel);
-            song.dialogue = NextLine()[DialogueLabel.Length..];
+            // Legacy
             RemoveLine();
 
             float BpmCalculator(string x) => ConvertBPMToOffset(x, bpm);

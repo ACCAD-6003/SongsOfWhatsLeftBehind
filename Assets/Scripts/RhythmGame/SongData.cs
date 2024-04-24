@@ -8,13 +8,11 @@ namespace RhythmGame
     {
         public AudioClip song;
         public int maxScore;
-        public bool mainSong;
         public AudioClip violinLayer;
+        public AudioClip vocalLayer;
         public List<PhraseData> phrases = new();
         public float bpm;
         public string SongName => name;
-        public float SongLength => phrases[^1].startTime + phrases[^1].duration;
         public float speed = 1;
-        public string dialogue;
     }
 }

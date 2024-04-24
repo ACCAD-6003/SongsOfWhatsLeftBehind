@@ -17,7 +17,6 @@ namespace Controller
         public static Action OnSkipScene;
         public static Action OnOpenQuestLog;
 
-        public static Action<Vector2> OnNavigateMenu;
         public static Action OnSelect;
         public static Action OnGoBack;
         public static Action OnSkip;
@@ -26,9 +25,7 @@ namespace Controller
         public static Action OnOverrideSkip;
         public static Action OnCloseQuestLog;
         public static Action<NoteType, bool> OnNotePressed;
-
-        public static Action OnPlayerTwoInteract;
-
+        
         public static Action OnCancel;
 
         public Action OnSwapToUI;
@@ -57,6 +54,12 @@ namespace Controller
         public string GetKey(string keyName)
         {
             try { return playerInput.actions.FindAction(keyName).GetBindingDisplayString(0); }
+            catch { Debug.LogError("Can't find key " + keyName); return "?"; }
+        }
+        
+        public string GetLongKey(string keyName)
+        {
+            try { return playerInput.actions.FindAction(keyName).GetBindingDisplayString(0, InputBinding.DisplayStringOptions.DontIncludeInteractions); }
             catch { Debug.LogError("Can't find key " + keyName); return "?"; }
         }
 
@@ -140,12 +143,6 @@ namespace Controller
             {
                 OnResume?.Invoke();
             }
-        }
-
-        public void NavigateMenu(InputAction.CallbackContext context)
-        {
-            if(context.started)
-                OnNavigateMenu?.Invoke(context.ReadValue<Vector2>());
         }
 
         public void GoBack(InputAction.CallbackContext context)
