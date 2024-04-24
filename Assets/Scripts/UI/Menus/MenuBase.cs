@@ -18,6 +18,7 @@ namespace UI.Menus
         {
             if (display == null) display = transform.GetChild(0).gameObject;
             if (pages.Count == 0) pages.Add(new Page(display));
+            pages.ForEach(x => x.ToggleDisplay(false));
         }
         
         private void JumpToStartPage() => JumpToPage(0);
@@ -76,6 +77,11 @@ namespace UI.Menus
         {
             OpenTrigger -= OpenMenu;
             CloseTrigger -= CloseMenu;
+        }
+
+        private void OnDestroy()
+        {
+            Controller.UIController.OnGoBack -= JumpToStartPage;
         }
     }
 }

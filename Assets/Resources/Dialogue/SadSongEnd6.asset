@@ -47,6 +47,10 @@ MonoBehaviour:
       - 1
       inspectorDescription: questCompleted = 1
       State: questCompleted
+    - components:
+      - SisterAtEnd
+      inspectorDescription: SisterAtEnd
+      State: SisterAtEnd
     StateRequirements:
     - components:
       - day
