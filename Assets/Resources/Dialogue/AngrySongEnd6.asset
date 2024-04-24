@@ -67,6 +67,10 @@ MonoBehaviour:
       - 1
       inspectorDescription: questCompleted = 1
       State: questCompleted
+    - components:
+      - DoctorAtEnd
+      inspectorDescription: DoctorAtEnd
+      State: DoctorAtEnd
     StateRequirements:
     - components:
       - day

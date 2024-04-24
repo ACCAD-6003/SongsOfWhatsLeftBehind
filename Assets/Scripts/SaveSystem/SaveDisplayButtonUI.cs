@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 
@@ -10,14 +11,27 @@ namespace SaveSystem
 
         [SerializeField] private TMP_Text day;
         [SerializeField] private TMP_Text sceneName;
+        [SerializeField] private bool skewText;
+        [SerializeField, ShowIf("skewText")] private float daySize = 80f;
+        [SerializeField, ShowIf("skewText")] private float sceneSize = 60f;
 
         public void Display(Save save)
         {
             if (day == null)
             {
-                sceneName.text = save.isEmpty
-                    ? "Empty"
-                    : $"Day {ConvertNumToText(save.day)}\n{sceneNames[save.sceneIndex]}";
+                if (skewText)
+                {
+                    sceneName.text = save.isEmpty
+                        ? "Empty"
+                        : $"<size={daySize}>Day {ConvertNumToText(save.day)}</size>\n" +
+                          $"<size={sceneSize}>{sceneNames[save.sceneIndex]}</size>";
+                }
+                else
+                {
+                    sceneName.text = save.isEmpty
+                        ? "Empty"
+                        : $"Day {ConvertNumToText(save.day)}\n{sceneNames[save.sceneIndex]}";
+                }
             }
             else
             {

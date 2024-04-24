@@ -72,6 +72,10 @@ MonoBehaviour:
       - 1
       inspectorDescription: questCompleted = 1
       State: questCompleted
+    - components:
+      - BankerAtEnd
+      inspectorDescription: BankerAtEnd
+      State: BankerAtEnd
     StateRequirements:
     - components:
       - sisterTalkedTo
