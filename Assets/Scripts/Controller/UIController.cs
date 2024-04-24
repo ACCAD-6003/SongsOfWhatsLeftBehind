@@ -36,6 +36,12 @@ namespace Controller
 
         [SerializeField] PlayerInput playerInput;
 
+        private void OnEnable()
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         public void SwapToUI()
         {
             var isActive = playerInput.enabled;

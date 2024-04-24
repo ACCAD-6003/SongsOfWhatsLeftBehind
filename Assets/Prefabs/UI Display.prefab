@@ -8602,6 +8602,7 @@ GameObject:
   - component: {fileID: 673209370099819136}
   - component: {fileID: 950592224274152110}
   - component: {fileID: 2012182878960721947}
+  - component: {fileID: 8553888208636858190}
   m_Layer: 5
   m_Name: Audio SFX
   m_TagString: Untagged
@@ -8898,6 +8899,19 @@ MonoBehaviour:
   blipSound: {fileID: 8300000, guid: be31fcf20606a0c47bd09344e36da822, type: 3}
   variation: 0.1
   frequency: 4
+--- !u!114 &8553888208636858190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4851110341769112846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575679bc595d4773b2b5b4e19c71495a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 0
 --- !u!1 &4896932059057217353
 GameObject:
   m_ObjectHideFlags: 0
@@ -15527,7 +15541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5948ccc153fc23443ac8ff5a02fff589, type: 2}
   m_sharedMaterial: {fileID: -4823789721502391906, guid: 5948ccc153fc23443ac8ff5a02fff589, type: 2}
