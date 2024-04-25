@@ -68,6 +68,10 @@ MonoBehaviour:
       - '!ShowGarretInSong'
       inspectorDescription: '!ShowGarretInSong'
       State: ShowGarretInSong
+    - components:
+      - PlayAlternative
+      inspectorDescription: PlayAlternative
+      State: PlayAlternative
     StateRequirements:
     - components:
       - acappellaTalkedTo

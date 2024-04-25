@@ -40,7 +40,7 @@ MonoBehaviour:
         Dialogue: Wh-
       - speaker: 1
         speakerName: Doctor
-        Dialogue: If you need something, speak to my nurse.
+        Dialogue: If you need something, speak to the receptionist.
       - speaker: 0
         speakerName: Kristen
         Dialogue: Dude-

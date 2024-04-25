@@ -54,6 +54,7 @@ namespace RhythmGame
 
         private void CheckForNoteInZone(NoteType type)
         {
+            if (!ActiveNotes.Any()) return;
             var closestNote = ActiveNotes
                 .Where(x => WithinThreshold(x.Position))
                 .OrderBy(x => Mathf.Abs(x.Position - ThresholdCenter))

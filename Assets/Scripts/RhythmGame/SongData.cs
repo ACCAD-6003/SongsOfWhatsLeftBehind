@@ -10,6 +10,7 @@ namespace RhythmGame
         public int maxScore;
         public AudioClip violinLayer;
         public AudioClip vocalLayer;
+        public AudioClip alternativeSong;
         public List<PhraseData> phrases = new();
         public float bpm;
         public string SongName => name;

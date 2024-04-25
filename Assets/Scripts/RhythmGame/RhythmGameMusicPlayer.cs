@@ -19,6 +19,7 @@ namespace RhythmGame
 
         private Coroutine transition;
         private static bool InGarretSong => WorldState.InState("ShowGarretInSong");
+        private static bool PlayAlternative => WorldState.InState("PlayAlternative");
 
         private void Awake()
         {
@@ -33,6 +34,8 @@ namespace RhythmGame
                 SetupAudio(violinTrack, songData.violinLayer, startTime, AudioPreferences.ViolinVolume);
             if (InGarretSong && songData.vocalLayer != null) 
                 SetupAudio(vocalTrack, songData.vocalLayer, startTime, AudioPreferences.ViolinVolume);
+            if (PlayAlternative && songData.alternativeSong != null)
+                SetupAudio(vocalTrack, songData.alternativeSong, startTime, AudioPreferences.MusicVolume);
         }
 
         private void SetupAudio(AudioSource source, AudioClip clip, float startTime, float volume)

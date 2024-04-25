@@ -120,7 +120,7 @@ MonoBehaviour:
         Dialogue: "Yes. I\u2019m sure."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: Take care, Garebear.
+        Dialogue: Take care, Garrebear.
       - speaker: 1
         speakerName: Garret
         Dialogue: "Heh\u2026I\u2019ll try my best."

@@ -46,6 +46,10 @@ MonoBehaviour:
       - AcappellaAtEnd
       inspectorDescription: AcappellaAtEnd
       State: AcappellaAtEnd
+    - components:
+      - '!PlayAlternative'
+      inspectorDescription: '!PlayAlternative'
+      State: PlayAlternative
     StateRequirements:
     - components:
       - day

@@ -18,7 +18,7 @@ MonoBehaviour:
     - dialogues:
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "Where is he\u2026"
+        Dialogue: "Alrighty Garrebear\u2026"
     LeadsTo: []
     StateChanges:
     - components:

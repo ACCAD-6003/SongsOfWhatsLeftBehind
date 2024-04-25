@@ -160,7 +160,16 @@ namespace RhythmGame
                     ? extendedNoteXOffset : noMoveExtended;
 
                 if (hasBeenHit && style == NoteStyle.Hold && Position < targetZone) SetPosition(noteSprite, targetZone);
-                if (!thresholdPassed) thresholdPassed = ThresholdPassed();
+                if (!thresholdPassed)
+                {
+                    thresholdPassed = ThresholdPassed();
+                    if (thresholdPassed && style == NoteStyle.Hold && loseScore == null)
+                    {
+                        extendedNoteSprite.gameObject.SetActive(false);
+                        connector.gameObject.SetActive(false);
+                    }
+                }
+                
                 
                 UpdatePosition(speed, spriteXOffset, noteXOffset);
                 yield return null;
