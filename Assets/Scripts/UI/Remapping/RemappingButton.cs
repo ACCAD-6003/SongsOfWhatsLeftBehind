@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Controller;
 using TMPro;
 using UnityEngine;
@@ -17,8 +18,19 @@ namespace UI.Remapping
         {
             base.Awake();
             uiController = UIController.Instance;
-            currentKeyText.text = uiController.GetKey(keyName);
             keyNameText.text = keyName;
+        }
+
+        private void OnEnable()
+        {
+            ReplaceKey();
+        }
+
+        private void ReplaceKey()
+        {
+            var keyText = uiController.GetKey(keyName);
+            keyText = keyText.Replace("D-Pad/", "");
+            currentKeyText.text = keyText;
         }
 
         public override void Use()
@@ -30,7 +42,7 @@ namespace UI.Remapping
         {
             currentKeyText.text = "Press a key";
             yield return uiController.AllowUserToSetKey(keyName);
-            currentKeyText.text = uiController.GetKey(keyName);
+            ReplaceKey();
         }
     }
 }

@@ -20,7 +20,7 @@ MonoBehaviour:
   - tutorialText: "Soon, she\u2019ll have even more songs to play\u2013songs of what
       was left behind. But, more on that later. For now, it is important you know
       how to play"
-    image: {fileID: 21300000, guid: 30ed41f11251bd642847ceb50a166408, type: 3}
+    image: {fileID: 21300000, guid: 0a028db90e1e9944e8d3fbaed5a1431c, type: 3}
     animation: {fileID: 0}
   - tutorialText: To move Kristen, use the [Button:Movement]. To interact with things
       in her environment, use [Button:Interact].

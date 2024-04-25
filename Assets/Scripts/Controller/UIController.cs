@@ -62,7 +62,7 @@ namespace Controller
         {
             try
             {
-                var controller = Input.GetJoystickNames().Length > 0 ? "Gamepad" : "Keyboard";
+                var controller = Gamepad.current != null ? "Gamepad" : "Keyboard";
                 return playerInput.actions.FindAction(keyName).bindings
                     .Where(x => x.path.Contains(controller))
                     .Select(x => x.ToDisplayString(displayOption))
@@ -80,6 +80,7 @@ namespace Controller
         {
             playerInput.enabled = false;
             var operation = playerInput.actions.FindAction(keyName).PerformInteractiveRebinding();
+            
             Debug.Log("Press a key");
             operation.Start();
             yield return new WaitUntil(() => operation.completed);
