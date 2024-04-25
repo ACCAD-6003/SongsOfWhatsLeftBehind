@@ -15,24 +15,31 @@ MonoBehaviour:
   popups:
   - tutorialText: Every day, Kristen waits for the nighttime so that she can come
       to the graveyard and play songs on her violin.
-    image: {fileID: 21300000, guid: 363aef3c3306c3e4b9077ef5e65a9666, type: 3}
+    image: {fileID: 21300000, guid: 30ed41f11251bd642847ceb50a166408, type: 3}
+    animation: {fileID: 0}
   - tutorialText: "Soon, she\u2019ll have even more songs to play\u2013songs of what
       was left behind. But, more on that later. For now, it is important you know
       how to play"
-    image: {fileID: 21300000, guid: 85aa6db92285a084893d46634a3389bb, type: 3}
-  - tutorialText: To move Kristen, use WASD or the arrow keys. To interact with things
+    image: {fileID: 21300000, guid: 0a028db90e1e9944e8d3fbaed5a1431c, type: 3}
+    animation: {fileID: 0}
+  - tutorialText: To move Kristen, use the [Button:Movement]. To interact with things
       in her environment, use [Button:Interact].
     image: {fileID: 21300000, guid: 350dddc86f1cdb745ae8416426eccf68, type: 3}
+    animation: {fileID: 9100000, guid: 5e934ddc9df6ad5439740a6026a1d7a0, type: 2}
   - tutorialText: For Kristen to play her violin, use [Button:Key One], [Button:Key
       Two], [Button:Key Three], and [Button:Key Four]. Notes correspond to keys left
       to right, with [Button:Key One] playing the notes on the far left.
-    image: {fileID: 21300000, guid: f6c110ba9fddf664f8b7a80591e4ae78, type: 3}
+    image: {fileID: 21300000, guid: 673b583804f7a3d4f94be44a1957288c, type: 3}
+    animation: {fileID: 0}
   - tutorialText: To change the keys that correspond to playing the violin, as well
       as access other settings, open the pause menu with [Button:Pause].
-    image: {fileID: 21300000, guid: 998d7856a44a5eb49aeafaf7de1d0173, type: 3}
+    image: {fileID: 21300000, guid: d30a181ae70c86d42bbb8b40bc173d6e, type: 3}
+    animation: {fileID: 0}
   - tutorialText: 'When Kristen has tasks she needs to complete, you can review them
       by pressing [Button:OpenQuestLog] to see your current quest. '
-    image: {fileID: 21300000, guid: 00d2034390b8ed2448f714ec6c6844e4, type: 3}
+    image: {fileID: 21300000, guid: 5d7eb20586de2da47b2e31ce2fb3ce5c, type: 3}
+    animation: {fileID: 0}
   - tutorialText: "Follow your heart as you make your choices, good luck on those
       rhythm sections, and enjoy. \n<3 Songs of What\u2019s Left Behind Dev Team\r"
     image: {fileID: 21300000, guid: f59fc8a9f4c328e4e9db4092f2caf8d2, type: 3}
+    animation: {fileID: 0}

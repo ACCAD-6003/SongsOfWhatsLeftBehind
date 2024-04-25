@@ -22,6 +22,7 @@ namespace RhythmGame
         [SerializeField] private Sprite closeButton;
         [SerializeField] private Sprite nextButton;
         [SerializeField] private ButtonGroup buttonGroup;
+        [SerializeField] private Animator animator;
 
         int currentIndex = 0;
 
@@ -55,12 +56,16 @@ namespace RhythmGame
             {
                 var button = UIController.Instance.GetLongKey(keyName);
                 var stringToMatch = $"[Button:{keyName}]";
-                var replacement = $"{button}";
-                text = text.Replace(stringToMatch, replacement);
+                if (button == "W") button = "Arrow Keys or WASD"; 
+                
+                text = text.Replace(stringToMatch, button);
             }
             tutorialText.text = text;
+            animator.enabled = popup.animation != null;
+            animator.runtimeAnimatorController = popup.animation;
             tutorialImage.sprite = popup.image;
             currentIndex = index;
+            
             UpdateButtons();
         }
         
@@ -102,5 +107,6 @@ namespace RhythmGame
     {
         [TextArea(3, 5)] public string tutorialText;
         public Sprite image;
+        public RuntimeAnimatorController animation;
     }
 }

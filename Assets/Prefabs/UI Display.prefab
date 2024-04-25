@@ -13028,6 +13028,7 @@ GameObject:
   - component: {fileID: 2993875544006913228}
   - component: {fileID: 3776325239113365179}
   - component: {fileID: 6627291583780056490}
+  - component: {fileID: 4789819564732045627}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -13093,6 +13094,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &4789819564732045627
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343087281479112581}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e934ddc9df6ad5439740a6026a1d7a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7450177028592047687
 GameObject:
   m_ObjectHideFlags: 0
@@ -15722,6 +15743,7 @@ GameObject:
   - component: {fileID: 3228238770896057049}
   - component: {fileID: 5840326403773144997}
   - component: {fileID: 3364518837821439543}
+  - component: {fileID: 2703980441101481836}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -15843,6 +15865,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2703980441101481836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8848462882737985048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b8e86f03bd40788a328926267184e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerSprite: {fileID: 21300000, guid: caea7e5c6d429474a80f0a00d2ff6094, type: 3}
+  keyboardSprite: {fileID: 21300000, guid: cd378c2fe352f7e4eb6101dff4005770, type: 3}
 --- !u!1 &8902513088781529500
 GameObject:
   m_ObjectHideFlags: 0
@@ -16244,6 +16280,7 @@ MonoBehaviour:
   closeButton: {fileID: 21300000, guid: c8ab53fe73cf4054dacb6c222034d010, type: 3}
   nextButton: {fileID: 21300000, guid: 61b1f65d09c871e4a952616ff569d80f, type: 3}
   buttonGroup: {fileID: 498558954649293964}
+  animator: {fileID: 4789819564732045627}
 --- !u!114 &3859764118309174102
 MonoBehaviour:
   m_ObjectHideFlags: 0

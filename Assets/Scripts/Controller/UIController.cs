@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using RhythmGame;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -57,22 +58,29 @@ namespace Controller
             playerInput.SwitchCurrentActionMap("Gameplay"); OnSwapToGameplay?.Invoke(); inGameplay = true;
             if (!isActive) DeactivateInput(default);
         }
-        public string GetKey(string keyName)
+        public string GetKey(string keyName, InputBinding.DisplayStringOptions displayOption = 0)
         {
-            try { return playerInput.actions.FindAction(keyName).GetBindingDisplayString(0); }
+            try
+            {
+                var controller = Gamepad.current != null ? "Gamepad" : "Keyboard";
+                return playerInput.actions.FindAction(keyName).bindings
+                    .Where(x => x.path.Contains(controller))
+                    .Select(x => x.ToDisplayString(displayOption))
+                    .First();
+            }
             catch { Debug.LogError("Can't find key " + keyName); return "?"; }
         }
         
         public string GetLongKey(string keyName)
         {
-            try { return playerInput.actions.FindAction(keyName).GetBindingDisplayString(0, InputBinding.DisplayStringOptions.DontIncludeInteractions); }
-            catch { Debug.LogError("Can't find key " + keyName); return "?"; }
+            return GetKey(keyName, InputBinding.DisplayStringOptions.DontUseShortDisplayNames);
         }
 
         public IEnumerator AllowUserToSetKey(string keyName)
         {
             playerInput.enabled = false;
             var operation = playerInput.actions.FindAction(keyName).PerformInteractiveRebinding();
+            
             Debug.Log("Press a key");
             operation.Start();
             yield return new WaitUntil(() => operation.completed);
