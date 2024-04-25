@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Scales
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: 1ba3dec7050ee5b409ba76eb0c895e71, type: 3}
-  maxScore: 5000
-  mainSong: 0
+  maxScore: 4000
   violinLayer: {fileID: 8300000, guid: 3daed0acc23fc3e4281d28661df454f3, type: 3}
+  vocalLayer: {fileID: 0}
   phrases:
   - phraseName: Phrase
     startTime: 2.25
@@ -153,4 +153,3 @@ MonoBehaviour:
       notes: 0100000008000000
   bpm: 80
   speed: 2
-  dialogue: TutorialDay-SongEnd

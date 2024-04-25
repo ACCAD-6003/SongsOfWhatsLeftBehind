@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UI;
+using UI.Dialogue_System;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -12,9 +14,11 @@ namespace RhythmGame
         [SerializeField] private AudioClip errorSound;
         [SerializeField] private AudioSource audioSource;
         [SerializeField] private AudioSource violinTrack;
+        [SerializeField] private AudioSource vocalTrack;
         [SerializeField] private RhythmGameManager rhythmGameManager;
 
         private Coroutine transition;
+        private static bool InGarretSong => WorldState.InState("ShowGarretInSong");
 
         private void Awake()
         {
@@ -24,26 +28,25 @@ namespace RhythmGame
         
         public void PlaySong(SongData songData, float startTime = 0)
         {
-            audioSource.clip = songData.song;
-            audioSource.time = startTime;
-            audioSource.volume = PlayerPreferences.MusicVolume;
-            violinTrack.clip = songData.violinLayer;
-            violinTrack.time = startTime;
-            violinTrack.volume = PlayerPreferences.ViolinVolume;
-            StartCoroutine(PlayAfterDelay());
+            SetupAudio(audioSource, songData.song, startTime, AudioPreferences.MusicVolume);
+            if (songData.violinLayer != null) 
+                SetupAudio(violinTrack, songData.violinLayer, startTime, AudioPreferences.ViolinVolume);
+            if (InGarretSong && songData.vocalLayer != null) 
+                SetupAudio(vocalTrack, songData.vocalLayer, startTime, AudioPreferences.ViolinVolume);
         }
-        
-        private IEnumerator PlayAfterDelay()
+
+        private void SetupAudio(AudioSource source, AudioClip clip, float startTime, float volume)
         {
-            yield return new WaitForSeconds(PlayerPreferences.VisualDelay);
-            audioSource.Play();
-            if (violinTrack.clip != null) violinTrack.Play();
+            source.clip = clip;
+            source.time = startTime;
+            source.volume = volume;
+            source.Play();
         }
 
         private void IncreaseVolume()
         {
             if (transition != null) StopCoroutine(transition);
-            transition = StartCoroutine(TransitionVolume(PlayerPreferences.ViolinVolume));
+            transition = StartCoroutine(TransitionVolume(AudioPreferences.ViolinVolume));
         }
 
         private void DecreaseVolume()
@@ -59,9 +62,11 @@ namespace RhythmGame
             while (Time.time - startTime < volumeTransitionDuration)
             {
                 violinTrack.volume = Mathf.Lerp(startVolume, targetVolume, (Time.time - startTime) / volumeTransitionDuration);
+                vocalTrack.volume = violinTrack.volume;
                 yield return null;
             }
             violinTrack.volume = targetVolume;
+            vocalTrack.volume = targetVolume;
         }
         
         public void PlayErrorSound()
@@ -73,6 +78,7 @@ namespace RhythmGame
         {
             audioSource.Stop();
             violinTrack.Stop();
+            vocalTrack.Stop();
         }
     }
 }

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DeterminedSong
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: d6a4613ee1df51d439423cdbc00f9af0, type: 3}
-  maxScore: 40000
-  mainSong: 0
+  maxScore: 24000
   violinLayer: {fileID: 8300000, guid: b7318b693e44e1d44aef6a49c8f7695b, type: 3}
+  vocalLayer: {fileID: 8300000, guid: ee9dff48a2b5f464db031115e2ced6d6, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 10.615385
@@ -711,4 +711,3 @@ MonoBehaviour:
       notes: 01000000020000000400000008000000
   bpm: 130
   speed: 1.5
-  dialogue: DayOne-DeterminedSongEnd

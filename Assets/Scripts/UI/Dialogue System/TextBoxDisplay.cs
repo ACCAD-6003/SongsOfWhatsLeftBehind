@@ -20,6 +20,8 @@ namespace UI.Dialogue_System
 
         public void SetDialogueText(string speakerName, string dialogue)
         {
+            if (speakerName == "Singing Group of Young Dudes")
+                speakerName = "Singing Group";
             nameTextField.text = speakerName;
             nameField.SetActive(nameTextField.text != "");
             dialogueTextField.maxVisibleCharacters = 0;

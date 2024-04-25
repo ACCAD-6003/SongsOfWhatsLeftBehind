@@ -59,7 +59,7 @@ namespace QuestSystem
             return true;
         }
 
-        private void OpenUI()
+        public void OpenUI()
         {
             if (currentQuestLine == null)
             {

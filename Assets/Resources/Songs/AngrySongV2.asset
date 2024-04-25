@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: c871c281d81514c49a3a773cb13704ca, type: 3}
   maxScore: 20000
-  mainSong: 0
   violinLayer: {fileID: 8300000, guid: c5b2be78de7c2e9468fe98f5860db54d, type: 3}
+  vocalLayer: {fileID: 8300000, guid: a382bf82c217cf8448df6e34e4cd5b3a, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 3.652174
@@ -529,4 +529,3 @@ MonoBehaviour:
       notes: 01000000
   bpm: 115
   speed: 1
-  dialogue: DayOne-AngrySongEnd

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   song: {fileID: 8300000, guid: f1d4ba554fa36c14292bb131c26c2951, type: 3}
   maxScore: 20000
-  mainSong: 0
   violinLayer: {fileID: 8300000, guid: 82eb8ef0943aad9488548b31c21d7451, type: 3}
+  vocalLayer: {fileID: 8300000, guid: 9b3a2c2431e08ac459ab17e5efe467c0, type: 3}
   phrases:
   - phraseName: Phrase
     startTime: 5.25
@@ -437,4 +437,3 @@ MonoBehaviour:
       notes: 01000000020000000400000008000000
   bpm: 80
   speed: 1
-  dialogue: SadSongEnd

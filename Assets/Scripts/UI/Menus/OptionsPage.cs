@@ -11,27 +11,27 @@ namespace UI
         
         private void Start()
         {
-            globalVolumeSlider.value = PlayerPreferences.GlobalVolume;
+            globalVolumeSlider.value = AudioPreferences.GlobalVolume;
             globalVolumeSlider.onValueChanged.AddListener(SetGlobalVolume);
-            musicVolumeSlider.value = PlayerPreferences.MusicVolume;
+            musicVolumeSlider.value = AudioPreferences.MusicVolume;
             musicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
-            violinVolumeSlider.value = PlayerPreferences.ViolinVolume;
+            violinVolumeSlider.value = AudioPreferences.ViolinVolume;
             violinVolumeSlider.onValueChanged.AddListener(SetViolinVolume);
         }
         
         private void SetGlobalVolume(float value)
         {
-            PlayerPreferences.GlobalVolume = value;
+            AudioPreferences.GlobalVolume = value;
         }
         
         private void SetMusicVolume(float value)
         {
-            PlayerPreferences.MusicVolume = value;
+            AudioPreferences.MusicVolume = value;
         }
 
         private void SetViolinVolume(float value)
         {
-            PlayerPreferences.ViolinVolume = value;
+            AudioPreferences.ViolinVolume = value;
         }
         
         private void OnDestroy()
