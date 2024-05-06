@@ -32,7 +32,7 @@ MonoBehaviour:
           some extra tip money."
       - speaker: 1
         speakerName: Bank Teller
-        Dialogue: "Well, *chuckle* you can\u2019t pay in ghost money, so\u2026"
+        Dialogue: "Well, haha, you can\u2019t pay in ghost money, so\u2026"
       - speaker: 0
         speakerName: Kristen
         Dialogue: What?

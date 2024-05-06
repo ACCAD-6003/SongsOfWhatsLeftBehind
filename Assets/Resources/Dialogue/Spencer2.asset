@@ -50,7 +50,7 @@ MonoBehaviour:
         Dialogue: '*Sniff* *Sigh* That he was sexy while he was alive.'
       - speaker: 0
         speakerName: Kristen
-        Dialogue: "*Chuckle* *Sniff* I\u2019ll relay the message."
+        Dialogue: "Hehe. *Sniff* I\u2019ll relay the message."
       - speaker: 1
         speakerName: Spencer
         Dialogue: To your ghosts in the graveyard?

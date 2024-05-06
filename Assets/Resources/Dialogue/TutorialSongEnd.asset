@@ -34,7 +34,7 @@ MonoBehaviour:
         Dialogue: "\u2026and my ghosties. I will meet you eventually."
       - speaker: 0
         speakerName: Kristen
-        Dialogue: '*Heehee* Okay, goodnight.'
+        Dialogue: Heehee! Okay, goodnight.
     LeadsTo:
     - inspectorDescription: 'Prompt:  Triggers Event: DayTransition'
       prompt: 

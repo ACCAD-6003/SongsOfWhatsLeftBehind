@@ -72,7 +72,7 @@ MonoBehaviour:
         Dialogue: "I didn\u2019t-"
       - speaker: 1
         speakerName: Garret
-        Dialogue: My name is Garret. I will listen if you play.
+        Dialogue: My name is Garret. I will listen and sing along if you play.
       - speaker: 0
         speakerName: Kristen
         Dialogue: "S-sure. I\u2019m Kristen. What kind of song do you want?"

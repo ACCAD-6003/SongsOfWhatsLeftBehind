@@ -1,81 +1,22 @@
 {
     "saves": [
         {
-            "worldState": [
-                {
-                    "entryName": "day",
-                    "entryValue": 0
-                },
-                {
-                    "entryName": "saveDay",
-                    "entryValue": 1
-                },
-                {
-                    "entryName": "questCompleted",
-                    "entryValue": 1
-                },
-                {
-                    "entryName": "bankTellerTalkedTo",
-                    "entryValue": 1
-                }
-            ],
+            "worldState": [],
             "sceneIndex": 1,
-            "isEmpty": false,
-            "day": 2
+            "isEmpty": true,
+            "day": 0
         },
         {
-            "worldState": [
-                {
-                    "entryName": "day",
-                    "entryValue": 0
-                },
-                {
-                    "entryName": "saveDay",
-                    "entryValue": 1
-                }
-            ],
-            "sceneIndex": 2,
-            "isEmpty": false,
-            "day": 2
+            "worldState": [],
+            "sceneIndex": 1,
+            "isEmpty": true,
+            "day": 0
         },
         {
-            "worldState": [
-                {
-                    "entryName": "day",
-                    "entryValue": 2
-                },
-                {
-                    "entryName": "saveDay",
-                    "entryValue": 3
-                },
-                {
-                    "entryName": "questCompleted",
-                    "entryValue": 1
-                },
-                {
-                    "entryName": "ShowGarretInSong",
-                    "entryValue": 1
-                },
-                {
-                    "entryName": "GarretIsVisible",
-                    "entryValue": 1
-                },
-                {
-                    "entryName": "questType",
-                    "entryValue": 5
-                },
-                {
-                    "entryName": "acappellaTalkedTo",
-                    "entryValue": 1
-                },
-                {
-                    "entryName": "questNeedsReset",
-                    "entryValue": 0
-                }
-            ],
-            "sceneIndex": 2,
-            "isEmpty": false,
-            "day": 4
+            "worldState": [],
+            "sceneIndex": 1,
+            "isEmpty": true,
+            "day": 0
         }
     ]
 }

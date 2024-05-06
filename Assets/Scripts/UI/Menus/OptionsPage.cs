@@ -50,5 +50,14 @@ namespace UI
         {
             PlayerPrefs.Save();
         }
+        
+        public void ClearData()
+        {
+            PlayerPrefs.DeleteAll();
+            SaveSystem.SaveManager.Instance.ClearSaves();
+            globalVolumeSlider.value = AudioPreferences.GlobalVolume;
+            musicVolumeSlider.value = AudioPreferences.MusicVolume;
+            violinVolumeSlider.value = AudioPreferences.ViolinVolume;
+        }
     }
 }

@@ -24,7 +24,7 @@ MonoBehaviour:
         Dialogue: I need to withdraw.
       - speaker: 1
         speakerName: Borris
-        Dialogue: Uhh, *Chuckle* with the utmost respect, withdraw what?
+        Dialogue: Uhh, hehe, with the utmost respect, withdraw what?
       - speaker: 0
         speakerName: Kristen
         Dialogue: "I need to withdraw from a friend\u2019s account. Doing a favor,

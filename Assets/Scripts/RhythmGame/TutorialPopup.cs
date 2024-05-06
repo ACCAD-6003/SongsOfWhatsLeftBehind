@@ -56,7 +56,7 @@ namespace RhythmGame
             {
                 var button = UIController.Instance.GetLongKey(keyName);
                 var stringToMatch = $"[Button:{keyName}]";
-                if (button == "W") button = "Arrow Keys or WASD"; 
+                if (button == "W" && keyName == "Movement") button = "Arrow Keys or WASD"; 
                 
                 text = text.Replace(stringToMatch, button);
             }

@@ -18,7 +18,7 @@ MonoBehaviour:
     - dialogues:
       - speaker: 1
         speakerName: Passerby
-        Dialogue: There she is *haha*.
+        Dialogue: There she is haha.
       - speaker: 1
         speakerName: Passerby
         Dialogue: "The ghost whisperer\u2026"

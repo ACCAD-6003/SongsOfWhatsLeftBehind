@@ -55,7 +55,7 @@ MonoBehaviour:
         Dialogue: Technicalities.
       - speaker: 0
         speakerName: Kristen
-        Dialogue: '*Giggle*'
+        Dialogue: Heehee.
       - speaker: 1
         speakerName: Garret
         Dialogue: "I\u2019ll sing my way to the heavens."

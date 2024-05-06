@@ -99,5 +99,13 @@ namespace SaveSystem
                 WriteSavesToFile();
             }
         }
+
+        public void ClearSaves()
+        {
+            saves.Clear();
+            saves.AddRange(new List<Save> {new Save(), new Save(), new Save()});
+            
+            WriteSavesToFile();
+        }
     }
 }
